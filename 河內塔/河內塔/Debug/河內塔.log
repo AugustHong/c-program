@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\偉德\documents\c製作全集\河內塔\河內塔\source.cpp(11): warning C4477: 'scanf' : 格式字串 '%c' 需要 'char *' 類型的引數，但 variadic 引數 2 的類型為 'int *'
+c:\users\偉德\documents\c製作全集\河內塔\河內塔\source.cpp(11): warning C4477: 'scanf' : 格式字串 '%c' 需要 'char *' 類型的引數，但 variadic 引數 3 的類型為 'int *'
+c:\users\偉德\documents\c製作全集\河內塔\河內塔\source.cpp(11): warning C4477: 'scanf' : 格式字串 '%c' 需要 'char *' 類型的引數，但 variadic 引數 4 的類型為 'int *'
+c:\users\偉德\documents\c製作全集\河內塔\河內塔\source.cpp(11): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+  河內塔.vcxproj -> C:\Users\偉德\Documents\c製作全集\河內塔\Debug\河內塔.exe
