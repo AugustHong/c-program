@@ -1,0 +1,8 @@
+﻿已經開始建置於 2016/3/22 下午 01:46:19。
+     1>節點 2 (Build 目標) 上的專案 "G:\c製作全集\HW3_B10409006_盧禹宏\HW3_B10409006_盧禹宏\HW3_B10409006_盧禹宏.vcxproj"。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.Platform.targets(64,5): error MSB8020: The build tools for v140 (Platform Toolset = 'v140') cannot be found. To build using the v140 build tools, please install v140 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Upgrade Solution...".
+     1>專案 "G:\c製作全集\HW3_B10409006_盧禹宏\HW3_B10409006_盧禹宏\HW3_B10409006_盧禹宏.vcxproj" (Build 目標) 建置完成 -- 失敗。
+
+建置失敗。
+
+經過時間 00:00:00.01

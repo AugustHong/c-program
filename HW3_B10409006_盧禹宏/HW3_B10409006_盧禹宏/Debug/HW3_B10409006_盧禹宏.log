@@ -1,0 +1,5 @@
+﻿  homework3.cpp
+c:\users\偉德\documents\c製作全集\hw3_b10409006_盧禹宏\hw3_b10409006_盧禹宏\homework3.cpp(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw3_b10409006_盧禹宏\hw3_b10409006_盧禹宏\homework3.cpp(49): warning C4715: 'Fibonacci': 不是所有控制路徑都傳回值
+  HW3_B10409006_盧禹宏.vcxproj -> C:\Users\偉德\Documents\c製作全集\HW3_B10409006_盧禹宏\Debug\HW3_B10409006_盧禹宏.exe
