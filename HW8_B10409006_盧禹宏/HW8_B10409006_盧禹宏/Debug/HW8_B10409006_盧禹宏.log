@@ -1,0 +1,18 @@
+﻿  homework8.cpp
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(25): warning C4244: '引數': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(33): warning C4244: '引數': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(41): warning C4244: '引數': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(49): warning C4244: '引數': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(60): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(71): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(76): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(81): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\hw8_b10409006_盧禹宏\hw8_b10409006_盧禹宏\homework8.cpp(86): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+  HW8_B10409006_盧禹宏.vcxproj -> C:\Users\偉德\Documents\c製作全集\HW8_B10409006_盧禹宏\Debug\HW8_B10409006_盧禹宏.exe
