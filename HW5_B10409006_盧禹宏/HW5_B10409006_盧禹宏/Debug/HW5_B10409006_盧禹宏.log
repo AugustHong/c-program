@@ -1,0 +1,4 @@
+﻿  homework5.cpp
+c:\users\偉德\documents\c製作全集\hw5_b10409006_盧禹宏\hw5_b10409006_盧禹宏\homework5.cpp(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 請參閱 'fopen' 的宣告
+  HW5_B10409006_盧禹宏.vcxproj -> C:\Users\偉德\Documents\c製作全集\HW5_B10409006_盧禹宏\Debug\HW5_B10409006_盧禹宏.exe
