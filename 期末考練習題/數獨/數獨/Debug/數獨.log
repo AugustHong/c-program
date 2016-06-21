@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\偉德\documents\c製作全集\期末考練習題\數獨\數獨\source.cpp(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 請參閱 'fopen' 的宣告
+c:\users\偉德\documents\c製作全集\期末考練習題\數獨\數獨\source.cpp(17): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: 請參閱 'fscanf' 的宣告
+  數獨.vcxproj -> C:\Users\偉德\Documents\c製作全集\期末考練習題\數獨\Debug\數獨.exe

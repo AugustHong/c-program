@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\偉德\documents\c製作全集\期末考練習題\個人printf\個人printf\source.cpp(22): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+c:\users\偉德\documents\c製作全集\期末考練習題\個人printf\個人printf\source.cpp(47): warning C4018: '<': signed/unsigned 不相符
+c:\users\偉德\documents\c製作全集\期末考練習題\個人printf\個人printf\source.cpp(56): warning C4018: '<=': signed/unsigned 不相符
+  個人printf.vcxproj -> C:\Users\偉德\Documents\c製作全集\期末考練習題\個人printf\Debug\個人printf.exe
