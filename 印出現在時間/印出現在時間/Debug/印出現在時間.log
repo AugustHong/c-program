@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\偉德\documents\c製作全集\印出現在時間\印出現在時間\source.cpp(18): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: 請參閱 'localtime' 的宣告
+  印出現在時間.vcxproj -> C:\Users\偉德\Documents\c製作全集\印出現在時間\Debug\印出現在時間.exe
