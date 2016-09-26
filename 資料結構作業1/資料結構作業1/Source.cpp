@@ -71,6 +71,10 @@ int change(int i) { //讓資料交換（這樣只要跑剩下的幾筆，可以省時間和空間）
 	return 0;
 }
 
+void status_clear() {
+	for (int i = 0; i < max; i++) { datalist[i].status = false; }
+}
+
 void running() {
 
 	while (current_number < total_input_number) { //只要資料還沒跑完就繼續
@@ -79,7 +83,7 @@ void running() {
 		tm1 = localtime(&time1);
 
 		if (_kbhit() && _getch() == 'q') { break; }
-		if (tm1->tm_hour == 0 && tm1->tm_min == 0 && tm1->tm_sec == 0) { format(); break; } //如果0:0:0就清空全部
+		if (tm1->tm_hour == 0 && tm1->tm_min == 0 && tm1->tm_sec == 0) { status_clear(); break; } //如果0:0:0就清空全部
 
 		for (int i = current_number; i < total_input_number; i++) {
 			if (tm1->tm_hour == datalist[i].hour && tm1->tm_min == datalist[i].min && tm1->tm_sec == datalist[i].sec) {
@@ -87,11 +91,10 @@ void running() {
 				puts("=========================================");
 				datalist[i].status = true;
 				change(i);
+				break;
 			}
 		}
 	}
-
-	format();
 }
 
 int main() {
