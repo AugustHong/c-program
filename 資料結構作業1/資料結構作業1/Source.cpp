@@ -73,11 +73,12 @@ int change(int i) { //讓資料交換（這樣只要跑剩下的幾筆，可以省時間和空間）
 
 void status_clear() {
 	for (int i = 0; i < max; i++) { datalist[i].status = false; }
+	current_number = 0;
 }
 
 void running() {
 
-	while (current_number < total_input_number) { //只要資料還沒跑完就繼續
+	while (true) { 
 		//取得當前時間
 		time(&time1);
 		tm1 = localtime(&time1);
