@@ -47,7 +47,7 @@ int clear(int j) { //因為會拿到\n的資料，所以要把它取代掉
 }
 
 void setting() {
-	FILE *source = fopen("source.txt", "r");
+	FILE *source = fopen("morningCall.txt", "r");
 
 	while (!feof(source)) {
 		fscanf(source, "%d%d%d", &Alarm[total_input_number].hour, &Alarm[total_input_number].min, &Alarm[total_input_number].sec);
