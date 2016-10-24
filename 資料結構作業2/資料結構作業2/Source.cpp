@@ -15,7 +15,7 @@ char str[5][20] = { "open", "print", "rename", "move", "history" };
 int number;
 
 void format();
-void action(int number, char* string);
+void action(int number);
 bool isfull();
 void traverse();
 void pushdata(char* string);
@@ -27,8 +27,7 @@ int main() {
 	while (true) {
 		printf("請輸入數字：  1.open  2.print  3.rename  4.move  5.history\n");
 		scanf("%d", &number);
-		printf("%s\n===================\n", str[number - 1]);
-		action(number, str[number-1]);
+		action(number);
 	}
 
 	system("pause");
@@ -39,12 +38,14 @@ void format() {
 	stack_data->count = 0; //設定初值
 }
 
-void action(int number, char* string) {
+void action(int number) {
 	if (number > 0 && number <= max) { 
-		pushdata(string); 
+		printf("%s\n================\n", str[number - 1]);
+		pushdata(str[number-1]); 
 		if (number == max) { print(); }
 		stack_data->count += 1;		
 	}
+	else { printf("error(please input 1-5)\n"); }
 }
 
 bool isfull() {
