@@ -1,4 +1,4 @@
 ﻿  Source.cpp
-c:\users\偉德\documents\c製作全集\圍棋\圍棋\source.cpp(27): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\偉德\documents\c製作全集\圍棋\圍棋\source.cpp(28): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
   圍棋.vcxproj -> C:\Users\偉德\Documents\c製作全集\圍棋\Debug\圍棋.exe

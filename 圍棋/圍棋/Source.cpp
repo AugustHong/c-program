@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int data[10][10] = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,   //邊界是2 黑棋是-1 白棋是1 空格是0
+#define max 10
+
+int data[max][10] = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,   //邊界是2 黑棋是-1 白棋是1 空格是0
 					 2, 1, 1, 1, 0, 0, 0, 0, 0, 2,
 					 2, 1, -1, 1, 0, 0, 0, 0, 0, 2,
 					 2, 1, -1, 1, 0, 0, 0, 0, 0, 2,
@@ -18,19 +20,22 @@ int current = 0, a, b;
 void print();
 bool exit(int x, int y);
 bool judge(int x, int y, int color);
-void clear();
+void clear(bool a);
 
 int main() {
+	puts("測試值(4,2) (8,6)");
 	print();
 
 	printf("請輸入2個數字\n");
 	scanf("%d %d", &a, &b);
 	data[a][b] = 1;
 
-	if (judge(a + 1, b, -1) == false) { clear(); print(); }
-	if (judge(a - 1, b, -1) == false) { clear(); print(); }
-	if (judge(a , b+1, -1) == false) { clear(); print(); }
-	if (judge(a , b-1, -1) == false) { clear(); print(); }
+	clear(judge(a + 1, b, -1));
+	clear(judge(a - 1, b, -1));
+	clear(judge(a, b + 1, -1));
+	clear(judge(a, b - 1, -1));
+
+	print();
 
 	system("pause");
 	return 0;
@@ -38,9 +43,9 @@ int main() {
 
 void print() {
 	puts("   0  1  2  3  4  5  6  7  8  9");
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < max; i++) {
 		printf("%d  ", i);
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < max; j++) {
 			if (data[i][j] == 0) { printf("空 "); }
 			if (data[i][j] == 2) { printf("邊 "); }
 			if (data[i][j] == 1) { printf("白 "); }
@@ -48,7 +53,6 @@ void print() {
 		}
 		printf("\n");
 	}
-	puts("測試值(4,2) (8,6)");
 }
 
 bool exit(int x, int y) {
@@ -59,15 +63,22 @@ bool exit(int x, int y) {
 	return true;
 }
 
-void clear() { //把全部都清除
-	for (int i = 0; i <= current; i++) {
-		if (record[i][0] != 0 && record[i][1] != 0) {
-			data[record[i][0]][record[i][1]] = 0;
-			printf("已清除(%d, %d)\n", record[i][0], record[i][1]);
-			record[i][0] = 0;
-			record[i][1] = 0;
+void clear(bool a) { //把全部都清除
+
+	if (a){
+		for (int i = 0; i <= current; i++){ record[i][0] = 0; record[i][1] = 0;} //就算找到出口還是要讓record的清空
+	}
+	else {
+		for (int i = 0; i <= current; i++) {
+			if (record[i][0] != 0 && record[i][1] != 0) {
+				data[record[i][0]][record[i][1]] = 0;
+				printf("已清除(%d, %d)\n", record[i][0], record[i][1]);
+				record[i][0] = 0;
+				record[i][1] = 0;
+			}
 		}
 	}
+	current = 0; //clear current
 }
 
 bool judge(int x, int y, int color) {
