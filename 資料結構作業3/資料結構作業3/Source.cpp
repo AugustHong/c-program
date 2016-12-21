@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-#define HASH_TABLE_SIZE 10
+#define HASH_TABLE_SIZE 11
 
 struct Node_t {
 	char key[30];
@@ -52,7 +52,7 @@ int main() {
 int Hash() {
 	int c = 0;
 	for (int i = 0; i < strlen(a); i++) { c += (int)a[i]; }
-	return c % 10;
+	return c % HASH_TABLE_SIZE;
 }
 
 void format() {
@@ -78,10 +78,10 @@ void add_data(node *head) {
 
 void find() {
 	node current;
-
-	current = hashTable[Hash()];
+	int i = Hash();
+	current = hashTable[i];
 		while (current != NULL) {
-			if (strcmp(current->key, a) == 0) { printf("%s %d\n", current->key, current->value); return; }
+			if (strcmp(current->key, a) == 0) { printf("%s %d -> %d\n", current->key, current->value, i); return; }
 				current = current->next;
 			}
 
