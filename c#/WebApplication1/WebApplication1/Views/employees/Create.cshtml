@@ -1,0 +1,146 @@
+﻿@model WebApplication1.employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>employee</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.birthday, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.birthday, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.birthday, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.height, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.height, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.height, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.weight, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.weight, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.weight, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.salary, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.salary, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.salary, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.department, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.department, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.department, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.mail, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.mail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.mail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+               <p>age</p>
+                <div class="col-md-10">
+                    <input type="text" id="age" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p>gender</p>
+                <div class="col-md-10">
+                    <input type="radio" name="gender" value="male">男<input type="radio" name="gender" value="famale">女
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p>home</p>
+                <div class="col-md-10">
+                    <select name="place">
+                        <option value="Taipei">台北</option>
+                        <option value="Taoyuan">桃園</option>
+                        <option value="Hsinchu">新竹</option>
+                        <option value="Miaoli">苗栗</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p>興趣</p>
+                <div class="col-md-10">
+                    <input type="checkbox" value="computer" id="c1" />電腦
+                    <input type="checkbox" value="sport" id="c2" />運動
+                    <input type="checkbox" value="music" id="c3" />音樂
+                    <input type="checkbox" value="art"  id="c4" />藝術
+                    <input type="checkbox" value="read" id="c5" />閱讀
+                    <input type="text" style="display:block;" id="check"/>
+                </div>
+            </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button onclick="check_func();">check</button>
+            <input type="submit" value="Create" class="btn btn-default"/>
+        </div>
+    </div>
+</div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    <script>
+        function check_func() {
+            for (var i = 1; i <= 5; i++) {
+                if (document.getElementById('c' + i.toString()).checked) {
+                    document.getElementById('check').value = document.getElementById('check').value + document.getElementById('c' + i.toString()).value;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
