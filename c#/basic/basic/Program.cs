@@ -104,6 +104,16 @@ namespace basic
                 if(yy != 0) { Console.WriteLine(yy); }    
             }
 
+            Console.WriteLine("");
+
+            Boolean z = true;
+            Console.WriteLine(z);
+            Console.WriteLine(z ? false : true);  /* 可直接就在這邊運算了*/
+            Console.WriteLine($"boolean to int: {Convert.ToInt32(z)}");
+            Console.WriteLine($"boolean to string: {z.ToString()}");
+
+            Console.WriteLine("");
+
 
             Console.Write("please input value:");
             string p = Console.ReadLine();
