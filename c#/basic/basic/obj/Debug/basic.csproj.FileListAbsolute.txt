@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\bin\Debug\basic.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\bin\Debug\basic.exe
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\bin\Debug\basic.pdb
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\obj\Debug\basic.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\obj\Debug\basic.exe
+C:\Users\偉德\Documents\c製作全集\c#\basic\basic\obj\Debug\basic.pdb
