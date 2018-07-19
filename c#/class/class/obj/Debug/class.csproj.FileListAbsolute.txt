@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\class\class\bin\Debug\@class.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\class\class\bin\Debug\@class.exe
+C:\Users\偉德\Documents\c製作全集\c#\class\class\bin\Debug\@class.pdb
+C:\Users\偉德\Documents\c製作全集\c#\class\class\obj\Debug\class.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\class\class\obj\Debug\@class.exe
+C:\Users\偉德\Documents\c製作全集\c#\class\class\obj\Debug\@class.pdb
