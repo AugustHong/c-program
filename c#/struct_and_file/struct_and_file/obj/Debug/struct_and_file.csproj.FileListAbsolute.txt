@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\bin\Debug\struct_and_file.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\bin\Debug\struct_and_file.exe
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\bin\Debug\struct_and_file.pdb
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\obj\Debug\struct_and_file.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\obj\Debug\struct_and_file.exe
+C:\Users\偉德\Documents\c製作全集\c#\struct_and_file\struct_and_file\obj\Debug\struct_and_file.pdb
