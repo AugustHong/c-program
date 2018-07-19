@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\bin\Debug\@interface.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\bin\Debug\@interface.exe
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\bin\Debug\@interface.pdb
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\obj\Debug\interface.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\obj\Debug\@interface.exe
+C:\Users\偉德\Documents\c製作全集\c#\interface\interface\obj\Debug\@interface.pdb
