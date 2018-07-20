@@ -87,10 +87,16 @@ namespace advanced
 
             Console.WriteLine("");
 
-            //時間戳
-            DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1)); // 當地時區
-            long timeStamp = (long)(DateTime.Now - startTime).TotalMilliseconds; // 相差毫秒數
-            Console.WriteLine(timeStamp);
+            //日期轉時間戳
+            DateTime DateStart = new DateTime(1970, 1, 1, 8, 0, 0);
+            long timestamp = Convert.ToInt32((DateTime.Now - DateStart).TotalSeconds);
+            Console.WriteLine(timestamp);
+
+            //時間戳轉日期
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timestamp + "0000000");
+            TimeSpan toNow = new TimeSpan(lTime);
+            Console.WriteLine(dtStart.Add(toNow));
 
 
             Console.WriteLine("");
