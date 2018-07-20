@@ -191,6 +191,34 @@ namespace advanced
             //用where或者order的結果如果想要變成變數，那型態要注意喔！看以下
             //用List<int> primes = new List<int>();來存結果喔  記得如果是string的話2邊的int要改成string
 
+            Console.WriteLine("");
+            Console.WriteLine("___________________________________________________________________________");
+
+            //linq寫法（其實就和上方陣列的那種寫法差不多） numbers.where(j+1=>j);
+            int[] numbers = { 5, 4, 3, 2, 19, 9 };
+            var result = from score in numbers
+                         select score + 1;
+
+            var result2 = from score in numbers
+                          where score <= 8
+                          select score;
+
+            //以下2個結果會是相同的
+            foreach (var re in result){
+                Console.WriteLine(re);
+            }
+            Console.WriteLine("__________________________________________________________________");
+
+            foreach(var re in numbers.Where(j => true)) {  //因為後面要是  =>判斷式   ，所以要全選就給他true
+                Console.WriteLine(re + 1);
+            }
+
+            Console.WriteLine("");
+
+            foreach (var re in result2){
+                Console.WriteLine(re);
+            }
+
 
             Console.Read();
         }
