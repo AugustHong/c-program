@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyEC.Ban>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>封鎖名單</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            封鎖者名稱
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ban_reason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ban_end_data)
+        </th>
+        <th></th>
+    </tr>
+
+@{ int count = 0;}
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @ViewBag.ban_name[count]
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ban_reason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ban_end_data)
+        </td>
+        <td>
+            @Html.ActionLink("修改", "Edit", new { id=item.user_id }) |
+            @Html.ActionLink("解封", "Delete", new { id=item.user_id })
+        </td>
+        @{ count += 1;}
+    </tr>
+}
+
+</table>

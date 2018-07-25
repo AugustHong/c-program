@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MyEC.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>商品列表</h2>
+
+<form action="Index" method="get">
+    請選擇你要的篩選條件：
+    <select name="q_type">
+        <option value="全部">全部</option>
+        <option value="家電                  ">家電</option>
+        <option value="生活用品                  ">生活用品</option>
+        <option value="傢俱                  ">傢俱</option>
+        <option value="食品                  ">食品</option>
+        <option value="娛樂                  ">娛樂</option>
+        <option value="其他                  ">其他</option>
+    </select>
+    <input type="submit" value="送出" class="btn btn-default" />
+</form>
+
+@if (ViewBag.is_vender_goods){
+    <p>@Html.ActionLink("上架商品", "Create")</p>
+    <p>@Html.ActionLink("全館打折", "../Discount/Index")</p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.pruduct_name)
+        </th>
+        <th>
+            廠商名稱
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.push_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th></th>
+    </tr>
+
+@{ int count = 0;}
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pruduct_name)
+        </td>
+        <td>
+            @ViewBag.vender_name[count]
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @{ double price = item.price * ViewBag.percent[count];}
+            @price
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @{ string date = item.push_date.ToString("yyyy-MM-dd");}
+            @date
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @if (ViewBag.is_vender_goods)
+            {
+                @Html.ActionLink("下架 ", "Delete", new { id = item.product_id })
+                @Html.ActionLink("修改", "Edit", new { id = item.product_id })
+            }
+            else {
+                @Html.ActionLink("查看內容", "Details", new { id = item.product_id })
+            }
+        </td>
+        @{ count += 1;}
+    </tr>
+}
+
+</table>

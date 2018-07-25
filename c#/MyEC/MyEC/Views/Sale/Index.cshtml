@@ -1,0 +1,85 @@
+﻿@model IEnumerable<MyEC.Sale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (ViewBag.u_type){
+    <h2>我的銷售記錄</h2>
+    <h3>查詢年銷售圖表</h3>
+    <form action="../Sale/Chart" method="get">
+        請輸入你要查的年份：<input type="text" name="year" id="year" />
+        <input type="submit" value="送出" class="btn btn-default" />
+    </form>
+}else {
+    <h2>我的購買記錄</h2>
+}
+
+<br />
+
+<form action="../Sale/Index" method="get">
+    請輸入你想查詢的年：<input type="text" name="year" id="year" />
+    <input type="submit" value="送出" class="btn btn-default" />
+</form>
+
+
+<table class="table">
+    <tr>
+        <th>
+            購買者
+        </th>
+        <th>
+            廠商
+        </th>
+        <th>
+            產品名稱
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sale_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sale_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goods_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.buy_amount)
+        </th>
+    </tr>
+@{ int count = 0;}
+@{ string status = "";}
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @ViewBag.b_name[count]
+        </td>
+        <td>
+            @ViewBag.v_name[count]
+        </td>
+        <td>
+            @ViewBag.p_name[count]
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sale_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sale_price)
+        </td>
+        <td>
+            @{ status = item.goods_status;}
+            @Html.DisplayFor(modelItem => item.goods_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.buy_amount)
+        </td>
+
+        @if (ViewBag.u_type && status == "待出貨"){
+            @Html.ActionLink("出貨", "Edit", new { id = item.sale_id })
+        }
+
+        @{ count += 1;}
+    </tr>
+}
+
+</table>

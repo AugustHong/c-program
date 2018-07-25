@@ -1,0 +1,39 @@
+﻿@model MyEC.Ban
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>是否有幫此位解鎖？</h2>
+
+<div>
+    <h4>Ban</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ban_reason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ban_reason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ban_end_data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ban_end_data)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

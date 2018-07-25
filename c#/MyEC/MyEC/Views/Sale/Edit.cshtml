@@ -1,0 +1,94 @@
+﻿@model MyEC.Sale
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>這項產品是否要出貨？</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Sale</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.sale_id)
+        @Html.HiddenFor(model => model.buyer_id)
+        @Html.HiddenFor(model => model.product_id)
+        @Html.HiddenFor(model => model.sale_date)
+        @Html.HiddenFor(model => model.sale_price)
+        <input type="text" name="goods_status" id="goods_status" value="已出貨" style="display:none;" />
+        @Html.HiddenFor(model => model.buy_amount)
+
+        <dl class="dl-horizontal">
+
+            <dt>
+                買方名稱
+            </dt>
+
+            <dd>
+                @ViewBag.b_n
+            </dd>
+
+            <dt>
+                產品名稱
+            </dt>
+
+            <dd>
+                @ViewBag.p_n
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.sale_date)
+            </dt>
+
+            <dd>
+                @{ string d = Model.sale_date.ToString("yyyy-MM-dd");}
+                @d
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.sale_price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.sale_price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.goods_status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.goods_status)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.buy_amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.buy_amount)
+            </dd>
+
+        </dl>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="出貨" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

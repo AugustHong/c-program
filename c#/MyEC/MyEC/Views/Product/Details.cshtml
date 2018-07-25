@@ -1,0 +1,87 @@
+﻿@model MyEC.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    @{ string name = Model.pruduct_name;}
+    <h4>@name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            廠商名稱
+        </dt>
+
+        <dd>
+            @ViewBag.v_name
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price);
+        </dt>
+
+        <dd>
+            @{ double price = Model.price * ViewBag.p_percent;}
+            @price
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.push_date)
+        </dt>
+
+        <dd>
+            @{ string date = Model.push_date.ToString("yyyy-MM-dd");}
+            @date
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+
+<form action="../Sale/Create" method="post">
+    <!--buyer_id要看session的了，所以在載入product的detail時就把viewbag存一下放進來-->
+    <!--<input type="number" name="buyer_id" id="buyer_id" value=ViewBag.b_id />-->
+    @Html.EditorFor(model => model.product_id, new { htmlAttributes = new { @class = "form-control", @style="display:none" } })
+    <input type="number" name="sale_price" id="sale_price" value=@price  style="display:none;" />
+    <input type="datetime" name="sale_date" id="sale_date"  style="display:none;" />
+    <input type="text" name="goods_status" id="goods_status" value="待出貨" style="display:none;"/>
+    請輸入購買的數量：<input type="number" name="buy_amount" id="buy_amount" />
+    <input type="submit" value="確定購買" class="btn btn-default" />
+</form>
+
+<script>
+    var Today=new Date();
+    document.getElementById('sale_date').value = Today.getFullYear() + "-" + (Today.getMonth() + 1) + "-" + Today.getDate();
+</script>
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

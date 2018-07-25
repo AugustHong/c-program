@@ -1,0 +1,74 @@
+﻿@model IEnumerable<MyEC.Sale>
+
+@{
+    ViewBag.Title = "Chart";
+}
+
+
+<h2>@ViewBag.year 銷售圖表</h2>
+
+<p id="y1" style="display:none;">@ViewBag.month_r[0]</p>
+<p id="y2" style="display:none;">@ViewBag.month_r[1]</p>
+<p id="y3" style="display:none;">@ViewBag.month_r[2]</p>
+<p id="y4" style="display:none;">@ViewBag.month_r[3]</p>
+<p id="y5" style="display:none;">@ViewBag.month_r[4]</p>
+<p id="y6" style="display:none;">@ViewBag.month_r[5]</p>
+<p id="y7" style="display:none;">@ViewBag.month_r[6]</p>
+<p id="y8" style="display:none;">@ViewBag.month_r[7]</p>
+<p id="y9" style="display:none;">@ViewBag.month_r[8]</p>
+<p id="y10" style="display:none;">@ViewBag.month_r[9]</p>
+<p id="y11" style="display:none;">@ViewBag.month_r[10]</p>
+<p id="y12" style="display:none;">@ViewBag.month_r[11]</p>
+
+<div class="box">
+    <canvas id="chart-area" class="zone"></canvas>
+</div>
+
+<script>
+    var color = Chart.helpers.color;
+    var barChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+            label: '銷售收入',
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            borderWidth: 1,
+            data: [
+                parseInt(document.getElementById('y1').innerHTML),
+                parseInt(document.getElementById('y2').innerHTML),
+                parseInt(document.getElementById('y3').innerHTML),
+                parseInt(document.getElementById('y4').innerHTML),
+                parseInt(document.getElementById('y5').innerHTML),
+                parseInt(document.getElementById('y6').innerHTML),
+                parseInt(document.getElementById('y7').innerHTML),
+                parseInt(document.getElementById('y8').innerHTML),
+                parseInt(document.getElementById('y9').innerHTML),
+                parseInt(document.getElementById('y10').innerHTML),
+                parseInt(document.getElementById('y11').innerHTML),
+                parseInt(document.getElementById('y12').innerHTML)
+            ]
+        }]
+    };
+
+    window.onload = function () {
+        var ctx = document.getElementById('chart-area').getContext('2d');
+        window.myBar = new Chart(ctx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: '銷售收入圖（月）'
+                }
+            }
+        });
+    };
+</script>
+
+<br />
+
+@Html.ActionLink("回銷售表", "../Sale/Index")

@@ -1,0 +1,21 @@
+﻿@model MyEC.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<center>
+    <div>
+        <h1>歡迎來到MyEC</h1>
+
+        <h2>登入</h2>
+
+        <form action="../User/Login" method="post">
+            帳號：<input type="text" name="account" id="account" /><br /><br />
+            密碼：<input type="password" name="password" id="password" /><br /><br />
+            <input type="submit" value="送出" class="btn btn-default" />
+        </form>
+    </div>
+</center>
+
+

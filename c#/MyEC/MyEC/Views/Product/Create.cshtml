@@ -1,0 +1,107 @@
+﻿@model MyEC.Product
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>上架商品</h2>
+
+<!--跟其他的不一樣，因為檔案上傳需要設定  所以裡面的參數是跟上傳檔案有關的-->
+<!--前2個參數就是form要傳的路徑-->
+@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.pruduct_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.pruduct_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.pruduct_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input type="number" id="vendor_id" name="vendor_id" value=@ViewBag.v_id style="display:none;"/>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.type, new SelectList(Enum.GetValues(typeof(p_type))), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.pic_path, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" name="pic_path" id="pic_path" style="display:none;" />
+                <input type="file" accept="image/*" onchange="loadFile(event)" name="pic" id="pic">
+                @Html.ValidationMessageFor(model => model.pic_path, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <img id="output" />
+
+        <script>
+            var loadFile = function (event) {
+
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+
+            document.getElementById('pic_path').value = document.getElementById('pic').value;
+
+            };
+        </script>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--這邊可以的話有第二種做法（在資料庫裡預設日期為今天）-->
+        <input type="datetime" id="push_date" name="push_date" style="display:none;"/>
+        
+        <script>
+            var Today=new Date();
+            document.getElementById('push_date').value = Today.getFullYear() + "-" + (Today.getMonth() + 1) + "-" + Today.getDate();
+        </script>
+ 
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

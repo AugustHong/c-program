@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="my_ecModelStoreContainer" CdmEntityContainer="my_ecEntities">
+    <EntitySetMapping Name="Ban">
+      <EntityTypeMapping TypeName="my_ecModel.Ban">
+        <MappingFragment StoreEntitySet="Ban">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="ban_reason" ColumnName="ban_reason" />
+          <ScalarProperty Name="ban_end_data" ColumnName="ban_end_data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="my_ecModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="pruduct_name" ColumnName="pruduct_name" />
+          <ScalarProperty Name="vendor_id" ColumnName="vendor_id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pic_path" ColumnName="pic_path" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="push_date" ColumnName="push_date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale">
+      <EntityTypeMapping TypeName="my_ecModel.Sale">
+        <MappingFragment StoreEntitySet="Sale">
+          <ScalarProperty Name="buy_amount" ColumnName="buy_amount" />
+          <ScalarProperty Name="sale_id" ColumnName="sale_id" />
+          <ScalarProperty Name="buyer_id" ColumnName="buyer_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="sale_date" ColumnName="sale_date" />
+          <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+          <ScalarProperty Name="goods_status" ColumnName="goods_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="my_ecModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discount">
+      <EntityTypeMapping TypeName="my_ecModel.Discount">
+        <MappingFragment StoreEntitySet="Discount">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="discount_percent" ColumnName="discount_percent" />
+          <ScalarProperty Name="vender_id" ColumnName="vender_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

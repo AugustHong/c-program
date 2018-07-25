@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MyEC.Discount>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>我的全館折扣方案</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.discount_percent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+@{ int is_created = Model.Count() == 0 ? 1:0;} <!--如果還未創建給他創建畫面，否則給他修改畫面-->
+@{ double percent = 0;}
+@{ string status = "";}
+@foreach (var item in Model){
+        <tr>
+            <td>
+                @{ percent = item.discount_percent * 100;}
+                @percent
+            </td>
+            <td>
+                @{ status = item.status;}
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+        </tr>
+}
+
+</table>
+
+<hr />
+
+@if(is_created == 1)
+{
+    <h3>創建您公司的全館折扣方案</h3>
+    <form action="../Discount/Create" method="post">
+        @Html.AntiForgeryToken()
+        <input type="number" name="vender_id" id="vender_id" value=@ViewBag.v_id style="display:none;" />
+        請輸入想打的折扣%數：<input type="number" id="n1" onchange="document.getElementById('discount_percent').value = document.getElementById('n1').value / 100;"/>
+        <input type="text" name="discount_percent" id="discount_percent" style="display:none;"/>
+        <input type="text" name="status" id="status" value="Y" style="display:none;" />
+        <input type="submit" value="新增" class="btn btn-default" />
+    </form>
+}
+else {
+    double p = percent / 100;
+
+    <h3>修改您公司的全館折扣方案</h3>
+    <form action="../Discount/Edit" method="post">
+        @Html.AntiForgeryToken()
+        <input type="number" name="vender_id" id="vender_id" value=@ViewBag.v_id style="display:none;" />
+        請輸入想打的折扣%數：<input type="number" id="n2" onchange="document.getElementById('discount_percent').value = document.getElementById('n2').value / 100;" value=@percent />
+        <input type="text" name="discount_percent" id="discount_percent" style="display:none;" value=@p />
+        <input type="text" name="status" id="status" value=@status style="display:none;" />
+        <input type="submit" value="修改" class="btn btn-default" />
+
+        @if (status == "Y")
+        {
+            <input type="submit" value="停用" class="btn btn-default" onclick="change_status('N');" />
+        }
+        else {
+            <input type="submit" value="啟用" class="btn btn-default" onclick="change_status('Y');" />
+        }
+
+        <script>
+            function change_status(s) {
+                document.getElementById('status').value = s;
+            }
+        </script>
+
+    </form>
+
+
+}
+
+
+
+
+
+

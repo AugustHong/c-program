@@ -1,0 +1,78 @@
+﻿@model IEnumerable<MyEC.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>User名單</h2>
+
+<!--index呼叫回index會變成index/1  為避免這事發生，也要讓它先回到User裡面-->
+<p>@Html.ActionLink("列出所有user","../User")</p>
+<p>@Html.ActionLink("只列出廠商", "../User/Index", new { type = "廠商" })</p>
+<p>@Html.ActionLink("只列出顧客", "../User/Index", new { type = "顧客" })</p>
+<p>@Html.ActionLink("新增廠商", "Create")</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <!--不該讓他直接在畫面上看到帳號密碼-->
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remark)
+        </th>
+        <th>
+            是否被封（Y=是；N=否）
+        </th>
+        <th></th>
+    </tr>
+
+@{ int count = 0;}
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{string type = item.user_type == 0 ? "管理者" : item.user_type == 1 ? "廠商" : "顧客";}
+            @type
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.remark)
+        </td>
+        <td>
+            @ViewBag.is_ban[count]
+        </td>
+        <td>
+            @if(ViewBag.is_ban[count] == "N"){
+                //用../回到主頁面，再調到Ban的網址
+                @Html.ActionLink("封鎖", "../Ban/Create", new { id = item.user_id })
+            }else {
+                @Html.ActionLink("查看封鎖名單", "../Ban/Index")
+            }
+        </td>
+        @{ count += 1;}
+    </tr>
+}
+
+</table>

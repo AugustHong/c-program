@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="my_ecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ban">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="ban_reason" Type="ntext" Nullable="false" />
+    <Property Name="ban_end_data" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="vender_id" />
+    </Key>
+    <Property Name="vender_id" Type="int" Nullable="false" />
+    <Property Name="discount_percent" Type="float" Nullable="false" />
+    <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pruduct_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vendor_id" Type="int" Nullable="false" />
+    <Property Name="type" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="pic_path" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="push_date" Type="date" Nullable="false" />
+    <Property Name="description" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="sale_id" />
+    </Key>
+    <Property Name="sale_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="buyer_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="buy_amount" Type="int" Nullable="false" />
+    <Property Name="sale_date" Type="date" Nullable="false" />
+    <Property Name="sale_price" Type="money" Nullable="false" />
+    <Property Name="goods_status" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_type" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="account" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="phone" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="remark" Type="ntext" />
+  </EntityType>
+  <EntityContainer Name="my_ecModelStoreContainer">
+    <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Discount" EntityType="Self.Discount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
