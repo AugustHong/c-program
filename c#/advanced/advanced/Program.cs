@@ -75,6 +75,13 @@ namespace advanced
             Console.WriteLine(dateOnly.ToString("MM/dd/yyyy HH:mm"));
             Console.WriteLine(date1.ToString("yyyy-MM-dd HH:mm"));
 
+            //日期比大小
+            DateTime date2 = new DateTime(2009, 8, 1, 0, 0, 0);
+            DateTime date3 = new DateTime(2009, 8, 1, 12, 0, 0);
+            int result = DateTime.Compare(date1, date2);
+            //如果result 是 <0 代表date1 < date2  ； =0代表相同 ； >0 代表 date1>date2
+            Console.WriteLine(result);
+
             Console.WriteLine("");
 
             //string轉日期
@@ -196,7 +203,7 @@ namespace advanced
 
             //linq寫法（其實就和上方陣列的那種寫法差不多） numbers.where(j+1=>j);
             int[] numbers = { 5, 4, 3, 2, 19, 9 };
-            var result = from score in numbers
+            var result1 = from score in numbers
                          select score + 1;
 
             var result2 = from score in numbers
@@ -204,7 +211,7 @@ namespace advanced
                           select score;
 
             //以下2個結果會是相同的
-            foreach (var re in result){
+            foreach (var re in result1){
                 Console.WriteLine(re);
             }
             Console.WriteLine("__________________________________________________________________");
@@ -219,6 +226,15 @@ namespace advanced
                 Console.WriteLine(re);
             }
 
+            //相加
+            Console.WriteLine("變數result2的值全部相加為{0}", result2.Sum());
+
+            //如果今天是class 的 list的話，例如以下：（當然class要寫外圈喔，但這只是解說）
+            // public class Score{
+            //          string name {get;set;}
+            //          int student_score {get;set;} }
+            // List<Score> s = new List<Score>;
+            // s.sum(student_score));
 
             Console.Read();
         }
