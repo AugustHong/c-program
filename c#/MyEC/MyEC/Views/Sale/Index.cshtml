@@ -16,7 +16,9 @@
 }
 
 <br />
+<hr />
 
+<h3>查詢記錄</h3>
 <form action="../Sale/Index" method="get">
     請輸入你想查詢的年：<input type="text" name="year" id="year" />
     <input type="submit" value="送出" class="btn btn-default" />
@@ -61,7 +63,8 @@
             @ViewBag.p_name[count]
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.sale_date)
+            @{ string d = item.sale_date.ToString("yyyy-MM-dd");}
+            @d
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.sale_price)
@@ -73,11 +76,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.buy_amount)
         </td>
-
-        @if (ViewBag.u_type && status == "待出貨"){
-            @Html.ActionLink("出貨", "Edit", new { id = item.sale_id })
-        }
-
+        <td>
+            @if (ViewBag.u_type && status == "待出貨       "){
+                @Html.ActionLink("出貨", "Edit", new { id = item.sale_id })
+            }
+        </td>
         @{ count += 1;}
     </tr>
 }

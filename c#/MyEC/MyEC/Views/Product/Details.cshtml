@@ -65,9 +65,10 @@
     </dl>
 </div>
 
-<form action="../Sale/Create" method="post">
+<form action="../../Sale/Create" method="post">
+    @Html.AntiForgeryToken()
     <!--buyer_id要看session的了，所以在載入product的detail時就把viewbag存一下放進來-->
-    <!--<input type="number" name="buyer_id" id="buyer_id" value=ViewBag.b_id />-->
+    <input type="number" name="buyer_id" id="buyer_id" value=@ViewBag.b_id style="display:none;"/>
     @Html.EditorFor(model => model.product_id, new { htmlAttributes = new { @class = "form-control", @style="display:none" } })
     <input type="number" name="sale_price" id="sale_price" value=@price  style="display:none;" />
     <input type="datetime" name="sale_date" id="sale_date"  style="display:none;" />

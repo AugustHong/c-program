@@ -27,34 +27,40 @@ namespace MyEC.Controllers
 
             switch (query){
                 case "我的產品":
-                    int id = 1;  //照理來說是看cookies的id，但因還沒做，所以先預設為1
-                    p_list = db.Product.Where(p => p.vendor_id == id);
+                    if (Request.Cookies["MyCook"]["type"] == "廠商")
+                    {
+                        int id = Int32.Parse(Request.Cookies["MyCook"]["id"]);
+                        p_list = db.Product.Where(p => p.vendor_id == id);
 
-                    //做篩選
-                    if(q_type != null && q_type != "全部") { p_list = p_list.Where(p => p.type == q_type); }
+                        //做篩選
+                        if (q_type != null && q_type != "全部") { p_list = p_list.Where(p => p.type == q_type); }
 
-                    ViewBag.is_vender_goods = true;  //記錄是否是廠商在看自己的產品（要讓他有修改、打折、下架 那些選項可以選）
+                        ViewBag.is_vender_goods = true;  //記錄是否是廠商在看自己的產品（要讓他有修改、打折、下架 那些選項可以選）
 
-                    //只有一個名稱
-                    var v = db.User.Find(id);
-                    vender = v.name;
+                        //只有一個名稱
+                        var v = db.User.Find(id);
+                        vender = v.name;
 
-                    var d = db.Discount.Find(v.user_id);
-                    
-                    //percent數
-                    if(d != null){
-                        if(d.status == "Y"){
-                            discount_percent = d.discount_percent;
+                        var d = db.Discount.Find(v.user_id);
+
+                        //percent數
+                        if (d != null)
+                        {
+                            if (d.status == "Y")
+                            {
+                                discount_percent = d.discount_percent;
+                            }
+                        }
+
+
+                        //把廠商的名稱變成list（但是全部一樣，所以用for跑）
+                        for (int i = 1; i <= p_list.Count(); i++)
+                        {
+                            vender_name.Add(vender);
+                            percent.Add(discount_percent);
                         }
                     }
-                    
-
-                    //把廠商的名稱變成list（但是全部一樣，所以用for跑）
-                    for(int i = 1; i <= p_list.Count(); i++){
-                        vender_name.Add(vender);
-                        percent.Add(discount_percent);
-                    }
-                    
+                    else { return RedirectToAction("Login", "User"); }
                     break;
 
                 default:
@@ -63,7 +69,7 @@ namespace MyEC.Controllers
 
                     ViewBag.is_vender_goods = false;
 
-                    foreach(var p in p_list){
+                    foreach (var p in p_list){
                         var v1 = db.User.Find(p.vendor_id);
                         vender = v1.name;
 
@@ -112,6 +118,7 @@ namespace MyEC.Controllers
 
                 ViewBag.v_name = name;
                 ViewBag.p_percent = percent;
+                ViewBag.b_id = Int32.Parse(Request.Cookies["MyCook"]["id"]);
             }
 
             return View(product);
@@ -120,10 +127,15 @@ namespace MyEC.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            int i = 1; //這邊會是cookies中的id（且是廠商這邊才能觸發）
-            ViewBag.v_id = i;
+            //這邊會是cookies中的id（且是廠商這邊才能觸發）
+            if (Request.Cookies["MyCook"]["type"] == "廠商")
+            {
+                int i = Int32.Parse(Request.Cookies["MyCook"]["id"]); 
+                ViewBag.v_id = i;
 
-            return View();
+                return View();
+            }
+            else { return RedirectToAction("Login", "User"); }
         }
 
         // POST: Product/Create
@@ -140,6 +152,9 @@ namespace MyEC.Controllers
                 var path = Path.Combine(Server.MapPath("~/Pic"), fileName);
                 pic.SaveAs(path);
 
+                //拿到檔名
+                product.pic_path = fileName;
+
 
                 db.Product.Add(product);
                 db.SaveChanges();
@@ -153,16 +168,21 @@ namespace MyEC.Controllers
         public ActionResult Edit(int? id)
         {
             //要有cookies判斷
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
-            if (product == null)
+            if (Int32.Parse(Request.Cookies["MyCook"]["id"]) == db.Product.Find(id).vendor_id)
             {
-                return HttpNotFound();
+                Product product = db.Product.Find(id);
+                if (product == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(product);
             }
-            return View(product);
+            else { return RedirectToAction("Login", "User"); }
         }
 
         // POST: Product/Edit/5
@@ -189,12 +209,17 @@ namespace MyEC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
-            if (product == null)
+
+            if (Int32.Parse(Request.Cookies["MyCook"]["id"]) == db.Product.Find(id).vendor_id)
             {
-                return HttpNotFound();
+                Product product = db.Product.Find(id);
+                if (product == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(product);
             }
-            return View(product);
+            else { return RedirectToAction("Login", "User"); }
         }
 
         // POST: Product/Delete/5

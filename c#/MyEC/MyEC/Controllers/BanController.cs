@@ -15,24 +15,38 @@ namespace MyEC.Controllers
         private my_ecEntities db = new my_ecEntities();
 
         // GET: Ban
-        public ActionResult Index()
+        public ActionResult Index(string q_name)
         {
             //要讓定cookies是管理者來可以看
             //if cookies == 管理者id
-            IEnumerable<Ban> ban_list = null;
-            ban_list = db.Ban.ToList();
 
-            List<String> ban_name = new List<String>();
+            if(Request.Cookies["MyCook"]["type"] == "管理者"){
 
-            foreach (var b in ban_list){
-                string name;
-                name = db.User.Find(b.user_id).name;
-                ban_name.Add(name);
+                IEnumerable<Ban> ban_list = null;
+
+                if (q_name == null) { ban_list = db.Ban.ToList(); }
+                else {
+                    IEnumerable<User> u = db.User.Where(ur => ur.name == q_name);
+                    foreach (var ur in u) { ban_list = db.Ban.Where(b => b.user_id == ur.user_id); }
+                }
+
+
+                List<String> ban_name = new List<String>();
+
+                foreach (var b in ban_list)
+                {
+                    string name;
+                    name = db.User.Find(b.user_id).name;
+                    ban_name.Add(name);
+                }
+
+                ViewBag.ban_name = ban_name;
+
+                return View(ban_list);
+            }else{
+                return RedirectToAction("Login", "User");
             }
 
-            ViewBag.ban_name = ban_name;
-
-            return View(ban_list);
         }
 
 
@@ -40,12 +54,18 @@ namespace MyEC.Controllers
         public ActionResult Create(int? id)
         {
             //if cookies == 管理者id  來執行
-            if(db.User.Find(id) != null){
-                ViewBag.ban_id = id;
-                return View();
-            }
+            if (Request.Cookies["MyCook"]["type"] == "管理者")
+            {
+                if (db.User.Find(id) != null)
+                {
+                    ViewBag.ban_id = id;
+                    return View();
+                }
 
-            return RedirectToAction("../User/Index");
+                return RedirectToAction("../User/Index");
+            }
+            else { return RedirectToAction("Login", "User"); }
+            
         }
 
         // POST: Ban/Create
@@ -69,16 +89,20 @@ namespace MyEC.Controllers
         public ActionResult Edit(int? id)
         {
             //要cookies是使用者
-            if (id == null)
+            if (Request.Cookies["MyCook"]["type"] == "管理者")
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Ban ban = db.Ban.Find(id);
+                if (ban == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(ban);
             }
-            Ban ban = db.Ban.Find(id);
-            if (ban == null)
-            {
-                return HttpNotFound();
-            }
-            return View(ban);
+            else { return RedirectToAction("Login", "User"); }
         }
 
         // POST: Ban/Edit/5
@@ -101,16 +125,20 @@ namespace MyEC.Controllers
         public ActionResult Delete(int? id)
         {
             //要cookies是使用者
-            if (id == null)
+            if (Request.Cookies["MyCook"]["type"] == "管理者")
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Ban ban = db.Ban.Find(id);
+                if (ban == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(ban);
             }
-            Ban ban = db.Ban.Find(id);
-            if (ban == null)
-            {
-                return HttpNotFound();
-            }
-            return View(ban);
+            else { return RedirectToAction("Login", "User"); }
         }
 
         // POST: Ban/Delete/5

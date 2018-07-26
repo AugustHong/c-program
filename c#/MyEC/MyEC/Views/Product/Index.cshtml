@@ -5,8 +5,15 @@
 }
 
 <h2>商品列表</h2>
-
-<form action="Index" method="get">
+@if (ViewBag.is_vender_goods)
+{
+    <p>@Html.ActionLink("上架商品", "Create")</p>
+    <p>@Html.ActionLink("全館打折", "../Discount/Index")</p>
+    <p>@Html.ActionLink("銷售記錄", "../Sale/Index")</p>
+    <a href="../Product/Index?query=我的產品">我的產品</a>
+}
+<br />
+<form action="../Product/Index" method="get">
     請選擇你要的篩選條件：
     <select name="q_type">
         <option value="全部">全部</option>
@@ -20,13 +27,13 @@
     <input type="submit" value="送出" class="btn btn-default" />
 </form>
 
-@if (ViewBag.is_vender_goods){
-    <p>@Html.ActionLink("上架商品", "Create")</p>
-    <p>@Html.ActionLink("全館打折", "../Discount/Index")</p>
-}
+
 
 <table class="table">
     <tr>
+        <th>
+            圖片
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.pruduct_name)
         </th>
@@ -52,8 +59,13 @@
     </tr>
 
 @{ int count = 0;}
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
+        <td>
+            @{string path = "/pic/" + item.pic_path;}
+            <img src=@path style="width:30px;height:20px;"/>
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.pruduct_name)
         </td>
@@ -78,13 +90,14 @@
             @Html.DisplayFor(modelItem => item.description)
         </td>
         <td>
-            @if (ViewBag.is_vender_goods)
-            {
-                @Html.ActionLink("下架 ", "Delete", new { id = item.product_id })
-                @Html.ActionLink("修改", "Edit", new { id = item.product_id })
-            }
-            else {
-                @Html.ActionLink("查看內容", "Details", new { id = item.product_id })
+            @if (Request.Cookies.AllKeys.Contains("MyCook")){
+                if (ViewBag.is_vender_goods){
+                    @Html.ActionLink("下架 ", "Delete", new { id = item.product_id })
+                    @Html.ActionLink("修改", "Edit", new { id = item.product_id })
+                }
+                else {
+                    @Html.ActionLink("查看內容", "Details", new { id = item.product_id })
+                }
             }
         </td>
         @{ count += 1;}

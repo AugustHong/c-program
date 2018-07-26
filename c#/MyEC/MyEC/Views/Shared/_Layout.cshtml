@@ -20,12 +20,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MyEc", "Login", "User", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("MyEc", "Index", "Product", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Login", "User")</li>
                     <li>@Html.ActionLink("觀看商品", "Index", "Product")</li>
+
+                    @if (Request.Cookies.AllKeys.Contains("MyCook"))
+                    {
+                        <li>@Html.ActionLink("修改個人資料", "Edit", "User")</li>
+                        if (Request.Cookies["MyCook"]["type"] == "廠商")
+                        {
+                            <li><a href="../Product/Index?query=我的產品">我的產品</a></li>
+                        }
+
+                        if (Request.Cookies["MyCook"]["type"] == "顧客")
+                        {
+                            <li><a href="../Sale/Index">購買記錄</a></li>
+                        }
+                        
+                    }
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

@@ -5,6 +5,12 @@
 }
 
 <h2>封鎖名單</h2>
+@Html.ActionLink("回User列表", "../User/Index")
+
+<form action="../Ban/Index" method="get">
+    請輸入你要查詢的名稱<input type="text" id="q_name" name="q_name" />
+    <input type="submit" value="送出" class="btn-default" />
+</form>
 
 <table class="table">
     <tr>

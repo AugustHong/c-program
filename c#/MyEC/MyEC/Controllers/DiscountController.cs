@@ -18,12 +18,16 @@ namespace MyEC.Controllers
         public ActionResult Index()
         {
             //先確定cookies是廠商的
-            int i = 1;  //一樣先預設，等有寫cookies再說
+            if (Request.Cookies["MyCook"]["type"] == "廠商")
+            {
+                int i = Int32.Parse(Request.Cookies["MyCook"]["id"]);
 
-            ViewBag.v_id = i;
+                ViewBag.v_id = i;
 
-            //照理來說只會有一筆，因為vender_id是pk
-            return View(db.Discount.Where(d => d.vender_id == i).ToList());
+                //照理來說只會有一筆，因為vender_id是pk
+                return View(db.Discount.Where(d => d.vender_id == i).ToList());
+            }
+            else { return RedirectToAction("Login", "User"); }
         }
 
 
