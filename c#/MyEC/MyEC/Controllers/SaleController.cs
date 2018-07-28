@@ -19,7 +19,7 @@ namespace MyEC.Controllers
         {
             //先判斷cookies是廠商還是顧客
             //再用 cookies 的 id 來列出資料
-            IEnumerable<Sale> Sale_list = db.Sale.Where(sa => false);
+            IQueryable<Sale> Sale_list;
             List<String> buyer_name = new List<String>();  //購買者名稱
             List<String> product_name = new List<String>(); //產品名稱
             List<String> vender_name = new List<String>(); //廠商名稱
@@ -34,17 +34,17 @@ namespace MyEC.Controllers
                     case "廠商":
                         //如果是廠商
                         //先找出所以是此廠商的商品，再把一個個串上去
-                        IEnumerable<Product> p = db.Product.Where(pro => pro.vendor_id == i);
+                        //IEnumerable<Product> p = db.Product.Where(pro => pro.vendor_id == i);
 
-                        foreach(var pd in p)
-                        {
-                            Sale_list.Concat(db.Sale.Where(s => s.product_id == pd.product_id));
-                        }
+                        //foreach (var pd in p)
+                        //{
+                        //    Sale_list.Concat(db.Sale.Where(s => s.product_id == pd.product_id));
+                        //}
 
-                        //Sale_list = from pd in db.Product
-                        //            join sa in db.Sale on pd.product_id equals sa.product_id
-                        //            where pd.vendor_id == i
-                        //            select sa;
+                        Sale_list = from pd in db.Product
+                                    join sa in db.Sale on pd.product_id equals sa.product_id
+                                    where pd.vendor_id == i
+                                    select sa;
 
 
                         ViewBag.u_type = true;  //true代表廠商
@@ -53,7 +53,7 @@ namespace MyEC.Controllers
 
                     default:
                         //如果是顧客（管理者也是一個顧客）
-                        Sale_list = db.Sale.Where(s => s.buyer_id == i).ToList();
+                        Sale_list = db.Sale.Where(s => s.buyer_id == i);
                         ViewBag.u_type = false;  //false代表顧客
 
                         break;
@@ -63,7 +63,7 @@ namespace MyEC.Controllers
                 if (year != null)
                 {
                     int y = Int32.Parse(year);
-                    Sale_list = Sale_list.Where(s => s.sale_date.Year == y).ToList();
+                    Sale_list = Sale_list.Where(s => s.sale_date.Year == y);
                 }
 
                 //把購買者名稱和產品名稱寫成list
@@ -169,13 +169,12 @@ namespace MyEC.Controllers
 
                 int j = Int32.Parse(Request.Cookies["MyCook"]["id"]);
 
-                IEnumerable<Sale> s_list = db.Sale.Where(s => true);
-                IEnumerable<Product> p = db.Product.Where(pro => pro.vendor_id == j);
+                IQueryable<Sale> s_list;
 
-                foreach (var pr in p)
-                {
-                    s_list.Concat(db.Sale.Where(s => s.product_id == pr.product_id));
-                }
+                s_list = from pd in db.Product
+                            join sa in db.Sale on pd.product_id equals sa.product_id
+                            where pd.vendor_id == j
+                            select sa;
 
                 if (year != null)
                 {
