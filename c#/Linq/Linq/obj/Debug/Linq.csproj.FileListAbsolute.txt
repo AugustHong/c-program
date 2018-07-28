@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\bin\Debug\Linq.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\bin\Debug\Linq.exe
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\bin\Debug\Linq.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\obj\Debug\Linq.exe
+C:\Users\偉德\Documents\c製作全集\c#\Linq\Linq\obj\Debug\Linq.pdb
