@@ -29,7 +29,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.price);
+            @Html.DisplayNameFor(model => model.price)
         </dt>
 
         <dd>
@@ -42,6 +42,7 @@
         </dt>
 
         <dd>
+            @{ int a = Model.amount;}
             @Html.DisplayFor(model => model.amount)
         </dd>
 
@@ -73,13 +74,25 @@
     <input type="number" name="sale_price" id="sale_price" value=@price  style="display:none;" />
     <input type="datetime" name="sale_date" id="sale_date"  style="display:none;" />
     <input type="text" name="goods_status" id="goods_status" value="待出貨" style="display:none;"/>
-    請輸入購買的數量：<input type="number" name="buy_amount" id="buy_amount" />
+    請輸入購買的數量：<input type="number" name="buy_amount" id="buy_amount" onchange="check();"/>
     <input type="submit" value="確定購買" class="btn btn-default" />
 </form>
+
+<p id="amount" style="display:none;">@a</p>
+<p id="total_price"></p>
 
 <script>
     var Today=new Date();
     document.getElementById('sale_date').value = Today.getFullYear() + "-" + (Today.getMonth() + 1) + "-" + Today.getDate();
+</script>
+
+<script>
+    function check() {
+        if (parseInt(document.getElementById('amount').innerHTML) < parseInt(document.getElementById('buy_amount').value)) {
+            document.getElementById('buy_amount').value = document.getElementById('amount').innerHTML;
+        }
+        document.getElementById('total_price').innerHTML = "總共為：" + (parseInt(document.getElementById('buy_amount').value) * parseInt(document.getElementById('sale_price').value)).toString() + "元";
+    }
 </script>
 
 

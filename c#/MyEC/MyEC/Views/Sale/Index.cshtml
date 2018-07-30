@@ -24,7 +24,7 @@
     <input type="submit" value="送出" class="btn btn-default" />
 </form>
 
-
+<p style="color:red;">日期中有黃底的代表是今天購買的喔</p>
 <table class="table">
     <tr>
         <th>
@@ -51,7 +51,10 @@
     </tr>
 @{ int count = 0;}
 @{ string status = "";}
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
+    string d = item.sale_date.ToString("yyyy-MM-dd");
+
     <tr>
         <td>
             @ViewBag.b_name[count]
@@ -62,10 +65,16 @@
         <td>
             @ViewBag.p_name[count]
         </td>
-        <td>
-            @{ string d = item.sale_date.ToString("yyyy-MM-dd");}
-            @d
-        </td>
+        @if (d == DateTime.Now.ToString("yyyy-MM-dd")){
+            <td style="background-color:yellow;">
+                @d
+            </td>
+        }else{
+            <td>
+                @d
+            </td>
+        }
+
         <td>
             @Html.DisplayFor(modelItem => item.sale_price)
         </td>
@@ -77,12 +86,13 @@
             @Html.DisplayFor(modelItem => item.buy_amount)
         </td>
         <td>
-            @if (ViewBag.u_type && status == "待出貨       "){
+            @if (ViewBag.u_type && status == "待出貨       ")
+            {
                 @Html.ActionLink("出貨", "Edit", new { id = item.sale_id })
             }
         </td>
         @{ count += 1;}
     </tr>
-}
+            }
 
 </table>

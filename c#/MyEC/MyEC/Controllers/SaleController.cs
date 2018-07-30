@@ -42,9 +42,10 @@ namespace MyEC.Controllers
                         //}
 
                         Sale_list = from pd in db.Product
-                                    join sa in db.Sale on pd.product_id equals sa.product_id
-                                    where pd.vendor_id == i
-                                    select sa;
+                                     join sa in db.Sale on pd.product_id equals sa.product_id
+                                     where pd.vendor_id == i
+                                     orderby sa.sale_date descending  //遞減排序（盡量不要再用.wher()這種，這個可以用於簡單的，但是要排序或者其他都會有問題）
+                                     select sa;
 
 
                         ViewBag.u_type = true;  //true代表廠商
@@ -53,7 +54,11 @@ namespace MyEC.Controllers
 
                     default:
                         //如果是顧客（管理者也是一個顧客）
-                        Sale_list = db.Sale.Where(s => s.buyer_id == i);
+                        Sale_list = from sa in db.Sale
+                                    where sa.buyer_id == i
+                                    orderby sa.sale_date descending
+                                    select sa;
+
                         ViewBag.u_type = false;  //false代表顧客
 
                         break;
@@ -66,14 +71,19 @@ namespace MyEC.Controllers
                     Sale_list = Sale_list.Where(s => s.sale_date.Year == y);
                 }
 
-                //把購買者名稱和產品名稱寫成list
-                foreach (var s in Sale_list)
-                {
-                    buyer_name.Add(db.User.Find(s.buyer_id).name);
-                    product_name.Add(db.Product.Find(s.product_id).pruduct_name);
-                    vender_name.Add(db.User.Find(db.Product.Find(s.product_id).vendor_id).name);
-                }
 
+                //把購買者名稱和產品名稱寫成list
+                if (Sale_list.Count() >= 1)
+                {
+
+                    foreach (var s in Sale_list)
+                    {
+                        buyer_name.Add(db.User.Find(s.buyer_id).name);
+                        product_name.Add(db.Product.Find(s.product_id).pruduct_name);
+                        vender_name.Add(db.User.Find(db.Product.Find(s.product_id).vendor_id).name);
+                    }
+                }
+                
                 ViewBag.b_name = buyer_name;
                 ViewBag.p_name = product_name;
                 ViewBag.v_name = vender_name;
@@ -187,10 +197,13 @@ namespace MyEC.Controllers
                     {
                         for (var i = 0; i <= 11; i++)
                         {
-                            IEnumerable<Sale> s_l = s_list.Where(s => s.sale_date.Month == m[i]);
+                            int mm = m[i];
+                            var s_l = s_list.Where(s => s.sale_date.Month == mm);
 
                             //相加
-                            if (s_l.Count() != 0) { month_r[i] = s_l.Sum(s => s.sale_price); }
+                            if (s_l.Count() != 0) {
+                                foreach(var s in s_l){month_r[i] += s.sale_price;}
+                            }
                         }
                     }
 
