@@ -15,16 +15,32 @@ namespace WebApplication1.Controllers
         private my_db1Entities db = new my_db1Entities();
 
         // GET: employees
-        public ActionResult Index(string re_name)
+        public ActionResult Index(string re_name, string page)
         {
-            if(re_name == null)
-            {
-                return View(db.employee.ToList());
+
+            IQueryable<employee> e;
+
+            if(re_name == null){
+                e = from em in db.employee
+                    orderby em.id ascending
+                    select em;
             }
-            else
-            {
-                return View(db.employee.Where(d => d.name == re_name).ToList());
-            }  
+            else{
+                e = from em in db.employee
+                    where em.name == re_name
+                    orderby em.id ascending
+                    select em;
+            }
+
+            //分頁（快速版）
+            int pagesize = 5;
+            int total_page = e.Count() % pagesize == 0 ? (e.Count() / pagesize) : (e.Count() / pagesize) + 1;
+
+            ViewBag.total_page = total_page;
+
+            int pa = page == null || Int32.Parse(page) <= 0 || Int32.Parse(page) > total_page ? 1 : Int32.Parse(page);
+
+            return View(e.Skip((pa - 1)*pagesize).Take(pagesize));
         }
 
         // GET: employees/Details/5

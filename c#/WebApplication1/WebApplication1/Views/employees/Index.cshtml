@@ -9,9 +9,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
     <title>Index</title>
 </head>
 <body>
+    <p id="total_page" style="display:none;">@ViewBag.total_page</p>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p><br />
@@ -81,5 +87,33 @@
     }
     
     </table>
+    <div class="container">
+        <ul class="pagination" id="pagination">
+        </ul>
+    </div>
+
+        <script>
+            var data = "";
+            var path = document.URL;
+
+            //如果已有page參數，要特別拿掉
+            if (path.search("page=") >= 0) {
+                var p = path.indexOf("page=");
+                path = path.substr(0, p -1);  //start, end 保留start到end的字串
+            }
+
+            if (path.search("re_name") < 0) {
+                path += "?page=";  //<0代表沒有這個符號（所以沒？代表還沒加入任何參數）
+            } else {
+                path += "&page=";  //已有其他參數，所以要加一&
+            }
+
+            for (var i = 1; i <= parseInt(document.getElementById('total_page').innerHTML) ; i++){
+                data += "<li class='page-item'><a class='page-link' href='" + path + i.toString() +"'>" + i.toString() + "</a></li>";                
+            }
+            
+            $("#pagination").append(data);
+            
+        </script>
 </body>
 </html>
