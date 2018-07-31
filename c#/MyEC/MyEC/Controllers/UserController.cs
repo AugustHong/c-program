@@ -143,7 +143,11 @@ namespace MyEC.Controllers
         //GET  一般login 畫面
         public ActionResult Login()
         {
-            return View();
+            if (Request.Cookies.AllKeys.Contains("MyCook")) {
+                return RedirectToAction("Index", "Product");
+            }
+            else { return View(); }
+                
         }
 
         //登入（用post傳帳密進來）

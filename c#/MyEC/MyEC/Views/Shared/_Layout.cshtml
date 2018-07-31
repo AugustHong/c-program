@@ -8,7 +8,7 @@
 
     <style>
         .footer {
-            position: fixed;
+            position:fixed;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -51,7 +51,12 @@
                         {
                             <li><a href="../Sale/Index">購買記錄</a></li>
                         }
-                        
+
+                        if (Request.Cookies["MyCook"]["type"] == "管理者")
+                        {
+                            <li><a href="../User/Index">User列表</a></li>
+                        }
+
                     }
 
 
@@ -60,14 +65,23 @@
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <center><p>&copy; @DateTime.Now.ToString("yyyy-MM-dd") - MyEC</p></center>
-            <center><p>聯絡地址：火星市地球村50號</p></center>
-            <center><p>聯絡電話：88888888</p></center>
-        </footer>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+
+    <div class="footer">
+        <p>&copy; @DateTime.Now.ToString("yyyy-MM-dd") - MyEC</p>
+        <p>聯絡地址：火星市地球村50號</p>
+        <p>聯絡電話：88888888</p>
     </div>
 
     
