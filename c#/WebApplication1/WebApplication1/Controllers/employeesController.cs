@@ -30,6 +30,8 @@ namespace WebApplication1.Controllers
                     where em.name == re_name
                     orderby em.id ascending
                     select em;
+
+                ViewBag.re_name = re_name;
             }
 
             //分頁（快速版）

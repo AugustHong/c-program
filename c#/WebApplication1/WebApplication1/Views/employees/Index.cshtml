@@ -87,12 +87,21 @@
     }
     
     </table>
+
     <div class="container">
         <ul class="pagination" id="pagination">
+            @for (int i = 1; i <= ViewBag.total_page; i++){
+                if (ViewBag.re_name == null){
+                    <li class='page-item'>@Html.ActionLink(i.ToString(), "../employees/Index", new { page = i }, new { @class = "page-link" })</li>
+                }
+                else {
+                    <li class='page-item'>@Html.ActionLink(i.ToString(), "../employees/Index", new { re_name = ViewBag.re_name, page = i}, new { @class = "page-link" })</li> 
+                }
+            }
         </ul>
     </div>
 
-        <script>
+        @*<script>
             var data = "";
             var path = document.URL;
 
@@ -114,6 +123,6 @@
             
             $("#pagination").append(data);
             
-        </script>
+        </script>*@
 </body>
 </html>
