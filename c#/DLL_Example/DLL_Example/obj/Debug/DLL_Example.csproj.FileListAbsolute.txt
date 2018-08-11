@@ -3,3 +3,4 @@ C:\Users\偉德\Documents\c製作全集\c#\DLL_Example\DLL_Example\bin\Debug\DLL
 C:\Users\偉德\Documents\c製作全集\c#\DLL_Example\DLL_Example\obj\Debug\DLL_Example.csprojResolveAssemblyReference.cache
 C:\Users\偉德\Documents\c製作全集\c#\DLL_Example\DLL_Example\obj\Debug\DLL_Example.dll
 C:\Users\偉德\Documents\c製作全集\c#\DLL_Example\DLL_Example\obj\Debug\DLL_Example.pdb
+C:\Users\偉德\Documents\c製作全集\c#\DLL_Example\DLL_Example\bin\Debug\DLL_Example.XML

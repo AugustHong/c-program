@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 namespace DLL_Example
 {
     //要public別人才能用
+    /// <summary>
+    /// Order
+    /// </summary>
     public class Order{
 
+        /// <summary>
+        /// 顯示稅金
+        /// </summary>
+        /// <param name="price">總价</param>
+        /// <returns></returns>
         public int GetTax(int price){
             //營業稅是直接進位的
             int tax = 0;

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DLL_Example</name>
+    </assembly>
+    <members>
+        <member name="T:DLL_Example.Order">
+            <summary>
+            Order
+            </summary>
+        </member>
+        <member name="M:DLL_Example.Order.GetTax(System.Int32)">
+            <summary>
+            顯示稅金
+            </summary>
+            <param name="price">總价</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
