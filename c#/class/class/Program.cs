@@ -119,6 +119,9 @@ namespace @class
             return x + y + z;
         }
 
+        //靜態的mathod，所以不用new就可以用
+        public static int doAdd(int x, int y, int z, int w) { return x + y + z + w; }
+
         //mathod只能傳一值，但可用out和ref
         public bool TrySave(int id, ref string errMessage){
             if(id < 0) { errMessage = "id <0"; return false; }
@@ -220,6 +223,11 @@ namespace @class
             }catch (Exception ex){
                 Console.WriteLine(ex);
             }
+
+            Console.WriteLine("____________________________________________________________________");
+
+            //靜態的方法，所以不用new
+            Console.WriteLine(Member.doAdd(2, 4, 8, 16));
 
             Console.Read();
 
