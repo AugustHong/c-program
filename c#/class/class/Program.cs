@@ -70,11 +70,53 @@ namespace @class
         }
     }
 
-    //public override void Eat() 可以寫在 Student 和  Teacher中，此為覆寫，就是改掉寫成自己的function
-    //原理都懂就不實作了
 
+    class Member
+    {
+        //field = 欄位
+        public string Name; //姓名
+        private string _idCard; //身份證字號
 
-    class Program
+        public int id { get; set; }  //property沒自訂
+
+        public string IdCard
+        {    //property自訂（裡面還可再多加）
+            get { return _idCard; }
+            set { _idCard = value; }
+        }
+
+        private string _phone;
+        public string phone
+        {  //property自訂
+            get { return _phone; }
+            set { _phone = "+886 " + value; }
+        }
+
+        public DateTime Birthday { get; set; }
+        public int age { get { return DateTime.Today.Year - Birthday.Year; } }
+
+        //mathod（打3個/可以打詳細註解）
+        public void GetAllData()
+        {
+            Console.WriteLine("id={0} Name={1} IdCard={2} phone={3} birthday={4} age={5}", this.id, this.Name, this.IdCard, this.phone, this.Birthday.ToString("yyyy-MM-dd"), this.age);
+        }
+
+        /// <summary>
+        /// 讓x和y相加
+        /// </summary>
+        /// <param name="x">第一個數字</param>
+        /// <param name="y">第二個數字</param>
+        /// <returns></returns>
+        public int doAdd(int x, int y)
+        {
+            return x + y;
+        }
+
+        //public override void Eat() 可以寫在 Student 和  Teacher中，此為覆寫，就是改掉寫成自己的function
+        //原理都懂就不實作了
+    }
+
+        class Program
     {
         static void Main(string[] args){
 
@@ -132,6 +174,18 @@ namespace @class
             Animal a1 = new Animal();
             a1.Height = 50;
             Console.WriteLine(a1.Height);
+
+
+            Console.WriteLine("_____________________________________________________________________________");
+            var member1 = new Member();
+            member1.Name = "Jack";
+            member1.id = 1;
+            member1.IdCard = "A123456789";
+            member1.phone = "12345678";
+            member1.Birthday = new DateTime(1988, 1, 1);
+            member1.GetAllData();
+
+            Console.WriteLine(member1.doAdd(3, 5));
 
             Console.Read();
 
