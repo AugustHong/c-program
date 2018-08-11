@@ -27,6 +27,9 @@ namespace @class
         }
     }
 
+    //public override void Eat() 可以寫在 Student 和  Teacher中，此為覆寫，就是改掉寫成自己的function
+    //原理都懂就不實作了
+
     class Student : People{  //繼承（學生也是人，所以學生會繼承人會做的事）
                             
         public int ID { get; set; }  //Properties的做法（而Property就是會可以有get() 和 set()函數去設定和取值）
@@ -112,8 +115,24 @@ namespace @class
             return x + y;
         }
 
-        //public override void Eat() 可以寫在 Student 和  Teacher中，此為覆寫，就是改掉寫成自己的function
-        //原理都懂就不實作了
+        public int doAdd(int x, int y, int z){
+            return x + y + z;
+        }
+
+        //mathod只能傳一值，但可用out和ref
+        public bool TrySave(int id, ref string errMessage){
+            if(id < 0) { errMessage = "id <0"; return false; }
+            return true;
+        }
+
+        public void Save2(int id) {
+            if(id < 0) { throw new Exception("id<0"); }
+            //用這個   throw new ArgumentOutOfRangeException("id")   更好
+        }
+
+        //public override string ToString() 覆寫原有的function
+
+
     }
 
         class Program
@@ -186,6 +205,21 @@ namespace @class
             member1.GetAllData();
 
             Console.WriteLine(member1.doAdd(3, 5));
+
+            Console.WriteLine("______________________________________________________________________");
+
+            string errMessage = "";
+            bool result = member1.TrySave(-1, ref errMessage);
+            Console.Write("{0} => ", result);
+            if (!result) { Console.WriteLine(errMessage); }
+
+            Console.WriteLine("___________________________________________________________________");
+
+            try{
+                member1.Save2(-1);
+            }catch (Exception ex){
+                Console.WriteLine(ex);
+            }
 
             Console.Read();
 
