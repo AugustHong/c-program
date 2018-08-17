@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="geoModelStoreContainer" CdmEntityContainer="geoEntities">
+    <EntitySetMapping Name="geo_test2">
+      <EntityTypeMapping TypeName="geoModel.geo_test2">
+        <MappingFragment StoreEntitySet="geo_test2">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="graph" ColumnName="graph" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

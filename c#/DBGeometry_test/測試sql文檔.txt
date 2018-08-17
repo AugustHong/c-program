@@ -1,0 +1,34 @@
+DECLARE @g Geometry;   /*建議用Geometry*/
+DECLARE @h Geometry;  
+
+select @g = graph from geo_test2 where id=1;
+select @h = graph from geo_test2 where id =2;
+
+/*SET @g = Geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
+ SET @h = Geometry::STGeomFromText('POLYGON((-125.368 30.663, -110.338 30.639, -110.338 50.668, -125.368 50.668, -125.368 30.663))', 4326);*/
+
+SELECT @g.STEquals(@h) as equal; 
+select @g.STOverlaps(@h) as overlaps;
+select @g.STDisjoint(@h) as disjoint;
+select @g.STIntersects(@h) as intersects;
+select @g.STIntersection(@h).STAsText() as intersection;
+select @g.STContains(@h) as contain;
+select @h.STContains(@g) as contain2;
+select @g.STWithin(@h) as with_in;
+
+select @g.STAsText() as g;
+select @h.STAsText() as h;
+
+________________________________________________________________________________________________________________
+
+新增
+
+INSERT INTO geo_test2 (graph)  
+VALUES (Geometry::STGeomFromText('POLYGON((-122.358 47.653 , -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));
+
+//這是新增多邊型的（所以他一定會叫你輸入4個點=>（頭尾相同）） -> 所以要三角型的話，就再多一個點（和頭尾相同的那個值一樣就行）
+
+________________________________________________________________________________________________________________
+全部資料
+select * from geo_test2;
+select graph.STAsText() from geo_test2;
