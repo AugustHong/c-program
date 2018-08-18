@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\bin\Debug\advanced_class.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\bin\Debug\advanced_class.exe
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\bin\Debug\advanced_class.pdb
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\obj\Debug\advanced_class.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\obj\Debug\advanced_class.exe
+C:\Users\偉德\Documents\c製作全集\c#\advanced_class\advanced_class\obj\Debug\advanced_class.pdb
