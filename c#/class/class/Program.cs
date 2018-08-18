@@ -22,6 +22,7 @@ namespace @class
             _name = name;
         }
 
+        //多半父類別的mathod都要加virtual，好讓子類別覆寫
         public void Eat(string food){   //這邊會要求一定要有回傳值，選擇void就是沒回傳值
             Console.WriteLine("{0} eat {1}", _name, food);
         }
@@ -45,6 +46,13 @@ namespace @class
         }
 
         public Student() { }
+
+
+        //跟其父類的函式相同名稱，這時用Student執行Eat時會執行這個（但當然可以用override來覆寫它，但是父類別的那個mathod要有virtual才行，否則會錯）
+        public void Eat(string food)
+        {   //這邊會要求一定要有回傳值，選擇void就是沒回傳值
+            Console.WriteLine("學生{0} 正在eat {1}", _name, food);
+        }
     }
 
     class Teacher : People{
@@ -133,12 +141,12 @@ namespace @class
             //用這個   throw new ArgumentOutOfRangeException("id")   更好
         }
 
-        //public override string ToString() 覆寫原有的function
+        //public override string ToString() 覆寫原有的function  ，但是父類別的那個mathod要有virtual才行，否則會錯
 
 
     }
 
-        class Program
+    class Program
     {
         static void Main(string[] args){
 
@@ -200,6 +208,7 @@ namespace @class
             foreach(People person in p)
             {
                 Console.WriteLine(person._name);
+                //person.Eat("rice");  如果沒用覆寫，但有寫Eat()，則還是執行People的Eat()；如有覆寫，則會執行他自己的Eat()
             }
 
             Console.WriteLine("_____________________________________________________________________");
