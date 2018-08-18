@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\bin\Debug\delegate_test.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\bin\Debug\delegate_test.exe
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\bin\Debug\delegate_test.pdb
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\obj\Debug\delegate_test.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\obj\Debug\delegate_test.exe
+C:\Users\偉德\Documents\c製作全集\c#\delegate_test\delegate_test\obj\Debug\delegate_test.pdb
