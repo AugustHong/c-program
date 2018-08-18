@@ -191,6 +191,17 @@ namespace @class
             t1.Teach(s1);
             t2.Teach(s2);
 
+
+            Console.WriteLine("_____________________________________________________________________");
+            //高階方法（繼承），如果要列出以上的name，則把他們的型態都化為父類別
+
+            People[] p = { p1, p2, s1, s2, t1, t2};  //因為他們都繼承People，所以可以合成People，但是裡面的變數和方法也只能用People的（因為型態是People）
+            
+            foreach(People person in p)
+            {
+                Console.WriteLine(person._name);
+            }
+
             Console.WriteLine("_____________________________________________________________________");
 
             Animal a1 = new Animal();
