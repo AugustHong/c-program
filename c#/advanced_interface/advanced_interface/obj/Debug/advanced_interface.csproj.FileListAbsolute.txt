@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\bin\Debug\advanced_interface.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\bin\Debug\advanced_interface.exe
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\bin\Debug\advanced_interface.pdb
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\obj\Debug\advanced_interface.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\obj\Debug\advanced_interface.exe
+C:\Users\偉德\Documents\c製作全集\c#\advanced_interface\advanced_interface\obj\Debug\advanced_interface.pdb
