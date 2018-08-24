@@ -1,0 +1,1 @@
+C:\Users\偉德\Documents\c製作全集\c#\ExportExcel\ExportExcel\bin\Debug\ExportExcel.exe.config
