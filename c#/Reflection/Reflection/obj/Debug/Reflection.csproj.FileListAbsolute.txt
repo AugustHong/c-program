@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\bin\Debug\Reflection.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\bin\Debug\Reflection.exe
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\bin\Debug\Reflection.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\obj\Debug\Reflection.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\obj\Debug\Reflection.exe
+C:\Users\偉德\Documents\c製作全集\c#\Reflection\Reflection\obj\Debug\Reflection.pdb
