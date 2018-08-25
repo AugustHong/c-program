@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -236,7 +237,101 @@ namespace advanced
             // List<Score> s = new List<Score>;
             // s.sum(student_score));
 
+            Console.WriteLine("-------------------------------------------------------------------");
+
+            //另種排序在第195行
+            int[] arr = { 8, 25, 99, 84, 65, 21, 75, 35, 14, 84 };
+            Array.Sort(arr);  //把arr排完
+            foreach (var item in arr) { Console.Write("{0} ",item); }
+
+            Console.WriteLine("");
+
+            string[] arr2 = { "aa", "zz", "bb" };
+            Array.Sort(arr2);
+            foreach (var item in arr2) { Console.Write("{0} ", item); }
+
+            Console.WriteLine("");
+
+            DateTime[] arr3 = { new DateTime(1905, 05, 04), new DateTime(1705, 1, 1) };
+            Array.Sort(arr3);
+            foreach (var item in arr3) { Console.Write("{0} ", item); }
+
+            Console.WriteLine("-------------------------------------------------------------------");
+
+            Member[] arr4 = new Member[] {
+                new Member { id=1, name="jack", birth=new DateTime(1705,1,1)},
+                new Member { id=2, name="hello", birth=new DateTime(1708,1,1)},
+                new Member { id=3, name="back", birth=new DateTime(1605,1,1)}
+            };
+
+            //以下2個都是錯的（會告訴你必需要實作IComparable)
+            //Array.Sort(arr4);
+            //Array.Sort<Member>(arr4);
+            //去讓我們的Member class去實作IComparable
+
+            Array.Sort(arr4);
+            //或者不想實說則打  arr4.OrderBy(x => x.birth); 再用foreach跑完他
+
+            foreach(Member m in arr4) { Console.WriteLine(m.ToString()) ; }
+
+            Console.WriteLine("-----------------------------------------------------------");
+
+            //想做活的（傳入啥就排啥），下面新增class
+            Member[] arr5 = new Member[] {
+                new Member { id=1, name="jack", birth=new DateTime(1705,1,1)},
+                new Member { id=2, name="hello", birth=new DateTime(1708,1,1)},
+                new Member { id=3, name="back", birth=new DateTime(1605,1,1)}
+            };
+
+            soryByName xxx = new soryByName();
+            Array.Sort(arr5, xxx); //用這個物件的來排
+
+            foreach (Member m in arr5) { Console.WriteLine(m.ToString()); }
+
             Console.Read();
+        }
+    }
+
+    public class sortByID : IComparer<Member> //不是IComparerable  
+        //平常是寫IComparer，下面就會是Compare(Object x, Object y)還要做轉型
+        //如果不想再多做轉型就打 IComparer<Member>下面就會是Compare(Member x, Member y)
+    {
+        public int Compare(Member x, Member y)
+        {
+            return x.id.CompareTo(y.id);
+        }
+    }
+
+    public class soryByName : IComparer<Member>{
+        public int Compare(Member x, Member y){
+            return x.name.CompareTo(y.name);
+        }
+    }
+
+    //Member class
+    public class Member:IComparable{
+        public int id { get; set; }
+        public string name { get; set; }
+        public DateTime birth { get; set; }
+
+        public override string ToString(){
+            return $"id = {id}, name = {name}, birth = {birth : yyyy/MM/dd}";
+        }
+
+        //加入IComparable後的第一個選項會自動幫你產生
+        public int CompareTo(object obj)
+        {
+            Member x = this; //自已
+            Member y = obj as Member; //下一個轉成Member
+
+            int z = x.birth > y.birth ? 99 : x.birth == y.birth ? 0 : -100;
+            // >0 是大於  =0等於 <0小於
+
+            //或者直叫呼叫int string datetime(都有實作IComparable，所以一定有CompareTo方法)
+            //int result = x.id.CompareTo(y.id);
+            //如果想要遞減（x和y互換就好了）
+            //int result = y.id.CompareTo(x.id);
+            return z;
         }
     }
 }
