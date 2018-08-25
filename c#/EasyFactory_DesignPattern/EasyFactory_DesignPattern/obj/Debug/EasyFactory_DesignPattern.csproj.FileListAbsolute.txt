@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\bin\Debug\EasyFactory_DesignPattern.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\bin\Debug\EasyFactory_DesignPattern.exe
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\bin\Debug\EasyFactory_DesignPattern.pdb
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\obj\Debug\EasyFactory_DesignPattern.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\obj\Debug\EasyFactory_DesignPattern.exe
+C:\Users\偉德\Documents\c製作全集\c#\EasyFactory_DesignPattern\EasyFactory_DesignPattern\obj\Debug\EasyFactory_DesignPattern.pdb
