@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\bin\Debug\Chain_of_Responsibility_Design_Pattern.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\bin\Debug\Chain_of_Responsibility_Design_Pattern.exe
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\bin\Debug\Chain_of_Responsibility_Design_Pattern.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\obj\Debug\Chain_of_Responsibility_Design_Pattern.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\obj\Debug\Chain_of_Responsibility_Design_Pattern.exe
+C:\Users\偉德\Documents\c製作全集\c#\Chain_of_Responsibility_Design_Pattern\Chain_of_Responsibility_Design_Pattern\obj\Debug\Chain_of_Responsibility_Design_Pattern.pdb
