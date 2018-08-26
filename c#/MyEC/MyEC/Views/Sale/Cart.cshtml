@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MyEC.Sale>
+
+@{
+    ViewBag.Title = "Cart";
+
+    List<Sale> c = HttpContext.Current.Session["Cart"] as List<Sale>;
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            廠商
+        </th>
+        <th>
+            產品名稱
+        </th>
+        <th>
+            銷售金額
+        </th>
+        <th>
+            購買數量
+        </th>
+        <th>
+            總價
+        </th>
+        <th>
+            操作
+        </th>
+    </tr>
+
+    @if (c.Count() == 0)
+    {
+        <tr><td colspan="6">您還尚未購買任何產品</td></tr>
+
+    }
+    else
+    {
+        int count = 0;
+        foreach (var a in c)
+        {
+            <tr>
+                <td>@ViewBag.vender[count]</td>
+                <td>@ViewBag.p_name[count]</td>
+                <td>@a.sale_price</td>
+                <td>@a.buy_amount</td>
+                @{ decimal b = a.sale_price * a.buy_amount;}
+                <td>@b</td>
+                <td>
+                    @Html.ActionLink("取消", "../Sale/Cart", new { p_id = a.product_id })
+                </td>
+                @{ count += 1;}
+            </tr>
+                        }
+                    }
+
+</table>
+
+@if (c.Count() != 0)
+{
+    <button>@Html.ActionLink("結帳去", "../Sale/Create")</button>
+}

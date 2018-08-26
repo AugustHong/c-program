@@ -44,17 +44,19 @@
                         <li>@Html.ActionLink("修改個人資料", "Edit", "User")</li>
                         if (Request.Cookies["MyCook"]["type"] == "廠商")
                         {
-                            <li><a href="../Product/Index?query=我的產品">我的產品</a></li>
+                            <li><a href="../../Product/Index?query=我的產品">我的產品</a></li>
                         }
 
                         if (Request.Cookies["MyCook"]["type"] == "顧客")
                         {
-                            <li><a href="../Sale/Index">購買記錄</a></li>
+                            <li><a href="../../Sale/Index">購買記錄</a></li>
+                            <li><a href="../../Sale/Cart">購物車</a></li>
                         }
 
                         if (Request.Cookies["MyCook"]["type"] == "管理者")
                         {
-                            <li><a href="../User/Index">User列表</a></li>
+                            <li><a href="../../User/Index">User列表</a></li>
+                            <li><a href="../../Sale/Cart">購物車</a></li>
                         }
 
                     }

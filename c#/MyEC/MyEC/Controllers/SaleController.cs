@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MyEC;
+using System.Web.Services;
 
 namespace MyEC.Controllers
 {
@@ -94,29 +95,35 @@ namespace MyEC.Controllers
         }
 
 
-        // POST: Sale/Create
+        // Get: Sale/Create
         // 若要免於過量張貼攻擊，請啟用想要繫結的特定屬性，如需
         // 詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkId=317598。
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "sale_id,buyer_id,product_id,sale_date,sale_price,goods_status,buy_amount")] Sale sale)
+        public ActionResult Create()
         {
-            if (ModelState.IsValid)
+            if (System.Web.HttpContext.Current != null)
             {
-                //新增sale
-                db.Sale.Add(sale);
-                db.SaveChanges();
+                if (System.Web.HttpContext.Current.Session["Cart"] != null)
+                {
+                    List<Sale> c = System.Web.HttpContext.Current.Session["Cart"] as List<Sale>;
 
-                //要把product 的amount修改一下
-                Product p = db.Product.Find(sale.product_id);
-                p.amount = p.amount - sale.buy_amount;
-                db.Entry(p).State = EntityState.Modified;
-                db.SaveChanges();
+                    for (var i = 0; i < c.Count(); i++)
+                    {
+                        //新增sale
+                        db.Sale.Add(c[i]);
+                        db.SaveChanges();
 
-                return RedirectToAction("Index");
+                        //要把product 的amount修改一下
+                        Product p = db.Product.Find(c[i].product_id);
+                        p.amount = p.amount - c[i].buy_amount;
+                        db.Entry(p).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+
+                    return RedirectToAction("Index");
+                }
+                else { return RedirectToAction("Index", "Product"); }
             }
-
-            return View(sale);
+            else { return RedirectToAction("Index", "Product"); }
         }
 
         // GET: Sale/Edit/5
@@ -182,9 +189,9 @@ namespace MyEC.Controllers
                 IQueryable<Sale> s_list;
 
                 s_list = from pd in db.Product
-                            join sa in db.Sale on pd.product_id equals sa.product_id
-                            where pd.vendor_id == j
-                            select sa;
+                         join sa in db.Sale on pd.product_id equals sa.product_id
+                         where pd.vendor_id == j
+                         select sa;
 
                 if (year != null)
                 {
@@ -201,8 +208,9 @@ namespace MyEC.Controllers
                             var s_l = s_list.Where(s => s.sale_date.Month == mm);
 
                             //相加
-                            if (s_l.Count() != 0) {
-                                foreach(var s in s_l){month_r[i] += s.sale_price;}
+                            if (s_l.Count() != 0)
+                            {
+                                foreach (var s in s_l) { month_r[i] += s.sale_price; }
                             }
                         }
                     }
@@ -217,6 +225,104 @@ namespace MyEC.Controllers
                 return View();
             }
             else { return RedirectToAction("Login", "User"); }
+        }
+
+
+        [WebMethod(EnableSession = true)] //啟用session
+        public ActionResult Cart(int? p_id)
+        {
+            if (System.Web.HttpContext.Current != null)
+            {
+                if (System.Web.HttpContext.Current.Session["Cart"] == null)
+                {
+                    List<Sale> c = new List<Sale>();
+                    System.Web.HttpContext.Current.Session["Cart"] = c;
+                }
+                else
+                {
+                    //一般新建
+                    if (p_id == null)
+                    {
+                        List<string> vender = new List<string>();
+                        List<string> p_name = new List<string>();
+
+                        List<Sale> c = System.Web.HttpContext.Current.Session["Cart"] as List<Sale>;
+
+                        for (var i = 0; i < c.Count(); i++)
+                        {
+                            vender.Add(db.User.Find(db.Product.Find(c[i].product_id).vendor_id).name);
+                            p_name.Add(db.Product.Find(c[i].product_id).pruduct_name);
+                        }
+
+                        ViewBag.vender = vender;
+                        ViewBag.p_name = p_name;
+                    }
+                    else
+                    {
+                        //刪除資料
+                        List<Sale> c = System.Web.HttpContext.Current.Session["Cart"] as List<Sale>;
+
+                        for (var i = 0; i < c.Count(); i++)
+                        {
+                            if (c[i].product_id == p_id)
+                            {
+                                c.Remove(c[i]);
+                                break;
+                            }
+                        }
+
+                        System.Web.HttpContext.Current.Session["Cart"] = c;
+
+                        return RedirectToAction("Cart", "Sale");
+                    }
+                }
+            }
+            else { return RedirectToAction("Index", "Product"); }
+
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [WebMethod(EnableSession = true)] //啟用session
+        public ActionResult Cart([Bind(Include = "sale_id,buyer_id,product_id,sale_date,sale_price,goods_status,buy_amount")] Sale sale)
+        {
+            if (System.Web.HttpContext.Current != null)
+            {
+                if (System.Web.HttpContext.Current.Session["Cart"] == null)
+                {
+                    List<Sale> c = new List<Sale>();
+                    c.Add(sale);
+                    System.Web.HttpContext.Current.Session["Cart"] = c;
+                }
+                else {
+                    List<Sale> c = System.Web.HttpContext.Current.Session["Cart"] as List<Sale>;
+
+                    bool a = false;//判斷是不是已在商品列表中
+
+                    for (var i = 0; i < c.Count(); i++)
+                    {
+                        if (c[i].product_id == sale.product_id)
+                        {
+                            c[i].buy_amount += sale.buy_amount;
+                            System.Web.HttpContext.Current.Session["Cart"] = c;
+                            a = true;
+                            break;
+                        }
+                    }
+
+                    if (a == false)
+                    {
+                        c.Add(sale);
+                        System.Web.HttpContext.Current.Session["Cart"] = c;
+                    }
+
+                }
+            }
+            else { return RedirectToAction("Index", "Product"); }
+
+            return RedirectToAction("Index", "Product");
         }
     }
 }
