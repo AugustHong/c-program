@@ -28,7 +28,7 @@
             操作
         </th>
     </tr>
-
+    @{ decimal total = 0;}
     @if (c.Count() == 0)
     {
         <tr><td colspan="6">您還尚未購買任何產品</td></tr>
@@ -45,6 +45,7 @@
                 <td>@a.sale_price</td>
                 <td>@a.buy_amount</td>
                 @{ decimal b = a.sale_price * a.buy_amount;}
+                @{ total += b;}
                 <td>@b</td>
                 <td>
                     @Html.ActionLink("取消", "../Sale/Cart", new { p_id = a.product_id })
@@ -58,5 +59,6 @@
 
 @if (c.Count() != 0)
 {
+    <h3>總金額：@total</h3>
     <button>@Html.ActionLink("結帳去", "../Sale/Create")</button>
 }

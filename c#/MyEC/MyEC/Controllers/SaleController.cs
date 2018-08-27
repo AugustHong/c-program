@@ -117,7 +117,12 @@ namespace MyEC.Controllers
                         p.amount = p.amount - c[i].buy_amount;
                         db.Entry(p).State = EntityState.Modified;
                         db.SaveChanges();
+
+                        //加完就要清空囉
+                        c.Remove(c[i]);
                     }
+
+                    System.Web.HttpContext.Current.Session["Cart"] = c;
 
                     return RedirectToAction("Index");
                 }
