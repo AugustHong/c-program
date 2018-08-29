@@ -288,7 +288,31 @@ namespace advanced
 
             foreach (Member m in arr5) { Console.WriteLine(m.ToString()); }
 
+
+            Console.WriteLine("------------------------------------------------------------------");
+
+            /*
+            linq的多重篩選寫法（判斷null "" 一起）
+            function void filter(string name, string city, string id){
+                
+                var result = from data in DBdata
+                             where name==""? true: data.name == name  && city==""? true: data.city == city && id==""? true: data.id == id
+                             select data;
+            }    
+            //因為where那邊出來的會是true或false，所以如果它沒輸入篩選條件就直接用true，如果有輸入就判斷
+            //where那邊其實可以把 name==""? true: data.name == name寫成函式來維護        
+            */
+
+            PrintData(5, 20, 55, 32, 18, 64, 24, 15, 17, 99, 155, 25, 87, 42);
+
+
             Console.Read();
+        }
+
+        //無限數目的參數（但他們的類型要相同）
+        public static void PrintData(params int[] data)
+        {
+            foreach(var item in data.OrderBy(x => x)){Console.Write("{0} ", item);}
         }
     }
 
