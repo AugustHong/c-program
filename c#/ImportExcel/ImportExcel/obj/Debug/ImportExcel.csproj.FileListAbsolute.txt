@@ -1,0 +1,7 @@
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\bin\Debug\ImportExcel.exe.config
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\bin\Debug\ImportExcel.exe
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\bin\Debug\ImportExcel.pdb
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.csprojAssemblyReference.cache
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.csproj.CoreCompileInputs.cache
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.exe
+C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.pdb
