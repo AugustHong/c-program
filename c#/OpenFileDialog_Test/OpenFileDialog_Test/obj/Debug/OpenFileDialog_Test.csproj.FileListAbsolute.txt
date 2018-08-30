@@ -1,0 +1,6 @@
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\bin\Debug\OpenFileDialog_Test.exe.config
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\bin\Debug\OpenFileDialog_Test.exe
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\bin\Debug\OpenFileDialog_Test.pdb
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\obj\Debug\OpenFileDialog_Test.csproj.CoreCompileInputs.cache
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\obj\Debug\OpenFileDialog_Test.exe
+C:\Users\shengsen\Desktop\OpenFileDialog_Test\OpenFileDialog_Test\obj\Debug\OpenFileDialog_Test.pdb
