@@ -35,7 +35,7 @@ namespace WebApplication1
     		/// </summary>        
     	[DisplayName("graph")]
             [Required(ErrorMessage = "graph,未輸入")]
-    		public DbGeometry  graph { get; set; }
+    		public DbGeometry graph { get; set; }
     
     		    
     	}
