@@ -22,7 +22,12 @@ namespace WebApplication1.Controllers
     {
         private static string _kmlFrontTag = "<?xml version='1.0' encoding='UTF-8'?>" +
                                            "<kml xmlns = 'http:////www.opengis.net//kml//2.2' >" +
-                                                "<Document><Placemark>";
+                                                "<Style id='WraDefaultStyle'>" +
+                                                    "<IconStyle id='TpcIconStyle'><color>a1ff00ff</color><scale>0.5</scale></IconStyle>" +
+                                                    "<LableStyle id='EpaLableStyle'><color>ffff0000</color><scale>1.5</scale></LableStyle>" +
+                                                    "<LineStyle id='EpaLineStyle'><color>ffff0000</color><width>3</width></LineStyle>" +
+                                                    "<PolyStyle id='EpaPolyStyle'><color>7f3fe4e4</color><colorMode>random</colorMode></PolyStyle>" +
+                                                "</Style><Document><Placemark><styleUrl>#WraDefaultStyle</styleUrl>";
 
         private static string _kmlBehindTag = "</Placemark></Document></kml> ";
 
