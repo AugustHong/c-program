@@ -21,13 +21,13 @@ namespace WebApplication1.Controllers
     public class TgosKMLProcess
     {
         private static string _kmlFrontTag = "<?xml version='1.0' encoding='UTF-8'?>" +
-                                           "<kml xmlns = 'http:////www.opengis.net//kml//2.2' >" +
+                                           "<kml xmlns = 'http:////www.opengis.net//kml//2.2' ><Document>" +
                                                 "<Style id='WraDefaultStyle'>" +
                                                     "<IconStyle id='TpcIconStyle'><color>a1ff00ff</color><scale>0.5</scale></IconStyle>" +
                                                     "<LableStyle id='EpaLableStyle'><color>ffff0000</color><scale>1.5</scale></LableStyle>" +
                                                     "<LineStyle id='EpaLineStyle'><color>ffff0000</color><width>3</width></LineStyle>" +
                                                     "<PolyStyle id='EpaPolyStyle'><color>7f3fe4e4</color><colorMode>random</colorMode></PolyStyle>" +
-                                                "</Style><Document><Placemark><styleUrl>#WraDefaultStyle</styleUrl>";
+                                                "</Style><Placemark><styleUrl>#WraDefaultStyle</styleUrl>";
 
         private static string _kmlBehindTag = "</Placemark></Document></kml> ";
 
@@ -50,21 +50,23 @@ namespace WebApplication1.Controllers
         /// </summary>
         /// <param name="type">類型：現只支援 點 和 多邊型</param>
         /// <param name="coordinate">座標資料用串</param>
+        /// <param name="name">圖層的名字（或活動名，地區名 皆可）</param>
         /// <returns>傳回一個kml檔樣式的string</returns>
-        private static string ToKML(string type, string coordinate)
+        private static string ToKML(string type, string coordinate, string name)
         {
             string result = string.Empty;
+            string nameTag = "<name>" + name + "</name>";
 
             switch (type)
             {
                 //多邊形
                 case "POLYGON":
-                    result = _kmlFrontTag + "<Polygon><outerBoundaryIs><LinearRing><coordinates>" + coordinate + "</coordinates></LinearRing></outerBoundaryIs></Polygon>" + _kmlBehindTag;
+                    result = _kmlFrontTag + nameTag + "<Polygon><outerBoundaryIs><LinearRing><coordinates>" +  coordinate + "</coordinates></LinearRing></outerBoundaryIs></Polygon>" + _kmlBehindTag;
                     break;
 
                 //點
                 case "POINT":
-                    result = _kmlFrontTag + "<Point><coordinates>" + coordinate + "</<coordinates></Point>" + _kmlBehindTag;
+                    result = _kmlFrontTag + nameTag + "<Point><coordinates>" +  coordinate + "</<coordinates></Point>" + _kmlBehindTag;
                     break;
 
                 default:
@@ -110,7 +112,7 @@ namespace WebApplication1.Controllers
             string[] kmlFormat = ToKMLFormat(graph);
 
             //第二步
-            string kmlTag = ToKML(kmlFormat[0], kmlFormat[1]);
+            string kmlTag = ToKML(kmlFormat[0], kmlFormat[1], "FirstKMLlayer");
 
             //第三步（先讓它選路徑，再做SaveToKMLFile）
             string url = SaveToKMLFile(kmlTag, filePath);
