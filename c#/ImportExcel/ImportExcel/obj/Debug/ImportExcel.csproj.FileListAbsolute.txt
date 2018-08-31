@@ -5,3 +5,9 @@ C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.csprojAs
 C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.csproj.CoreCompileInputs.cache
 C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.exe
 C:\Users\shengsen\Desktop\ImportExcel\ImportExcel\obj\Debug\ImportExcel.pdb
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\bin\Debug\ImportExcel.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\obj\Debug\ImportExcel.exe
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\obj\Debug\ImportExcel.pdb
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\bin\Debug\ImportExcel.exe
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\bin\Debug\ImportExcel.pdb
+C:\Users\偉德\Documents\c製作全集\c#\ImportExcel\ImportExcel\obj\Debug\ImportExcel.csprojResolveAssemblyReference.cache

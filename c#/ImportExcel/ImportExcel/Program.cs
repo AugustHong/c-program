@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 using System.Data.OleDb;  //要讀取excel
 using System.Data;  //DataSet用的
+using System.Windows.Forms;
 
 namespace ImportExcel
 {
     class Program
     {
+        [STAThreadAttribute]
         static void Main(string[] args)
         {
 
@@ -20,7 +22,19 @@ namespace ImportExcel
 
             string strConn = string.Empty;   //連線字串名稱
             string sheetName = string.Empty;  //sheet名稱
-            string filePath = "C:\\Users\\shengsen\\Desktop\\76345977_testFile_1.xlsx";  //檔案路徑
+
+            //開啟檔案
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "選擇文件";
+            openFileDialog.Filter = "Excel2010以後|*.xlsx|Excel2010前|*.xls";
+            openFileDialog.FileName = string.Empty;
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.DefaultExt = "xlsx";
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.Cancel) { return; }
+
+            string filePath = openFileDialog.FileName;  //檔案路徑
 
             try
             {
@@ -71,10 +85,11 @@ namespace ImportExcel
                     //每個row都跑過
                     foreach (DataRow row in table.Rows)
                     {
-                        foreach (var column in row.ItemArray)
+                        for(var i = 0; i < row.ItemArray.Count(); i++)
                         {
-                            Console.WriteLine(column);
+                            Console.Write("{0} ", row.ItemArray[i]);
                         }
+                        Console.WriteLine("");
                     }
                 }
             }
