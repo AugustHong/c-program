@@ -16,15 +16,18 @@ namespace DLL_Example
         /// 顯示稅金
         /// </summary>
         /// <param name="price">總价</param>
+        /// <param name="total">要傳出去的總金額（含稅）</param>
         /// <returns></returns>
-        public int GetTax(int price){
-            //營業稅是直接進位的
-            int tax = 0;
-            int t = Convert.ToInt32(price * 0.05); //double轉int會是找比原先小的最大整數 10.5=>10  11.5=>11
+        public static int GetTax(int? price, out int total)
+        {
+            if (price.HasValue == false || price <= 0) { throw new Exception("未稅金必需是正整數"); }
 
-            //偶數的直接把剛才的加1就可，奇數的則用4捨6入5成雙
-            //10.5照理來說要變成11，所以用t+1   11.5照理來說要變成12，所以用round即可
-            if(t % 2 == 0) { tax = t + 1; } else { tax = (int)Math.Round(price*0.05); }
+            decimal taxM = (decimal)price / 20M;
+
+            int tax = (int)Math.Round(taxM, MidpointRounding.AwayFromZero); //一律進位（不會受4捨6入5成雙影響）
+
+            total = price.Value + tax;
+
             return tax;
         }
     }

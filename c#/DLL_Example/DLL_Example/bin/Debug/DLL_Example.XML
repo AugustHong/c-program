@@ -9,11 +9,12 @@
             Order
             </summary>
         </member>
-        <member name="M:DLL_Example.Order.GetTax(System.Int32)">
+        <member name="M:DLL_Example.Order.GetTax(System.Nullable{System.Int32},System.Int32@)">
             <summary>
             顯示稅金
             </summary>
             <param name="price">總价</param>
+            <param name="total">要傳出去的總金額（含稅）</param>
             <returns></returns>
         </member>
     </members>
