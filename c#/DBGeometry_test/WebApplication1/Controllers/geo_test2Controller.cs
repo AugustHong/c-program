@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace WebApplication1.Controllers
 {
+    //練習中（未抽出分離） => 正式請看 Hong.KMLProceess 和 Hong.FileHealper
     #region TGOS一系列流程（轉格式=>存檔=>使用）
     /// <summary>
     /// tgos引用資料庫至呼叫至結束的一個process（底下分別為以下流程）
@@ -130,8 +131,8 @@ namespace WebApplication1.Controllers
         // GET: geo_test2
         public ActionResult Index()
         {
-            geo_test2 re = db.geo_test2.Find(7);
-            string x = TgosKMLProcess.Process(re.graph, "C:\\Users\\偉德\\Desktop\\hello.kml");
+            //geo_test2 re = db.geo_test2.Find(7);
+            //string x = TgosKMLProcess.Process(re.graph, "C:\\Users\\偉德\\Desktop\\hello.kml");
             return View(db.geo_test2.ToList());
         }
 
@@ -237,6 +238,47 @@ namespace WebApplication1.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        //取得是否重疊，如果有重疊會列出其交集區域
+        public string GetData()
+        {
+            string ret = string.Empty;
+
+            List<geo_test2> data = db.geo_test2.ToList();
+
+            for (var i = 0; i < data.Count(); i++)
+            {
+                for (var j = i + 1; j < data.Count(); j++)
+                {
+                    if (data[i].graph.Disjoint(data[j].graph) == false)
+                    {
+                        string area = data[i].graph.Intersection(data[j].graph).AsText();
+                        ret += $"id為{data[i].id.ToString()} 和 id為{data[j].id.ToString()}有重疊，相交的區域為{area}" + "<br>";
+                    }
+                    else
+                    {
+                        ret += $"id為{data[i].id.ToString()} 和 id為{data[j].id.ToString()}沒有重疊" + "<br>";
+                    }
+                }
+                ret += "<br>";
+            }
+
+
+            return ret;
+        }
+
+        //取得其範圍
+        public string GetData2()
+        {
+            string ret = string.Empty;
+
+            foreach (var item in db.geo_test2)
+            {
+                ret += $"id為{item.id.ToString()}其座標為{item.graph.AsText()}" + "<br>";
+            }
+
+            return ret;
         }
     }
 }
