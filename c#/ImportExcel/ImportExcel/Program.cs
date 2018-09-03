@@ -18,7 +18,7 @@ namespace ImportExcel
 
             //用類似sql的語法來讀出
             DataSet ds = null;
-            OleDbConnection conn;
+            OleDbConnection ExcelConn = null;
 
             string strConn = string.Empty;   //連線字串名稱
             string sheetName = string.Empty;  //sheet名稱
@@ -36,23 +36,32 @@ namespace ImportExcel
 
             string filePath = openFileDialog.FileName;  //檔案路徑
 
-            try
+            //取得副檔名
+            string extension = System.IO.Path.GetExtension(filePath);
+
+            switch (extension)
             {
-                // Excel 2003 版本連線字串
-                strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0; HDR=YES; IMEX=1;'";
-                conn = new OleDbConnection(strConn);
-                conn.Open();
-            }
-            catch
-            {
-                // Excel 2007 以上版本連線字串
-                strConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 12.0;HDR=Yes;IMEX=1;'";
-                conn = new OleDbConnection(strConn);
-                conn.Open();
+                case ".xls":
+                    // Excel 2003 版本連線字串
+                    strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0; HDR=YES; IMEX=1;'";
+                    ExcelConn = new OleDbConnection(strConn);
+                    ExcelConn.Open();
+                    break;
+
+                case ".xlsx":
+                    // Excel 2007 以上版本連線字串
+                    strConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 12.0;HDR=Yes;IMEX=1;'";
+                    ExcelConn = new OleDbConnection(strConn);
+                    ExcelConn.Open();
+                    break;
+
+                default:
+                    return;
             }
 
+
             //獲取所有的 sheet 表
-            DataTable dtSheetName = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
+            DataTable dtSheetName = ExcelConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
 
             ds = new DataSet();
 
@@ -64,7 +73,7 @@ namespace ImportExcel
                 //獲取表名
                 sheetName = dtSheetName.Rows[i]["TABLE_NAME"].ToString();
 
-                OleDbDataAdapter oleda = new OleDbDataAdapter("select * from [" + sheetName + "]", conn);
+                OleDbDataAdapter oleda = new OleDbDataAdapter("select * from [" + sheetName + "]", ExcelConn);
 
                 oleda.Fill(dt);
 
@@ -72,8 +81,8 @@ namespace ImportExcel
             }
 
             //關閉連線，釋放資源
-            conn.Close();
-            conn.Dispose();
+            ExcelConn.Close();
+            ExcelConn.Dispose();
 
 
             //如果ds是有資料的
