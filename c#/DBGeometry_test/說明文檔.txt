@@ -1,0 +1,13 @@
+c# 實作出SqlGeometry型態（要用裡面的重疊判斷功能）
+
+先去NuGet裝 Microsoft.SqlServer.Types
+再到你的C#中
+using Microsoft.SqlServer.Types;
+
+https://msdn.microsoft.com/zh-tw/library/microsoft.sqlserver.types.sqlgeometry.aspx
+
+再裝MICROSOFTRREPORTVIEWER 2012 RUNTIME這個
+就可以跑出來了
+
+mvc 和 geometry
+https://www.infragistics.com/community/blogs/b/mihail_mateev/posts/using-spatial-data-in-asp-net-mvc-with-sql-server-2012-entity-framework-5-and-infragistics-jquery-map
