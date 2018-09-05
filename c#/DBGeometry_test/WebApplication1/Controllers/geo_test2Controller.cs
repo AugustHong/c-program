@@ -280,5 +280,13 @@ namespace WebApplication1.Controllers
 
             return ret;
         }
+
+        //將string型別轉換成dbgeometry型別
+        public void StringConvertToDbGeometry()
+        {
+            string command = "POLYGON((120 25, 122 25, 122 23, 120 23, 120 25))";
+            DbGeometry dg = System.Data.Entity.Spatial.DbGeometry.PolygonFromText(command, 4326);
+
+        }
     }
 }
