@@ -33,12 +33,19 @@ namespace MVC_test.Models.ViewModel
         public string AuthorPhote { get; set; }
 
         [DisplayName("作者姓名")]
-        [StringLength(20, MinimumLength = 0, ErrorMessage = "長度最小0最突20")] //等同最小0，最大20(同時有stringlength和maxlength會照maxlength）
+        [StringLength(20, MinimumLength = 0, ErrorMessage = "長度最小0最長20")] //等同最小0，最大20(同時有stringlength和maxlength會照maxlength）
         public string AuthorName { get; set; }
 
         [Required]
         [DisplayName("體重")]
+        //呈現的格式，第一個參數都寫false，第二個是呈現的格式（0代表自己這個值，f2就是小數點第二位），第三個是空的值的時候呈現的格式
+        [DisplayFormat(ApplyFormatInEditMode =false, DataFormatString= "{0:f2}", NullDisplayText ="N/A")]
         public decimal Weight { get; set; }
+
+        //日期的格式（一樣0代表自己的值，呈現為yyyy/MM/dd）
+        //[DisplayFormat(ApplyFormatInEditMode =false, DataFormatString ="{0:yyyy/MM/dd}")]
+
+        //{0}是代表自己  {0: xxx} 是指自己要呈現什麼樣子
     }
 }
 
