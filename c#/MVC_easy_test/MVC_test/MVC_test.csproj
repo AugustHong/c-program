@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,6 +151,7 @@
     </Compile>
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\ViewModel\ArticleViewModel.cs" />
+    <Compile Include="Models\ViewModel\AuthorViewModel.cs" />
     <Compile Include="Models\ViewModel\CategoryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,6 +173,7 @@
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Author\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

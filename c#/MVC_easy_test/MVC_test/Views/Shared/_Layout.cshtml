@@ -36,5 +36,11 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!--因為想要讓js都放在下面，但是因為renderbody中也有自己的js，所以要把它拉下拉比較好-->
+    <!--先在layout加入下面這行-->
+    @RenderSection("jsFooter", false)  
+    <!--後面的false是可有可無此section，如果今天寫true的話他沒找到jsfooter這行就會爆錯-->
+    <!--jsFooter是自己取的，但是要呈現的網頁那邊要打@section jsFooter{}-->
 </body>
 </html>
