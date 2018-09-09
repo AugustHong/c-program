@@ -1,0 +1,4 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ConditionalHelper\Hong.ConditionalHelper\bin\Debug\Hong.ConditionalHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ConditionalHelper\Hong.ConditionalHelper\bin\Debug\Hong.ConditionalHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ConditionalHelper\Hong.ConditionalHelper\obj\Debug\Hong.ConditionalHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ConditionalHelper\Hong.ConditionalHelper\obj\Debug\Hong.ConditionalHelper.pdb
