@@ -1,0 +1,4 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\bin\Debug\Hong.DirectoryHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\bin\Debug\Hong.DirectoryHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\obj\Debug\Hong.DirectoryHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\obj\Debug\Hong.DirectoryHelper.pdb
