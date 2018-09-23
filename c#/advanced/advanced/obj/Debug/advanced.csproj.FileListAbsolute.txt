@@ -4,3 +4,9 @@ C:\Users\偉德\Documents\c製作全集\c#\advanced\advanced\bin\Debug\advanced.
 C:\Users\偉德\Documents\c製作全集\c#\advanced\advanced\obj\Debug\advanced.csprojResolveAssemblyReference.cache
 C:\Users\偉德\Documents\c製作全集\c#\advanced\advanced\obj\Debug\advanced.exe
 C:\Users\偉德\Documents\c製作全集\c#\advanced\advanced\obj\Debug\advanced.pdb
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\bin\Debug\advanced.exe.config
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\obj\Debug\advanced.exe
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\obj\Debug\advanced.pdb
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\bin\Debug\advanced.exe
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\bin\Debug\advanced.pdb
+C:\Users\偉德\Documents\GitHub\c-program\c#\advanced\advanced\obj\Debug\advanced.csprojResolveAssemblyReference.cache

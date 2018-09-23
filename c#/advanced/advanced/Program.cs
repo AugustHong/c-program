@@ -93,6 +93,9 @@ namespace advanced
                 Console.WriteLine(convertedDate);
             }
 
+            //第2種轉法： Convert.ToDateTime(日期字串);
+
+
             Console.WriteLine("");
 
             //日期轉時間戳
@@ -236,6 +239,26 @@ namespace advanced
             //          int student_score {get;set;} }
             // List<Score> s = new List<Score>;
             // s.sum(student_score));
+
+            Console.WriteLine("");
+
+            //linq的group寫法（取得其總共幾個東西）
+            Member[] arr3_1 = new Member[] {
+                new Member { id=1, name="jack", birth=new DateTime(1705,1,1)},
+                new Member { id=2, name="hello", birth=new DateTime(1708,1,1)},
+                new Member { id=3, name="back", birth=new DateTime(1605,1,1)},
+                new Member { id=3, name="jack", birth=new DateTime(1605,1,1)}
+            };
+
+            //這樣可以取到所以的key（會把重複的拿掉，因為group by了）
+            var result3 = from data in arr3_1
+                          group data by data.name into NewData
+                          select NewData.Key;
+
+            foreach(var i in result3)
+            {
+                Console.WriteLine(i);
+            }
 
             Console.WriteLine("-------------------------------------------------------------------");
 
