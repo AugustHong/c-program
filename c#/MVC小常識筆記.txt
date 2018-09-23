@@ -1,0 +1,18 @@
+一、使用EF的savechanges()完後，會更新到實體中（請看以下範例）
+
+User u = new User{
+	account = data.account;
+	passwd = data.passwd;
+	name = data.name;
+}
+
+db.User.Add(u);
+db.User.savechanges();
+
+int id = u.id;
+
+//User是我們資料庫的model，裡面其實還有id的屬性（但是應該是自動增加的，所以不用給）
+//而我們savechanges()完後，我們再輸入int id = u.id; 是可以取得到剛才自動產生的id
+//所以用完savechanges()後，我們的變數u會是其資料庫的資料喔！
+
+-------------------------------------------------------------------------------------------------------------
