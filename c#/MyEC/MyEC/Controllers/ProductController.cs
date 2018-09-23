@@ -161,6 +161,21 @@ namespace MyEC.Controllers
                 return RedirectToAction("Index");
             }
 
+	    /*
+		如果想要設定檔案上傳的大小，請去改web.config
+
+		在<system.web>中加入
+			<httpRuntime targetFramework="4.6.1" maxRequestLength="102400" executionTimeout="600" />
+
+		在<system.webServer>中加入
+			    <security>
+      				<requestFiltering>
+        				<requestLimits maxAllowedContentLength="104857600" />
+      				</requestFiltering>
+    			    </security>
+
+	    */
+
             return View(product);
         }
 
