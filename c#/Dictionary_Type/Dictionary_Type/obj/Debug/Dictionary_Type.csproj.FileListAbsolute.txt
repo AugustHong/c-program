@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\bin\Debug\Dictionary_Type.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\bin\Debug\Dictionary_Type.exe
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\bin\Debug\Dictionary_Type.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\obj\Debug\Dictionary_Type.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\obj\Debug\Dictionary_Type.exe
+C:\Users\偉德\Documents\c製作全集\c#\Dictionary_Type\Dictionary_Type\obj\Debug\Dictionary_Type.pdb
