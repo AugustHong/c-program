@@ -16,3 +16,32 @@ int id = u.id;
 //所以用完savechanges()後，我們的變數u會是其資料庫的資料喔！
 
 -------------------------------------------------------------------------------------------------------------
+二、AJAX之用法：
+
+	(a)正常寫法：
+	
+		//全部被勾選的id列表（取得checkbox被選取的陣列)
+		var data = $("input[name='checkDownload']:checked").map(function () { return this.id.replace("check_", ""); }).get();
+
+		if (data != []) {
+			//傳到controller中
+			$.ajax({
+				url: "網址",
+				data: {
+					downloadContext: data
+				},
+				type: "GET", //也可以選POST（要大寫喔）
+				traditional: true   //加入這行是只要是傳陣列給Controller的都要加
+			});  
+		} else {
+			alert("請勾選你要的項目");
+		}
+
+	(b)精簡寫法：
+	
+	$.get("網址",
+				{
+					ladderSerial: ladder
+				}).done(function (result) {
+					alert(result);
+				});
