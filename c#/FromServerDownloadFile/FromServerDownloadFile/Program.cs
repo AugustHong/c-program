@@ -40,7 +40,18 @@ namespace FromServerDownloadFile
 
             response.Content.Headers.ContentDisposition.FileName = HttpUtility.UrlPathEncode("檔名.txt");
             //response.Content.Headers.ContentLength = fileStream.Length; //告知瀏覽器下載長度
-            
+
+
+            /*
+                特別注意：（其中那路徑是可以改的）
+
+                如果是在Controller中，取得Server當前位置用：
+                    var path = Path.Combine(Server.MapPath("~/subQuestion.zip");
+
+                如不在Controller中，取得Server當前位直用：
+                    string path = HttpContext.Current.Server.MapPath(@"~/subQuestion.zip");
+            */
+
         }
     }
 }
