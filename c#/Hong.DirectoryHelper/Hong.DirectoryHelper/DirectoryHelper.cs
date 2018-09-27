@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.IO;
-using System.IO.Compression;
+using System.IO.Compression;  //一般壓縮（不用密碼的）
+
+using Ionic.Zip;  //有密碼的壓縮（但要先去NuGet裝上DotNetZip才行使用）
 
 namespace Hong.DirectoryHelper
 {
@@ -63,7 +65,7 @@ namespace Hong.DirectoryHelper
         }
 
         /// <summary>
-        /// 把資料夾變成zip
+        /// 把資料夾變成zip（無密碼）
         /// </summary>
         /// <param name="destination">目的地（請輸入詳細路徑+檔名+.zip）</param>
         public void MarkZip(string destination)
@@ -71,8 +73,8 @@ namespace Hong.DirectoryHelper
             //如果後面不是.zip型式，則不作
             if (Path.GetExtension(destination) != ".zip") { return; }
 
-            //如果這zip不存在，不動作
-            if (File.Exists(destination)) { return; }
+            //如果這zip存在，先砍掉
+            if (File.Exists(destination)) { File.Delete(destination); }
 
             //如果資料夾不存在，不動作
             if (!Directory.Exists(path + dirName)) { return; }
@@ -81,7 +83,7 @@ namespace Hong.DirectoryHelper
                 try
                 {
                     //路徑相同可能會發生錯誤（所以用try catch）
-                    ZipFile.CreateFromDirectory(path + dirName, destination);
+                    System.IO.Compression.ZipFile.CreateFromDirectory(path + dirName, destination);
                 }
                 catch (Exception e)
                 {
@@ -89,6 +91,44 @@ namespace Hong.DirectoryHelper
                 }
             }
         }
+
+        /// <summary>
+        /// 把資料夾變成zip（有密碼的）
+        /// </summary>
+        /// <param name="destination">目的地（請輸入詳細路徑+檔名+.zip）</param>
+        /// <param name="passwd">密碼</param>
+        public void MarkZip(string destination, string passwd)
+        {
+            //如果後面不是.zip型式，則不作
+            if (Path.GetExtension(destination) != ".zip") { return; }
+
+            //如果這zip存在，先砍掉
+            if (File.Exists(destination)) { File.Delete(destination); }
+
+            //如果資料夾不存在，不動作
+            if (!Directory.Exists(path + dirName)) { return; }
+            else
+            {
+                try
+                {
+                    //路徑相同可能會發生錯誤（所以用try catch）
+                    //有密碼的壓縮
+                    using (Ionic.Zip.ZipFile zip = new Ionic.Zip.ZipFile(destination))
+                    {
+                        zip.Password = passwd;
+                        //也有zip.AddFile(路徑)，但這裡是DirectoryHelper所以都是用Direcotry來做即可（要的話把檔案放進
+                        //資料夾內再壓縮即可）
+                        zip.AddDirectory(path + dirName);
+                        zip.Save();
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("錯誤：請詳見" + e.Message);
+                }
+            }
+        }
+
 
         /// <summary>
         /// 把zip解壓縮
@@ -99,22 +139,69 @@ namespace Hong.DirectoryHelper
             //如果後面不是.zip型式，則不作
             if (Path.GetExtension(source) != ".zip") { return; }
 
-            //如果這zip不存在，不動作
-            if (File.Exists(source)) { return; }
+            //如果這zip不存在，不做
+            if (!File.Exists(source)) { return; }
 
             //如果資料夾已存在，刪掉
             if (Directory.Exists(path + dirName)) { Delete(); }
-            else
+
+            try
             {
-                try
+                //路徑相同可能會發生錯誤（所以用try catch）
+                System.IO.Compression.ZipFile.CreateFromDirectory(source, path + dirName);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("錯誤：請詳見" + e.Message);
+            }
+
+        }
+
+        /// <summary>
+        /// 把zip解壓縮（有密碼的）
+        /// </summary>
+        /// <param name="source">來源地（請輸入詳細路徑+檔名+.zip）</param>
+        /// <param name="passwd">密碼</param>
+        /// <param name="zipName">Zip的檔名，好用於移動檔案新增</param>
+        public void Extract(string source, string passwd, string zipName = "test.zip")
+        {
+            //如果後面不是.zip型式，則不作
+            if (Path.GetExtension(source) != ".zip") { return; }
+
+            //如果這zip不存在，不做
+            if (!File.Exists(source)) { return; }
+
+            //這裡跟上面不一樣，他會把東西都拆開來，但不會產生Directory
+            //所以要先有資料夾，再把zip移到這個資料夾下，再拆開
+            //如果資料夾不存在，新建
+            if (!Directory.Exists(path + dirName)) { Create(); }
+
+            //如果他給的zip檔名未有.zip則幫他加
+            zipName = zipName.Substring(zipName.Length - 4) == ".zip" ? zipName : zipName + ".zip";
+
+            //新的zip位置
+            string newZipPath = path + dirName + "/" + zipName;
+            File.Move(source, newZipPath);
+
+            try
+            {
+                //路徑相同可能會發生錯誤（所以用try catch）
+
+                using (var zip = Ionic.Zip.ZipFile.Read(newZipPath))
                 {
-                    //路徑相同可能會發生錯誤（所以用try catch）
-                    ZipFile.CreateFromDirectory(source, path + dirName);
+                    foreach (var zipEntry in zip)
+                    {
+                        zip.Password = passwd;
+                        zipEntry.Extract(path + dirName, ExtractExistingFileAction.OverwriteSilently);
+                    }
                 }
-                catch (Exception e)
-                {
-                    throw new Exception("錯誤：請詳見" + e.Message);
-                }
+
+                //把zip砍掉
+                File.Delete(newZipPath);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("錯誤：請詳見" + e.Message);
             }
         }
     }

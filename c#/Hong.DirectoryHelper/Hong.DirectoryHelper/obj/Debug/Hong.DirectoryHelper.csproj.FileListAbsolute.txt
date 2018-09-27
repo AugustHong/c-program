@@ -2,3 +2,6 @@ C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHe
 C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\bin\Debug\Hong.DirectoryHelper.pdb
 C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\obj\Debug\Hong.DirectoryHelper.dll
 C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\obj\Debug\Hong.DirectoryHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\bin\Debug\DotNetZip.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\bin\Debug\DotNetZip.xml
+C:\Users\偉德\Documents\c製作全集\c#\Hong.DirectoryHelper\Hong.DirectoryHelper\obj\Debug\Hong.DirectoryHelper.csprojResolveAssemblyReference.cache
