@@ -162,8 +162,7 @@ namespace Hong.DirectoryHelper
         /// </summary>
         /// <param name="source">來源地（請輸入詳細路徑+檔名+.zip）</param>
         /// <param name="passwd">密碼</param>
-        /// <param name="zipName">Zip的檔名，好用於移動檔案新增</param>
-        public void Extract(string source, string passwd, string zipName = "test.zip")
+        public void Extract(string source, string passwd)
         {
             //如果後面不是.zip型式，則不作
             if (Path.GetExtension(source) != ".zip") { return; }
@@ -172,22 +171,14 @@ namespace Hong.DirectoryHelper
             if (!File.Exists(source)) { return; }
 
             //這裡跟上面不一樣，他會把東西都拆開來，但不會產生Directory
-            //所以要先有資料夾，再把zip移到這個資料夾下，再拆開
+            //所以要先有資料夾，再拆開
             //如果資料夾不存在，新建
             if (!Directory.Exists(path + dirName)) { Create(); }
-
-            //如果他給的zip檔名未有.zip則幫他加
-            zipName = zipName.Substring(zipName.Length - 4) == ".zip" ? zipName : zipName + ".zip";
-
-            //新的zip位置
-            string newZipPath = path + dirName + "/" + zipName;
-            File.Move(source, newZipPath);
 
             try
             {
                 //路徑相同可能會發生錯誤（所以用try catch）
-
-                using (var zip = Ionic.Zip.ZipFile.Read(newZipPath))
+                using (var zip = Ionic.Zip.ZipFile.Read(source))
                 {
                     foreach (var zipEntry in zip)
                     {
@@ -195,9 +186,6 @@ namespace Hong.DirectoryHelper
                         zipEntry.Extract(path + dirName, ExtractExistingFileAction.OverwriteSilently);
                     }
                 }
-
-                //把zip砍掉
-                File.Delete(newZipPath);
             }
             catch (Exception e)
             {
