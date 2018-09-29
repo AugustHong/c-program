@@ -25,7 +25,7 @@ namespace Reflection
         static void Main(string[] args)
         {
             string dllName = "Reflection";
-            string className = "A";
+            string className = "Reflection.A";
 
             //建立物件
             Assembly assembly = Assembly.Load(dllName);
