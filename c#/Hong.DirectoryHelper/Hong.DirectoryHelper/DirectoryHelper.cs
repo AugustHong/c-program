@@ -97,7 +97,8 @@ namespace Hong.DirectoryHelper
         /// </summary>
         /// <param name="destination">目的地（請輸入詳細路徑+檔名+.zip）</param>
         /// <param name="passwd">密碼</param>
-        public void MarkZip(string destination, string passwd)
+        /// <param name="commit">Comment（預設沒有）</param>
+        public void MarkZip(string destination, string passwd, string comment = "")
         {
             //如果後面不是.zip型式，則不作
             if (Path.GetExtension(destination) != ".zip") { return; }
@@ -118,6 +119,10 @@ namespace Hong.DirectoryHelper
                         zip.Password = passwd;
                         //也有zip.AddFile(路徑)，但這裡是DirectoryHelper所以都是用Direcotry來做即可（要的話把檔案放進
                         //資料夾內再壓縮即可）
+
+                        //如果有commit再加上去
+                        if (!string.IsNullOrEmpty(comment)) { zip.Comment = comment; }
+
                         zip.AddDirectory(path + dirName);
                         zip.Save();
                     }
@@ -162,7 +167,8 @@ namespace Hong.DirectoryHelper
         /// </summary>
         /// <param name="source">來源地（請輸入詳細路徑+檔名+.zip）</param>
         /// <param name="passwd">密碼</param>
-        public void Extract(string source, string passwd)
+        /// <param name="comment">Comment（確保這是你產生的，如果Comment不會，不會解壓縮）</param>
+        public void Extract(string source, string passwd, string comment = "")
         {
             //如果後面不是.zip型式，則不作
             if (Path.GetExtension(source) != ".zip") { return; }
@@ -180,11 +186,17 @@ namespace Hong.DirectoryHelper
                 //路徑相同可能會發生錯誤（所以用try catch）
                 using (var zip = Ionic.Zip.ZipFile.Read(source))
                 {
-                    foreach (var zipEntry in zip)
+                    //如果沒給comment或者相同才解壓縮
+                    if (string.IsNullOrEmpty(comment) || zip.Comment == comment)
                     {
-                        zip.Password = passwd;
-                        zipEntry.Extract(path + dirName, ExtractExistingFileAction.OverwriteSilently);
+                        //解壓縮
+                        foreach (var zipEntry in zip)
+                        {
+                            zip.Password = passwd;
+                            zipEntry.Extract(path + dirName, ExtractExistingFileAction.OverwriteSilently);
+                        }
                     }
+
                 }
             }
             catch (Exception e)
