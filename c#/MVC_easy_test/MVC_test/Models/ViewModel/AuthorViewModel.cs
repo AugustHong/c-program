@@ -144,6 +144,14 @@ MVC內建驗證規則：
 //正常
 [Range(typeof(int), 100, 200)]
 
+
+//下方的屬性為int或double，所以可以直接寫
+[Range(1, 100, ErrorMessage=""]
+public int a {get;set;}
+
+//float
+[Range(typeof(float), 1, 100]
+
 //自訂型別
 [Range(typeof(你的類型), "kg10", "kg100")]
 
@@ -163,7 +171,7 @@ MVC內建驗證規則：
 4.RegularExpressionAttribute 正規表達式
 [RegularExpression]
 
-=>[RegularExpression("^[A-Z | a-z][1-2][\d]{8}$")]  //詳情正規表達式請自行去找
+=>[RegularExpression("^[A-Z | a-z][1-2][0-9]{8}$")]  //詳情正規表達式請自行去找
 
 
 5.自訂驗證CustomValidationAttribute
@@ -173,6 +181,7 @@ MVC內建驗證規則：
 
     [CustomValidation(typeof(StringHelper), "MyCheck")]
     public string Name{get;set;}
+
 
     public class StringHelper{
         public static ValidationResult MyCheck(ojbect value, ValidationContext context){
@@ -190,6 +199,23 @@ MVC內建驗證規則：
 
 
 ---------------------------------------------------------------------------------------------------
+
+7.[Remote(函式名, Controller名, HttpMathod="POST", ErrorMessage="輸入錯誤")]
+
+    ex:[Remote("test", "Test", HttpMathod="POST", ErrorMessage="輸入錯誤")]
+
+    當然test函式要在TestController裡寫好方法，並且回傳JSON(true) 或 JSON(false)
+    public ActionResult test(){ 判斷 ...   成功：return JSON(true)   失敗：return JSON(false);}
+
+---------------------------------------------------------------------------------------------------
+
+8.自已寫驗證屬性 （要繼承ValidatonAttribute )
+
+    ex: public xxxx TestValidationAttribute : ValidationAttribute{}
+
+    ps:這個在聽時不太清楚，所以有些有錯，要再實測才知道
+
+----------------------------------------------------------------------------------------------------
 
 在view model 可以實作IValidationObject 後寫一個mathod 名叫 Validate() 裡面可以寫驗證
 而在（前+後）全部都驗證完後，確認全部皆正確後，才會執行這段mathod，然後會回傳true 和 false。但不管結果如何都會end。（繼續執行）

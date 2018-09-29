@@ -32,6 +32,14 @@ namespace MVC_test.Controllers
                 //通過驗證，開始執行insert record
             }
 
+            //刪掉想不檢查的
+            //ModelState.Remove("WebSite");  裡面要填的是ViewModel裡的欄位名稱
+            //但怕打錯字，可以打=> ModelState.Remove(nameof(formData.WebSite));
+
+
+            //所有錯誤清空
+            ModelState.Clear();
+
             return View();
         }
     }
