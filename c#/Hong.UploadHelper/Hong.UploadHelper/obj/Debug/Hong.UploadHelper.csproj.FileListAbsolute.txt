@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.UploadHelper\Hong.UploadHelper\bin\Debug\Hong.UploadHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.UploadHelper\Hong.UploadHelper\bin\Debug\Hong.UploadHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.UploadHelper\Hong.UploadHelper\obj\Debug\Hong.UploadHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.UploadHelper\Hong.UploadHelper\obj\Debug\Hong.UploadHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.UploadHelper\Hong.UploadHelper\obj\Debug\Hong.UploadHelper.pdb
