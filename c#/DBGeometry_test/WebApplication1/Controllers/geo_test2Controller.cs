@@ -284,6 +284,7 @@ namespace WebApplication1.Controllers
         //將string型別轉換成dbgeometry型別
         public void StringConvertToDbGeometry()
         {
+	    //今天是點的話（一個括號即可） => string command = "POINT(120 25)";
             string command = "POLYGON((120 25, 122 25, 122 23, 120 23, 120 25))";
             DbGeometry dg = System.Data.Entity.Spatial.DbGeometry.PolygonFromText(command, 4326);
 
