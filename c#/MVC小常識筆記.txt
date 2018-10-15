@@ -45,3 +45,29 @@ int id = u.id;
 				}).done(function (result) {
 					alert(result);
 				});
+
+
+	(c)postªº¼gªk¡G
+		
+	$.ajax({
+			
+		type: "POST",
+			
+		url: "@Url.Action("CheckTransactionType")",
+			
+		data: {
+				
+			ID: id,
+				
+			Type: type
+			
+		},
+	
+		
+		success: function (result) {
+				
+			alert(result);
+			
+		}
+		
+	})
