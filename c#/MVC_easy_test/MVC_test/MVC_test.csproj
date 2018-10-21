@@ -167,6 +167,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\HtmlHelpers.cs" />
+    <Compile Include="Infrastrueture\Filter\CategoryFilter.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\ViewModel\ArticleViewModel.cs" />
     <Compile Include="Models\ViewModel\AuthorViewModel.cs" />
@@ -197,6 +199,7 @@
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
     <Content Include="Views\Author\Create.cshtml" />
+    <Content Include="Views\Category\CategoryList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

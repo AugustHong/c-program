@@ -1,0 +1,17 @@
+﻿@*要先using你的helper*@
+@using MVC_test.Helper;
+@{
+    ViewBag.Title = "CategoryList";
+
+    //把viewbag轉型回來
+    var categoryList = ViewBag.CategoryList as IEnumerable<MVC_test.Models.ViewModel.CategoryViewModel>;
+}
+
+<h2>CategoryList For Button</h2>
+
+@*因為設為static所以不用new物件即可直接使用
+
+這裡其實可以在controller寫一個函式回傳html字串，再用Url.Action()取回來即可，但如同我們所說還是把
+html字串都放在htmlhelper中比較好*@
+@Html.getCategoryListBtn(categoryList)
+

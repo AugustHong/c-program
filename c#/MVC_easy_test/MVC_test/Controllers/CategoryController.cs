@@ -8,6 +8,7 @@ using MVC_test.Models.ViewModel;
 //資料庫要用的
 using System.Data.SqlClient;
 using Dapper;
+using MVC_test.Infrastrueture.Filter;
 
 //先去裝Dapper（在NuGet中）
 
@@ -145,6 +146,14 @@ namespace MVC_test.Controllers
 
                 return RedirectToAction("Index");
             }
+        }
+
+
+        //加入Attribute（會在執行action中，先做這一步把資料放進viewbag中）
+        [CategoryFilter]
+        public ActionResult CategoryList()
+        {
+            return View();
         }
     }
 }
