@@ -71,3 +71,44 @@ int id = u.id;
 		}
 		
 	})
+
+------------------------------------------------------------------------------------------------------------
+RedirectToActionぇ莱ノ
+
+	(a)膀セController埃糶
+		
+		return RedirectToAction("Action", "Controller");
+
+
+	(b)肚把计int, string, datetime, double 单
+
+		return RedirectToAction("Action", "Controller", new {把计 = 把计(┪跑计)});
+
+	(c)肚Model璶ノ硆腹だ秨
+
+		return RedirectToAction("Action", "Controller", Model跑计);
+
+	(d)肚Model + 把计
+
+		эΘ肚2Model┪ㄖ1Model
+
+------------------------------------------------------------------------------------------------------------
+么挡闽莱ノ
+
+	(a)List
+
+		Viewい瞷					Modelい瞷
+		---------------					------------------
+
+		<input name="studentID[0]" />			List<string> studentID {get;set;}
+		<input name="studentID[1]" />
+		<input name="studentID[2]" />
+
+	(b)IEnumerable
+
+		Viewい瞷					Modelい瞷
+		---------------					-------------------
+
+		<input name="studentID" />			IEnumerable<string> studentID {get;set;}
+		<input name="studentID" />
+		<input name="studentID" />
