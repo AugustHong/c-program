@@ -104,7 +104,7 @@ int id = u.id;
 		<input name="studentID[1]" />
 		<input name="studentID[2]" />
 
-	(b)IEnumerable：
+	(b)IEnumerable：（目前自訂的Class型別不太能用，要多研究 => 不過int string這些可以）
 
 		在View中的呈現					Model中的呈現
 		---------------					-------------------
@@ -112,3 +112,15 @@ int id = u.id;
 		<input name="studentID" />			IEnumerable<string> studentID {get;set;}
 		<input name="studentID" />
 		<input name="studentID" />
+
+------------------------------------------------------------------------------------------------------------
+五、前端呼叫Controller並回傳html字串給前端
+
+@{Html.RenderAction("Action名", "Controller名", new {參數 = 變數值  });}
+
+ps:這個Controller回傳出來要是字串型態（可以用基本字串，或者一段html標籤 => 會在呼叫的地方變成它）
+
+例如：  Action名=getName()   ，回傳的是 "<p>Lee</p>"
+
+<p>hello</p>                         => 執行後    =>   	<p>hello</p>
+@{Html.RenderAction("getName"}				<p>Lee</p>
