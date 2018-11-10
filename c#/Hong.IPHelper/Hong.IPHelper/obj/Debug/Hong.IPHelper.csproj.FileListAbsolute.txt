@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.IPHelper\Hong.IPHelper\bin\Debug\Hong.IPHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.IPHelper\Hong.IPHelper\bin\Debug\Hong.IPHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.IPHelper\Hong.IPHelper\obj\Debug\Hong.IPHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.IPHelper\Hong.IPHelper\obj\Debug\Hong.IPHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.IPHelper\Hong.IPHelper\obj\Debug\Hong.IPHelper.pdb
