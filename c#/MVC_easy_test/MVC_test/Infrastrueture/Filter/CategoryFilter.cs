@@ -18,7 +18,7 @@ namespace MVC_test.Infrastrueture.Filter
     /// </summary>
     public class CategoryFilter : ActionFilterAttribute
     {
-        //覆寫其ActionFilterAttribute的函式（這函式是action一開始執行前執行的）
+        //覆寫其ActionFilterAttribute的函式（這函式是action一開始執行後執行的）
         //ActionExecutedContext就是只在執行這action（controller裡的），所有的相關資料集合
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
@@ -38,6 +38,12 @@ namespace MVC_test.Infrastrueture.Filter
                 // 放入ViewData/ViewBag
                 filterContext.Controller.ViewBag.CategoryList = data;
             }
+        }
+
+        //執行前執行的
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            base.OnActionExecuting(filterContext);
         }
     }
 }
