@@ -1,0 +1,7 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\bin\Debug\Hong.EncryptHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\bin\Debug\Hong.EncryptHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\obj\Debug\Hong.EncryptHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\obj\Debug\Hong.EncryptHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.EncryptHelper\Hong.EncryptHelper\obj\Debug\Hong.EncryptHelper.pdb
