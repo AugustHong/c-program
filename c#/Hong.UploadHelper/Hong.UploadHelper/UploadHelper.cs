@@ -32,7 +32,7 @@ namespace Hong.UploadHelper
             //檔名（未含副檔名，因為要用於格式的串接，所以先把它分出來）
             string fileName = Path.GetFileName(file.FileName).Replace(extension, "");
 
-            //如果副本名不是其允許的，跳出例外
+            //如果副檔名不是其允許的，跳出例外
             if (!string.IsNullOrEmpty(accept) && !accept.Contains(extension)) { throw new Exception("此副檔名不是可支援的"); }
 
             //如果使用者沒給/，自己加
@@ -61,7 +61,7 @@ namespace Hong.UploadHelper
 
 
             //儲存起來
-            file.SaveAs(newSavePath + extension);
+            file.SaveAs(newSavePath + newFileName + extension);
 
 
             //傳回儲存路徑 + 新檔名
