@@ -124,3 +124,14 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ĞÅÒ => ·|¦b©
 
 <p>hello</p>                         => °õ¦æ«á    =>   	<p>hello</p>
 @{Html.RenderAction("getName"}				<p>Lee</p>
+
+-----------------------------------------------------------------------------------------------------------
+¤»¡BTempData
+
+¥ÎªkÃş¦ü©óSessionªº¥\¥Î¡A¥D­n¥Î©ó¸ó§OªºController¶Ç¸ê®Æ¤§¥Îªk¡C
+
+¥Îªk¡G
+
+¦b¤@­ÓController¤¤¿é¤J  TempData["ÀH«Kªº¦WºÙ"] = ÀH«Kªº­È¡]¥ô¦óÃş«¬¬Ò¥i¡^;
+
+¦b²Ä¤G­ÓController¤¤±o¸ê®Æ =>  Ãş§O A = TempData["ÀH«Kªº¦WºÙ"] as XXX;   ¡]¦]¬°¥L·|¸òSession¤@¼ËÅÜ¦¨ª«¥ó¡A©Ò¥H­nÂà«¬¡^
