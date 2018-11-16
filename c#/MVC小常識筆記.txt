@@ -92,6 +92,9 @@ int id = u.id;
 
 		¡H¡H¡H¡H¡H¡]§ï¦¨¶Ç2­ÓModel¡A©Î¦X¨Ö¨ì1­ÓModel§a¡^
 
+
+PS:¤]¥i¥H¥Î Redirect("ºô§}")  ´N¥i¥H±µ¨ìÅo¡I
+
 ------------------------------------------------------------------------------------------------------------
 ¥|¡BÃ´µ²¬ÛÃöÀ³¥Î¡G
 
@@ -125,6 +128,7 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ÐÅÒ => ·|¦b©
 <p>hello</p>                         => °õ¦æ«á    =>   	<p>hello</p>
 @{Html.RenderAction("getName"}				<p>Lee</p>
 
+
 -----------------------------------------------------------------------------------------------------------
 ¤»¡BTempData
 
@@ -135,3 +139,24 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ÐÅÒ => ·|¦b©
 ¦b¤@­ÓController¤¤¿é¤J  TempData["ÀH«Kªº¦WºÙ"] = ÀH«Kªº­È¡]¥ô¦óÃþ«¬¬Ò¥i¡^;
 
 ¦b²Ä¤G­ÓController¤¤±o¸ê®Æ =>  Ãþ§O A = TempData["ÀH«Kªº¦WºÙ"] as XXX;   ¡]¦]¬°¥L·|¸òSession¤@¼ËÅÜ¦¨ª«¥ó¡A©Ò¥H­nÂà«¬¡^
+
+--------------------------------------------------------------------------------------------------------------
+¤C¡BTransaction³B²z¡]¨Ï¥ÎTransactionScopeªº¸Ü¡A¦bscope.Complete();¨S°õ¦æ§¹«e¦³µo¥Í¨Ò¥~ªº¸Ü¡A¤W­±ªº¥þ³¡·|¨ú®ø¥æ©ö¡^
+
+
+//¨Ï¥ÎTransactionScope
+   using (TransactionScope scope = new TransactionScope())
+   {
+    try
+    {
+
+	sql»yªk©ÎªÌ¨ä¥L¥æ©ö¬ÛÃö
+
+     //§¹¦¨
+     scope.Complete();
+
+    }
+    catch
+    {
+     return string.Empty;
+    }
