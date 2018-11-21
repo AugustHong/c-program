@@ -72,6 +72,35 @@ int id = u.id;
 		
 	})
 
+
+	(d)Post的寫法（傳Model + 有Vaild要傳回去的 + 執行完（success都跑完了）才會繼續執行下一行程式：
+
+	//得到[ValidateAntiForgeryToken]要的值
+        var token = $('input[name="__RequestVerificationToken"]').val();
+
+        //有了座標資料後，就可以把全部東西都Ajax到Create了（因為要傳的是Model所以用{{}}）
+      $.ajax({
+       type: "POST",
+       url: "@Url.Action("Create")",
+       async: false, 先讓ajax跑完（含success，才會繼續都行下面的程式
+
+       data: {
+        __RequestVerificationToken: token,    //要傳回Vaild的值
+
+        formData: {              //用{}包起來的就是Model裡的屬性名稱
+         name: "hello",
+	 englishName : "jack"
+        },
+
+        success: function (response) {
+         alert('success');
+        },
+        error: function (response) {
+         alert('error');
+        }
+       }
+      });
+
 ------------------------------------------------------------------------------------------------------------
 三、RedirectToAction之應用：
 
