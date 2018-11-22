@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.MailHelper\Hong.MailHelper\bin\Debug\Hong.MailHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.MailHelper\Hong.MailHelper\bin\Debug\Hong.MailHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.MailHelper\Hong.MailHelper\obj\Debug\Hong.MailHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.MailHelper\Hong.MailHelper\obj\Debug\Hong.MailHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.MailHelper\Hong.MailHelper\obj\Debug\Hong.MailHelper.pdb
