@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\bin\Debug\Generic.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\bin\Debug\Generic.exe
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\bin\Debug\Generic.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\obj\Debug\Generic.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\obj\Debug\Generic.exe
+C:\Users\偉德\Documents\c製作全集\c#\Generic\Generic\obj\Debug\Generic.pdb
