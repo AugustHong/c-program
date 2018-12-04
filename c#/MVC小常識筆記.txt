@@ -189,3 +189,83 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ÐÅÒ => ·|¦b©
     {
      return string.Empty;
     }
+
+-------------------------------------------------------------------------------------------------------------
+¤K¡B¤@¨Ç¤pÅÞ¿è¸Ñ»¡¡G
+
+(a)°}¦C¤¤©ñi++
+
+	int[] a = {1, 2, 3, 4, 5}
+	i = 2;
+	a[i++] = a[i] + 10;
+
+	=>¥X¨Óªºµ²ªG 1, 2, 14, 4, 5
+
+	µ²½×¡G¦ba[i++]¤¤¤´µM¬O¥u§ì¨ìiªº­È ¡A¬G¬Oa[2]¡A¦ý¦]¬°«e­±¦³i++¤F¡I©Ò¥H²{¦bi¬O3
+
+	=> a[2] = a[3] + 10
+
+(b)°}¦C¤¤©ñi--
+
+	int[] a = {1, 2, 3, 4, 5}
+	i = 2;
+	a[i--] = a[i] + 10;
+
+	=>¥X¨Óªºµ²ªG 1, 2, 12, 4, 5
+
+	µ²½×¡G¦ba[i--]¤¤¤´µM¬O¥u§ì¨ìiªº­È ¡A¬G¬Oa[2]¡A¦ý¦]¬°«e­±¦³i--¤F¡I©Ò¥H²{¦bi¬O1
+
+	=> a[2] = a[1] + 10
+
+(c)Byteªº·¸¦ì³B²z
+
+	byte x = 0, y = 64;
+
+	for(var i = 0; i < 5; i++){
+		x += y;
+		Console.writeLine(x);
+	}
+
+	=>¥X¨Óµ²ªG¡G 64 128 192 0 64
+	=>Á`µ²¡Gbyte³Ì¤j­È¬O256¡A¬G¦b²Äi=3®É¡A­È¨ì¤F256«á´N·|ÅÜ¦¨0¤F¡I¤§«á¦b²Äi=4®É´N¥Î0 ¦A¥[¤W 64
+
+------------------------------------------------------------------------------------------------------------
+¤E¡BIPageList¥ÎªkÂ²¤¶µ§°O¡G
+
+(1)¥ý¥hNuGet¸Ë
+
+(2)½T»{View/Web.config¬O§_¦³
+
+	<add namespace="PagedList" />
+	<add namespace="PagedList.Mvc" />
+
+	³o2¦æ¡A¦³®É­Ô¥X²{Assembly....ªº¿ù»~´N¬O³o¸Ì¨S¦³
+
+(3)¦bController
+
+	using PagedList;   //¥ý¨Ï¥Îusing
+
+
+	//Controller¸Ì­±
+	[HttpGet]
+	public ActionResult Index(int page = 1){
+			
+
+		int currentPage = page < 1 ? 1 : page;   //·í«eªº­¶¼Æ¡]¦pªGpage < 1ªº¸Ü´N¬O1¡F¤Ï¤§´N¬Opage¡^
+		IEnumerable<ª«¥ó(Class)> data= ¨ú±o¸ê®Æ¶°¦X;
+		IOrderedEnumerable<ª«¥ó(Class)> pageAllList = data.OrderBy(x => x.ID);   //±Æ§Ç
+		IPagedList result = pageAllList.ToPagedList(currentPage, pageSize);
+
+
+		return View(result);
+
+	}
+
+(4)¦bView¤¤
+
+	@model IPagedList<Model¦W>
+
+	@Html.PagedListPager(Model, page => Url.Action("Controller¦W(°ò¥»¤W¬OIndex)", new { page, °Ñ¼Æ¦W = ÅÜ¼Æ­È }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+	//¤W­±ªºModel«üªº¬O@model 
+	//¦Ó new {page, °Ñ¼Æ¦W = ÅÜ¼Æ­È}  page¬O¥²­n¶Çªº¡A¦Ó«á­±ªº°Ñ¼Æ¨ÌController¦ÓÅÜ¡C
