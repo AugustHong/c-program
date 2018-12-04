@@ -10,6 +10,8 @@ using System.Data.SqlClient;
 using Dapper;
 
 using MVC_test.Models.ViewModel;
+using MVC_test.Controllers;
+using System.Web.Routing;
 
 namespace MVC_test.Infrastrueture.Filter
 {
@@ -43,7 +45,28 @@ namespace MVC_test.Infrastrueture.Filter
         //執行前執行的
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+
+            //判別是否是哪一個Controller
+            bool isCategoryController = filterContext.Controller is CategoryController;
+
+            //判斷這個Action是否有這個Attribute（後面的CategoryFilter是Attribute名）
+            bool isAttribute = filterContext.ActionDescriptor.IsDefined(typeof(CategoryFilter), true);
+
+            //跳轉頁面（可以做判斷，如果沒登入就進去Login畫面）
+            //其中Redirect是下面的函式
+            //filterContext.Result = Redirect("Account", "LogIn");
+
+
             base.OnActionExecuting(filterContext);
+        }
+
+        //做跳轉頁面用
+        private RedirectToRouteResult Redirect(string controller, string action)
+        {
+            return new RedirectToRouteResult(new RouteValueDictionary {
+                                                                    { "Controller", controller },
+                                                                    { "Action", action }}
+            );
         }
     }
 }
