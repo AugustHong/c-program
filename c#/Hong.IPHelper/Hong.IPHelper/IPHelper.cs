@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,10 +11,25 @@ namespace Hong.IPHelper
     /// <summary>
     /// 取得本機IP和實體IP的位址
     /// </summary>
-    public class IPHelper
+    public static class IPHelper
     {
         /// <summary>
-        /// 取得實體IP位址
+        /// 得到真正的ip
+        /// </summary>
+        /// <param name="Request">傳入System.Web.HttpContext.Current.Request</param>
+        /// <returns></returns>
+        public static string GetIP(this HttpRequest Request)
+        {
+            if (Request.Headers["CF-CONNECTING-IP"] != null) return Request.Headers["CF-CONNECTING-IP"].ToString();
+
+            if (Request.ServerVariables["HTTP_X_FORWARDED_FOR"] != null) return Request.ServerVariables["HTTP_X_FORWARDED_FOR"].ToString();
+
+            return Request.UserHostAddress;
+        }
+
+
+        /// <summary>
+        /// 取得實體IP位址（dns出來的）
         /// </summary>
         /// <param name="dns">DNS的服務商（例如Hinet就輸入 dns.hinet.net）</param>
         /// <returns></returns>
