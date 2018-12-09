@@ -60,3 +60,11 @@ C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\AutoMapper
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\AutoMapper.xml
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.ValueTuple.xml
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\AutoMapper.Data.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\Newtonsoft.Json.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Net.Http.Formatting.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Web.Http.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\Newtonsoft.Json.xml
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Net.Http.Formatting.xml
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Web.Http.xml
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Web.Http.WebHost.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\MVC_test\bin\System.Web.Http.WebHost.xml

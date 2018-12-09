@@ -1,5 +1,4 @@
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\Blog.Service\bin\Debug\Blog.Service.dll
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\Blog.Service\bin\Debug\Blog.Service.pdb
-C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\Blog.Service\obj\Debug\Blog.Service.csprojResolveAssemblyReference.cache
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\Blog.Service\obj\Debug\Blog.Service.dll
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test\Blog.Service\obj\Debug\Blog.Service.pdb
