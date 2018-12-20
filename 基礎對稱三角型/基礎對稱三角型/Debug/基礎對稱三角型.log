@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\偉德\documents\c製作全集\c#\基礎對稱三角型\基礎對稱三角型\source.cpp(19): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\偉德\documents\c製作全集\c#\基礎對稱三角型\基礎對稱三角型\source.cpp(13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 請參閱 'scanf' 的宣告
+  基礎對稱三角型.vcxproj -> C:\Users\偉德\Documents\c製作全集\c#\基礎對稱三角型\Debug\基礎對稱三角型.exe
