@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\DistinctHelper\DistinctHelper\bin\Debug\DistinctHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\DistinctHelper\DistinctHelper\bin\Debug\DistinctHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\DistinctHelper\DistinctHelper\obj\Debug\DistinctHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\DistinctHelper\DistinctHelper\obj\Debug\DistinctHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\DistinctHelper\DistinctHelper\obj\Debug\DistinctHelper.pdb
