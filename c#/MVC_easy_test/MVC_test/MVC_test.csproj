@@ -186,6 +186,7 @@
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\CallAPIController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\GetControllerNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\UploadDirectoryController.cs" />
@@ -226,6 +227,7 @@
     <Content Include="Views\Author\Create.cshtml" />
     <Content Include="Views\Category\CategoryList.cshtml" />
     <Content Include="Views\UploadDirectory\Index.cshtml" />
+    <Content Include="Views\GetControllerName\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
