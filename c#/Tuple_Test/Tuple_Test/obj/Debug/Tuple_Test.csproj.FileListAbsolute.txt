@@ -1,0 +1,8 @@
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\bin\Debug\Tuple_Test.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\bin\Debug\Tuple_Test.exe
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\bin\Debug\Tuple_Test.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\bin\Debug\System.ValueTuple.dll
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\bin\Debug\System.ValueTuple.xml
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\obj\Debug\Tuple_Test.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\obj\Debug\Tuple_Test.exe
+C:\Users\偉德\Documents\c製作全集\c#\Tuple_Test\Tuple_Test\obj\Debug\Tuple_Test.pdb
