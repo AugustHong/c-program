@@ -101,6 +101,14 @@ int id = u.id;
        }
       });
 
+
+	(e)Ajax¨Æ¥ó¤¶²Ð¡]°£ success error¥~¡^¡G
+
+		complete¡G ½Ð¨D§¹¦¨®É°õ¦æªº¨ç¦¡(¤£½×µ²ªG¬Osuccess©Îerror)¡C
+		beforeSend¡Gµo°e½Ð¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
+
+		//¤W2­Ó¥D­n§@¥Î©ó Process BarªºÀ³¥Î¡]¬Ý²Ä10ÂI¡^
+
 ------------------------------------------------------------------------------------------------------------
 ¤T¡BRedirectToAction¤§À³¥Î¡G
 
@@ -269,3 +277,72 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ÐÅÒ => ·|¦b©
 
 	//¤W­±ªºModel«üªº¬O@model 
 	//¦Ó new {page, °Ñ¼Æ¦W = ÅÜ¼Æ­È}  page¬O¥²­n¶Çªº¡A¦Ó«á­±ªº°Ñ¼Æ¨ÌController¦ÓÅÜ¡C
+
+------------------------------------------------------------------------------------------------------------
+¤Q¡BProcess Bar
+
+(a) Ajax¨Æ¥ó¤¶²Ð¡G
+
+complete¡G ½Ð¨D§¹¦¨®É°õ¦æªº¨ç¦¡(¤£½×µ²ªG¬Osuccess©Îerror)¡C
+beforeSend¡Gµo°e½Ð¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
+
+(b)µ{¦¡½X¤¶²Ð¡G
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="jquery.js"></script>
+        <script>
+        var Submit=function(){
+            var URLs="back.php";
+            
+            $.ajax({
+                url: URLs,
+                data: $('#sentToBack').serialize(),
+                type:"POST",
+                dataType:'text',
+                success: function(msg){
+                    alert(msg);
+                },
+               
+		//¥D­n¥ÎbeforeSend©Mcomplete°µProcess Barªº¶}Ãö
+		//¦pªG¤µ¤Ñ¤£¬Oajax¡A¤]¤@¼Ë¬O¥ÎProcess Bar ªº show ©M hide¨Ó¾Þ§@
+		beforeSend:function(){
+                    $('#loadingIMG').show();
+                },
+                complete:function(){
+                    $('#loadingIMG').hide();
+                },
+
+                error:function(xhr, ajaxOptions, thrownError){ 
+                    alert(xhr.status); 
+                    alert(thrownError); 
+                }
+            });
+        }
+
+        </script>
+    </head>
+    <body>
+     <form id="sentToBack">
+            <input type="text" name="Text"/> 
+            <input type="button"  value="°e¥X" onClick="Submit()"/>
+        </form>
+
+	<!--Process Barªº³¡¥÷-->
+        <div id=" loadingIMG" style="display:none"><img src="loading.gif" height='14'/>¸ê®Æ³B²z¤¤¡A½Ðµy«á¡C</div>
+
+    </body>
+</html>
+
+(c)Process Barªº¹Ï¤ù¤U¸üºô§}¡]¥i¥H¶i¦æ»s§@¹ÏÀÉ¡^
+
+http://www.ajaxload.info/
+
+------------------------------------------------------------------------------------------------------------
+¤Q¤@¡BView¤¤ªºcheckboxªºÃ´µ²
+
+¦bcheckbox¤¤¦pªG­nÃ´µ²¤@©w­n¥[¤W value="true" ¤~¯à¦¨¥\¶Ç¨ì«áºÝ¡]¦pªGvalue¤£¬Otrue¡A«h³£¶Ç¤£¦^¥h¡^
+
+¨Ò¡G <input type="checkbox" id="c" name="c" value="true" />
