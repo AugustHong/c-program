@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@Html.ActionLink("首頁", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav"></ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container body-content">
+		@RenderBody()
+
+		<footer class="navbar-fixed-bottom">
+			<center><p>&copy; @DateTime.Now</p></center>
+		</footer>
+	</div>
+
+	<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>
+
+	<!--因為想要讓js都放在下面，但是因為renderbody中也有自己的js，所以要把它拉下拉比較好-->
+	<!--先在layout加入下面這行-->
+	@RenderSection("jsFooter", false)
+	<!--後面的false是可有可無此section，如果今天寫true的話他沒找到jsfooter這行就會爆錯-->
+	<!--jsFooter是自己取的，但是要呈現的網頁那邊要打@section jsFooter{}-->
+
+
+	<!--提示文字-->
+	@if (TempData["Message"] != null && TempData["Message"].ToString() != "")
+	{
+		string alertText = TempData["Message"].ToString();
+
+		<script>
+			alert("@alertText");
+		</script>
+	}
+
+	<!--導去別頁-->
+	@if (TempData["RtnURL"] != null && TempData["RtnURL"].ToString() != "")
+	{
+		string rtnURL = TempData["RtnURL"].ToString();
+
+		<script>
+			location.href = "@rtnURL";
+		</script>
+	}
+
+	<!--設定Scroll-->
+	@if(TempData["Scroll"] != null)
+	{
+		Tuple<int, int> scroll = TempData["Scroll"] as Tuple<int, int>;
+
+		<script>
+			var x = parseInt("@scroll.Item1");
+			var y = parseInt("@scroll.Item2");
+			window.scroll(x, y);
+		</script>
+	}
+
+</body>
+</html>

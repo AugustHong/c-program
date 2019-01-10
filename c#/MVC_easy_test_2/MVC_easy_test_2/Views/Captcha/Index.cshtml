@@ -1,0 +1,82 @@
+﻿@model MVC_easy_test_2.Models.CheckModel
+@using CaptchaLib   @*要記得引用*@
+@using CaptchaMvc.HtmlHelpers @*要記得引用*@
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Test captcha</title>
+</head>
+<body>
+	@using (Html.BeginForm())
+	{
+
+		@Html.AntiForgeryToken()
+
+		@Html.ValidationSummary()
+
+	<div class="form-group">
+		@Html.LabelFor(model => model.Account, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.Account, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.Account, "", new { @class = "text-danger" })
+		</div>
+	</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.Passwd, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.Passwd, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Passwd, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<!--MvcCaptchaLib的-->
+		<div class="form-group">
+			@Html.LabelFor(model => model.Captcha, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@*這邊就照它的寫法， 中間的"GetCaptcha"即是Controller中的Action名，後面的是重刷驗證碼所有呈現的文字*@
+				@Html.CaptchaFor(model => model.Captcha, "GetCaptcha", "看不清楚嗎？重新載入吧")
+				@Html.ValidationMessageFor(model => model.Captcha, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<!--CaptchaMvc的-->
+		<div class="form-group">
+			@Html.LabelFor(model => model.Captcha2, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@*第一個為  重新刷新所顯示的文字
+				第二個為 在 "重載" 下方顯示的提示文字  這邊選擇 ""即可
+				第三個為 驗證碼出現的長度
+				第四個為 必填文字訊息
+				第五個為 是否要有驗證span（這邊關閉(false)是因為，在Controller有）*@
+				@{var captcha = Html.Captcha("重載", "", 5, "這是必填的", false);}
+
+				@*以上的是英文字的
+				也有純數字的 var mathCaptcha = Html.MathCaptcha("Refresh", "Input", "Is required field.", false);*@
+
+				@captcha
+				@Html.ValidationMessage(captcha.BuildInfo.InputElementId)
+			</div>
+		</div>
+
+				<br />
+
+				<button type="submit" class="btn btn-success">送出</button>
+			}
+
+</body>
+</html>
+
+@section jsFooter{
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<!--載入驗證碼的js（在安裝CaptchaLib時就會附了）-->
+<script type="text/javascript" src="@Url.Content("~/Scripts/captcha.js")"></script>
+}
