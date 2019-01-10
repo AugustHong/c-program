@@ -1,0 +1,6 @@
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\bin\Debug\Hong.ReadKMLHelper.dll
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\bin\Debug\Hong.ReadKMLHelper.pdb
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.dll
+c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.pdb
