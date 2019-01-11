@@ -1,0 +1,6 @@
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\bin\Debug\Hong.TripleDESHelper.dll
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\bin\Debug\Hong.TripleDESHelper.pdb
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.csprojAssemblyReference.cache
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.csproj.CoreCompileInputs.cache
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.dll
+C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.pdb
