@@ -4,3 +4,7 @@ c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\H
 c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.csproj.CoreCompileInputs.cache
 c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.dll
 c:\users\shengsen\source\repos\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ReadKMLHelper\Hong.ReadKMLHelper\bin\Debug\Hong.ReadKMLHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ReadKMLHelper\Hong.ReadKMLHelper\bin\Debug\Hong.ReadKMLHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.ReadKMLHelper\Hong.ReadKMLHelper\obj\Debug\Hong.ReadKMLHelper.pdb

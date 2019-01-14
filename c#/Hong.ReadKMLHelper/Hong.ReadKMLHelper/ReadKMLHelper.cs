@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hong.ReadKMLHelper
 {
-	class ReadKMLHelper
+	public class ReadKMLHelper
 	{
 		/// <summary>
 		/// 單純讀檔
