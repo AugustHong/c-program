@@ -1,0 +1,6 @@
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\bin\Debug\Hong.SearchFileHelper.dll
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\bin\Debug\Hong.SearchFileHelper.pdb
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.dll
+c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.pdb
