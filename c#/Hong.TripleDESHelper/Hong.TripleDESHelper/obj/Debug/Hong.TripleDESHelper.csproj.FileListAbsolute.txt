@@ -4,3 +4,8 @@ C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Deb
 C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.csproj.CoreCompileInputs.cache
 C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.dll
 C:\Users\shengsen\source\repos\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.TripleDESHelper\Hong.TripleDESHelper\bin\Debug\Hong.TripleDESHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.TripleDESHelper\Hong.TripleDESHelper\bin\Debug\Hong.TripleDESHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.TripleDESHelper\Hong.TripleDESHelper\obj\Debug\Hong.TripleDESHelper.pdb

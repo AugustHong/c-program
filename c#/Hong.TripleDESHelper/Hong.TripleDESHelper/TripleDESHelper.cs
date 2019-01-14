@@ -13,7 +13,7 @@ namespace Hong.TripleDESHelper
 	/// 擴充方法（class一定要是靜態的)
 	/// 讓string 變成SecureString
 	/// </summary>
-	static class SecureStringConvert
+	public static class SecureStringConvert
 	{
 		//讓string 變成SecureString
 		public static SecureString ToSecureString(this string value)
@@ -38,7 +38,7 @@ namespace Hong.TripleDESHelper
 	/// <summary>
 	/// TripleDES加密
 	/// </summary>
-	class TripleDESHelper
+	public class TripleDESHelper
 	{
 		/// <summary>
 		/// 獲取加密key的 md5 hash，最终DES加密的時候使用這个hash值
