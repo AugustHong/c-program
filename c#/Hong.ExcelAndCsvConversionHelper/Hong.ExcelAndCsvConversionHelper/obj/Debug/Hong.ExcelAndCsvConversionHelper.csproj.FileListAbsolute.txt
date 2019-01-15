@@ -1,0 +1,15 @@
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Hong.ExcelAndCsvConversionHelper.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Hong.ExcelAndCsvConversionHelper.pdb
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.Common.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.License.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.Pdf.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.XLS.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Microsoft.mshtml.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.Common.xml
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.Pdf.xml
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\bin\Debug\Spire.XLS.xml
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\obj\Debug\Hong.ExcelAndCsvConversionHelper.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\obj\Debug\Hong.ExcelAndCsvConversionHelper.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\obj\Debug\Hong.ExcelAndCsvConversionHelper.csproj.CopyComplete
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\obj\Debug\Hong.ExcelAndCsvConversionHelper.dll
+c:\users\shengsen\source\repos\Hong.ExcelAndCsvConversionHelper\Hong.ExcelAndCsvConversionHelper\obj\Debug\Hong.ExcelAndCsvConversionHelper.pdb
