@@ -1,6 +1,9 @@
 ﻿@model MVC_easy_test_2.Models.CheckModel
 @using CaptchaLib   @*要記得引用*@
 @using CaptchaMvc.HtmlHelpers @*要記得引用*@
+
+@using MVC_easy_test_2.Helper  @*使用多國語系的Helper*@
+
 @{
     ViewBag.Title = "Index";
 }
@@ -66,7 +69,8 @@
 
 				<br />
 
-				<button type="submit" class="btn btn-success">送出</button>
+				<!--有使用多國語系-->
+				<button type="submit" class="btn btn-success">@MultiLanguageHelper.GetResourceValue("送出")</button>
 			}
 
 </body>

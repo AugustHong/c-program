@@ -1,0 +1,25 @@
+﻿@using MVC_easy_test_2.Models
+	
+@{
+		ViewBag.Title = "Index";
+	}
+
+	<h1>以下是其使用PartialView的清況：</h1>
+
+<!--要記得在View/Shared中建立View喔，才能使用-->
+
+	<div>
+		沒使用參數的： （Html.Partial("_PartialViewWithNoParm")）
+		@Html.Partial("_PartialViewWithNoParm")
+	</div>
+
+	<br />
+
+	<div>
+		有使用參數的：Html.Partial("_PartialViewWithHaveParm", new PartialViewTestModel(){ parm = "This is Parm" })
+		@Html.Partial("_PartialViewWithHaveParm", new PartialViewTestModel()
+		{
+			parm = "This is Parm"
+		})
+	</div>
+

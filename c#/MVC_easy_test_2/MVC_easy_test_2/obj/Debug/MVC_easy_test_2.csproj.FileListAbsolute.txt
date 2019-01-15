@@ -54,3 +54,8 @@ C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\obj\D
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\bin\CaptchaMvc.dll
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\bin\CaptchaMvc.pdb
 C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\bin\CaptchaMvc.xml
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\bin\en-US\MVC_easy_test_2.resources.dll
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\obj\Debug\MVC_easy_test_2.MultiLanguage.Resource.resources
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\obj\Debug\MVC_easy_test_2.MultiLanguage.Resource.en-US.resources
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\obj\Debug\MVC_easy_test_2.csproj.GenerateResource.Cache
+C:\Users\偉德\Documents\c製作全集\c#\MVC_easy_test_2\MVC_easy_test_2\obj\Debug\en-US\MVC_easy_test_2.resources.dll

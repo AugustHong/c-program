@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+	//多國語系的使用
+	var culture = System.Globalization.CultureInfo.CurrentCulture;
+	var lang = culture.Name == "zh-TW" ? string.Empty : "/" + culture.Name;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -18,9 +24,12 @@
 					<span class="icon-bar"></span>
 				</button>
 				@Html.ActionLink("首頁", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+				<a onclick="ChangeLang('zh-TW');" class="navbar-brand">中文</a>
+				<a onclick="ChangeLang('en-US');" class="navbar-brand">英文</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav"></ul>
+				<ul class="nav navbar-nav">
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -41,6 +50,16 @@
 	@RenderSection("jsFooter", false)
 	<!--後面的false是可有可無此section，如果今天寫true的話他沒找到jsfooter這行就會爆錯-->
 	<!--jsFooter是自己取的，但是要呈現的網頁那邊要打@section jsFooter{}-->
+
+
+	<!--多國語系切換-->
+	<script>
+		//切換多國語系
+		function ChangeLang(langVaule) {
+			var url = location.href;
+			location.href = url + "/" + langVaule;
+		}
+	</script>
 
 
 	<!--提示文字-->
