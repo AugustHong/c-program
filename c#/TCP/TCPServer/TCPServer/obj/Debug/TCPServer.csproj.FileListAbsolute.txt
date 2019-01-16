@@ -1,0 +1,14 @@
+c:\users\shengsen\source\repos\TCPServer\TCPServer\bin\Debug\TCPServer.exe.config
+c:\users\shengsen\source\repos\TCPServer\TCPServer\bin\Debug\TCPServer.exe
+c:\users\shengsen\source\repos\TCPServer\TCPServer\bin\Debug\TCPServer.pdb
+c:\users\shengsen\source\repos\TCPServer\TCPServer\obj\Debug\TCPServer.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\TCPServer\TCPServer\obj\Debug\TCPServer.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\TCPServer\TCPServer\obj\Debug\TCPServer.exe
+c:\users\shengsen\source\repos\TCPServer\TCPServer\obj\Debug\TCPServer.pdb
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\bin\Debug\TCPServer.exe.config
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\bin\Debug\TCPServer.exe
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\bin\Debug\TCPServer.pdb
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\obj\Debug\TCPServer.csprojAssemblyReference.cache
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\obj\Debug\TCPServer.csproj.CoreCompileInputs.cache
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\obj\Debug\TCPServer.exe
+C:\Users\shengsen\source\repos\TCP\TCPServer\TCPServer\obj\Debug\TCPServer.pdb
