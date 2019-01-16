@@ -4,3 +4,8 @@ c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\D
 c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.csproj.CoreCompileInputs.cache
 c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.dll
 c:\users\shengsen\source\repos\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.SearchFileHelper\Hong.SearchFileHelper\bin\Debug\Hong.SearchFileHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.SearchFileHelper\Hong.SearchFileHelper\bin\Debug\Hong.SearchFileHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.SearchFileHelper\Hong.SearchFileHelper\obj\Debug\Hong.SearchFileHelper.pdb

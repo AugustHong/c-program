@@ -33,6 +33,20 @@ namespace Hong.SearchFileHelper
 	/// </summary>
 	public static class SearchFileHelper
 	{
+		public static List<string> GetAllFilesName(string directoryPath)
+		{
+			List<string> result = new List<string>();
+
+			//如果最後一個字元不是"/"的話，加上去
+			if (directoryPath.Substring(directoryPath.Length - 1) != "/") { directoryPath += "/"; }
+
+			//單純只找到檔名的寫法
+			result = Directory.GetFileSystemEntries(directoryPath).ToList();
+
+			return result;
+		}
+
+
 		/// <summary>
 		/// 取得此目錄下的所有檔案
 		/// </summary>
