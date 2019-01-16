@@ -16,3 +16,6 @@ C:\Users\shengsen\source\repos\MultiLanguage\MultiLanguage\obj\Debug\ja-JP\Multi
 C:\Users\shengsen\source\repos\MultiLanguage\MultiLanguage\obj\Debug\ko-KR\MultiLanguage.resources.dll
 C:\Users\shengsen\source\repos\MultiLanguage\MultiLanguage\obj\Debug\MultiLanguage.exe
 C:\Users\shengsen\source\repos\MultiLanguage\MultiLanguage\obj\Debug\MultiLanguage.pdb
+C:\Users\偉德\Documents\c製作全集\c#\MultiLanguage\MultiLanguage\bin\Debug\MultiLanguage.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\MultiLanguage\MultiLanguage\obj\Debug\MultiLanguage.exe
+C:\Users\偉德\Documents\c製作全集\c#\MultiLanguage\MultiLanguage\obj\Debug\MultiLanguage.pdb

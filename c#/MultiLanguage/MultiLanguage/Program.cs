@@ -40,13 +40,34 @@ using static MultiLanguage.MultiLanguageHelper;
 2. 在View中（最好是在 Layout、或者其他全部View都會套用的）  中加入
 
 @{
+	//這邊主要是取到當前語系，因為如果有語系了 那 url = 語系/Controller/Action
+	//所以超聯結就寫 <a href="@lang/Controller/Action" >聯結</a>
 	var culture = System.Globalization.CultureInfo.CurrentCulture;
 	var lang = culture.Name == "zh-TW" ? string.Empty : "/" + culture.Name;
 }
 
+中間的部份會有切換語系的按鈕或下拉式選單
+
+下方會有個切換語系的js如下：
+<script>
+	//切換語系
+	function ChangeLang(langValue){
+		window.location.href = "/" + langValue;
+	}
+</script>
+
 3.最好寫一隻Helper來再度處理（可以使用下面的）
 
-4.請在MVC實測一下，會在MVC_easy_test_2中實作（目前還未做）
+4.在App_Start/RouteConfig.cs  中加上 （記得要放在 name:"Default" 那隻程式 的 上面喔）
+
+			//因為多國語系，所以路徑改為  語系/Controller/Action
+			//預設沒有語系時的路徑（因為語系如果是空的=>預設中文）
+			routes.MapRoute(
+					name: "Localized",
+					url: "{lang}/{controller}/{action}/{id}",
+					constraints: new { lang = @"(\w{2})|(\w{2}-\w{2})" },
+					defaults: new { controller = "Captcha", action = "Index", id = UrlParameter.Optional }
+			);
 
  */
 
