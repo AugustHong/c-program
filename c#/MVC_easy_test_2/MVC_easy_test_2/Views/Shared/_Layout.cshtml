@@ -56,8 +56,9 @@
 	<script>
 		//切換多國語系
 		function ChangeLang(langVaule) {
-			var url = location.href;
-			location.href = url + "/" + langVaule;
+			window.location.href = "/" + langVaule;
+			//出來的網址會是： /en-US  這樣
+			//而接下來的就是 /en-US/Controller/Action 這種形式
 		}
 	</script>
 
