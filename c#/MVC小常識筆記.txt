@@ -346,3 +346,18 @@ http://www.ajaxload.info/
 在checkbox中如果要繫結一定要加上 value="true" 才能成功傳到後端（如果value不是true，則都傳不回去）
 
 例： <input type="checkbox" id="c" name="c" value="true" />
+
+------------------------------------------------------------------------------------------------------------
+十二、在Controller取得前一個頁面的網址
+
+string preURL = System.Web.HttpContext.Current.Request.Headers["Referer"].ToString();
+
+------------------------------------------------------------------------------------------------------------
+十三、將一整個List轉型成另一個List (例如： string[] => int[])：
+
+string[] tid = {"1", "2", "3"};
+int[] id = tid.Select(int.Parse).ToArray();
+
+如果要轉成字串的話：
+int[] num = [1, 2, 3];
+string[] id = num.Select(n => n.ToString()).ToArray();
