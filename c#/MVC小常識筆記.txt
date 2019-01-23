@@ -361,3 +361,15 @@ int[] id = tid.Select(int.Parse).ToArray();
 如果要轉成字串的話：
 int[] num = [1, 2, 3];
 string[] id = num.Select(n => n.ToString()).ToArray();
+
+----------------------------------------------------------------------------------------------------------
+十四、基礎型的AutoMapper寫法：
+
+     var dbResult = new List<VIP>();
+    var config = new MapperConfiguration(cfg => cfg.CreateMap<VIP, Member>())
+    //var config = new MapperConfiguration(cfg => cfg.CreateMap<轉型的資料Class, 要轉成的Class>());
+    config.AssertConfigurationIsValid();
+    var mapper = config.CreateMapper();
+    //左邊是原資料型別，右邊是帶出的資料型別
+    return mapper.Map<List<VIP>, List<Member>>(dbResult);
+    //return mapper.Map<轉型的資料類型, 轉出的資料類型>(dbResult);
