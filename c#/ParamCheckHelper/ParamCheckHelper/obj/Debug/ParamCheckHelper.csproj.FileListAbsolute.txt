@@ -1,0 +1,10 @@
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\ParamCheckHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\ParamCheckHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\AutoMapper.dll
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\System.ValueTuple.dll
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\AutoMapper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\AutoMapper.xml
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\bin\Debug\System.ValueTuple.xml
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\obj\Debug\ParamCheckHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\obj\Debug\ParamCheckHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\ParamCheckHelper\ParamCheckHelper\obj\Debug\ParamCheckHelper.pdb
