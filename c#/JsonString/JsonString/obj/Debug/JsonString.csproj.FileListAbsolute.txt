@@ -1,0 +1,9 @@
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\JsonString.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\JsonString.exe
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\JsonString.pdb
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.dll
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.xml
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.exe
+C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.pdb
