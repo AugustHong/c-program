@@ -1,0 +1,7 @@
+c:\users\shengsen\source\repos\TryParse\TryParse\bin\Debug\TryParse.exe.config
+c:\users\shengsen\source\repos\TryParse\TryParse\bin\Debug\TryParse.exe
+c:\users\shengsen\source\repos\TryParse\TryParse\bin\Debug\TryParse.pdb
+c:\users\shengsen\source\repos\TryParse\TryParse\obj\Debug\TryParse.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\TryParse\TryParse\obj\Debug\TryParse.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\TryParse\TryParse\obj\Debug\TryParse.exe
+c:\users\shengsen\source\repos\TryParse\TryParse\obj\Debug\TryParse.pdb
