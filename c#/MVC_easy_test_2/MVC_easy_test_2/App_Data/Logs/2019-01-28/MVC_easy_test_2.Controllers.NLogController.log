@@ -1,0 +1,6 @@
+2019-01-28 20:24:55.6541 | TRACE | MVC_easy_test_2.Controllers.NLogController | 我是追蹤:Trace 
+
+2019-01-28 20:24:55.7001 | INFO | MVC_easy_test_2.Controllers.NLogController | 我是資訊:Info 
+
+2019-01-28 20:24:55.7001 | WARN | MVC_easy_test_2.Controllers.NLogController | 我是警告:Warn 
+

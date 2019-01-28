@@ -1,0 +1,6 @@
+2019-01-28 20:24:55.7061 | ERROR | MVC_easy_test_2.Controllers.NLogController | 我是錯誤:error |  
+
+2019-01-28 20:24:55.7261 | FATAL | MVC_easy_test_2.Controllers.NLogController | 我是致命錯誤:Fatal |  
+
+2019-01-28 20:24:55.7261 | ERROR | MVC_easy_test_2.Controllers.NLogController | 我是錯誤:error | System.Exception: 這是個錯誤 
+
