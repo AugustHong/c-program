@@ -373,3 +373,35 @@ string[] id = num.Select(n => n.ToString()).ToArray();
     //左邊是原資料型別，右邊是帶出的資料型別
     return mapper.Map<List<VIP>, List<Member>>(dbResult);
     //return mapper.Map<轉型的資料類型, 轉出的資料類型>(dbResult);
+
+------------------------------------------------------------------------------------------------------------
+十五、C#簡單使用 StoredProcedure：
+
+//使用SP
+	//ConnectionHelpr.GetADOConnectionString() 這邊是自己改變，反正就是要得到 sql連線字串
+    using (SqlConnection conn = new SqlConnection(ConnectionHelpr.GetADOConnectionString()))
+    {
+     SqlCommand cmd = new SqlCommand("SP的名稱", conn);
+     cmd.CommandType = CommandType.StoredProcedure;
+
+     //以下是傳入參數
+
+     //傳入VarChar型別
+     cmd.Parameters.Add("@InputText", SqlDbType.VarChar);
+     cmd.Parameters["@InputText"].Value = "aaa";
+
+     cmd.Parameters.Add("@InputNo", SqlDbType.Int);
+     cmd.Parameters["@InputNo"].Value = 30;
+
+     #region 輸出的部分（前提是你的SP有回傳值）
+     // @RESULT 是你在SP中的回傳變數名稱，後面的SqlDbType.Bit是回傳型別
+     SqlParameter retValParam = cmd.Parameters.Add("@RESULT", SqlDbType.Bit);
+     retValParam.Direction = ParameterDirection.ReturnValue;
+
+     conn.Open();
+     SqlDataReader reader = cmd.ExecuteReader();
+
+     //如果你想select sp相關內容請影用下面兩行
+     DataTable dt1 = new DataTable();  
+     dt1.Load(reader);
+   }
