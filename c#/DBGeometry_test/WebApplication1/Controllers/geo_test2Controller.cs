@@ -316,18 +316,20 @@ namespace WebApplication1.Controllers
 			{
 				try
 				{
-					//線
-					DbGeometry result = isAddType ? DbGeometry.LineFromText("LINESTRING(" + userInputArea + ")", srid) : DbGeometry.LineFromText(userInputArea, srid);
-					areaType = "LINESTRING";
+					//多邊型
+					//注意：多邊型一定要比線段還前面判斷(因為 他不會依照封閉區間就把它當作多邊型，
+					//故如果拿多邊型的座標資料給線段  他會直接當作成功而回傳線段的類型)
+					DbGeometry result = isAddType ? DbGeometry.PolygonFromText("POLYGON((" + userInputArea + "))", srid) : DbGeometry.PolygonFromText(userInputArea, srid);
+					areaType = "POLYGON";
 					return result;
 				}
 				catch
 				{
 					try
 					{
-						//多邊型
-						DbGeometry result = isAddType ? DbGeometry.PolygonFromText("POLYGON((" + userInputArea + "))", srid) : DbGeometry.PolygonFromText(userInputArea, srid);
-						areaType = "POLYGON";
+						//線
+						DbGeometry result = isAddType ? DbGeometry.LineFromText("LINESTRING(" + userInputArea + ")", srid) : DbGeometry.LineFromText(userInputArea, srid);
+						areaType = "LINESTRING";
 						return result;
 					}
 					catch
@@ -335,6 +337,7 @@ namespace WebApplication1.Controllers
 						try
 						{
 							//多重多邊型（不建議 isAddType為true）
+							//一樣多邊型都要比線段前面判斷
 							DbGeometry result = isAddType ? DbGeometry.MultiPolygonFromText("MULTIPOLYGON(((" + userInputArea + ")))", srid) : DbGeometry.MultiPolygonFromText(userInputArea, srid);
 							areaType = "MULTIPOLYGON";
 							return result;
@@ -343,14 +346,24 @@ namespace WebApplication1.Controllers
 						{
 							try
 							{
-								//組合圖形（不建議 isAddType為true）
-								DbGeometry result = isAddType ? DbGeometry.GeometryCollectionFromText("GEOMETRYCOLLECTION(" + userInputArea + ")", srid) : DbGeometry.GeometryCollectionFromText(userInputArea, srid);
-								areaType = "GEOMETRYCOLLECTION";
+								//多重線段(不建議isAddType為true)
+								DbGeometry result = isAddType ? DbGeometry.MultiLineFromText("MULTILINESTRING((" + userInputArea + "))", srid) : DbGeometry.MultiLineFromText(userInputArea, srid);
+								areaType = "MULTILINESTRING";
 								return result;
 							}
 							catch
 							{
-								throw new Exception("GetAreaType: 地圖座標資料轉換錯誤");
+								try
+								{
+									//組合圖形（不建議 isAddType為true）
+									DbGeometry result = isAddType ? DbGeometry.GeometryCollectionFromText("GEOMETRYCOLLECTION(" + userInputArea + ")", srid) : DbGeometry.GeometryCollectionFromText(userInputArea, srid);
+									areaType = "GEOMETRYCOLLECTION";
+									return result;
+								}
+								catch
+								{
+									throw new Exception("GetAreaType: 地圖座標資料轉換錯誤");
+								}
 							}
 						}
 					}
