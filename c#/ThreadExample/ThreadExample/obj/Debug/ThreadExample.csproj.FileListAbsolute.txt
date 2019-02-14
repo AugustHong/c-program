@@ -1,0 +1,7 @@
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\bin\Debug\ThreadExample.exe.config
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\bin\Debug\ThreadExample.exe
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\bin\Debug\ThreadExample.pdb
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\obj\Debug\ThreadExample.csprojAssemblyReference.cache
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\obj\Debug\ThreadExample.csproj.CoreCompileInputs.cache
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\obj\Debug\ThreadExample.exe
+c:\users\shengsen\source\repos\ThreadExample\ThreadExample\obj\Debug\ThreadExample.pdb
