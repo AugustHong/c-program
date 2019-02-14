@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;     //要記得引用（多國語系所需要的）
 using System.Linq;
+using System.Security.Principal;
 using System.Threading;         //要記得引用（多國語系所需要的）
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
 
 namespace MVC_easy_test_2
 {
@@ -60,6 +62,32 @@ namespace MVC_easy_test_2
 				Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
 			}
 			catch (Exception) { }
+		}
+
+		//權限控管所要用的
+		protected void Application_AuthenticateRequest(Object sender, EventArgs e)
+		{
+			//是否有使用者
+			bool hasUser = HttpContext.Current.User != null;
+			//有使用者，且登入者就是使用者
+			bool isAuthenticated = hasUser && HttpContext.Current.User.Identity.IsAuthenticated;
+			//身份是否能被辦識
+			bool isIdentity = isAuthenticated && HttpContext.Current.User.Identity is FormsIdentity;
+
+			if (isIdentity)
+			{
+				//取得表單認證目前這位使用者的身份
+				FormsIdentity id = (FormsIdentity)HttpContext.Current.User.Identity;
+
+				//取得FormsAuthenticationTicket物件(在LoginProcess中設定的那個)
+				FormsAuthenticationTicket ticket = id.Ticket;
+
+				//取得 角色權限資料
+				string[] roles = ticket.UserData.Split(',');
+
+				//賦予該使用者新的身份(含角色資料)
+				HttpContext.Current.User = new GenericPrincipal(id, roles);
+			}
 		}
 	}
 }

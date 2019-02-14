@@ -1,4 +1,5 @@
-﻿@{
+﻿@using MVC_easy_test_2.Helper;
+@{
 	//多國語系的使用
 	var culture = System.Globalization.CultureInfo.CurrentCulture;
 	var lang = culture.Name == "zh-TW" ? string.Empty : "/" + culture.Name;
@@ -30,6 +31,20 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 				</ul>
+				<!--看是否有登入(記得上方要引用Helper)-->
+				@if (!string.IsNullOrWhiteSpace(WebSiteHelper.CurrentUserName))
+				{
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">@WebSiteHelper.CurrentUserName <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="@Url.Action("Logout", "Authorize")"><i class="icon-off"></i> 登出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				}
 			</div>
 		</div>
 	</div>

@@ -158,11 +158,13 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <None Include="Views\Authorize\ListPage.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Views\Captcha\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthorizeController.cs" />
     <Compile Include="Controllers\CaptchaController.cs" />
     <Compile Include="Controllers\NLogController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
@@ -170,6 +172,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\MultiLanguageHelper.cs" />
+    <Compile Include="Helper\WebSiteHelper.cs" />
     <Compile Include="Models\CheckModel.cs" />
     <Compile Include="Models\PartialViewTestModel.cs" />
     <Compile Include="MultiLanguage\Resource.Designer.cs">
@@ -199,6 +202,7 @@
     <Content Include="Views\PartialView\Index.cshtml" />
     <Content Include="Views\Shared\_PartialViewWithNoParm.cshtml" />
     <Content Include="Views\Shared\_PartialViewWithHaveParm.cshtml" />
+    <Content Include="Views\Authorize\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
