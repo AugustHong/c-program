@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\Hong.FTPHelper\Hong.FTPHelper\bin\Debug\Hong.FTPHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.FTPHelper\Hong.FTPHelper\bin\Debug\Hong.FTPHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Hong.FTPHelper\Hong.FTPHelper\obj\Debug\Hong.FTPHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Hong.FTPHelper\Hong.FTPHelper\obj\Debug\Hong.FTPHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\Hong.FTPHelper\Hong.FTPHelper\obj\Debug\Hong.FTPHelper.pdb
