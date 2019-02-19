@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Caching;  //要使用快取（先去 參考/加入參考/組建/架構  中  安裝）
+using System.IO;
 
 namespace Queue_and_MemoryCache_and_CheckEnglishOrNumber
 {
@@ -69,6 +70,66 @@ namespace Queue_and_MemoryCache_and_CheckEnglishOrNumber
 
 			//取出物件
 			Console.WriteLine($"從快取中取出 key = A 的物件，其value = {m.Get("A")}");
+
+			Console.WriteLine();
+			Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+
+			/*
+				MemoryStream的使用
+				參考網圵： https://docs.microsoft.com/zh-tw/dotnet/api/system.io.memorystream?view=netframework-4.7.2
+			*/
+
+			int count;
+			byte[] byteArray;
+			char[] charArray;
+
+			//要做Unicode轉碼的
+			UnicodeEncoding uniEncoding = new UnicodeEncoding();
+
+			// 要進行存進MemoryStream中的資料(要轉成Bytes)，Path.GetInvalidPathChars()是取得路徑
+			byte[] firstString = uniEncoding.GetBytes("Invalid file path characters are: ");
+			byte[] secondString = uniEncoding.GetBytes(Path.GetInvalidPathChars());
+
+			//這是取得路徑上的無效字元(所以出來會是一大堆亂碼)
+			Console.WriteLine(Path.GetInvalidPathChars());
+
+			//開始使用MemoryStream，後面參數的100是位元素容量 即類似 Byte[100]
+			using (MemoryStream memStream = new MemoryStream(100))
+			{
+				// 第一種的寫法
+				memStream.Write(firstString, 0, firstString.Length);
+
+				// 第二種寫法(慢慢把byte讀進去)
+				count = 0;
+				while (count < secondString.Length)
+				{
+					memStream.WriteByte(secondString[count++]);
+				}
+
+				// Capacity是容量，Length是目前的長度，Position是目前的位置(類似Seek)
+				Console.WriteLine("Capacity = {0}, Length = {1}, Position = {2}\n",memStream.Capacity.ToString(),memStream.Length.ToString(),memStream.Position.ToString());
+
+				// 將Seek設置在初使上
+				memStream.Seek(0, SeekOrigin.Begin);
+
+				// 從MemoryStream中讀取20 Byte至宣告的
+				byteArray = new byte[memStream.Length];
+				count = memStream.Read(byteArray, 0, 20);
+
+				// 讀取資料，用一個一個Byte去讀取
+				while (count < memStream.Length)
+				{
+					byteArray[count++] =Convert.ToByte(memStream.ReadByte());
+				}
+
+				//以下2行是將Byte[]用UniCode解碼成Char[]
+				//GetChars(byteArray, 0, count, charArray, 0); 這段是把byteArray變數中的 第0位數 到 count數 的byte內容 從 charArray
+				//的第0位數開始放	
+				charArray = new char[uniEncoding.GetCharCount(byteArray, 0, count)];
+				uniEncoding.GetDecoder().GetChars(byteArray, 0, count, charArray, 0);
+
+				Console.WriteLine(charArray);
+			}
 
 
 			Console.Read();
