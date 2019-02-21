@@ -340,6 +340,31 @@ beforeSend：發送請求之前會執行的函式。
 
 http://www.ajaxload.info/
 
+
+
+(d)更簡單的應用(但比較沒那麼好)
+
+	(1)在每個Form表單中加上：
+
+		$('form').submit(function () {
+        		$('body').loading();   //主要是這段
+        		return true; 
+    		});
+
+	(2)而在Ajax中加的是(同上面，一樣是這3個事件時觸發)：
+
+
+		error: function (xhr, textStatus, errorThrown) {
+                    $('body').loading('stop');    //主要
+                }
+                , beforeSend: function (xhr) {
+                    $('body').loading();          //主要
+                }
+                , complete: function () {
+                    $('body').loading('stop');    //主要
+                }
+   	});
+
 ------------------------------------------------------------------------------------------------------------
 十一、View中的checkbox的繫結
 
