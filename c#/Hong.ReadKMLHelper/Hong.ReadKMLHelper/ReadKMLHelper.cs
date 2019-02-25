@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Hong.ReadKMLHelper
@@ -97,29 +98,9 @@ namespace Hong.ReadKMLHelper
 						StyleUrl = s.Count() > 0 ? s[0] : "",
 
 						Polygon = new List<Polygon>(),
-						//所有<Point>切出來的資料
-						Point = ReadKMLHelper.StringSpecialSplie(placemarkText, "Point")
+						LineString = new List<LineString>(),
+						Point = new List<Point>()
 					};
-
-					#region 點座標
-					if(placemark.Point.Count() > 0)
-					{
-						//跑過每筆資料，並且把他化成座標格式
-						for(var i = 0; i < placemark.Point.Count(); i++)
-						{
-							try
-							{
-								//將得來的資料轉成座標格式
-								placemark.Point[i] = ReadKMLHelper.StringToListCoordinates(placemark.Point[i])[0];
-							}
-							catch
-							{
-								errorList.Add($"檔案 {filePath} 中格式資料有誤在name為 {placemark.AreaTitle}  且 Description為 {placemark.Description} 的資料");
-								continue;
-							}
-						}
-					}
-					#endregion
 
 					#region 多邊型
 					//此Placemark中的所有Polygon資料
@@ -161,6 +142,52 @@ namespace Hong.ReadKMLHelper
 								errorList.Add($"檔案 {filePath} 中格式資料有誤在name為 {placemark.AreaTitle}  且 Description為 {placemark.Description} 的資料");
 								continue;
 							}
+						}
+					}
+					#endregion
+
+					#region 線段
+					//此Placemark中的所有LineString資料
+					List<string> totalLineStringText = ReadKMLHelper.StringSpecialSplie(placemarkText, "LineString");
+
+					//確定此Placemark中有LineString類型
+					if (totalLineStringText.Count() > 0)
+					{
+						foreach (var lineString in totalLineStringText)
+						{
+							List<string> lCoo = ReadKMLHelper.StringToListCoordinates(lineString);
+
+							LineString l = new LineString
+							{
+								//以防可能有錯
+								coordinates = lCoo.Count() > 0 ? lCoo[0] : ""
+							};
+
+							//加入進去
+							placemark.LineString.Add(l);
+						}
+					}
+					#endregion
+
+					#region 點
+					//此Placemark中的所有Point資料
+					List<string> totalPointText = ReadKMLHelper.StringSpecialSplie(placemarkText, "Point");
+
+					//確定此Placemark中有LineString類型
+					if (totalPointText.Count() > 0)
+					{
+						foreach (var point in totalPointText)
+						{
+							List<string> pCoo = ReadKMLHelper.StringToListCoordinates(point);
+
+							Point p = new Point
+							{
+								//以防可能有錯
+								coordinates = pCoo.Count() > 0 ? pCoo[0] : ""
+							};
+
+							//加入進去
+							placemark.Point.Add(p);
 						}
 					}
 					#endregion
@@ -238,6 +265,8 @@ namespace Hong.ReadKMLHelper
 			List<string> result = new List<string>();
 
 			//先把要分割的字串整理好（把<分割文字>和</分割文字>先取代成一個東西，再用他分割）
+			//先把要分割的字串整理好（把<分割文字>和</分割文字>先取代成一個東西，再用他分割）
+			text = RegexReplace(text, $"<{splitText}", ">", $"<{splitText}>");           //但是可能會出現這種的資料 <Placemark id="ID_00001"> => 所以要把這種的資料變成 <Placemark>才能下一步
 			text = text.Replace("<" + splitText + ">", "*").Replace("</" + splitText + ">", "*");
 
 			//進行分割（只要拿奇數位的資料即可）
@@ -253,6 +282,34 @@ namespace Hong.ReadKMLHelper
 
 			return result;
 		}
+
+
+		/// <summary>
+		/// 正規化 Replace 用法
+		/// 將 <Placemark id="ID_00001"> 這種資料 變成 <Placemark>
+		/// </summary>
+		/// <param name="input">輸入字串</param>
+		/// <param name="startStr">開頭</param>
+		/// <param name="endStr">結尾</param>
+		/// <param name="replaceStr">取代成的字串</param>
+		/// <returns></returns>
+		public static string RegexReplace(string input, string startStr, string endStr, string replaceStr)
+		{
+			//這邊會找出 某開頭 + 任意字元 + 某結尾 (找到第一個符合的結尾就停下來)
+			string Pattern = @"\" + startStr + @"(?<c>[ \S\t]*?)\" + endStr;
+			string ReplacePattern = replaceStr;
+
+			if (Regex.IsMatch(input, Pattern))   // 是否有符合的字串
+			{
+				//將正規化匹配到的 取代
+				string s = Regex.Replace(input, Pattern, ReplacePattern);
+				return s;
+			}
+			else
+			{
+				return input;
+			}
+		}
 	}
 
 	/// <summary>
@@ -264,6 +321,8 @@ namespace Hong.ReadKMLHelper
 		public Placemark()
 		{
 			Polygon = new List<Polygon>();
+			LineString = new List<LineString>();
+			Point = new List<Point>();
 		}
 
 		/// <summary>
@@ -290,9 +349,15 @@ namespace Hong.ReadKMLHelper
 
 
 		/// <summary>
-		/// 多個點資料
+		/// 多個線段資料
 		/// </summary>
-		public List<string> Point { get; set; }
+		public List<LineString> LineString { get; set; }
+
+
+		/// <summary>
+		/// 多個點的資料
+		/// </summary>
+		public List<Point> Point { get; set; }
 	}
 
 
@@ -315,5 +380,27 @@ namespace Hong.ReadKMLHelper
 		/// 多個innerBoundaryIs
 		/// </summary>
 		public List<string> InnerBoundaryIs { get; set; }
+	}
+
+	/// <summary>
+	/// kml中的<LineString>中的資料
+	/// </summary>
+	public class LineString
+	{
+		/// <summary>
+		/// 線段的座標點資料
+		/// </summary>
+		public string coordinates { get; set; }
+	}
+
+	/// <summary>
+	/// kml中的<Point>中的資料
+	/// </summary>
+	public class Point
+	{
+		/// <summary>
+		/// 點的座標點資料
+		/// </summary>
+		public string coordinates { get; set; }
 	}
 }
