@@ -1,0 +1,9 @@
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\Crawler.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\Crawler.exe
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\Crawler.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\obj\Debug\Crawler.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\obj\Debug\Crawler.exe
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\obj\Debug\Crawler.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\HtmlAgilityPack.dll
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Crawler\Crawler\bin\Debug\HtmlAgilityPack.xml
