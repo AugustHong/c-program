@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;   //要加入這個才能寫檔讀檔
-
+using System.Xml;
 
 namespace struct_and_file
 {
@@ -70,6 +70,20 @@ namespace struct_and_file
 			}
 			sr.Close();
 
+			//讀檔，一次讀取全部至結尾
+			string tmp = string.Empty;
+			StreamReader sr2 = new StreamReader("hello.txt", System.Text.Encoding.UTF8);
+			try
+			{
+				//一次讀取至結尾
+				tmp = sr.ReadToEnd();
+			}
+			catch
+			{
+				tmp = "";
+			}
+			sr2.Close();
+
 
 			//用file來建立檔案
 			Console.Write("please input file name: ");
@@ -114,6 +128,23 @@ namespace struct_and_file
 
 			//取到資料夾內的所有檔案名稱
 			string[] allFileName = Directory.GetFileSystemEntries("你所指定的目錄");
+
+
+			//-----------------------------------------------------------------------------------------------------------------------------------------------------
+			//------------------------------------------------------------------------------------------------------------------------------------------------------
+			Console.WriteLine();
+
+			//解析xml
+			string xmlstring = "<aaa>hello</aaa>";
+			XmlDocument doc = new XmlDocument();
+			doc.XmlResolver = null;       //要設定(不然有可以會錯)
+			doc.LoadXml(xmlstring);    //xmlstring 是傳入 XML 格式的 string
+
+			//後面的那個?是確定有值才會給
+			string xmlData = doc.GetElementsByTagName("aaa")[0]?.InnerText;
+			string xmlData2 = doc.GetElementsByTagName("bbb")[0]?.InnerText;
+			Console.WriteLine(xmlData);
+			Console.WriteLine(xmlData2);   //因為沒有 => 空字串
 
 			Console.Read();
 		}
