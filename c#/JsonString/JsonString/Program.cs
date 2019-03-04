@@ -69,6 +69,23 @@ namespace JsonString
 			foreach (var r in rtn) { Console.WriteLine($"id = {r.id}  value = {r.nameList[0]} , {r.nameList[1]} , {r.nameList[2]}"); }
 			#endregion
 
+			//------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+			/*
+				MVC中Controller和View互傳JSON
+
+				參考網圵： https://blog.csdn.net/a84934532/article/details/53121444
+
+				基本上都照著網圵的即可，比較特別的是Controller給View中的 "要用個input去接"
+				=> 用 <input type="text" style="display:none;" id="jsonData" value="@ViewBag.JsonString" />
+				而不行直接用 var s = "@ViewBag.JsonString" ，用這種得到的s 中 " 這個符號會變成 &qot; 而且去不掉
+
+				，所以用input去接  然後用 var s = $('#jsonData').val();
+				, 再來用 var json = eval('(' + s + ')'); 即可得到	
+			
+			*/
+
 
 			Console.Read();
 		}
