@@ -39,19 +39,34 @@ namespace FromServerDownloadFile
             response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment");
 
             response.Content.Headers.ContentDisposition.FileName = HttpUtility.UrlPathEncode("檔名.txt");
-            //response.Content.Headers.ContentLength = fileStream.Length; //告知瀏覽器下載長度
+			//response.Content.Headers.ContentLength = fileStream.Length; //告知瀏覽器下載長度
 
 
-            /*
-                特別注意：（其中那路徑是可以改的）
+			/*
+			    特別注意：（其中那路徑是可以改的）
 
-                如果是在Controller中，取得Server當前位置用：
-                    var path = Path.Combine(Server.MapPath("~/subQuestion.zip");
+			    如果是在Controller中，取得Server當前位置用：
+				  var path = Path.Combine(Server.MapPath("~/subQuestion.zip");
 
-                如不在Controller中，取得Server當前位直用：
-                    string path = HttpContext.Current.Server.MapPath(@"~/subQuestion.zip");
-            */
+			    如不在Controller中，取得Server當前位直用：
+				  string path = HttpContext.Current.Server.MapPath(@"~/subQuestion.zip");
+			*/
 
-        }
-    }
+			//-----------------------------------------------------------------------------------------------------------------------------------------
+
+			/*
+				另一種寫法：
+
+			public ActionResult GetFile(string fileName){
+				//取得檔案路徑
+				string realPath = Server.MapPath("~/download/" + fileName);
+				//下載檔案( return File(路徑, 檔案格式, 檔名+副檔名) )
+				return File(realPath, "xml", "aaa.xml");
+				//return File(realPath, "doc", "aaa.doc");
+			}
+			
+			*/
+
+		}
+	}
 }
