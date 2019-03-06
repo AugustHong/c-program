@@ -1,4 +1,4 @@
-¤@¡B¨Ï¥ÎEFªºsavechanges()§¹«á¡A·|§ó·s¨ì¹êÅé¤¤¡]½Ğ¬İ¥H¤U½d¨Ò¡^
+ï»¿ä¸€ã€ä½¿ç”¨EFçš„savechanges()å®Œå¾Œï¼Œæœƒæ›´æ–°åˆ°å¯¦é«”ä¸­ï¼ˆè«‹çœ‹ä»¥ä¸‹ç¯„ä¾‹ï¼‰
 
 User u = new User{
 	account = data.account;
@@ -11,35 +11,35 @@ db.User.savechanges();
 
 int id = u.id;
 
-//User¬O§Ú­Ì¸ê®Æ®wªºmodel¡A¸Ì­±¨ä¹êÁÙ¦³idªºÄİ©Ê¡]¦ı¬OÀ³¸Ó¬O¦Û°Ê¼W¥[ªº¡A©Ò¥H¤£¥Îµ¹¡^
-//¦Ó§Ú­Ìsavechanges()§¹«á¡A§Ú­Ì¦A¿é¤Jint id = u.id; ¬O¥i¥H¨ú±o¨ì­è¤~¦Û°Ê²£¥Íªºid
-//©Ò¥H¥Î§¹savechanges()«á¡A§Ú­ÌªºÅÜ¼Æu·|¬O¨ä¸ê®Æ®wªº¸ê®Æ³á¡I
+//Useræ˜¯æˆ‘å€‘è³‡æ–™åº«çš„modelï¼Œè£¡é¢å…¶å¯¦é‚„æœ‰idçš„å±¬æ€§ï¼ˆä½†æ˜¯æ‡‰è©²æ˜¯è‡ªå‹•å¢åŠ çš„ï¼Œæ‰€ä»¥ä¸ç”¨çµ¦ï¼‰
+//è€Œæˆ‘å€‘savechanges()å®Œå¾Œï¼Œæˆ‘å€‘å†è¼¸å…¥int id = u.id; æ˜¯å¯ä»¥å–å¾—åˆ°å‰›æ‰è‡ªå‹•ç”¢ç”Ÿçš„id
+//æ‰€ä»¥ç”¨å®Œsavechanges()å¾Œï¼Œæˆ‘å€‘çš„è®Šæ•¸uæœƒæ˜¯å…¶è³‡æ–™åº«çš„è³‡æ–™å–”ï¼
 
 -------------------------------------------------------------------------------------------------------------
-¤G¡BAJAX¤§¥Îªk¡G
+äºŒã€AJAXä¹‹ç”¨æ³•ï¼š
 
-	(a)¥¿±`¼gªk¡G
+	(a)æ­£å¸¸å¯«æ³•ï¼š
 	
-		//¥ş³¡³Q¤Ä¿ïªºid¦Cªí¡]¨ú±ocheckbox³Q¿ï¨úªº°}¦C)
+		//å…¨éƒ¨è¢«å‹¾é¸çš„idåˆ—è¡¨ï¼ˆå–å¾—checkboxè¢«é¸å–çš„é™£åˆ—)
 		var data = $("input[name='checkDownload']:checked").map(function () { return this.id.replace("check_", ""); }).get();
 
 		if (data != []) {
-			//¶Ç¨ìcontroller¤¤
+			//å‚³åˆ°controllerä¸­
 			$.ajax({
-				url: "ºô§}",
+				url: "ç¶²å€",
 				data: {
 					downloadContext: data
 				},
-				type: "GET", //¤]¥i¥H¿ïPOST¡]­n¤j¼g³á¡^
-				traditional: true   //¥[¤J³o¦æ¬O¥u­n¬O¶Ç°}¦Cµ¹Controllerªº³£­n¥[
+				type: "GET", //ä¹Ÿå¯ä»¥é¸POSTï¼ˆè¦å¤§å¯«å–”ï¼‰
+				traditional: true   //åŠ å…¥é€™è¡Œæ˜¯åªè¦æ˜¯å‚³é™£åˆ—çµ¦Controllerçš„éƒ½è¦åŠ 
 			});  
 		} else {
-			alert("½Ğ¤Ä¿ï§A­nªº¶µ¥Ø");
+			alert("è«‹å‹¾é¸ä½ è¦çš„é …ç›®");
 		}
 
-	(b)ºëÂ²¼gªk¡G
+	(b)ç²¾ç°¡å¯«æ³•ï¼š
 	
-	$.get("ºô§}",
+	$.get("ç¶²å€",
 				{
 					ladderSerial: ladder
 				}).done(function (result) {
@@ -47,7 +47,7 @@ int id = u.id;
 				});
 
 
-	(c)postªº¼gªk¡G
+	(c)postçš„å¯«æ³•ï¼š
 		
 	$.ajax({
 			
@@ -73,21 +73,21 @@ int id = u.id;
 	})
 
 
-	(d)Postªº¼gªk¡]¶ÇModel + ¦³Vaild­n¶Ç¦^¥hªº + °õ¦æ§¹¡]success³£¶]§¹¤F¡^¤~·|Ä~Äò°õ¦æ¤U¤@¦æµ{¦¡¡G
+	(d)Postçš„å¯«æ³•ï¼ˆå‚³Model + æœ‰Vaildè¦å‚³å›å»çš„ + åŸ·è¡Œå®Œï¼ˆsuccesséƒ½è·‘å®Œäº†ï¼‰æ‰æœƒç¹¼çºŒåŸ·è¡Œä¸‹ä¸€è¡Œç¨‹å¼ï¼š
 
-	//±o¨ì[ValidateAntiForgeryToken]­nªº­È
+	//å¾—åˆ°[ValidateAntiForgeryToken]è¦çš„å€¼
         var token = $('input[name="__RequestVerificationToken"]').val();
 
-        //¦³¤F®y¼Ğ¸ê®Æ«á¡A´N¥i¥H§â¥ş³¡ªF¦è³£Ajax¨ìCreate¤F¡]¦]¬°­n¶Çªº¬OModel©Ò¥H¥Î{{}}¡^
+        //æœ‰äº†åº§æ¨™è³‡æ–™å¾Œï¼Œå°±å¯ä»¥æŠŠå…¨éƒ¨æ±è¥¿éƒ½Ajaxåˆ°Createäº†ï¼ˆå› ç‚ºè¦å‚³çš„æ˜¯Modelæ‰€ä»¥ç”¨{{}}ï¼‰
       $.ajax({
        type: "POST",
        url: "@Url.Action("Create")",
-       async: false, ¥ıÅıajax¶]§¹¡]§tsuccess¡A¤~·|Ä~Äò³£¦æ¤U­±ªºµ{¦¡
+       async: false, å…ˆè®“ajaxè·‘å®Œï¼ˆå«successï¼Œæ‰æœƒç¹¼çºŒéƒ½è¡Œä¸‹é¢çš„ç¨‹å¼
 
        data: {
-        __RequestVerificationToken: token,    //­n¶Ç¦^Vaildªº­È
+        __RequestVerificationToken: token,    //è¦å‚³å›Vaildçš„å€¼
 
-        formData: {              //¥Î{}¥]°_¨Óªº´N¬OModel¸ÌªºÄİ©Ê¦WºÙ
+        formData: {              //ç”¨{}åŒ…èµ·ä¾†çš„å°±æ˜¯Modelè£¡çš„å±¬æ€§åç¨±
          name: "hello",
 	 englishName : "jack"
         },
@@ -102,51 +102,51 @@ int id = u.id;
       });
 
 
-	(e)Ajax¨Æ¥ó¤¶²Ğ¡]°£ success error¥~¡^¡G
+	(e)Ajaxäº‹ä»¶ä»‹ç´¹ï¼ˆé™¤ success errorå¤–ï¼‰ï¼š
 
-		complete¡G ½Ğ¨D§¹¦¨®É°õ¦æªº¨ç¦¡(¤£½×µ²ªG¬Osuccess©Îerror)¡C
-		beforeSend¡Gµo°e½Ğ¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
+		completeï¼š è«‹æ±‚å®Œæˆæ™‚åŸ·è¡Œçš„å‡½å¼(ä¸è«–çµæœæ˜¯successæˆ–error)ã€‚
+		beforeSendï¼šç™¼é€è«‹æ±‚ä¹‹å‰æœƒåŸ·è¡Œçš„å‡½å¼ã€‚
 
-		//¤W2­Ó¥D­n§@¥Î©ó Process BarªºÀ³¥Î¡]¬İ²Ä10ÂI¡^
+		//ä¸Š2å€‹ä¸»è¦ä½œç”¨æ–¼ Process Barçš„æ‡‰ç”¨ï¼ˆçœ‹ç¬¬10é»ï¼‰
 
 ------------------------------------------------------------------------------------------------------------
-¤T¡BRedirectToAction¤§À³¥Î¡G
+ä¸‰ã€RedirectToActionä¹‹æ‡‰ç”¨ï¼š
 
-	(a)°ò¥»«¬¡]¦p¦b¦P¤@­ÓController¡A¥i§K°£¼g¡^¡G
+	(a)åŸºæœ¬å‹ï¼ˆå¦‚åœ¨åŒä¸€å€‹Controllerï¼Œå¯å…é™¤å¯«ï¼‰ï¼š
 		
-		return RedirectToAction("Action¦W", "Controller¦W");
+		return RedirectToAction("Actionå", "Controllerå");
 
 
-	(b)¶Ç¤@¯ë°Ñ¼Æ«¬¡]int, string, datetime, double ¡K¡Kµ¥¡^¡G
+	(b)å‚³ä¸€èˆ¬åƒæ•¸å‹ï¼ˆint, string, datetime, double â€¦â€¦ç­‰ï¼‰ï¼š
 
-		return RedirectToAction("Action¦W", "Controller¦W", new {°Ñ¼Æ¦W = °Ñ¼Æ­È(©ÎªÌÅÜ¼Æ)});
+		return RedirectToAction("Actionå", "Controllerå", new {åƒæ•¸å = åƒæ•¸å€¼(æˆ–è€…è®Šæ•¸)});
 
-	(c)¶ÇModel¡]¥u­n¥Î³r¸¹¤À¶}§Y¥i¡^¡G
+	(c)å‚³Modelï¼ˆåªè¦ç”¨é€—è™Ÿåˆ†é–‹å³å¯ï¼‰ï¼š
 
-		return RedirectToAction("Action¦W", "Controller¦W", ModelÅÜ¼Æ);
+		return RedirectToAction("Actionå", "Controllerå", Modelè®Šæ•¸);
 
-	(d)¶ÇModel + ¤@¯ë°Ñ¼Æ«¬¡G
+	(d)å‚³Model + ä¸€èˆ¬åƒæ•¸å‹ï¼š
 
-		¡H¡H¡H¡H¡H¡]§ï¦¨¶Ç2­ÓModel¡A©Î¦X¨Ö¨ì1­ÓModel§a¡^
+		ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼ˆæ”¹æˆå‚³2å€‹Modelï¼Œæˆ–åˆä½µåˆ°1å€‹Modelå§ï¼‰
 
 
-PS:¤]¥i¥H¥Î Redirect("ºô§}")  ´N¥i¥H±µ¨ìÅo¡I
+PS:ä¹Ÿå¯ä»¥ç”¨ Redirect("ç¶²å€")  å°±å¯ä»¥æ¥åˆ°å›‰ï¼
 
 ------------------------------------------------------------------------------------------------------------
-¥|¡BÃ´µ²¬ÛÃöÀ³¥Î¡G
+å››ã€ç¹«çµç›¸é—œæ‡‰ç”¨ï¼š
 
-	(a)List¡G
+	(a)Listï¼š
 
-		¦bView¤¤ªº§e²{					Model¤¤ªº§e²{
+		åœ¨Viewä¸­çš„å‘ˆç¾					Modelä¸­çš„å‘ˆç¾
 		---------------					------------------
 
 		<input name="studentID[0]" />			List<string> studentID {get;set;}
 		<input name="studentID[1]" />
 		<input name="studentID[2]" />
 
-	(b)IEnumerable¡G¡]¥Ø«e¦Û­qªºClass«¬§O¤£¤Ó¯à¥Î¡A­n¦h¬ã¨s => ¤£¹Lint string³o¨Ç¥i¥H¡^
+	(b)IEnumerableï¼šï¼ˆç›®å‰è‡ªè¨‚çš„Classå‹åˆ¥ä¸å¤ªèƒ½ç”¨ï¼Œè¦å¤šç ”ç©¶ => ä¸éint stringé€™äº›å¯ä»¥ï¼‰
 
-		¦bView¤¤ªº§e²{					Model¤¤ªº§e²{
+		åœ¨Viewä¸­çš„å‘ˆç¾					Modelä¸­çš„å‘ˆç¾
 		---------------					-------------------
 
 		<input name="studentID" />			IEnumerable<string> studentID {get;set;}
@@ -154,42 +154,42 @@ PS:¤]¥i¥H¥Î Redirect("ºô§}")  ´N¥i¥H±µ¨ìÅo¡I
 		<input name="studentID" />
 
 ------------------------------------------------------------------------------------------------------------
-¤­¡B«eºİ©I¥sController¨Ã¦^¶Çhtml¦r¦êµ¹«eºİ
+äº”ã€å‰ç«¯å‘¼å«Controllerä¸¦å›å‚³htmlå­—ä¸²çµ¦å‰ç«¯
 
-@{Html.RenderAction("Action¦W", "Controller¦W", new {°Ñ¼Æ = ÅÜ¼Æ­È  });}
+@{Html.RenderAction("Actionå", "Controllerå", new {åƒæ•¸ = è®Šæ•¸å€¼  });}
 
-ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ĞÅÒ => ·|¦b©I¥sªº¦a¤èÅÜ¦¨¥¦¡^
+ps:é€™å€‹Controllerå›å‚³å‡ºä¾†è¦æ˜¯å­—ä¸²å‹æ…‹ï¼ˆå¯ä»¥ç”¨åŸºæœ¬å­—ä¸²ï¼Œæˆ–è€…ä¸€æ®µhtmlæ¨™ç±¤ => æœƒåœ¨å‘¼å«çš„åœ°æ–¹è®Šæˆå®ƒï¼‰
 
-¨Ò¦p¡G  Action¦W=getName()   ¡A¦^¶Çªº¬O "<p>Lee</p>"
+ä¾‹å¦‚ï¼š  Actionå=getName()   ï¼Œå›å‚³çš„æ˜¯ "<p>Lee</p>"
 
-<p>hello</p>                         => °õ¦æ«á    =>   	<p>hello</p>
+<p>hello</p>                         => åŸ·è¡Œå¾Œ    =>   	<p>hello</p>
 @{Html.RenderAction("getName"}				<p>Lee</p>
 
 
 -----------------------------------------------------------------------------------------------------------
-¤»¡BTempData
+å…­ã€TempData
 
-¥ÎªkÃş¦ü©óSessionªº¥\¥Î¡A¥D­n¥Î©ó¸ó§OªºController¶Ç¸ê®Æ¤§¥Îªk¡C
+ç”¨æ³•é¡ä¼¼æ–¼Sessionçš„åŠŸç”¨ï¼Œä¸»è¦ç”¨æ–¼è·¨åˆ¥çš„Controllerå‚³è³‡æ–™ä¹‹ç”¨æ³•ã€‚
 
-¥Îªk¡G
+ç”¨æ³•ï¼š
 
-¦b¤@­ÓController¤¤¿é¤J  TempData["ÀH«Kªº¦WºÙ"] = ÀH«Kªº­È¡]¥ô¦óÃş«¬¬Ò¥i¡^;
+åœ¨ä¸€å€‹Controllerä¸­è¼¸å…¥  TempData["éš¨ä¾¿çš„åç¨±"] = éš¨ä¾¿çš„å€¼ï¼ˆä»»ä½•é¡å‹çš†å¯ï¼‰;
 
-¦b²Ä¤G­ÓController¤¤±o¸ê®Æ =>  Ãş§O A = TempData["ÀH«Kªº¦WºÙ"] as XXX;   ¡]¦]¬°¥L·|¸òSession¤@¼ËÅÜ¦¨ª«¥ó¡A©Ò¥H­nÂà«¬¡^
+åœ¨ç¬¬äºŒå€‹Controllerä¸­å¾—è³‡æ–™ =>  é¡åˆ¥ A = TempData["éš¨ä¾¿çš„åç¨±"] as XXX;   ï¼ˆå› ç‚ºä»–æœƒè·ŸSessionä¸€æ¨£è®Šæˆç‰©ä»¶ï¼Œæ‰€ä»¥è¦è½‰å‹ï¼‰
 
 --------------------------------------------------------------------------------------------------------------
-¤C¡BTransaction³B²z¡]¨Ï¥ÎTransactionScopeªº¸Ü¡A¦bscope.Complete();¨S°õ¦æ§¹«e¦³µo¥Í¨Ò¥~ªº¸Ü¡A¤W­±ªº¥ş³¡·|¨ú®ø¥æ©ö¡^
+ä¸ƒã€Transactionè™•ç†ï¼ˆä½¿ç”¨TransactionScopeçš„è©±ï¼Œåœ¨scope.Complete();æ²’åŸ·è¡Œå®Œå‰æœ‰ç™¼ç”Ÿä¾‹å¤–çš„è©±ï¼Œä¸Šé¢çš„å…¨éƒ¨æœƒå–æ¶ˆäº¤æ˜“ï¼‰
 
 
-//¨Ï¥ÎTransactionScope
+//ä½¿ç”¨TransactionScope
    using (TransactionScope scope = new TransactionScope())
    {
     try
     {
 
-	sql»yªk©ÎªÌ¨ä¥L¥æ©ö¬ÛÃö
+	sqlèªæ³•æˆ–è€…å…¶ä»–äº¤æ˜“ç›¸é—œ
 
-     //§¹¦¨
+     //å®Œæˆ
      scope.Complete();
 
     }
@@ -198,34 +198,40 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ĞÅÒ => ·|¦b©
      return string.Empty;
     }
 
--------------------------------------------------------------------------------------------------------------
-¤K¡B¤@¨Ç¤pÅŞ¿è¸Ñ»¡¡G
+***å¦‚æœå‡ºç¾ï¼š å·²åœç”¨åˆ†æ•£å¼äº¤æ˜“ç®¡ç†å“¡ (MSDTC) çš„ç¶²è·¯å­˜å–ã€‚è«‹ä½¿ç”¨å…ƒä»¶æœå‹™ç³»çµ±ç®¡ç†å·¥å…·å•Ÿç”¨ DTCï¼Œä»¥ä½¿ç”¨ MSDTC å®‰å…¨æ€§è¨­å®šä¸­çš„ç¶²è·¯å­˜å–ã€‚
 
-(a)°}¦C¤¤©ñi++
+æœ‰ä»¥ä¸Šå•é¡Œï¼Œè«‹æ”¹æˆ using (TransactionScope scope =new TransactionScope(TransactionScopeOption.Suppress))
+
+åƒè€ƒç¶²åœµï¼šhttps://dotblogs.com.tw/wasichris/2017/05/31/150157
+
+-------------------------------------------------------------------------------------------------------------
+å…«ã€ä¸€äº›å°é‚è¼¯è§£èªªï¼š
+
+(a)é™£åˆ—ä¸­æ”¾i++
 
 	int[] a = {1, 2, 3, 4, 5}
 	i = 2;
 	a[i++] = a[i] + 10;
 
-	=>¥X¨Óªºµ²ªG 1, 2, 14, 4, 5
+	=>å‡ºä¾†çš„çµæœ 1, 2, 14, 4, 5
 
-	µ²½×¡G¦ba[i++]¤¤¤´µM¬O¥u§ì¨ìiªº­È ¡A¬G¬Oa[2]¡A¦ı¦]¬°«e­±¦³i++¤F¡I©Ò¥H²{¦bi¬O3
+	çµè«–ï¼šåœ¨a[i++]ä¸­ä»ç„¶æ˜¯åªæŠ“åˆ°içš„å€¼ ï¼Œæ•…æ˜¯a[2]ï¼Œä½†å› ç‚ºå‰é¢æœ‰i++äº†ï¼æ‰€ä»¥ç¾åœ¨iæ˜¯3
 
 	=> a[2] = a[3] + 10
 
-(b)°}¦C¤¤©ñi--
+(b)é™£åˆ—ä¸­æ”¾i--
 
 	int[] a = {1, 2, 3, 4, 5}
 	i = 2;
 	a[i--] = a[i] + 10;
 
-	=>¥X¨Óªºµ²ªG 1, 2, 12, 4, 5
+	=>å‡ºä¾†çš„çµæœ 1, 2, 12, 4, 5
 
-	µ²½×¡G¦ba[i--]¤¤¤´µM¬O¥u§ì¨ìiªº­È ¡A¬G¬Oa[2]¡A¦ı¦]¬°«e­±¦³i--¤F¡I©Ò¥H²{¦bi¬O1
+	çµè«–ï¼šåœ¨a[i--]ä¸­ä»ç„¶æ˜¯åªæŠ“åˆ°içš„å€¼ ï¼Œæ•…æ˜¯a[2]ï¼Œä½†å› ç‚ºå‰é¢æœ‰i--äº†ï¼æ‰€ä»¥ç¾åœ¨iæ˜¯1
 
 	=> a[2] = a[1] + 10
 
-(c)Byteªº·¸¦ì³B²z
+(c)Byteçš„æº¢ä½è™•ç†
 
 	byte x = 0, y = 64;
 
@@ -234,34 +240,34 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ĞÅÒ => ·|¦b©
 		Console.writeLine(x);
 	}
 
-	=>¥X¨Óµ²ªG¡G 64 128 192 0 64
-	=>Á`µ²¡Gbyte³Ì¤j­È¬O256¡A¬G¦b²Äi=3®É¡A­È¨ì¤F256«á´N·|ÅÜ¦¨0¤F¡I¤§«á¦b²Äi=4®É´N¥Î0 ¦A¥[¤W 64
+	=>å‡ºä¾†çµæœï¼š 64 128 192 0 64
+	=>ç¸½çµï¼šbyteæœ€å¤§å€¼æ˜¯256ï¼Œæ•…åœ¨ç¬¬i=3æ™‚ï¼Œå€¼åˆ°äº†256å¾Œå°±æœƒè®Šæˆ0äº†ï¼ä¹‹å¾Œåœ¨ç¬¬i=4æ™‚å°±ç”¨0 å†åŠ ä¸Š 64
 
 ------------------------------------------------------------------------------------------------------------
-¤E¡BIPageList¥ÎªkÂ²¤¶µ§°O¡G
+ä¹ã€IPageListç”¨æ³•ç°¡ä»‹ç­†è¨˜ï¼š
 
-(1)¥ı¥hNuGet¸Ë
+(1)å…ˆå»NuGetè£
 
-(2)½T»{View/Web.config¬O§_¦³
+(2)ç¢ºèªView/Web.configæ˜¯å¦æœ‰
 
 	<add namespace="PagedList" />
 	<add namespace="PagedList.Mvc" />
 
-	³o2¦æ¡A¦³®É­Ô¥X²{Assembly....ªº¿ù»~´N¬O³o¸Ì¨S¦³
+	é€™2è¡Œï¼Œæœ‰æ™‚å€™å‡ºç¾Assembly....çš„éŒ¯èª¤å°±æ˜¯é€™è£¡æ²’æœ‰
 
-(3)¦bController
+(3)åœ¨Controller
 
-	using PagedList;   //¥ı¨Ï¥Îusing
+	using PagedList;   //å…ˆä½¿ç”¨using
 
 
-	//Controller¸Ì­±
+	//Controllerè£¡é¢
 	[HttpGet]
 	public ActionResult Index(int page = 1){
 			
 
-		int currentPage = page < 1 ? 1 : page;   //·í«eªº­¶¼Æ¡]¦pªGpage < 1ªº¸Ü´N¬O1¡F¤Ï¤§´N¬Opage¡^
-		IEnumerable<ª«¥ó(Class)> data= ¨ú±o¸ê®Æ¶°¦X;
-		IOrderedEnumerable<ª«¥ó(Class)> pageAllList = data.OrderBy(x => x.ID);   //±Æ§Ç
+		int currentPage = page < 1 ? 1 : page;   //ç•¶å‰çš„é æ•¸ï¼ˆå¦‚æœpage < 1çš„è©±å°±æ˜¯1ï¼›åä¹‹å°±æ˜¯pageï¼‰
+		IEnumerable<ç‰©ä»¶(Class)> data= å–å¾—è³‡æ–™é›†åˆ;
+		IOrderedEnumerable<ç‰©ä»¶(Class)> pageAllList = data.OrderBy(x => x.ID);   //æ’åº
 		IPagedList result = pageAllList.ToPagedList(currentPage, pageSize);
 
 
@@ -269,24 +275,24 @@ ps:³o­ÓController¦^¶Ç¥X¨Ó­n¬O¦r¦ê«¬ºA¡]¥i¥H¥Î°ò¥»¦r¦ê¡A©ÎªÌ¤@¬qhtml¼ĞÅÒ => ·|¦b©
 
 	}
 
-(4)¦bView¤¤
+(4)åœ¨Viewä¸­
 
-	@model IPagedList<Model¦W>
+	@model IPagedList<Modelå>
 
-	@Html.PagedListPager(Model, page => Url.Action("Controller¦W(°ò¥»¤W¬OIndex)", new { page, °Ñ¼Æ¦W = ÅÜ¼Æ­È }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+	@Html.PagedListPager(Model, page => Url.Action("Controllerå(åŸºæœ¬ä¸Šæ˜¯Index)", new { page, åƒæ•¸å = è®Šæ•¸å€¼ }), PagedListRenderOptions.ClassicPlusFirstAndLast)
 
-	//¤W­±ªºModel«üªº¬O@model 
-	//¦Ó new {page, °Ñ¼Æ¦W = ÅÜ¼Æ­È}  page¬O¥²­n¶Çªº¡A¦Ó«á­±ªº°Ñ¼Æ¨ÌController¦ÓÅÜ¡C
+	//ä¸Šé¢çš„ModelæŒ‡çš„æ˜¯@model 
+	//è€Œ new {page, åƒæ•¸å = è®Šæ•¸å€¼}  pageæ˜¯å¿…è¦å‚³çš„ï¼Œè€Œå¾Œé¢çš„åƒæ•¸ä¾Controllerè€Œè®Šã€‚
 
 ------------------------------------------------------------------------------------------------------------
-¤Q¡BProcess Bar
+åã€Process Bar
 
-(a) Ajax¨Æ¥ó¤¶²Ğ¡G
+(a) Ajaxäº‹ä»¶ä»‹ç´¹ï¼š
 
-complete¡G ½Ğ¨D§¹¦¨®É°õ¦æªº¨ç¦¡(¤£½×µ²ªG¬Osuccess©Îerror)¡C
-beforeSend¡Gµo°e½Ğ¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
+completeï¼š è«‹æ±‚å®Œæˆæ™‚åŸ·è¡Œçš„å‡½å¼(ä¸è«–çµæœæ˜¯successæˆ–error)ã€‚
+beforeSendï¼šç™¼é€è«‹æ±‚ä¹‹å‰æœƒåŸ·è¡Œçš„å‡½å¼ã€‚
 
-(b)µ{¦¡½X¤¶²Ğ¡G
+(b)ç¨‹å¼ç¢¼ä»‹ç´¹ï¼š
 
 <html>
     <head>
@@ -306,8 +312,8 @@ beforeSend¡Gµo°e½Ğ¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
                     alert(msg);
                 },
                
-		//¥D­n¥ÎbeforeSend©Mcomplete°µProcess Barªº¶}Ãö
-		//¦pªG¤µ¤Ñ¤£¬Oajax¡A¤]¤@¼Ë¬O¥ÎProcess Bar ªº show ©M hide¨Ó¾Ş§@
+		//ä¸»è¦ç”¨beforeSendå’ŒcompleteåšProcess Barçš„é–‹é—œ
+		//å¦‚æœä»Šå¤©ä¸æ˜¯ajaxï¼Œä¹Ÿä¸€æ¨£æ˜¯ç”¨Process Bar çš„ show å’Œ hideä¾†æ“ä½œ
 		beforeSend:function(){
                     $('#loadingIMG').show();
                 },
@@ -327,106 +333,106 @@ beforeSend¡Gµo°e½Ğ¨D¤§«e·|°õ¦æªº¨ç¦¡¡C
     <body>
      <form id="sentToBack">
             <input type="text" name="Text"/> 
-            <input type="button"  value="°e¥X" onClick="Submit()"/>
+            <input type="button"  value="é€å‡º" onClick="Submit()"/>
         </form>
 
-	<!--Process Barªº³¡¥÷-->
-        <div id=" loadingIMG" style="display:none"><img src="loading.gif" height='14'/>¸ê®Æ³B²z¤¤¡A½Ğµy«á¡C</div>
+	<!--Process Barçš„éƒ¨ä»½-->
+        <div id=" loadingIMG" style="display:none"><img src="loading.gif" height='14'/>è³‡æ–™è™•ç†ä¸­ï¼Œè«‹ç¨å¾Œã€‚</div>
 
     </body>
 </html>
 
-(c)Process Barªº¹Ï¤ù¤U¸üºô§}¡]¥i¥H¶i¦æ»s§@¹ÏÀÉ¡^
+(c)Process Barçš„åœ–ç‰‡ä¸‹è¼‰ç¶²å€ï¼ˆå¯ä»¥é€²è¡Œè£½ä½œåœ–æª”ï¼‰
 
 http://www.ajaxload.info/
 
 
 
-(d)§óÂ²³æªºÀ³¥Î(¦ı¤ñ¸û¨S¨º»ò¦n)
+(d)æ›´ç°¡å–®çš„æ‡‰ç”¨(ä½†æ¯”è¼ƒæ²’é‚£éº¼å¥½)
 
-	(1)¦b¨C­ÓFormªí³æ¤¤¥[¤W¡G
+	(1)åœ¨æ¯å€‹Formè¡¨å–®ä¸­åŠ ä¸Šï¼š
 
 		$('form').submit(function () {
-        		$('body').loading();   //¥D­n¬O³o¬q
+        		$('body').loading();   //ä¸»è¦æ˜¯é€™æ®µ
         		return true; 
     		});
 
-	(2)¦Ó¦bAjax¤¤¥[ªº¬O(¦P¤W­±¡A¤@¼Ë¬O³o3­Ó¨Æ¥ó®ÉÄ²µo)¡G
+	(2)è€Œåœ¨Ajaxä¸­åŠ çš„æ˜¯(åŒä¸Šé¢ï¼Œä¸€æ¨£æ˜¯é€™3å€‹äº‹ä»¶æ™‚è§¸ç™¼)ï¼š
 
 
 		error: function (xhr, textStatus, errorThrown) {
-                    $('body').loading('stop');    //¥D­n
+                    $('body').loading('stop');    //ä¸»è¦
                 }
                 , beforeSend: function (xhr) {
-                    $('body').loading();          //¥D­n
+                    $('body').loading();          //ä¸»è¦
                 }
                 , complete: function () {
-                    $('body').loading('stop');    //¥D­n
+                    $('body').loading('stop');    //ä¸»è¦
                 }
    	});
 
 ------------------------------------------------------------------------------------------------------------
-¤Q¤@¡BView¤¤ªºcheckboxªºÃ´µ²
+åä¸€ã€Viewä¸­çš„checkboxçš„ç¹«çµ
 
-¦bcheckbox¤¤¦pªG­nÃ´µ²¤@©w­n¥[¤W value="true" ¤~¯à¦¨¥\¶Ç¨ì«áºİ¡]¦pªGvalue¤£¬Otrue¡A«h³£¶Ç¤£¦^¥h¡^
+åœ¨checkboxä¸­å¦‚æœè¦ç¹«çµä¸€å®šè¦åŠ ä¸Š value="true" æ‰èƒ½æˆåŠŸå‚³åˆ°å¾Œç«¯ï¼ˆå¦‚æœvalueä¸æ˜¯trueï¼Œå‰‡éƒ½å‚³ä¸å›å»ï¼‰
 
-¨Ò¡G <input type="checkbox" id="c" name="c" value="true" />
+ä¾‹ï¼š <input type="checkbox" id="c" name="c" value="true" />
 
 ------------------------------------------------------------------------------------------------------------
-¤Q¤G¡B¦bController¨ú±o«e¤@­Ó­¶­±ªººô§}
+åäºŒã€åœ¨Controllerå–å¾—å‰ä¸€å€‹é é¢çš„ç¶²å€
 
 string preURL = System.Web.HttpContext.Current.Request.Headers["Referer"].ToString();
 
 ------------------------------------------------------------------------------------------------------------
-¤Q¤T¡B±N¤@¾ã­ÓListÂà«¬¦¨¥t¤@­ÓList (¨Ò¦p¡G string[] => int[])¡G
+åä¸‰ã€å°‡ä¸€æ•´å€‹Listè½‰å‹æˆå¦ä¸€å€‹List (ä¾‹å¦‚ï¼š string[] => int[])ï¼š
 
 string[] tid = {"1", "2", "3"};
 int[] id = tid.Select(int.Parse).ToArray();
 
-¦pªG­nÂà¦¨¦r¦êªº¸Ü¡G
+å¦‚æœè¦è½‰æˆå­—ä¸²çš„è©±ï¼š
 int[] num = [1, 2, 3];
 string[] id = num.Select(n => n.ToString()).ToArray();
 
 ----------------------------------------------------------------------------------------------------------
-¤Q¥|¡B°òÂ¦«¬ªºAutoMapper¼gªk¡G
+åå››ã€åŸºç¤å‹çš„AutoMapperå¯«æ³•ï¼š
 
      var dbResult = new List<VIP>();
     var config = new MapperConfiguration(cfg => cfg.CreateMap<VIP, Member>())
-    //var config = new MapperConfiguration(cfg => cfg.CreateMap<Âà«¬ªº¸ê®ÆClass, ­nÂà¦¨ªºClass>());
+    //var config = new MapperConfiguration(cfg => cfg.CreateMap<è½‰å‹çš„è³‡æ–™Class, è¦è½‰æˆçš„Class>());
     config.AssertConfigurationIsValid();
     var mapper = config.CreateMapper();
-    //¥ªÃä¬O­ì¸ê®Æ«¬§O¡A¥kÃä¬O±a¥Xªº¸ê®Æ«¬§O
+    //å·¦é‚Šæ˜¯åŸè³‡æ–™å‹åˆ¥ï¼Œå³é‚Šæ˜¯å¸¶å‡ºçš„è³‡æ–™å‹åˆ¥
     return mapper.Map<List<VIP>, List<Member>>(dbResult);
-    //return mapper.Map<Âà«¬ªº¸ê®ÆÃş«¬, Âà¥Xªº¸ê®ÆÃş«¬>(dbResult);
+    //return mapper.Map<è½‰å‹çš„è³‡æ–™é¡å‹, è½‰å‡ºçš„è³‡æ–™é¡å‹>(dbResult);
 
 ------------------------------------------------------------------------------------------------------------
-¤Q¤­¡BC#Â²³æ¨Ï¥Î StoredProcedure¡G
+åäº”ã€C#ç°¡å–®ä½¿ç”¨ StoredProcedureï¼š
 
-//¨Ï¥ÎSP
-	//ConnectionHelpr.GetADOConnectionString() ³oÃä¬O¦Û¤v§ïÅÜ¡A¤Ï¥¿´N¬O­n±o¨ì sql³s½u¦r¦ê
+//ä½¿ç”¨SP
+	//ConnectionHelpr.GetADOConnectionString() é€™é‚Šæ˜¯è‡ªå·±æ”¹è®Šï¼Œåæ­£å°±æ˜¯è¦å¾—åˆ° sqlé€£ç·šå­—ä¸²
     using (SqlConnection conn = new SqlConnection(ConnectionHelpr.GetADOConnectionString()))
     {
-     SqlCommand cmd = new SqlCommand("SPªº¦WºÙ", conn);
+     SqlCommand cmd = new SqlCommand("SPçš„åç¨±", conn);
      cmd.CommandType = CommandType.StoredProcedure;
 
-     //¥H¤U¬O¶Ç¤J°Ñ¼Æ
+     //ä»¥ä¸‹æ˜¯å‚³å…¥åƒæ•¸
 
-     //¶Ç¤JVarChar«¬§O
+     //å‚³å…¥VarCharå‹åˆ¥
      cmd.Parameters.Add("@InputText", SqlDbType.VarChar);
      cmd.Parameters["@InputText"].Value = "aaa";
 
      cmd.Parameters.Add("@InputNo", SqlDbType.Int);
      cmd.Parameters["@InputNo"].Value = 30;
 
-     #region ¿é¥Xªº³¡¤À¡]«e´£¬O§AªºSP¦³¦^¶Ç­È¡^
-     // @RESULT ¬O§A¦bSP¤¤ªº¦^¶ÇÅÜ¼Æ¦WºÙ¡A«á­±ªºSqlDbType.Bit¬O¦^¶Ç«¬§O
+     #region è¼¸å‡ºçš„éƒ¨åˆ†ï¼ˆå‰ææ˜¯ä½ çš„SPæœ‰å›å‚³å€¼ï¼‰
+     // @RESULT æ˜¯ä½ åœ¨SPä¸­çš„å›å‚³è®Šæ•¸åç¨±ï¼Œå¾Œé¢çš„SqlDbType.Bitæ˜¯å›å‚³å‹åˆ¥
      SqlParameter retValParam = cmd.Parameters.Add("@RESULT", SqlDbType.Bit);
      retValParam.Direction = ParameterDirection.ReturnValue;
 
      conn.Open();
      SqlDataReader reader = cmd.ExecuteReader();
 
-     //¦pªG§A·Qselect sp¬ÛÃö¤º®e½Ğ¼v¥Î¤U­±¨â¦æ
+     //å¦‚æœä½ æƒ³select spç›¸é—œå…§å®¹è«‹å½±ç”¨ä¸‹é¢å…©è¡Œ
      DataTable dt1 = new DataTable();  
      dt1.Load(reader);
    }
