@@ -63,6 +63,11 @@ namespace FromServerDownloadFile
 				//下載檔案( return File(路徑, 檔案格式, 檔名+副檔名) )
 				return File(realPath, "xml", "aaa.xml");
 				//return File(realPath, "doc", "aaa.doc");
+
+				File()還有一種型式 => File(byte[], "類型", "檔名+副檔名");
+				例如：
+				byte[] content = 讀完檔的二進制資料
+				return File(content, "image/jepg", "a.jpg");
 			}
 			
 			*/
