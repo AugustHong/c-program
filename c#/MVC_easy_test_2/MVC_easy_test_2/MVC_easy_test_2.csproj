@@ -166,6 +166,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthorizeController.cs" />
     <Compile Include="Controllers\CaptchaController.cs" />
+    <Compile Include="Controllers\CodeTemplatesController.cs" />
     <Compile Include="Controllers\NLogController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CodeTemplates\" />
     <Folder Include="Views\NLog\" />
   </ItemGroup>
   <ItemGroup>
