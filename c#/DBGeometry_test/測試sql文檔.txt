@@ -1,4 +1,7 @@
-DECLARE @g Geometry;   /*«ØÄ³¥ÎGeometry*/
+ï»¿åƒè€ƒç¶²åœµï¼š https://docs.microsoft.com/zh-tw/sql/t-sql/spatial-geometry/spatial-types-geometry-transact-sql?view=sql-server-2017
+
+---------------------------------------------------------------------------------------------------------
+DECLARE @g Geometry;   /*å»ºè­°ç”¨Geometry*/
 DECLARE @h Geometry;  
 
 select @g = graph from geo_test2 where id=1;
@@ -12,6 +15,7 @@ select @g.STOverlaps(@h) as overlaps;
 select @g.STDisjoint(@h) as disjoint;
 select @g.STIntersects(@h) as intersects;
 select @g.STIntersection(@h).STAsText() as intersection;
+select @g.STDifference(@h).STAsText() as diff;
 select @g.STContains(@h) as contain;
 select @h.STContains(@g) as contain2;
 select @g.STWithin(@h) as with_in;
@@ -21,20 +25,27 @@ select @h.STAsText() as h;
 
 ________________________________________________________________________________________________________________
 
-·s¼W
+æ–°å¢
 
 INSERT INTO geo_test2 (graph)  
 VALUES (Geometry::STGeomFromText('POLYGON((-122.358 47.653 , -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));
 
-//³o¬O·s¼W¦hÃä«¬ªº¡]©Ò¥H¥L¤@©w·|¥s§A¿é¤J4­ÓÂI=>¡]ÀY§À¬Û¦P¡^¡^ -> ©Ò¥H­n¤T¨¤«¬ªº¸Ü¡A´N¦A¦h¤@­ÓÂI¡]©MÀY§À¬Û¦Pªº¨º­Ó­È¤@¼Ë´N¦æ¡^
+//é€™æ˜¯æ–°å¢å¤šé‚Šå‹çš„ï¼ˆæ‰€ä»¥ä»–ä¸€å®šæœƒå«ä½ è¼¸å…¥4å€‹é»=>ï¼ˆé ­å°¾ç›¸åŒï¼‰ï¼‰ -> æ‰€ä»¥è¦ä¸‰è§’å‹çš„è©±ï¼Œå°±å†å¤šä¸€å€‹é»ï¼ˆå’Œé ­å°¾ç›¸åŒçš„é‚£å€‹å€¼ä¸€æ¨£å°±è¡Œï¼‰
 
-//ª½½u©MÂI¥u­n¤@­Ó(´N¥i¥H¤F¡A¨Ò¦p¡G
+
+PSï¼šå¤šé‚Šå‹æœ‰å€‹ç‰¹æ®Šæƒ…æ³ï¼Œé‚£å°±æ˜¯ç•¶ outerå’Œinneréƒ½åœ¨æ™‚ï¼Œæ‰€å‘ˆç¾çš„æœƒæ˜¯ä»¥ä¸‹ 
+POLYGON((120 24, 120 25, 121 25, 121 24, 120 24), (120.5 24, 120.5 25, 120.6 25, 120.6 24, 120.5 24));
+ä»¥ä¸Š ç¬¬ä¸€å€‹æ°¸é æ˜¯outerï¼Œè€Œå¾Œé¢çš„å…¨éƒ¨éƒ½æœƒæ˜¯inner(ä¸åªä¸€å€‹)
+
+
+
+//ç›´ç·šå’Œé»åªè¦ä¸€å€‹(å°±å¯ä»¥äº†ï¼Œä¾‹å¦‚ï¼š
 Geometry::STGeomFromText('POINT(121 20)', 4326);
 
-//¦Ó¦hÂI¦hÃä«¬­n¤T­Ó(¡A¨Ò¦p¡G¡]¦hÂI¦hÃä«¬¥D­n¥Î©ó ³s¦¿¿¤¡Bª÷ªù¿¤¡B¼ê´ò¿¤¡K¡K³oºØ¦h®qªºªF¦è¡^ =>¥i¤ä´©¤@¦¸¦n´X­Ó¤£¥æ¶°ªº¹Ï°Ï
+//è€Œå¤šé»å¤šé‚Šå‹è¦ä¸‰å€‹(ï¼Œä¾‹å¦‚ï¼šï¼ˆå¤šé»å¤šé‚Šå‹ä¸»è¦ç”¨æ–¼ é€£æ±Ÿç¸£ã€é‡‘é–€ç¸£ã€æ¾æ¹–ç¸£â€¦â€¦é€™ç¨®å¤šå³¶çš„æ±è¥¿ï¼‰ =>å¯æ”¯æ´ä¸€æ¬¡å¥½å¹¾å€‹ä¸äº¤é›†çš„åœ–å€
 Geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((10 10, 100 10, 200 200, 30 30, 10 10)))', 4326);  
 
 ________________________________________________________________________________________________________________
-¥ş³¡¸ê®Æ
+å…¨éƒ¨è³‡æ–™
 select * from geo_test2;
 select graph.STAsText() from geo_test2;
