@@ -1,0 +1,5 @@
+C:\Users\偉德\Documents\c製作全集\c#\RijndaelEncryptHelper\RijndaelEncryptHelper\bin\Debug\RijndaelEncryptHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\RijndaelEncryptHelper\RijndaelEncryptHelper\bin\Debug\RijndaelEncryptHelper.pdb
+C:\Users\偉德\Documents\c製作全集\c#\RijndaelEncryptHelper\RijndaelEncryptHelper\obj\Debug\RijndaelEncryptHelper.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\RijndaelEncryptHelper\RijndaelEncryptHelper\obj\Debug\RijndaelEncryptHelper.dll
+C:\Users\偉德\Documents\c製作全集\c#\RijndaelEncryptHelper\RijndaelEncryptHelper\obj\Debug\RijndaelEncryptHelper.pdb
