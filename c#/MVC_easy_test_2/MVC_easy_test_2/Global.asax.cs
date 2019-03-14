@@ -14,6 +14,8 @@ namespace MVC_easy_test_2
 {
 	public class MvcApplication : System.Web.HttpApplication
 	{
+		private static Logger logger = LogManager.GetCurrentClassLogger();
+
 		protected void Application_Start()
 		{
 			AreaRegistration.RegisterAllAreas();
@@ -87,6 +89,74 @@ namespace MVC_easy_test_2
 
 				//賦予該使用者新的身份(含角色資料)
 				HttpContext.Current.User = new GenericPrincipal(id, roles);
+			}
+		}
+
+		//依據網頁的錯誤導去不同頁面(例如：出現404時，要導去哪一頁)
+		protected void Application_Error(object sender, EventArgs e)
+		{
+			//得到錯誤訊息
+			var exception = Server.GetLastError();
+			var httpException = exception as HttpException;
+			logger.Error(exception);
+
+			//得到錯誤代碼
+			Response.StatusCode = httpException.GetHttpCode();
+
+			Response.Clear();
+			Server.ClearError();
+
+			if (httpException != null)
+			{
+				var httpContext = HttpContext.Current;
+
+				httpContext.RewritePath("~/Errors/", false);
+
+				// MVC 3 running on IIS 7+
+				//這邊在傳要轉去哪一頁
+				//不過這只是寫個大概，目前未實作 ErrorController => 故不會生效
+				//如果下次要使用時，要把View和Controller都建好
+				if (HttpRuntime.UsingIntegratedPipeline)
+				{
+					switch (Response.StatusCode)
+					{
+						case 302:
+							httpContext.Server.TransferRequest("~/home", true);
+							break;
+
+						case 403:
+							httpContext.Server.TransferRequest("~/Error/Http403", true);
+							break;
+
+						case 404:
+							httpContext.Server.TransferRequest("~/Error/HttpNotFound", true);
+							break;
+
+						default:
+							httpContext.Server.TransferRequest("~/Error/Index", true);
+							break;
+					}
+				}
+				else
+				{
+					switch (Response.StatusCode)
+					{
+						case 403:
+							httpContext.RewritePath(string.Format("~/Error/Http403", true));
+							break;
+
+						case 404:
+							httpContext.RewritePath(string.Format("~/Error/Http404", true));
+							break;
+
+						default:
+							httpContext.RewritePath(string.Format("~/Error/index", true));
+							break;
+					}
+
+					IHttpHandler httpHandler = new MvcHttpHandler();
+					httpHandler.ProcessRequest(httpContext);
+				}
 			}
 		}
 	}
