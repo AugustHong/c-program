@@ -436,3 +436,27 @@ string[] id = num.Select(n => n.ToString()).ToArray();
      DataTable dt1 = new DataTable();  
      dt1.Load(reader);
    }
+
+------------------------------------------------------------------------------------------------------------
+十六、在Controller中取到 客戶的IP
+
+ string getip = string.Empty;
+ try
+     {
+        getip = Request.UserHostAddress;
+     }
+ catch (Exception)
+     {
+     }
+
+return getip;
+
+-----------------------------------------------------------------------------------------------------------
+十七、一個後台設定就產生前端的套件(只For個大概，可以減少很多時間)
+
+套件：umbracocms    版本：7.14(版本一定要7的，不要8的)
+
+實作：
+	步驟1：開空專案
+	步驟2：去NuGet裝上這個套件
+	步驟3：接下來它會一步一步告訴你
