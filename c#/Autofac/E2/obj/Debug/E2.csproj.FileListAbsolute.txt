@@ -1,0 +1,8 @@
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\bin\Debug\E2.dll.config
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\bin\Debug\E2.dll
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\bin\Debug\E2.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\bin\Debug\AutofacTextInterface.exe
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\bin\Debug\AutofacTextInterface.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\obj\Debug\E2.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\obj\Debug\E2.dll
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\E2\obj\Debug\E2.pdb

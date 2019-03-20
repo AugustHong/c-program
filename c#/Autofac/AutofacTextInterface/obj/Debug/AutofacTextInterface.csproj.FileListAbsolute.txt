@@ -1,0 +1,14 @@
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\AutofacTextInterface.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\AutofacTextInterface.exe
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\AutofacTextInterface.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.Configuration.dll
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.dll
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.xml
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.Configuration.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Autofac.Configuration.xml
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\obj\Debug\AutofacTextInterface.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\obj\Debug\AutofacTextInterface.exe
+C:\Users\偉德\Documents\c製作全集\c#\Autofac\AutofacTextInterface\obj\Debug\AutofacTextInterface.pdb
