@@ -1,9 +1,13 @@
-﻿using System;
+﻿using System.Web.Mvc;
+using System.Security.Claims;
+using System.Web;
+using System.Web.Security;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Security;
+
 
 /*
 
@@ -20,6 +24,20 @@ using System.Web.Security;
 	6.在_Layout.cshtml中 加入 依照使用者是否有登入
 
 	如果要做客製化的權限控管，就新增一個Attribute且去繼承AuthorizeAttribute即可在裡面自己寫喔
+
+	-----------------------------------------------------------------------------------------------------------------------------------------------------------
+	以下是第二種的權限控管，一樣有Login那些都可以照用+權限的Attribute也都可以和上面共用
+	但有一些部份會和上面有所衝突 => 選擇一種來做即可
+
+	步驟：
+	1.去NuGet裝上 Microsoft.Owin 、 Microsoft.Owin.Security 、Microsoft.Owin.Security.Cookies 、 
+						Microsoft.Owin.Security.Google(可選擇要不要) 、Microsoft.AspNet.Identity.Owin、 Microsoft.Owin.Host.SystemWeb
+	2.先有Startup.cs(沒有的話，去產生。放在最外層即可)
+	3.確認WebConfig中沒有這一行 <add key="owin:AutomaticAppStartup" value="false" /> ，有的話先註解掉
+	4. Global.aspx的Application_Start()中 加入 AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;  這行  
+		且 這行要在所有的xxxConfig.Registerxxx 之後
+	5. 拿掉 Global.aspx中的 Application_AuthenticateRequest(object sender, EventArgs e) 函式 (這是第一種所要用的，但它們會砥觸)
+	6.寫 LoginProcess和 Logout的部份。和上面方法一的不同
 
 */
 
@@ -45,6 +63,13 @@ namespace MVC_easy_test_2.Controllers
 		public string Index3()
 		{
 			return "這是只有權限2或3可以進來的";
+		}
+
+		[Authorize(Roles ="2")]
+		[Authorize(Roles = "3")]
+		public string Index4()
+		{
+			return "這是要同時有2和3的權限的人才可以進來的";
 		}
 
 		[Authorize]
@@ -83,6 +108,7 @@ namespace MVC_easy_test_2.Controllers
 		/// <param name="isRemeber"></param>
 		private void LoginProcess(string name, string roles, bool isRemeber)
 		{
+			#region 方法一用的
 			//這邊基本上都是照寫(但裡面的值有些可以自訂)
 			var ticket = new FormsAuthenticationTicket(
 			    version: 1,
@@ -104,12 +130,37 @@ namespace MVC_easy_test_2.Controllers
 			string encryptedTicket = FormsAuthentication.Encrypt(ticket);
 			HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
 			Response.Cookies.Add(cookie);
+			#endregion
+
+			#region 方法二用的
+			//加入驗證資訊
+			//List<Claim> Claims = new List<Claim>();
+			//Claims.Add(new Claim(ClaimTypes.NameIdentifier, name));
+			//Claims.Add(new Claim(ClaimTypes.Name, name));
+
+			//List<string> roleSubMenuIdList = roles.Split(',').ToList();
+
+			////依序把Sub Menu 的 id 加入至權限清單中
+			//foreach (string s in roleSubMenuIdList)
+			//{
+			//	Claims.Add(new Claim(ClaimTypes.Role, s));
+			//}
+
+			////故定加入
+			//Claims.Add(new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", "My Identity", "http://www.w3.org/2001/XMLSchema#string"));
+
+			//ClaimsIdentity claimsIdentity = new ClaimsIdentity(Claims, "ApplicationCookie");
+			//ClaimsPrincipal principal = new ClaimsPrincipal(claimsIdentity);
+			//var identity = new ClaimsIdentity(Claims, DefaultAuthenticationTypes.ApplicationCookie);
+			//HttpContext.GetOwinContext().Authentication.SignIn(new AuthenticationProperties() { IsPersistent = false }, identity);
+			#endregion
 		}
 
 		//登出
 		[Authorize]
 		public ActionResult Logout()
 		{
+			#region 方法一用的
 			//先執行登出
 			FormsAuthentication.SignOut();
 
@@ -125,6 +176,12 @@ namespace MVC_easy_test_2.Controllers
 			HttpCookie cookie2 = new HttpCookie("ASP.NET_SessionId", "");
 			cookie2.Expires = DateTime.Now.AddYears(-1);
 			Response.Cookies.Add(cookie2);
+			#endregion
+
+			#region 方法二用的
+			//Session.Clear();
+			//HttpContext.GetOwinContext().Authentication.SignOut();
+			#endregion
 
 			//回到Login頁面
 			return RedirectToAction("Login");
