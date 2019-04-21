@@ -13,3 +13,6 @@ c:\users\shengsen\source\repos\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.csproj.Co
 c:\users\shengsen\source\repos\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.csproj.CopyComplete
 c:\users\shengsen\source\repos\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.exe
 c:\users\shengsen\source\repos\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.pdb
+C:\Users\偉德\Documents\c製作全集\c#\HtmlToPdf\HtmlToPdf\bin\Debug\HtmlToPdf.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.exe
+C:\Users\偉德\Documents\c製作全集\c#\HtmlToPdf\HtmlToPdf\obj\Debug\HtmlToPdf.pdb

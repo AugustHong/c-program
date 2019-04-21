@@ -17,6 +17,11 @@ using System.Threading.Tasks;
 		個檔案複製貼上到專案的bin資料夾，即可解決)
 
 	3.開始寫
+
+	-------------------------------------------------------------------------------------------------
+	第二種方法：
+	1. NuGet 裝上  NReco.PdfGenerator
+	2.照下面的寫法開始寫
 	 
 */
 
@@ -73,6 +78,17 @@ namespace HtmlToPdf
 			//轉換
 			byte[] pdf2 = pechkin.Convert(oc, html);
 			File.WriteAllBytes("myhtml.pdf", pdf2);
+
+
+
+			//------------------------------------------------------------------------------------------------------------------------------------------
+			//第二種的方法
+
+			NReco.PdfGenerator.HtmlToPdfConverter htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
+			byte[] pdfBytes = htmlToPdf.GeneratePdf(html);
+			string fileName = "test.pdf";
+			//再來就是寫檔的部份
+			File.WriteAllBytes(fileName, pdfBytes);
 
 			Console.Read();
 		}
