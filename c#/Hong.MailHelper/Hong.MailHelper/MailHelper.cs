@@ -68,7 +68,7 @@ namespace Hong.MailHelper
         public bool Send(MailContent d, string senderName = "Hong")
         {
             //如果收信人一個都沒有，傳false
-            if (d.Recipient.Count() < 0) { return false; }
+            if (d.Recipient.Count() <= 0) { return false; }
 
             try
             {
