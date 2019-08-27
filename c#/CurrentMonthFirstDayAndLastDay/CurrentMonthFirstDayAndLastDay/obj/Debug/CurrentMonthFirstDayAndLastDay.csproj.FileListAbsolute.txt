@@ -1,0 +1,7 @@
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\bin\Debug\CurrentMonthFirstDayAndLastDay.exe.config
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\bin\Debug\CurrentMonthFirstDayAndLastDay.exe
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\bin\Debug\CurrentMonthFirstDayAndLastDay.pdb
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\obj\Debug\CurrentMonthFirstDayAndLastDay.csprojAssemblyReference.cache
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\obj\Debug\CurrentMonthFirstDayAndLastDay.csproj.CoreCompileInputs.cache
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\obj\Debug\CurrentMonthFirstDayAndLastDay.exe
+C:\Users\green\Desktop\CurrentMonthFirstDayAndLastDay\CurrentMonthFirstDayAndLastDay\obj\Debug\CurrentMonthFirstDayAndLastDay.pdb
