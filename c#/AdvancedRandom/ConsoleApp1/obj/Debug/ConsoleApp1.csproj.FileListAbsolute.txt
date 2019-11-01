@@ -1,0 +1,12 @@
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\green\Desktop\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\偉德\Documents\c製作全集\c#\AdvancedRandom\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
