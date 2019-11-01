@@ -154,17 +154,19 @@ PS:也可以用 Redirect("網址")  就可以接到囉！
 		<input name="studentID" />
 
 ------------------------------------------------------------------------------------------------------------
-五、前端呼叫Controller並回傳html字串給前端
+五、前端呼叫Controller並回傳html字串給前端 +  取到 js 或 css 的路徑
 
 @{Html.RenderAction("Action名", "Controller名", new {參數 = 變數值  });}
 
 ps:這個Controller回傳出來要是字串型態（可以用基本字串，或者一段html標籤 => 會在呼叫的地方變成它）
 
-例如：  Action名=getName()   ，回傳的是 "<p>Lee</p>"
+例如：  Action名=getName()   ，回傳的是 "<p>Lee</p>" 例如： public string getName(){ return "<p>Lee</p>";}
 
 <p>hello</p>                         => 執行後    =>   	<p>hello</p>
-@{Html.RenderAction("getName"}				<p>Lee</p>
+@{Html.RenderAction("getName")}				<p>Lee</p>
 
+
+用 @Url.Content("~/Script/a.js") => 就可以取到真實的路徑囉！
 
 -----------------------------------------------------------------------------------------------------------
 六、TempData
@@ -460,3 +462,10 @@ return getip;
 	步驟1：開空專案
 	步驟2：去NuGet裝上這個套件
 	步驟3：接下來它會一步一步告訴你
+
+----------------------------------------------------------------------------------------------------------
+十八、在Filter中取到是否是用ajax傳過來的
+
+filterContext 就是在 Filter 中 (不管是 Action執行前，或Action執行後 會傳入的那個參數)
+
+filterContext.HttpContext.Request.IsAjaxRequest();
