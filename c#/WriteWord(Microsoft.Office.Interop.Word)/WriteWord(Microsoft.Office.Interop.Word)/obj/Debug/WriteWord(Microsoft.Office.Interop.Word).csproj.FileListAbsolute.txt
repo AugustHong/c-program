@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).exe.config
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).exe
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).pdb
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).csprojAssemblyReference.cache
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).exe
+C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).pdb
