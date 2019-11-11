@@ -50,6 +50,9 @@ namespace FromServerDownloadFile
 
 			    如不在Controller中，取得Server當前位直用：
 				  string path = HttpContext.Current.Server.MapPath(@"~/subQuestion.zip");
+
+			    如果是在 API中的話：
+				  System.Web.Hosting.HostingEnvironment.MapPath(@"~/");
 			*/
 
 			//-----------------------------------------------------------------------------------------------------------------------------------------
