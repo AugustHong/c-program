@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\bin\Debug\TaiwanAddressSplit.exe.config
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\bin\Debug\TaiwanAddressSplit.exe
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\bin\Debug\TaiwanAddressSplit.pdb
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\obj\Debug\TaiwanAddressSplit.csprojAssemblyReference.cache
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\obj\Debug\TaiwanAddressSplit.exe
+C:\Users\green\Desktop\TaiwanAddressSplit\TaiwanAddressSplit\obj\Debug\TaiwanAddressSplit.pdb
