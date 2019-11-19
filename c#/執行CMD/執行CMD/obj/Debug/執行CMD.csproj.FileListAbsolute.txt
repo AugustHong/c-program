@@ -1,0 +1,6 @@
+C:\Users\green\source\repos\執行CMD\執行CMD\bin\Debug\執行CMD.exe.config
+C:\Users\green\source\repos\執行CMD\執行CMD\bin\Debug\執行CMD.exe
+C:\Users\green\source\repos\執行CMD\執行CMD\bin\Debug\執行CMD.pdb
+C:\Users\green\source\repos\執行CMD\執行CMD\obj\Debug\執行CMD.csprojAssemblyReference.cache
+C:\Users\green\source\repos\執行CMD\執行CMD\obj\Debug\執行CMD.exe
+C:\Users\green\source\repos\執行CMD\執行CMD\obj\Debug\執行CMD.pdb
