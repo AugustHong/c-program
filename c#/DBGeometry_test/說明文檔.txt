@@ -1,13 +1,338 @@
-c# ��@�XSqlGeometry���A�]�n�θ̭������|�P�_�\��^
+﻿c# 實作出SqlGeometry型態（要用裡面的重疊判斷功能）
 
-���hNuGet�� Microsoft.SqlServer.Types
-�A��A��C#��
+先去NuGet裝 Microsoft.SqlServer.Types
+再到你的C#中
 using Microsoft.SqlServer.Types;
 
 https://msdn.microsoft.com/zh-tw/library/microsoft.sqlserver.types.sqlgeometry.aspx
 
-�A��MICROSOFTRREPORTVIEWER 2012 RUNTIME�o��
-�N�i�H�]�X�ӤF
+再裝MICROSOFTRREPORTVIEWER 2012 RUNTIME這個
+就可以跑出來了
 
-mvc �M geometry
+mvc 和 geometry
 https://www.infragistics.com/community/blogs/b/mihail_mateev/posts/using-spatial-data-in-asp-net-mvc-with-sql-server-2012-entity-framework-5-and-infragistics-jquery-map
+
+--------------------------------------------------------------------------------------------------------------------------
+
+二、 TGOS門牌系統 (用地圵查座標 + 用座標查地圵)：
+
+// 也可以寫在前端用 Ajax 呼叫網圵即可
+(a) 寫在 Controller 中：
+
+      (甲) 用 地圵 查 座標：
+
+      public string GetCoordinates(string address, string epsg = "4326")
+      {
+            // 所要查詢的門牌地址
+            string aAddress = address;
+            // 坐標系統(SRS)EPSG:4326(WGS84)國際通用, EPSG:3825 (TWD97TM119) 澎湖及金馬適用,EPSG:3826 (TWD97TM121) 台灣地區適用,EPSG:3827 (TWD67TM119) 澎湖及金馬適用,EPSG:3828 (TWD67TM121) 台灣地區適用
+            epsg = epsg == "4326" || epsg == "3825" || epsg == "3826" || epsg == "3827" || epsg == "3828" ? epsg : "4326";
+            string aSRS = $"EPSG:{epsg}";
+            int aFuzzyType = 0;
+            string aResultDataType = "JSON";
+            int aFuzzyBuffer = 100;
+            string aIsOnlyFullMatch = "false";
+            string aIsLockCounty = "true";
+            string aIsLockTown = "true";
+            string aIsLockVillage = "false";
+            string aIsLockRoadSection = "false";
+            string aIsLockLane = "false";
+            string aIsLockAlley = "false";
+            string aIsLockArea = "false";
+            string aIsSameNumber_SubNumber = "false";
+            string aCanIgnoreVillage = "true";
+            string aCanIgnoreNeighborhood = "true";
+            int aReturnMaxCount = 0;
+
+            string aUrl = "https://addr.tgos.tw/addrws/v30/QueryAddr.asmx";
+            string aKey = System.Web.Configuration.WebConfigurationManager.AppSettings["APIKey"];
+            string aId = System.Web.Configuration.WebConfigurationManager.AppSettings["APPId"];
+
+            //使用string.Format給予參數設定
+            string param = @"oAPPId={0}&oAPIKey={1}&oAddress={2}&oSRS={3}&oFuzzyType={4}
+                         &oResultDataType={5}&oFuzzyBuffer={6}&oIsOnlyFullMatch={7}&oIsLockCounty={8}
+                         &oIsLockTown={9}&oIsLockVillage={10}&oIsLockRoadSection={11}&oIsLockLane={12}
+                         &oIsLockAlley={13}&oIsLockArea={14}&oIsSameNumber_SubNumber={15}&oCanIgnoreVillage={16}&oCanIgnoreNeighborhood={17}&oReturnMaxCount={18}";
+
+            //給予需要的參數
+            param = string.Format(param,
+
+                  //應用程式識別碼(APPId) 實由使用者向TGOS申請
+                  aId,
+                  //應用程式介接驗證碼(APIKey)由使用者向TGOS申請
+                  aKey,
+                  aAddress,
+                  aSRS,
+                  aFuzzyType,
+                  aResultDataType,
+                  aFuzzyBuffer,
+                  aIsOnlyFullMatch,
+                  aIsLockCounty,
+                  aIsLockTown,
+                  aIsLockVillage,
+                  aIsLockRoadSection,
+                  aIsLockLane,
+                  aIsLockAlley,
+                  aIsLockArea,
+                  aIsSameNumber_SubNumber,
+                  aCanIgnoreVillage,
+                  aCanIgnoreNeighborhood,
+                  aReturnMaxCount
+              );
+
+            System.Uri requesturi = new Uri(aUrl + "/QueryAddr?");
+
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(requesturi);
+            req.Credentials = CredentialCache.DefaultCredentials;
+
+            param = param.Replace("+", "%2B");
+            byte[] PostData = Encoding.UTF8.GetBytes(param);
+
+            req.Method = "POST";
+            req.ContentType = "application/x-www-form-urlencoded";
+            req.Timeout = 30000;
+
+            req.ContentLength = PostData.Length;
+            string json = "";
+            try
+            {
+                using (Stream reqStream = req.GetRequestStream())
+                {
+                    reqStream.Write(PostData, 0, PostData.Length);
+                    json = "";
+                }
+
+                using (WebResponse wr = req.GetResponse())
+                {
+                    using (Stream myStream = wr.GetResponseStream())
+                    {
+                        using (StreamReader myStreamReader = new StreamReader(myStream))
+                        {
+                            //使用 StreamReader 來從標準文字檔讀取資料。
+                            json = myStreamReader.ReadToEnd();
+
+                            //對讀取出來的JSON格式資料進行解密
+                            json = Server.HtmlDecode(json);
+
+                            //XmlDocument讀取XML
+                            XmlDocument aXmlDocument = new XmlDocument();
+                            aXmlDocument.XmlResolver = null;
+                            aXmlDocument.LoadXml(json);
+
+                            // 去掉一些其他的字
+                            json = aXmlDocument.InnerText.Replace("\"", "'").Replace("\n", "").Replace("\r", "").Replace("&quot;", ":");
+
+                            // 轉成 JS物件
+                            var result = JObject.Parse(json);
+                            JArray WGS = result.GetValue("AddressList") as JArray;
+                            if (WGS.Count > 0)
+                            {
+                              // 取資料 (可以用中斷點看還有哪些可以取)
+                              // 目前都只取第一筆 => 以後可以視情況而定
+                              json = WGS.First["X"].ToString() + "," + WGS.First["Y"].ToString();
+                            }
+                            else
+                            {
+                              json = string.Empty;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                json = string.Empty;
+            }
+            return json;
+      }
+
+      (乙) 用 座標 查 地圵：
+
+      public string GetAddressByCoordinates(double oPX, double oPY, string epsg = "4326")
+        {
+            // 參考 https://www.tgos.tw/TGOS_WEB_API/Web/TGOSQueryAddrSample.aspx
+
+            //坐標系統(SRS)EPSG:4326(WGS84)國際通用, EPSG:3825 (TWD97TM119) 澎湖及金馬適用,EPSG:3826 (TWD97TM121) 台灣地區適用,EPSG:3827 (TWD67TM119) 澎湖及金馬適用,EPSG:3828 (TWD67TM121) 台灣地區適用
+            epsg = epsg == "4326" || epsg == "3825" || epsg == "3826" || epsg == "3827" || epsg == "3828" ? epsg : "4326";
+            string oSRS = $"EPSG:{epsg}";
+
+            string oResultDataType = "JSON";
+            string aUrl = "https://addr.tgos.tw/addrws/v30/GeoQueryAddr.asmx";
+            string aId = System.Web.Configuration.WebConfigurationManager.AppSettings["APPId"];
+            string aKey = System.Web.Configuration.WebConfigurationManager.AppSettings["APIKey"];
+
+            string param = "oAPPId={0}&oAPIKey={1}&oPX={2}&oPY={3}&oSRS={4}&oResultDataType={5}";
+            param = string.Format(param, aId, aKey, oPX, oPY, oSRS, oResultDataType);
+
+            System.Uri requesturi = new Uri(aUrl + "/PointQueryNearAddr?");
+
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(requesturi);
+            req.Credentials = CredentialCache.DefaultCredentials;
+
+            param = param.Replace("+", "%2B");
+            byte[] PostData = Encoding.UTF8.GetBytes(param);
+
+            req.Method = "POST";
+            req.ContentType = "application/x-www-form-urlencoded";
+            req.Timeout = 30000;
+
+            req.ContentLength = PostData.Length;
+            string json = "";
+
+            try
+            {
+                using (Stream reqStream = req.GetRequestStream())
+                {
+                    reqStream.Write(PostData, 0, PostData.Length);
+                    json = "";
+                }
+
+                using (WebResponse wr = req.GetResponse())
+                {
+
+                    using (Stream myStream = wr.GetResponseStream())
+                    {
+
+                        using (StreamReader myStreamReader = new StreamReader(myStream))
+                        {
+                            json = myStreamReader.ReadToEnd();
+                            json = Server.HtmlDecode(json);
+                            XmlDocument aXmlDocument = new XmlDocument();
+                            aXmlDocument.XmlResolver = null;
+                            aXmlDocument.LoadXml(json);
+                            json = aXmlDocument.InnerText.Replace("\"", "'").Replace("\n", "").Replace("\r", "").Replace("&quot;", ":");
+                            var result = JObject.Parse(json);
+                            JArray WGS = result.GetValue("AddressList") as JArray;
+
+                            // 可視情況取資料
+                            json = WGS.First["COUNTY"].ToString() + " " + WGS.First["TOWN"].ToString() + " " + WGS.First["VILLAGE"];
+                            json += $";{WGS.First["X"]},{WGS.First["Y"]}";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                json = string.Empty;
+            }
+
+            return json;
+        }
+
+(b) 寫在 Service 中：
+
+      程式碼照舊，但 Server 變成 public string AddressQueryPoint(string address, HttpServerUtilityBase Server, string epsg = "4326")
+      多一個 HttpServerUtilityBase Server 參數
+      ， 而在 Controller 呼叫時
+      AddressQueryPoint("臺北市", this.Server, "4326");   寫成這樣即可
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+三、 WGS84 和 TWD97 互換：
+
+      // 一樣可以寫在前端 (但要把 Math.Cos 都換成全小寫的 Math.cos 這樣即可)
+      // 參考網圵： http://wangshifuola.blogspot.com/2010/08/twd97wgs84-wgs84twd97.html
+
+      (a) WGS84 轉成 TWD97：
+
+      private string WGS84ToTWD97(double lon, double lat)
+        {
+            double a = 6378137.0;
+            double b = 6356752.314245;
+            double lon0 = 121 * Math.PI / 180;
+            double k0 = 0.9999;
+            int dx = 250000;
+
+            lon = (lon / 180) * Math.PI;
+            lat = (lat / 180) * Math.PI;
+
+            //---------------------------------------------------------
+            double e = Math.Pow((1 - Math.Pow(b, 2) / Math.Pow(a, 2)), 0.5);
+            double e2 = Math.Pow(e, 2) / (1 - Math.Pow(e, 2));
+            double n = (a - b) / (a + b);
+            double nu = a / Math.Pow((1 - (Math.Pow(e, 2)) * (Math.Pow(Math.Sin(lat), 2))), 0.5);
+            double p = lon - lon0;
+            double A = a * (1 - n + (5 / 4) * (Math.Pow(n, 2) - Math.Pow(n, 3)) + (81 / 64) * (Math.Pow(n, 4) - Math.Pow(n, 5)));
+            double B = (3 * a * n / 2.0) * (1 - n + (7 / 8.0) * (Math.Pow(n, 2) - Math.Pow(n, 3)) + (55 / 64.0) * (Math.Pow(n, 4) - Math.Pow(n, 5)));
+            double C = (15 * a * (Math.Pow(n, 2)) / 16.0) * (1 - n + (3 / 4.0) * (Math.Pow(n, 2) - Math.Pow(n, 3)));
+            double D = (35 * a * (Math.Pow(n, 3)) / 48.0) * (1 - n + (11 / 16.0) * (Math.Pow(n, 2) - Math.Pow(n, 3)));
+            double E = (315 * a * (Math.Pow(n, 4)) / 51.0) * (1 - n);
+
+            double S = A * lat - B * Math.Sin(2 * lat) + C * Math.Sin(4 * lat) - D * Math.Sin(6 * lat) + E * Math.Sin(8 * lat);
+
+            //計算Y值
+            double K1 = S * k0;
+            double K2 = k0 * nu * Math.Sin(2 * lat) / 4.0;
+            double K3 = (k0 * nu * Math.Sin(lat) * (Math.Pow(Math.Cos(lat), 3)) / 24.0) * (5 - Math.Pow(Math.Tan(lat), 2) + 9 * e2 * Math.Pow((Math.Cos(lat)), 2) + 4 * (Math.Pow(e2, 2)) * (Math.Pow(Math.Cos(lat), 4)));
+            double y = K1 + K2 * (Math.Pow(p, 2)) + K3 * (Math.Pow(p, 4));
+
+            //計算X值
+            double K4 = k0 * nu * Math.Cos(lat);
+            double K5 = (k0 * nu * (Math.Pow(Math.Cos(lat), 3)) / 6.0) * (1 - Math.Pow(Math.Tan(lat), 2) + e2 * (Math.Pow(Math.Cos(lat), 2)));
+            double x = K4 * p + K5 * (Math.Pow(p, 3)) + dx;
+
+            string TWD97 = x.ToString() + "," + y.ToString();
+            return TWD97;
+        }
+
+        (b) TWD97 轉成 WGS84 ：
+
+        private string Cal_TWD97_To_lonlat(double x, double y)
+      {
+
+            double a = 6378137.0;
+            double b = 6356752.314245;
+            double lon0 = 121 * Math.PI / 180;
+            double k0 = 0.9999;
+            int dx = 250000;
+
+            double dy = 0;
+            double e = Math.Pow((1- Math.Pow(b,2)/Math.Pow(a,2)), 0.5);
+
+            x -= dx;
+            y -= dy;
+
+            // Calculate the Meridional Arc
+            double M = y/k0;
+
+            // Calculate Footprint Latitude
+            double mu = M/(a*(1.0 - Math.Pow(e, 2)/4.0 - 3*Math.Pow(e, 4)/64.0 - 5*Math.Pow(e, 6)/256.0));
+            double e1 = (1.0 - Math.Pow((1.0 - Math.Pow(e, 2)), 0.5)) / (1.0 + Math.Pow((1.0 - Math.Pow(e, 2)), 0.5));
+
+            double J1 = (3*e1/2 - 27*Math.Pow(e1, 3)/32.0);
+            double J2 = (21*Math.Pow(e1, 2)/16 - 55*Math.Pow(e1, 4)/32.0);
+            double J3 = (151*Math.Pow(e1, 3)/96.0);
+            double J4 = (1097*Math.Pow(e1, 4)/512.0);
+
+            double fp = mu + J1*Math.Sin(2*mu) + J2*Math.Sin(4*mu) + J3*Math.Sin(6*mu) + J4*Math.Sin(8*mu);
+
+            // Calculate Latitude and Longitude
+
+            double e2 = Math.Pow((e*a/b), 2);
+            double C1 = Math.Pow(e2*Math.Cos(fp), 2);
+            double T1 = Math.Pow(Math.Tan(fp), 2);
+            double R1 = a*(1-Math.Pow(e, 2))/Math.Pow((1-Math.Pow(e, 2)*Math.Pow(Math.Sin(fp), 2)), (3.0/2.0));
+            double N1 = a/Math.Pow((1-Math.Pow(e, 2)*Math.Pow(Math.Sin(fp), 2)), 0.5);
+
+            double D = x/(N1*k0);
+
+            // 計算緯度
+            double Q1 = N1*Math.Tan(fp)/R1;
+            double Q2 = (Math.Pow(D, 2)/2.0);
+            double Q3 = (5 + 3*T1 + 10*C1 - 4*Math.Pow(C1, 2) - 9*e2)*Math.Pow(D, 4)/24.0;
+            double Q4 = (61 + 90*T1 + 298*C1 + 45*Math.Pow(T1, 2) - 3*Math.Pow(C1, 2) - 252*e2)*Math.Pow(D, 6)/720.0;
+            double lat = fp - Q1*(Q2 - Q3 + Q4);
+
+            // 計算經度
+            double Q5 = D;
+            double Q6 = (1 + 2*T1 + C1)*Math.Pow(D, 3)/6;
+            double Q7 = (5 - 2*C1 + 28*T1 - 3*Math.Pow(C1, 2) + 8*e2 + 24*Math.Pow(T1, 2))*Math.Pow(D, 5)/120.0;
+            double lon = lon0 + (Q5 - Q6 + Q7)/Math.Cos(fp);
+
+            lat = (lat * 180) / Math.PI; //緯
+            lon = (lon * 180) / Math.PI; //經
+
+
+            string lonlat = lon + "," + lat;
+            return lonlat;
+      }
