@@ -67,5 +67,17 @@ namespace PUVAMS.Web.DAL.Interfaces
         /// </summary>
         /// <returns></returns>
         bool SaveChanges();
+
+        DataTable Query_Table(string SQLString, List<SqlParameter> _cmdParms);
+
+        DataTable Query_Table(string SQLString);
+
+        DataSet Query_DS(string SQLString, List<SqlParameter> _cmdParms);
+
+        DataSet Query_DS(string SQLString);
+
+        List<T> ExecuteSql<T>(string SqlStr);
+
+        List<T> ExecuteSql<T>(string SqlStr, List<SqlParameter> _cmdParms);
     }
 }

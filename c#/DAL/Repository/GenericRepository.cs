@@ -127,5 +127,123 @@ namespace PUVAMS.Web.DAL.Repository
         }
 
 
+              /// <summary>
+        /// query dt
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <param name="cmdParms"></param>
+        /// <returns></returns>
+        public DataTable Query_Table(string SQLString, List<SqlParameter> _cmdParms)
+        {
+            SqlParameter[] cmdParms = _cmdParms.ToArray();
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = this._context.Database.SqlQuery<DataTable>(SQLString, cmdParms).FirstOrDefault();
+            }
+            catch (SqlException ex)
+            {
+                logger.Error(ex.Message);
+            }
+
+            return dt;
+        }
+
+        /// <summary>
+        /// query dt
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <returns></returns>
+        public DataTable Query_Table(string SQLString)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = this._context.Database.SqlQuery<DataTable>(SQLString).FirstOrDefault();
+            }
+            catch (SqlException ex)
+            {
+                logger.Error(ex.Message);
+            }
+            return dt;
+        }
+
+        /// <summary>
+        /// query DS
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <param name="cmdParms"></param>
+        /// <returns></returns>
+        public DataSet Query_DS(string SQLString, List<SqlParameter> _cmdParms)
+        {
+            SqlParameter[] cmdParms = _cmdParms.ToArray();
+            DataSet ds = new DataSet();
+            try
+            {
+                ds = this._context.Database.SqlQuery<DataSet>(SQLString, cmdParms).FirstOrDefault();
+            }
+            catch (SqlException ex)
+            {
+                logger.Error(ex.Message);
+            }
+
+            return ds;
+        }
+
+        /// <summary>
+        /// query ds
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <returns></returns>
+        public DataSet Query_DS(string SQLString)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                ds = this._context.Database.SqlQuery<DataSet>(SQLString).FirstOrDefault();
+            }
+            catch (SqlException ex)
+            {
+                logger.Error(ex.Message);
+            }
+            return ds;
+        }
+
+        public List<T> ExecuteSql<T>(string SqlStr)
+        {
+            List<T> rc;
+            try
+            {
+                rc = this._context.Database.SqlQuery<T>(SqlStr).ToList();
+                return rc;
+            }
+            catch (SqlException ex)  // 使用 SqlException
+            {
+                logger.Error(ex.Message);
+                rc = null;
+            }
+
+            return rc;
+        }
+
+        public List<T> ExecuteSql<T>(string SqlStr, List<SqlParameter> _cmdParms)
+        {
+            SqlParameter[] cmdParms = _cmdParms.ToArray();
+
+            List<T> rc;
+            try
+            {
+                rc = this._context.Database.SqlQuery<T>(SqlStr, cmdParms).ToList();
+                return rc;
+            }
+            catch (SqlException ex)  // 使用 SqlException
+            {
+                logger.Error(ex.Message);
+                rc = null;
+            }
+
+            return rc;
+        }
+
     }
 }
