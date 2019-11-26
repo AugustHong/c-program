@@ -67,6 +67,10 @@ namespace FromServerDownloadFile
 				return File(realPath, "xml", "aaa.xml");
 				//return File(realPath, "doc", "aaa.doc");
 
+				// 也可用 Stream的
+				// stream 就是個 Stream 的物件，而fileName 要包含副檔名 => 你要存成的檔案
+				//return this.File(stream, "application/octet-stream", fileName);
+
 				File()還有一種型式 => File(byte[], "類型", "檔名+副檔名");
 				例如：
 				byte[] content = 讀完檔的二進制資料
