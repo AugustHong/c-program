@@ -469,3 +469,16 @@ return getip;
 filterContext 就是在 Filter 中 (不管是 Action執行前，或Action執行後 會傳入的那個參數)
 
 filterContext.HttpContext.Request.IsAjaxRequest();
+
+-----------------------------------------------------------------------------------------------
+十九、 Open API ( Swagger 用法介紹)：
+
+參考網圵：
+1. https://marcus116.blogspot.com/2019/01/how-to-add-api-document-using-swagger-in-webapi.html
+2. https://dotblogs.com.tw/yc421206/2019/01/23/tips_write_write_web_api_document_via_swagger
+3. https://dotblogs.com.tw/yc421206/2018/12/20/swagger_custom_header
+
+備註：
+1. 要讓某些api 不出現在畫面上
+	(a) 先在此 action 上方加入 [ApiExplorerSettings(IgnoreApi = true)]
+	(b) 在 SwaggerConfig.cs 中開啟 c.IgnoreObsoleteActions(); 這行即可
