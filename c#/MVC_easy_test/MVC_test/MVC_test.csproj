@@ -179,8 +179,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\BaseAPI\BaseAPIController.cs" />
+    <Compile Include="API\CookiesAPI\CookiesAPIController.cs" />
     <Compile Include="API\DetailAPI\DetailAPIController.cs" />
     <Compile Include="API\EasyAPI\EasyAPIController.cs" />
+    <Compile Include="API\XmlAPI\XmlAPIController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
@@ -194,6 +196,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\HtmlHelpers.cs" />
+    <Compile Include="Infrastrueture\Filter\ApiFilter.cs" />
     <Compile Include="Infrastrueture\Filter\CategoryFilter.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\ViewModel\ArticleViewModel.cs" />
