@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\bin\Debug\HtmlToWord.exe.config
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\bin\Debug\HtmlToWord.exe
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\bin\Debug\HtmlToWord.pdb
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\obj\Debug\HtmlToWord.csprojAssemblyReference.cache
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\obj\Debug\HtmlToWord.exe
+C:\Users\green\Desktop\HtmlToWord\HtmlToWord\obj\Debug\HtmlToWord.pdb
