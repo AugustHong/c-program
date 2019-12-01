@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;   //要加入這個才能寫檔讀檔
 using System.Xml;
+using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 
 namespace struct_and_file
 {
@@ -25,6 +27,21 @@ namespace struct_and_file
 			x = p1;
 			y = p2;
 		}
+	}
+
+	// 測試 XML的
+	public class A
+	{
+		public string B { get; set; }
+
+		public string C { get; set; }
+
+		public D D { get; set; }
+	}
+
+	public class D
+	{
+		public string E { get; set; }
 	}
 
 	class Program
@@ -145,6 +162,37 @@ namespace struct_and_file
 			string xmlData2 = doc.GetElementsByTagName("bbb")[0]?.InnerText;
 			Console.WriteLine(xmlData);
 			Console.WriteLine(xmlData2);   //因為沒有 => 空字串
+
+			// 將 XML 格式轉成 Class
+			try
+			{
+				A result = new A();
+				string xml = "<A><B>bbb</B><C>ccc</C><D><E>eee</E></D></A>";
+				// 記住： 上面字串的 A 和 class A 是要全部相同， D 的部份也是 => 不然會轉錯
+				// 就是 不屬於 string int 這種的 自已寫的 Class 名稱 要和 xml 字串的 名稱相同
+				XmlSerializer serializer = new XmlSerializer(typeof(A));
+				using (StringReader reader = new StringReader(xml))
+				{
+					result = (A)serializer.Deserialize(reader);
+				}
+				Console.WriteLine($"B = {result.B} , C = {result.C}, E = {result.D.E}");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+
+			// -----------------------------------------------------------------------------------------------------------
+
+			// 用字串分割字串
+			// 平常只能用 char 來分割 => 這次用字串來分割
+			string testStr = "aaaCCDaaaBBaaaKKKaaaGGGaaa";
+			List<string> afterSplitStr = Regex.Split(testStr, "aaa", RegexOptions.IgnoreCase).ToList();
+
+			foreach (var af in afterSplitStr)
+			{
+				Console.WriteLine(af + "  ");
+			}
 
 			Console.Read();
 		}
