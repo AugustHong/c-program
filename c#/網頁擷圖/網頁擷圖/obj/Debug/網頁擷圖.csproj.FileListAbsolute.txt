@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\bin\Debug\網頁擷圖.exe.config
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\bin\Debug\網頁擷圖.exe
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\bin\Debug\網頁擷圖.pdb
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\obj\Debug\網頁擷圖.csprojAssemblyReference.cache
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\obj\Debug\網頁擷圖.exe
+C:\Users\green\Desktop\網頁擷圖\網頁擷圖\obj\Debug\網頁擷圖.pdb
