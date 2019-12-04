@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\動態物件\動態物件\bin\Debug\動態物件.exe.config
+C:\Users\green\Desktop\動態物件\動態物件\bin\Debug\動態物件.exe
+C:\Users\green\Desktop\動態物件\動態物件\bin\Debug\動態物件.pdb
+C:\Users\green\Desktop\動態物件\動態物件\obj\Debug\動態物件.csprojAssemblyReference.cache
+C:\Users\green\Desktop\動態物件\動態物件\obj\Debug\動態物件.exe
+C:\Users\green\Desktop\動態物件\動態物件\obj\Debug\動態物件.pdb
