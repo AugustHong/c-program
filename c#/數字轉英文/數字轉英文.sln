@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "數字轉英文", "數字轉英文\數字轉英文.csproj", "{B30741A1-F013-435B-B3DA-CCA7C8B1543C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B30741A1-F013-435B-B3DA-CCA7C8B1543C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30741A1-F013-435B-B3DA-CCA7C8B1543C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30741A1-F013-435B-B3DA-CCA7C8B1543C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30741A1-F013-435B-B3DA-CCA7C8B1543C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CE78F7A-2976-453D-9445-4018E317CC2A}
+	EndGlobalSection
+EndGlobal

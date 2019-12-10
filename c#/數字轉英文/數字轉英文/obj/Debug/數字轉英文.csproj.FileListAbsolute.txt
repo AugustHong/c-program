@@ -1,0 +1,8 @@
+C:\Users\green\Desktop\數字轉英文\數字轉英文\bin\Debug\數字轉英文.exe.config
+C:\Users\green\Desktop\數字轉英文\數字轉英文\bin\Debug\數字轉英文.exe
+C:\Users\green\Desktop\數字轉英文\數字轉英文\bin\Debug\數字轉英文.pdb
+C:\Users\green\Desktop\數字轉英文\數字轉英文\bin\Debug\Nut.dll
+C:\Users\green\Desktop\數字轉英文\數字轉英文\obj\Debug\數字轉英文.csprojAssemblyReference.cache
+C:\Users\green\Desktop\數字轉英文\數字轉英文\obj\Debug\數字轉英文.csproj.CopyComplete
+C:\Users\green\Desktop\數字轉英文\數字轉英文\obj\Debug\數字轉英文.exe
+C:\Users\green\Desktop\數字轉英文\數字轉英文\obj\Debug\數字轉英文.pdb
