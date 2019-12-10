@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\bin\Debug\用檔名得到ConnectType.exe.config
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\bin\Debug\用檔名得到ConnectType.exe
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\bin\Debug\用檔名得到ConnectType.pdb
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\obj\Debug\用檔名得到ConnectType.csprojAssemblyReference.cache
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\obj\Debug\用檔名得到ConnectType.exe
+C:\Users\green\Desktop\用檔名得到ConnectType\用檔名得到ConnectType\obj\Debug\用檔名得到ConnectType.pdb
