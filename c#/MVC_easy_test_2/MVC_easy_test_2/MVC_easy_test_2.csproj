@@ -212,6 +212,7 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Code\ViewFunc.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -237,6 +238,7 @@
     <Compile Include="Controllers\CustomerResultController.cs" />
     <Compile Include="Controllers\NLogController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
+    <Compile Include="Controllers\ViewFuncController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +276,7 @@
     <Content Include="Views\Shared\_PartialViewWithNoParm.cshtml" />
     <Content Include="Views\Shared\_PartialViewWithHaveParm.cshtml" />
     <Content Include="Views\Authorize\Login.cshtml" />
+    <Content Include="Views\ViewFunc\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

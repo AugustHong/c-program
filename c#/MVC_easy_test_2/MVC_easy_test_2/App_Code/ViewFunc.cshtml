@@ -1,0 +1,15 @@
+﻿@helper Test(string t)
+{
+	@System.Configuration.ConfigurationManager.AppSettings["Test"]@t
+}
+
+@helper GetStatusName(bool status)
+{
+	// 這就像是 HtmlHelper 一樣的做法
+	if (status){
+		<p>啟用</p>
+	}
+	else{
+		<p>停用</p>
+	}
+}
