@@ -482,3 +482,21 @@ filterContext.HttpContext.Request.IsAjaxRequest();
 1. 要讓某些api 不出現在畫面上
 	(a) 先在此 action 上方加入 [ApiExplorerSettings(IgnoreApi = true)]
 	(b) 在 SwaggerConfig.cs 中開啟 c.IgnoreObsoleteActions(); 這行即可
+
+-----------------------------------------------------------------------------------------------
+二十、 在 MVC 中 做到 Console.WriteLine 功能：
+
+// 參考網圵： https://blog.yowko.com/visual-studio-output-window/
+System.Diagnostics.Debug.WriteLine("Test");
+
+-----------------------------------------------------------------------------------------------
+二一、 前端用 jqueryval 手動觸發驗證：
+
+$("yourForm").validate();
+var isValid = $("yourForm").valid();
+console.log(isValid);
+
+if (isValid){
+	// Submit … 等動作
+}
+// 不用 else  因為接下來就會出現紅字了
