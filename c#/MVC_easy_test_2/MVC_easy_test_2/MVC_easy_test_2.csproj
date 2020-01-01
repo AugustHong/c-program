@@ -277,6 +277,7 @@
     <Content Include="Views\Shared\_PartialViewWithHaveParm.cshtml" />
     <Content Include="Views\Authorize\Login.cshtml" />
     <Content Include="Views\ViewFunc\Index.cshtml" />
+    <Content Include="Views\PartialView\PartialTest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
