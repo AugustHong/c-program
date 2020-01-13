@@ -492,8 +492,8 @@ System.Diagnostics.Debug.WriteLine("Test");
 -----------------------------------------------------------------------------------------------
 二一、 前端用 jqueryval 手動觸發驗證：
 
-$("yourForm").validate();
-var isValid = $("yourForm").valid();
+$("#yourForm").validate();
+var isValid = $("#yourForm").valid();
 console.log(isValid);
 
 if (isValid){
