@@ -1,0 +1,12 @@
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\Linq累加動態條件.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\Linq累加動態條件.exe
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\Linq累加動態條件.pdb
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\EntityFramework.dll
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\LinqKit.dll
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\EntityFramework.xml
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\bin\Debug\LinqKit.xml
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\obj\Debug\Linq累加動態條件.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\obj\Debug\Linq累加動態條件.exe
+C:\Users\偉德\Documents\c製作全集\c#\Linq累加動態條件\Linq累加動態條件\obj\Debug\Linq累加動態條件.pdb
