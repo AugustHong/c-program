@@ -1,0 +1,14 @@
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\LinqToExcelExample.exe.config
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\LinqToExcelExample.exe
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\LinqToExcelExample.pdb
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\LinqToExcel.dll
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\log4net.dll
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\Remotion.Data.Linq.dll
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\Remotion.dll
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\Remotion.Interfaces.dll
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\LinqToExcel.xml
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\bin\Debug\log4net.xml
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\obj\Debug\LinqToExcelExample.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\obj\Debug\LinqToExcelExample.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\obj\Debug\LinqToExcelExample.exe
+C:\摳叮幫幫忙\研究\LinqToExcelExample\LinqToExcelExample\obj\Debug\LinqToExcelExample.pdb
