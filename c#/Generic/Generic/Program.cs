@@ -37,6 +37,9 @@ namespace Generic
         // where T : class  是代表這個T要是class
         public static void GetInfo<T>(List<T> result, string a = "", string b="") where T : class
         {
+	    // 如果要建立 泛型的基本的話
+	    // T newObj = default(T);
+
             for(var i = 0; i <= 3; i++)
             {
                 //如果result 傳入的類型是 AppAreaInfo
