@@ -1,0 +1,9 @@
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\bin\Debug\CSharpEval.exe.config
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\bin\Debug\CSharpEval.exe
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\bin\Debug\CSharpEval.pdb
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\bin\Debug\TestC.dll
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\bin\Debug\TestC.pdb
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\obj\Debug\CSharpEval.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\obj\Debug\CSharpEval.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\obj\Debug\CSharpEval.exe
+C:\摳叮幫幫忙\研究\CSharpEval\CSharpEval\obj\Debug\CSharpEval.pdb
