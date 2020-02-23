@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.exe.config
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.exe
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.pdb
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.exe
+C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.pdb
