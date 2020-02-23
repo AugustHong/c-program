@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\bin\Debug\CSharp觸發桌面提示.exe.config
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\bin\Debug\CSharp觸發桌面提示.exe
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\bin\Debug\CSharp觸發桌面提示.pdb
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\obj\Debug\CSharp觸發桌面提示.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\obj\Debug\CSharp觸發桌面提示.exe
+C:\摳叮幫幫忙\研究\CSharp觸發桌面提示\CSharp觸發桌面提示\obj\Debug\CSharp觸發桌面提示.pdb
