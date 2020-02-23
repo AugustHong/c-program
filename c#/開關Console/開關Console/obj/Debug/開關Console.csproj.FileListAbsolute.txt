@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\開關Console\開關Console\bin\Debug\開關Console.exe.config
+C:\摳叮幫幫忙\研究\開關Console\開關Console\bin\Debug\開關Console.exe
+C:\摳叮幫幫忙\研究\開關Console\開關Console\bin\Debug\開關Console.pdb
+C:\摳叮幫幫忙\研究\開關Console\開關Console\obj\Debug\開關Console.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\開關Console\開關Console\obj\Debug\開關Console.exe
+C:\摳叮幫幫忙\研究\開關Console\開關Console\obj\Debug\開關Console.pdb
