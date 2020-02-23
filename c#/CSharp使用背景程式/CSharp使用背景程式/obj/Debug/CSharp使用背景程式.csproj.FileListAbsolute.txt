@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\bin\Debug\CSharp使用背景程式.exe.config
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\bin\Debug\CSharp使用背景程式.exe
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\bin\Debug\CSharp使用背景程式.pdb
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\obj\Debug\CSharp使用背景程式.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\obj\Debug\CSharp使用背景程式.exe
+C:\摳叮幫幫忙\研究\CSharp使用背景程式\CSharp使用背景程式\obj\Debug\CSharp使用背景程式.pdb
