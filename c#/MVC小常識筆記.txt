@@ -513,3 +513,75 @@ if (isValid){
 			this.A = value; // value就是你給的值
 		}
 	}
+
+-----------------------------------------------------------------------------------------------
+二十三、 將 C# 後端物件 轉成 js 物件：
+
+@Html.Raw(JSON.Encode(C#物件));
+
+-----------------------------------------------------------------------------------------------
+二十四、 依據 字串Table名稱 進行查詢：
+
+參考網圵： http://ina-work.blogspot.com/2015/10/sql-sqlspexecutesql.html
+
+// 原 SQL 語句 (可以直接在 sql 上跑，記得換掉 tableName即可)
+
+declare @tableName varchar(max);
+declare @mysql nvarchar(max);
+
+set @tableName  = 'COM_Codes';
+set @mysql = N'select * from ' + @tableName ;
+
+EXECUTE sp_executesql @mysql;
+
+// 在 C# 後端中 (我做2隻，一隻接List<T>，另一隻 List<dynamic>)
+
+        /// <summary>
+        ///  用動態 Table 名 得到 資料
+        /// </summary>
+        /// <returns></returns>
+        private List<dynamic> GetTableDataByTableName(string tableName = "")
+        {
+            List<dynamic> result;
+
+            using (var conn = new SqlConnection(connString))
+            {
+                DynamicParameters parameters = new DynamicParameters();
+
+                string sql = @" declare @mysql nvarchar(max);
+                                set @mysql = N'select * from ' +  @TableName;
+                                EXECUTE sp_executesql @mysql;
+                               ";
+
+                parameters.Add("TableName", tableName);
+
+                result = conn.Query(sql, parameters).ToList();  //Dapper用的
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        ///  用動態 Table 名 得到 資料 (用 List<T> 來接的)
+        /// </summary>
+        /// <returns></returns>
+        private List<T> GetTableDataByTableName<T>(string tableName = "")
+        {
+            List<T> result = new List<T>();
+
+            using (var conn = new SqlConnection(connString))
+            {
+                DynamicParameters parameters = new DynamicParameters();
+
+                string sql = @" declare @mysql nvarchar(max);
+                                set @mysql = N'select * from ' +  @TableName;
+                                EXECUTE sp_executesql @mysql;
+                               ";
+
+                parameters.Add("TableName", tableName);
+
+                result = conn.Query<T>(sql, parameters).ToList();  //Dapper用的
+            }
+
+            return result;
+        }
