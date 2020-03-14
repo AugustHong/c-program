@@ -182,6 +182,68 @@ namespace struct_and_file
 				Console.WriteLine(ex.Message);
 			}
 
+			/*
+				第二種 將 XML 格式轉成 Class ：
+
+				// T 是泛形 (你傳進來的)
+				XmlDocument doc = new XmlDocument();
+				doc.XmlResolver = null;
+				doc.LoadXml(xmlString);
+				XmlNodeReader reader = new XmlNodeReader(doc.DocumentElement);
+				XmlSerializer ser = new XmlSerializer(typeof(T));
+				T deserialize = ser.Deserialize(reader) as T;
+				return deserialize;
+			*/
+
+			/*
+				PS：如果你的 Class 裡面有 List 型別： 有以下2種方式可以解決轉換
+
+				例： 
+				public class A{
+					public List<B> B {get;set;}
+				}
+
+				public class B{
+					public string text {get;set;}
+				}
+
+				string xmlString = "<A><B><text>111</text></B><B><text>222</text></B></A>";
+
+				(1) ： 在 List<B> 上加上 屬性 => 如下：
+
+				public class A{	
+					[XmlElement("B")] 
+					public List<B> B {get;set;}
+				}
+
+				(2) ： 一個一個讀出來，再給值：
+				XmlDocument doc = new XmlDocument();
+				doc.XmlResolver = null;
+				doc.LoadXml(xmlString);
+
+				XmlNodeList source = doc.SelectNodes("A/B");
+
+				A a = new A();
+				a.B = new List<B>();
+
+				foreach (XmlNode item in source)
+				{
+      				try
+            		{
+                		B b = new B();
+                		B.text = item.SelectNodes("text")[0]?.InnerText;
+
+               			a.B.add(b);
+            		}
+             		catch (Exception ex)
+             		{
+                    	System.Diagnostics.Debug.WriteLine(ex.Message);
+                    	continue;
+               		}
+				}
+
+			*/
+
 			// -----------------------------------------------------------------------------------------------------------
 
 			// 用字串分割字串
