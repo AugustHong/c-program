@@ -168,6 +168,8 @@ ps:這個Controller回傳出來要是字串型態（可以用基本字串，或�
 
 用 @Url.Content("~/Script/a.js") => 就可以取到真實的路徑囉！
 
+// 還有 @Html.RenderPartial 這些請去看 easy_test2 那裡有 Partial View的介紹時有說到
+
 -----------------------------------------------------------------------------------------------------------
 六、TempData
 
@@ -287,7 +289,7 @@ ps:這個Controller回傳出來要是字串型態（可以用基本字串，或�
 	//而 new {page, 參數名 = 變數值}  page是必要傳的，而後面的參數依Controller而變。
 
 ------------------------------------------------------------------------------------------------------------
-十、Process Bar
+十、Process Bar  (或者使用 JqueryBlockUI.js ，詳細自行找)
 
 (a) Ajax事件介紹：
 
@@ -384,6 +386,14 @@ http://www.ajaxload.info/
 十二、在Controller取得前一個頁面的網址
 
 string preURL = System.Web.HttpContext.Current.Request.Headers["Referer"].ToString();
+
+取到 Host (沒試過取到的是什麼)：
+
+string host = System.Web.HttpContext.Current.Request.Headers["Host"].ToString();
+
+取到當前這隻 Controller 的全部網圵名稱 (所以可以用字串分割得到 domainName)：
+
+string currentUrl = Request.Url.ToString();
 
 ------------------------------------------------------------------------------------------------------------
 十三、將一整個List轉型成另一個List (例如： string[] => int[])：
@@ -585,3 +595,48 @@ EXECUTE sp_executesql @mysql;
 
             return result;
         }
+
+------------------------------------------------------------------------------------------------
+二十五、 MVC開啟檔案權限(目前測起來可能沒效)：
+
+參考網圵：
+https://docs.microsoft.com/zh-tw/dotnet/api/system.security.permissions.fileiopermission?view=dotnet-plat-ext-3.1
+
+範例：
+try{
+FileIOPermission f2 = new FileIOPermission(FileIOPermissionAccess.Read | FileIOPermissionAccess.Write | FileIOPermissionAccess.PathDiscovery, tmpFld);
+                        f2.Demand();
+}
+catch (Exception ex){
+    throw;
+}
+
+--------------------------------------------------------------------------------------------------
+二十六、 在MVC中 對 WebConfig進行 CRUD：
+
+參考網圵：
+https://dotblogs.com.tw/box5068/2011/02/21/21477
+
+取值 (R)：
+System.Web.Configuration.WebConfigurationManager.AppSettings["A"];
+
+新增 (C)：
+//Configuration與AppSettingsSection必須引用System.Configuration才可使用！
+Configuration config = WebConfigurationManager.OpenWebConfiguration(null); 
+AppSettingsSection app = config.AppSettings;
+app.Settings.Add("B", "This is B value");
+config.Save(ConfigurationSaveMode.Modified);
+
+修改 (U)：
+//Configuration與AppSettingsSection必須引用System.Configuration才可使用！
+Configuration config = WebConfigurationManager.OpenWebConfiguration(null); 
+AppSettingsSection app = config.AppSettings;
+app.Settings["A"].Value = "This is not B";
+config.Save(ConfigurationSaveMode.Modified);
+
+刪除 (D)：
+//Configuration與AppSettingsSection必須引用System.Configuration才可使用！
+Configuration config = WebConfigurationManager.OpenWebConfiguration(null); 
+AppSettingsSection app = config.AppSettings;
+app.Settings.Remove("A");
+config.Save(ConfigurationSaveMode.Modified);
