@@ -640,3 +640,17 @@ Configuration config = WebConfigurationManager.OpenWebConfiguration(null);
 AppSettingsSection app = config.AppSettings;
 app.Settings.Remove("A");
 config.Save(ConfigurationSaveMode.Modified);
+
+---------------------------------------------------------------------------------------------
+二十七、讓 Cookies 前端無法用 document.cookies取到 (但仍可用 Application取得)：
+
+重點： 讓 cookies 的 HttpOnly 設成 true 即可
+
+參考網圵： https://blog.miniasp.com/post/2009/11/26/Using-HttpOnly-flag-to-avoid-XSS-attack
+
+// Create an HttpOnly cookie.
+HttpCookie myHttpOnlyCookie = new HttpCookie("LastVisit", DateTime.Now.ToString());
+
+myHttpOnlyCookie.HttpOnly = true;  // 重點是這個
+myHttpOnlyCookie.Name = "MyHttpOnlyCookie";
+Response.AppendCookie(myHttpOnlyCookie);
