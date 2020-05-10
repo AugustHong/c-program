@@ -146,6 +146,16 @@ namespace struct_and_file
 			//取到資料夾內的所有檔案名稱
 			string[] allFileName = Directory.GetFileSystemEntries("你所指定的目錄");
 
+			// 得到 資料夾內的資料夾列表：
+			string RootPath = "C:\\Users\\green\\Desktop\\指定目錢";
+
+            DirectoryInfo rootDir = new DirectoryInfo(RootPath);
+			// 得到所有資料夾
+            List<DirectoryInfo> DirList = rootDir.EnumerateDirectories().ToList();
+
+			//得到 資料夾內的 檔案(不包含資料夾)：
+			DirectoryInfo rootDir = new DirectoryInfo(RootPath);
+			List<FileInfo> fileList = rootDir .EnumerateFiles().ToList();
 
 			//-----------------------------------------------------------------------------------------------------------------------------------------------------
 			//------------------------------------------------------------------------------------------------------------------------------------------------------
