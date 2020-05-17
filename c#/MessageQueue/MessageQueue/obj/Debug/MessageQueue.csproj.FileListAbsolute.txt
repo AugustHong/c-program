@@ -1,0 +1,6 @@
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\bin\Debug\MessageQueue.exe.config
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\bin\Debug\MessageQueue.exe
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\bin\Debug\MessageQueue.pdb
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\obj\Debug\MessageQueue.csprojResolveAssemblyReference.cache
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\obj\Debug\MessageQueue.exe
+C:\Users\偉德\Documents\c製作全集\c#\MessageQueue\MessageQueue\obj\Debug\MessageQueue.pdb
