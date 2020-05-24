@@ -63,6 +63,51 @@ namespace advanced
             /*比較好閱讀的寫法 */
             Console.Write("this is {0} and {1}", array2D[0, 0], array2D[3, 1]);
 
+            /*
+            字串比大小：
+
+                int r = string.Compare(A, B);
+                r < 0 =>  A < B
+                r = 0 => A = B
+                r > 0 => A > B
+            */
+
+            string smallStr = "aaabcdess";
+            string largeStr = "ccddfeijls";
+
+            int matchResult = string.Compare(smallStr, largeStr);
+            if (r < 0){
+                console.WriteLine("比較小");
+            }
+            else{
+                console.WriteLine("大於等於");
+            }
+
+            Console.WriteLine("");
+
+            /*
+            字串補空白：
+
+            參考網圵： http://jashliao.eu/wordpress/2016/06/15/c-string-format-%E8%A3%9C-0%E7%A9%BA%E7%99%BD/
+
+            前面補0的數字字串
+                String.Format(“{0:0000}”, 157);    //輸出 0157
+
+            前後都補0的數字字串
+                String.Format(“{0:0000.0000}”, 157.42);    //輸出 0157.4200
+
+            格式化電話號碼
+                (String.Format(“{0:(###) ###-####}”, 8005551212);    //輸出 (800) 555-1212
+
+            不滿特定長度的字串，後面補空白
+                String.Format(“{0,-10}”, “Hello”);    //「Hello     」
+
+            不滿特定長度的字串，前面補空白
+                String.Format(“{0,10}”, “Hello”);    //「     Hello」
+            */
+            string ddddddddddddddddd = "kk yy dd g";
+            console.WriteLine(string.Format("{0, -20}", ddddddddddddddddd));
+
             Console.WriteLine("\n");
 
             /* 日期 */
@@ -75,6 +120,37 @@ namespace advanced
             Console.WriteLine(dateOnly.ToString("g")); //用24小時的時鐘表示法
             Console.WriteLine(dateOnly.ToString("MM/dd/yyyy HH:mm"));
             Console.WriteLine(date1.ToString("yyyy-MM-dd HH:mm"));
+
+            /*
+                DateTime.ToString 選項表：
+
+                年分	y	9
+ 	                    yy	09
+ 	                    yyy...	2009
+
+                月份	M	8
+ 	                    MM	08
+ 	                    MMM...	八月(視使用語系)
+
+                日期/星期	d	5
+ 	                    dd	05
+ 	                    ddd...	星期三(視使用語系)
+
+                小時	h	9
+ 	                    hh	09
+ 	                    H	21(上午9點則顯示9)
+ 	                    HH	21
+
+                上午/下午	tt	下午(視使用語系)
+
+                分鐘	m	3
+ 	                    mm	03
+
+                秒數	s	8
+ 	                    ss	08
+
+                參考網圵：https://ad87515.pixnet.net/blog/post/330555740
+            */
 
             //日期比大小
             DateTime date2 = new DateTime(2009, 8, 1, 0, 0, 0);
