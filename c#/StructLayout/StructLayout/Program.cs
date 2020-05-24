@@ -52,6 +52,17 @@ namespace StructLayout
         public string E;
     }
 
+    // 長度超過上限的
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+    public class OverLen
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 7000)]
+        public string last;
+
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
+        public string first;
+    }
+
     #endregion
 
     class Program
@@ -127,6 +138,16 @@ namespace StructLayout
             // 將值為設為空白
             MyStruct ms5 = SetStructLayoutAllFieldValueISSpace<MyStruct>();
 
+            // ---------------------------------------------------------------------------------------------------
+
+            // 如果 限制的長度超過 5000以上 會轉爆錯 => 所以特別改寫了
+            // 但是 有些超過的會成功，但會出現亂碼 => ol.first 就是個亂碼的例子
+            // 但直接改寫 多層式的 就會爆錯 = =
+
+            OverLen ol = ConvertToStructLayout<OverLen>("abcd1                  kkkkkkkkkkkkkkkkk22222222222222222222222222llllllllll2k3l23jk2n         3 j2l3knl32                                     2341234567             gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg                                                    ");
+            Console.WriteLine("last is: {0}", ol.last);
+            Console.WriteLine("first is: {0}", ol.first);
+
             Console.ReadLine();
         }
 
@@ -143,13 +164,71 @@ namespace StructLayout
             if (!string.IsNullOrEmpty(val))
             {
                 IntPtr valPoint = Marshal.StringToBSTR(val);
-                T ret = (T)Marshal.PtrToStructure(valPoint, typeof(T));
+                T t = (T)Activator.CreateInstance(typeof(T));
+
+                try
+                {
+                    // 這邊轉換時，如果 限制長度超過5000 以上 會轉到爆掉，不知原因
+
+                    // 而且這個爆錯 try catch 竟然抓不到 = = 超級傻眼的
+                    // https://docs.microsoft.com/zh-tw/dotnet/api/system.accessviolationexception?view=netcore-3.1
+                    // https://docs.microsoft.com/zh-tw/dotnet/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element?view=netcore-3.1
+                    // 如果要攔住這 Exception 的錯的話 (他不是一般的 Exption，所以 catch 才抓不到的)
+                    // 在 config 加上 <legacyCorruptedStateExceptionsPolicy enabled="true|false"/>  這段
+
+                    // 總之 如果要用的話，改用 catch 裡的寫法 ， 然後就不要用多層式的了
+                    // 沒有兩全其美的方法 就擇一用吧
+                    // 1. 資料長度少 用這裡的方法 ， 可以用多層式
+                    // 2. 資料長度大 用下面的方法 ， 不可用多層式
+                    // 這邊只做介紹 => 之後視情況改這一隻 function 的內容
+                    t = (T)Marshal.PtrToStructure(valPoint, typeof(T));
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
+
+                    // 多半是因為 限制字串長度超過5000以上 => 所以幫他手動分割
+                    // 得到所有的 FieldInfo => 要來取長度的
+                    List<FieldInfo> infoList = GetClassFieldInfoList<T>();
+
+                    int currentIndex = 0;  // 當前長度
+
+                    foreach (var info in infoList)
+                    {
+                        // 得到字串長度
+                        int stringLength = GetStructLayoutStringLenByFieldInfo<T>(info);
+                        string v;
+
+                        // 做 Substring => 但因為 Substring 會爆 try catch 
+                        // 所以 用特別的判斷來寫
+                        try
+                        {
+                            v = val.Substring(currentIndex, stringLength);
+                        }
+                        catch (Exception e)
+                        {
+                            try
+                            {
+                                v = val.Substring(currentIndex);
+                            }
+                            catch (Exception ee)
+                            {
+                                v = string.Empty;
+                            }
+                        }
+
+                        info.SetValue(t, v);
+
+                        currentIndex += stringLength;
+                    }
+                }
+
                 Marshal.FreeBSTR(valPoint);
-                return ret;
+                return t;
             }
             else
             {
-                return (T)Activator.CreateInstance(typeof(T));
+                return SetStructLayoutAllFieldValueISSpace<T>();
             }
         }
 
