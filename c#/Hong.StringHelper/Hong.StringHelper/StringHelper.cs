@@ -21,6 +21,12 @@ namespace Hong.StringHelper
         {
             try
             {
+                // 錯誤判斷，不要讓他 猛進到 try catch 脫慢速度
+                if (string.IsNullOrEmpty(source)) { return string.Empty; }
+                int len = source.Length;
+                if (startIndex >= len) { return string.Empty; }
+                if ((startIndex + length) > len) { return source.SubString2(startIndex); }
+
                 source = string.IsNullOrEmpty(source) ? string.Empty : source;
                 string result = source.Substring(startIndex, length);
                 return result;
@@ -43,6 +49,10 @@ namespace Hong.StringHelper
         {
             try
             {
+                // 錯誤判斷，不要讓他 猛進到 try catch 脫慢速度
+                if (string.IsNullOrEmpty(source)) { return string.Empty; }
+                if (startIndex >= source.Length) { return string.Empty; }
+
                 source = string.IsNullOrEmpty(source) ? string.Empty : source;
                 string result = source.Substring(startIndex);
                 return result;
@@ -102,6 +112,18 @@ namespace Hong.StringHelper
         public static bool LargeTo(this string source, string matchStr)
         {
             return string.Compare(source, matchStr) > 0;
+        }
+
+        /// <summary>
+        ///  把 用 字串 分割字串 寫成精簡的 (沒測過，所有可能有小問題，但主要的都正常)
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="splitStr"></param>
+        /// <returns></returns>
+        public static string[] Split(this string source, string splitStr){
+            if (string.IsNullOrEmpty(source)){return new string[];}
+            splitStr = string.IsNullOrEmpty(splitStr) ? string.Empty : splitStr;
+            return Regex.Split(source, splitStr, RegexOptions.IgnoreCase)
         }
 
         #endregion
@@ -165,6 +187,44 @@ namespace Hong.StringHelper
             return result;
         }
 
+        /// <summary>
+        ///  這個 字串 是不是 數字型 (能用下面的 驗證全數字就行)
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static bool IsNumeric(string source)
+        {
+            if (string.IsNullOrEmpty(source)) { return false; }
+
+            try
+            {
+                var i = Convert.ToDecimal(source);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + " --> " + ex.Message);
+
+                try
+                {
+                    var i = Convert.ToDouble(source);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + " --> " + e.Message);
+
+                    /*
+                        原本在這邊有寫 ToInt32 => 但拿掉
+                        原因： 連 Double 和 Decimal 都不行了 ，那 Int 絕對就不可能
+                        不要再浪費時間 做 Convert (花的時間很久)
+                     */
+
+                    return false;
+                }
+            }
+        }
+
         #endregion
 
         #region 相關驗證(是否全數字、是否全英文、是否全英數字、是否全是中文) => 用 StringHelper.xxx() 的方式來用
@@ -178,6 +238,7 @@ namespace Hong.StringHelper
 
             try
             {
+                if (string.IsNullOrEmpty(source)) { return false; }
                 result = Regex.IsMatch(source, @"^[0-9]+$");
                 return result;
             }
@@ -197,6 +258,7 @@ namespace Hong.StringHelper
 
             try
             {
+                if (string.IsNullOrEmpty(source)) { return false; }
                 result = Regex.IsMatch(source, @"^[a-zA-Z]+$");
                 return result;
             }
@@ -216,6 +278,7 @@ namespace Hong.StringHelper
 
             try
             {
+                if (string.IsNullOrEmpty(source)) { return false; }
                 result = Regex.IsMatch(source, @"^[a-zA-Z0-9]+$");
                 return result;
             }
@@ -281,6 +344,8 @@ namespace Hong.StringHelper
                 return false;
             }
         }
+
+
 
         #endregion
     }
