@@ -239,6 +239,7 @@ namespace Hong.StringHelper
             try
             {
                 if (string.IsNullOrEmpty(source)) { return false; }
+                source = source.Trim();
                 result = Regex.IsMatch(source, @"^[0-9]+$");
                 return result;
             }
@@ -259,6 +260,7 @@ namespace Hong.StringHelper
             try
             {
                 if (string.IsNullOrEmpty(source)) { return false; }
+                source = source.Trim();
                 result = Regex.IsMatch(source, @"^[a-zA-Z]+$");
                 return result;
             }
@@ -279,6 +281,7 @@ namespace Hong.StringHelper
             try
             {
                 if (string.IsNullOrEmpty(source)) { return false; }
+                source = source.Trim();
                 result = Regex.IsMatch(source, @"^[a-zA-Z0-9]+$");
                 return result;
             }
