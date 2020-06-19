@@ -86,6 +86,13 @@ namespace JsonString
 			
 			*/
 
+			// ----------------------------------------------------------------------------------------------
+
+			/*
+				如果是 JObject 物件要轉為 Model 的話： (如下)
+				JObject jo = new JObject;
+				A a = jo.ToObject<A>();
+			*/
 
 			Console.Read();
 		}
