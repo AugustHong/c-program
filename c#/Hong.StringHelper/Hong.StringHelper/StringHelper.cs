@@ -66,6 +66,34 @@ namespace Hong.StringHelper
 
         #endregion
 
+        #region  重複字串
+
+         //回傳重複的 "字元" 所組成的字串
+        public static string Repeat(this char source, int repeatNum = 2)
+        {
+            repeatNum = repeatNum < 1 ? 1 : repeatNum;
+            return new string(source, repeatNum);
+        }
+
+        //回傳重複的 "字串" 所組成的字串
+        public static string Repeat(this string source, int repeatNum = 2)
+        {
+            if (string.IsNullOrEmpty(source)) { return string.Empty; }
+            if (repeatNum <= 1)
+            {
+                return source;
+            }
+
+            var builder = new StringBuilder(repeatNum * source.Length);
+            for (int i = 0; i < repeatNum; i++)
+            {
+                builder.Append(source);
+            }
+            return builder.ToString();
+        }
+
+        #endregion
+
         /// <summary>
         ///  維持固定的長度回傳
         ///  isRightAddSpace = 如果不足長度是否是向右補空白 (預設是 true, 如果是 false 就是像左補空白)
@@ -171,6 +199,47 @@ namespace Hong.StringHelper
         public static decimal DecimalTryParse(this string source)
         {
             decimal result = 0;
+            decimal.TryParse(source, out result);
+            return result;
+        }
+
+        /// <summary>
+        /// 轉成 Decimal ， 後面可以輸入有幾個小數位
+        /// 例如： source = "12345", floatNum = 2 => 結果 = 123.45
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="floatNum"></param>
+        /// <returns></returns>
+        public static decimal DecimalTryParse(string source, int floatNum = 0)
+        {
+            decimal result = 0;
+            if (string.IsNullOrEmpty(source)) { source = "0"; }
+            floatNum = floatNum <= 0 ? 0 : floatNum;
+
+            string before = string.Empty;
+            string after = string.Empty;
+            string haveFloat = (floatNum <= 0) ? "" : ".";  // 是否要出現小數點 (如果 float是 <= 0 的話)
+
+            if (floatNum >= source.Length)
+            {
+                before = "0";
+
+                int diff = floatNum - source.Length;
+                for (var i = 1; i <= diff; i++)
+                {
+                    after += "0";
+                }
+                after += source;
+            }
+            else
+            {
+                int diff = source.Length - floatNum;
+                before = source.SubString2(0, diff);
+                after = source.SubString2(diff);
+            }
+
+            source = $"{before}{haveFloat}{after}";
+
             decimal.TryParse(source, out result);
             return result;
         }
