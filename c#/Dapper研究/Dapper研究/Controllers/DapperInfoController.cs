@@ -396,12 +396,20 @@ namespace Dapper研究.Controllers
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
+                conn.Open();
+                
                 //交易 (一定要先 conn.Open過才能用)
                 using (var tran = conn.BeginTransaction())
                 {
                     try
                     {
-                        // conn.Execute(strSql, datas);
+                        //string delStr = "Delete Test4 where id =2;";
+                        //conn.Execute(delStr, transaction:tran, commandType: CommandType.Text);
+
+                        //string instStr = "Insert into Test4 (id, kk) values (2, 'yy');";
+                        //conn.Execute(instStr, transaction: tran, commandType: CommandType.Text);
+
+
                         tran.Commit();
                     }
                     catch (Exception ex)
