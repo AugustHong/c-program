@@ -40,5 +40,23 @@ namespace MVC_easy_test_2.Controllers
 			//第二種寫法（加上Exception的）
 			logger.Error(new Exception("這是個錯誤"), "我是錯誤:error");
 		}
+
+		/*
+                如果要讓 NLog 寫檔的路徑是用 Web.Config來設定的話，請依照以下步驟：
+                1. 先去 Web.Config 加入你要的變數
+                    <add key="LogPath" value="C:\TEST.Logs" />
+                2. 在你的進入點，即 你宣告 logger 這一隻的 時候，要順便告訴他我要載入的東西
+                    var l = ConfigurationManager.AppSettings["LogPath"];
+                    string logPath = l == null ? string.Empty : l.ToString();
+                    NLog.MappedDiagnosticsLogicalContext.Set("LogPath", logPath);   
+                    // 注意： .Set( 這個是你到時候要在 NLog.config中設的變數名稱, 你的Web.Config的值)
+                3. 在 NLog.Config 中使用
+                    <target name="File" xsi:type="File" fileName="${mdlc:item=LogPath}\Error.log" layout="${Layout}"
+              encoding="utf-8" maxArchiveFiles="30" archiveNumbering="Sequence"
+              archiveAboveSize="1048576" archiveFileName="${LogTxtDir}/${logger}.log{#######}" />
+
+                    // 注意： ${mdlc:item=你在第二步設的變數名稱} => 這段就是用你得到的值
+                    // 所以這時候 ${mdlc:item=LogPath} 就會是 C:\TEST.Logs 了
+        */
 	}
 }
