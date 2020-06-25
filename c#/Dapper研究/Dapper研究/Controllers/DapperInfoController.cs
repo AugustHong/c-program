@@ -478,6 +478,203 @@ namespace Dapper研究.Controllers
         }
     }
 
+    public static class DapperDebugHelper
+    {
+        /// <summary>
+        ///  Dapper 中 Insert 超出上限只會回 sql 本身丟出的 二進位或字串超出上限
+        ///  並無法知道是哪一欄
+        ///  注意： 只會特別去找 是 "字串" 類型的欄位 其他數字類大小就不會去找
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static List<string> DebugForInsertStringOverLength(string sql, DynamicParameters parameters, string connString)
+        {
+            List<string> result = new List<string>();
+
+            if (!string.IsNullOrEmpty(sql) && !string.IsNullOrEmpty(connString))
+            {
+                // 先得到所要的資料
+                // 要的參數
+                string tableName = string.Empty;
+                List<string> tableColnumName = new List<string>();
+                List<string> inputVarName = new List<string>();
+
+                HandleBaseInsertSql(sql, out tableName, tableColnumName, inputVarName);
+
+                // 如果 傳入的 和 接收的 數目不合 要提示
+                if (tableColnumName.Count() != inputVarName.Count())
+                {
+                    result.Add("輸入的參數個數和接收的個數不同");
+                }
+
+                if (!string.IsNullOrEmpty(tableName))
+                {
+                    List<dynamic> data;   // 得到的 資料表各欄位資料
+
+                    // 去取到 資料表詳細
+                    using (SqlConnection conn = new SqlConnection(connString))
+                    {
+                        string querySql = @"SELECT b.COLUMN_NAME as 欄位名稱, 
+                                        b.DATA_TYPE as 資料型別, 
+                                        b.CHARACTER_MAXIMUM_LENGTH  as 最大長度
+                                        FROM INFORMATION_SCHEMA.TABLES  a 
+                                        LEFT JOIN INFORMATION_SCHEMA.COLUMNS b ON (a.TABLE_NAME=b.TABLE_NAME) 
+                                        WHERE a.TABLE_NAME = @TableName ;";
+
+                        DynamicParameters querypar = new DynamicParameters();
+                        querypar.Add("TableName", tableName);
+
+                        data = conn.Query<dynamic>(querySql, querypar).ToList();
+                        if (data.Count() <= 0)
+                        {
+                            result.Add("查無此資料表的資料");
+                        }
+                        else
+                        {
+                            // 去把 DynamicParameters 解析出來
+                            List<string> parNameList = new List<string>();
+                            List<string> parValueList = new List<string>();
+
+                            GetDynamicParametersNameAndValue(parameters, parNameList, parValueList);
+
+                            if ((parNameList.Count() != tableColnumName.Count()) || (parNameList.Count() != inputVarName.Count()))
+                            {
+                                result.Add("在 DynamicParameters 得到的個數 和你寫在 sql 語法中的參數數目不合");
+                            }
+                            else
+                            {
+                                // 對這幾個 字串類型的才做處理
+                                List<string> canJudgeList = new List<string> { "text", "char" };
+
+                                // 去做判斷了 (跑過所有的 parName)
+                                for (var i = 0; i < tableColnumName.Count(); i++)
+                                {
+                                    string tableColnum = tableColnumName[i];
+                                    string inputVar = inputVarName[i];
+                                    string parValue = parValueList[i];
+
+                                    dynamic item = data.Where(d => d.欄位名稱 == tableColnum).FirstOrDefault();
+                                    if (item != null)
+                                    {
+                                        string type = item.資料型別;
+
+                                        if (canJudgeList.Where(c => type.Contains(c)).Count() > 0)
+                                        {
+                                            int maxLen =  item.最大長度;
+
+                                            if (parValue.Length > maxLen)
+                                            {
+                                                result.Add($"{tableColnum} 欄位的最大長度是 {maxLen} ， 而你 輸入的變數 {inputVar} 其值是 {parValue} 長度是 {parValue.Length} 已超過上限，請修改");
+                                            }
+                                            else
+                                            {
+                                                System.Diagnostics.Debug.WriteLine($"{tableColnum} 欄位的最大長度是 {maxLen} ， 而你輸入的 變數名稱是 {inputVar} 其值是 {parValue}  長度是 {parValue.Length}");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            System.Diagnostics.Debug.WriteLine($"{tableColnum} 欄位的類型是 {type} 而你輸入的 變數名稱是 {inputVar} 其值是 {parValue} ， 故不特別去判斷 字串長度是否超過");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        result.Add($"{tableColnum} -- 查無此 欄位名稱");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    result.Add("沒有輸入資料表名稱");
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        ///  將 Insert 語法 轉成所要的資料
+        /// </summary>
+        /// <param name="tableName">表格名稱</param>
+        /// <param name="tableColnumName">資料表的欄位名稱</param>
+        /// <param name="inputVarName">輸入的變數名稱</param>
+        private static void HandleBaseInsertSql(string sql, out string tableName, List<string> tableColnumName, List<string> inputVarName)
+        {
+            tableName = string.Empty;
+
+            if (!string.IsNullOrEmpty(sql))
+            {
+                // 先進行分割
+                // source = insert into Table (a, b, c, d, e) values (@aa, @bb, @cc, @dd, @ee);
+                // 1 => insert into Table (a, b, c, d, e( values (@aa, @bb, @cc, @dd, @ee(;
+                // 分解成 => insert into Table a, b, c, d, e  values @aa, @bb, @cc, @dd, @ee ;
+                // Index =>         0             1             2          3                 4
+                List<string> data = sql.Replace(")", "(").Split('(').ToList();
+
+                // 得到 資料表名稱
+                if (data.Count() > 0)
+                {
+                    // 真實資料可能不會給你這麼好， 可能有很多空餘的空白
+                    // 所以先用 空白 分開 => 再從尾巴數 第1個不是 空白的
+                    List<string> item = data[0].Split(' ').ToList();
+                    string tN = item.Where(x => !string.IsNullOrEmpty(x.Trim())).LastOrDefault();
+                    tableName = string.IsNullOrEmpty(tN) ? string.Empty : tN;
+                }
+
+                // 得到 資料表的欄位名稱
+                if (data.Count() > 1)
+                {
+                    // 先把多餘的空白去掉
+                    string source = data[1].Replace(" ", string.Empty);
+
+                    // 用 , 分開
+                    List<string> item = source.Split(',').ToList();
+                    tableColnumName.AddRange(item);
+                }
+
+                // 得到 輸入的參數名稱
+                if (data.Count() > 3)
+                {
+                    // 先把多餘的空白去掉 和 輸入的 @ 去掉
+                    string source = data[3].Replace(" ", string.Empty).Replace("@", string.Empty);
+
+                    // 用 , 分開
+                    List<string> item = source.Split(',').ToList();
+                    inputVarName.AddRange(item);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 把 DynamicParameters 解析出 Name 和 Value
+        /// Value 都用 string 先來接
+        /// </summary>
+        /// <param name="parameters"></param>
+        /// <param name="parNameList"></param>
+        /// <param name="parValueList"></param>
+        private static void GetDynamicParametersNameAndValue(DynamicParameters parameters, List<string> parNameList, List<string> parValueList)
+        {
+            foreach (var paramName in parameters.ParameterNames)
+            {
+                parNameList.Add(paramName);
+
+                string parValue = string.Empty;
+                if (parameters.Get<dynamic>(paramName) is System.Collections.IList)
+                {
+                    parValue = string.Join(", ", parameters.Get<dynamic>(paramName));
+                }
+                else
+                {
+                    parValue = Convert.ToString(parameters.Get<dynamic>(paramName));
+                }
+                parValueList.Add(parValue);
+            }
+        }
+    }
+
     public class Test
     {
         public string text { get; set; }
