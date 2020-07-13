@@ -294,6 +294,58 @@ namespace Hong.StringHelper
             }
         }
 
+        /// <summary>
+        ///  無條件捨去至 小數點第幾位
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="floatNum"></param>
+        /// <returns></returns>
+        public static decimal RoundDown(string source, int floatNum = 0)
+        {
+            decimal result = 0;
+            if (string.IsNullOrEmpty(source)) { source = "0"; }
+            floatNum = floatNum <= 0 ? 0 : floatNum;
+
+            if (source.Contains("."))
+            {
+                // 只取到第一個，後面不管
+                List<string> data = source.Split('.').ToList();
+                string item = data[0];
+
+                if (floatNum > 0)
+                {
+                    // 先幫他補0 (免得其實他的長度不夠)
+                    item += ".";
+                    string item1 = data[1];
+                    int len = item1.Length;
+                    for (var i = len; i < floatNum; i++)
+                    {
+                        item1 += "0";
+                    }
+
+                    // 再用 Substring
+                    item += item1.SubString2(0, floatNum);
+                }
+
+                result = DecimalTryParse(item);
+            }
+            else
+            {
+                if (floatNum > 0)
+                {
+                    source += ".";
+                    for (var i = 0; i < floatNum; i++)
+                    {
+                        source += "0";
+                    }
+                }
+
+                result = DecimalTryParse(source);
+            }
+
+            return result;
+        }
+
         #endregion
 
         #region 相關驗證(是否全數字、是否全英文、是否全英數字、是否全是中文) => 用 StringHelper.xxx() 的方式來用
