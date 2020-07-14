@@ -348,6 +348,169 @@ namespace Hong.StringHelper
 
         #endregion
 
+        #region 相關 數字靠右前補0 + 數字靠左後補0 + 小數格式
+
+        /// <summary>
+        ///  像是 "0   " => "0000"
+        ///  數字靠右補空白
+        ///  特例： 如果是 "1234" ， len 給2 => 結果 "34"
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string NumericStringNumberMoveRight(string source, int len)
+        {
+            string result = string.Empty;
+            len = len < 0 ? 0 : len;
+
+            if (!string.IsNullOrEmpty(source))
+            {
+                result = source.Replace(" ", string.Empty);
+
+                // 必要是全數字
+                if (IsAllNumeric(result))
+                {
+                    int diff = len - result.Length;
+                    if (diff <= 0)
+                    {
+                        // 拿後面的碼
+                        return result.SubString2(result.Length - len , len);
+                    }
+                    else
+                    {
+                        string space = string.Empty;
+                        for(var i = 0; i < diff; i++)
+                        {
+                            space += "0";
+                        }
+
+                        return space + result;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        ///  像是 "0   " => "0000"
+        ///  數字靠右補空白
+        ///  特例： 如果是 "1234" ， len 給2 => 結果 "34"
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string NumericStringNumberMoveRight(int source, int len)
+        {
+            string item = source.ToString();
+            return NumericStringNumberMoveRight(item, len);
+        }
+
+        /// <summary>
+        ///  像是 "   0" => "0000"
+        ///  數字靠左補空白 (在小數點後的數用的)
+        ///  特例： 如果是 "1234" ， len 給2 => 結果 "12"
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string NumericStringNumberMoveLeft(string source, int len)
+        {
+            string result = string.Empty;
+            len = len < 0 ? 0 : len;
+
+            if (!string.IsNullOrEmpty(source))
+            {
+                result = source.Replace(" ", string.Empty);
+
+                // 必要是全數字
+                if (IsAllNumeric(result))
+                {
+                    int diff = len - result.Length;
+                    if (diff <= 0)
+                    {
+                        // 拿前面的碼
+                        return result.SubString2(0, len);
+                    }
+                    else
+                    {
+                        string space = string.Empty;
+                        for (var i = 0; i < diff; i++)
+                        {
+                            space += "0";
+                        }
+
+                        return result + space;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        ///  像是 "   0" => "0000"
+        ///  數字靠左補空白 (在小數點後的數用的)
+        ///  特例： 如果是 "1234" ， len 給2 => 結果 "12"
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string NumericStringNumberMoveLeft(int source, int len)
+        {
+            string item = source.ToString();
+            return NumericStringNumberMoveLeft(item, len);
+        }
+
+        /// <summary>
+        ///  將 deciaml 轉換為 格式 
+        ///  例： YYY PIC 9(3)V9
+        ///  給的值是 22
+        ///  出來 的要是 0220
+        ///  給的值是 12.33
+        ///  出來的要是 012.3
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="numLen"></param>
+        /// <param name="floatLen"></param>
+        /// <returns></returns>
+        public static string NumericStringDecimalFormat(string source, int numLen, int floatLen)
+        {
+            string result = string.Empty;
+            numLen = numLen < 0 ? 0 : numLen;
+            floatLen = floatLen < 0 ? 0 : floatLen;
+
+            if (!string.IsNullOrEmpty(source))
+            {
+                // 因為要直接拿小數點，所以給他加個 . 就絕對不會爆錯了
+                source += ".0";
+                List<string> datas = source.Split('.').ToList();
+
+                // 數字靠右 前補0，小數靠左 後補0
+                result = NumericStringNumberMoveRight(datas[0], numLen) +
+                    "." +
+                    NumericStringNumberMoveLeft(datas[1], floatLen);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        ///  將 deciaml 轉換為 格式 
+        ///  例： YYY PIC 9(3)V9
+        ///  給的值是 22
+        ///  出來 的要是 0220
+        ///  給的值是 12.33
+        ///  出來的要是 012.3
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="numLen"></param>
+        /// <param name="floatLen"></param>
+        /// <returns></returns>
+        public static string NumericStringDecimalFormat(decimal source, int numLen, int floatLen)
+        {
+            string item = source.ToString();
+            return NumericStringDecimalFormat(item, numLen, floatLen);
+        }
+
+        #endregion
+
         #region 相關驗證(是否全數字、是否全英文、是否全英數字、是否全是中文) => 用 StringHelper.xxx() 的方式來用
 
         /// <summary>
