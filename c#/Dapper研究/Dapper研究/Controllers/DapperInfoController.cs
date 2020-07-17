@@ -450,6 +450,56 @@ namespace Dapper研究.Controllers
         }
 
         /// <summary>
+        /// Dapper 的 Bulk Insert
+        /// </summary>
+        public void DapperBulkInsert()
+        {
+            // 請再多去 Nuget 安裝 Z.Dapper.Plus
+            // 且確認 Dapper -Version 1.60.6 和 System.Data.SqlClient 都有安裝
+
+            // 先建立 List<Test4> 物件
+            List<SelectTestResult> test4 = new List<SelectTestResult>();
+            for (var i = 10; i < 6000; i++)
+            {
+                SelectTestResult item = new SelectTestResult();
+                item.value = i;
+                item.text = $"BulkInsert測試-{i}";
+                test4.Add(item);
+            }
+
+            // 宣告類型 和 要繫結哪張 資料表
+            // 語法： DapperPlusManager.Entity<要傳入的Class>().Table("要Insert的資料表名稱");
+            DapperPlusManager.Entity<SelectTestResult>().Table("Test");
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+
+                //交易 (一定要先 conn.Open過才能用)
+                using (var tran = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Bulk Insert 可以用
+                        // conn.BulkInsert(test4) ， 也可以用 beginTransaction 的作法來做 => 都可
+                        // 加上 UseBulkOptions(options => options.InsertKeepIdentity = true) 是記住 PK
+                        tran.UseBulkOptions(options => options.InsertKeepIdentity = true).BulkInsert(test4);
+                        tran.Commit();
+
+                        /*
+                            當然還有 Bulk Update 可以用
+                         */
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine(ex.Message);
+                        tran.Rollback();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         ///  自行準備T-SQL , WHERE 條件自行準備 => 產出 DataSet
         /// </summary>
         /// <param name="Sqls"></param>
