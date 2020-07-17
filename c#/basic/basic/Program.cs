@@ -119,6 +119,7 @@ namespace basic
             string p = Console.ReadLine();
 
             Console.WriteLine(p);
+            
 
             Console.Read();
         }
