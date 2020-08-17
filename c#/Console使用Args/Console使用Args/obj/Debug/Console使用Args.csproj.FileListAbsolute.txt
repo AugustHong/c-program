@@ -1,0 +1,6 @@
+C:\Users\green\Desktop\Console使用Args\Console使用Args\bin\Debug\Console使用Args.exe.config
+C:\Users\green\Desktop\Console使用Args\Console使用Args\bin\Debug\Console使用Args.exe
+C:\Users\green\Desktop\Console使用Args\Console使用Args\bin\Debug\Console使用Args.pdb
+C:\Users\green\Desktop\Console使用Args\Console使用Args\obj\Debug\Console使用Args.csproj.CoreCompileInputs.cache
+C:\Users\green\Desktop\Console使用Args\Console使用Args\obj\Debug\Console使用Args.exe
+C:\Users\green\Desktop\Console使用Args\Console使用Args\obj\Debug\Console使用Args.pdb
