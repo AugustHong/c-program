@@ -142,16 +142,174 @@ namespace Hong.StringHelper
             return string.Compare(source, matchStr) > 0;
         }
 
+        #endregion
+
+        #region 字串分割 + Trim
+
         /// <summary>
-        ///  把 用 字串 分割字串 寫成精簡的 (沒測過，所有可能有小問題，但主要的都正常)
+        /// 用正規化去 切割字串
         /// </summary>
         /// <param name="source"></param>
         /// <param name="splitStr"></param>
         /// <returns></returns>
-        public static string[] Split(this string source, string splitStr){
-            if (string.IsNullOrEmpty(source)){return new string[];}
-            splitStr = string.IsNullOrEmpty(splitStr) ? string.Empty : splitStr;
-            return Regex.Split(source, splitStr, RegexOptions.IgnoreCase)
+        public static List<string> RegexSplit(this string source, string splitStr)
+        {
+            List<string> result = new List<string>();
+
+            // 如果是 空的，就直接回傳 空字串
+            if (string.IsNullOrEmpty(source))
+            {
+                return new List<string> { "" };
+            }
+
+            // 如果切割字串是 null 回傳整個
+            if (splitStr == null)
+            {
+                result.Add(source);
+                return result;
+            }
+
+            return Regex.Split(source, "\r\n", RegexOptions.IgnoreCase).ToList();
+        }
+
+        /// <summary>
+        /// 上面的正規化 如果用 . 來切 會變成要輸入 \. (有點像 js 會遇到的狀況)
+        /// 解法： 自已寫
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="splitStr"></param>
+        /// <returns></returns>
+        public static List<string> Split(this string source, string splitStr)
+        {
+            List<string> result = new List<string>();
+
+            string tmpSource = source;
+
+            // 如果是 空的，就直接回傳 空字串
+            if (string.IsNullOrEmpty(source))
+            {
+                return new List<string> { "" };
+            }
+
+            // 如果切割字串是 null 回傳整個
+            if (splitStr == null)
+            {
+                result.Add(source);
+                return result;
+            }
+
+            int len = tmpSource.Length;
+
+            // 如果 切割字串是 空字串，就每個字母來切
+            if (splitStr == string.Empty)
+            {
+                for(var i = 0; i < len; i++)
+                {
+                    string tmp = source.Substring(i, 1);
+                    result.Add(tmp);
+                }
+                return result;
+            }
+
+            // 其餘照著切
+            int splitStrLen = splitStr.Length;
+
+            // 判斷是否有進去
+            bool haveI = false;
+
+            // 位置
+            int pos = tmpSource.IndexOf(splitStr);
+
+            // 直到結束
+            while(pos >= 0)
+            {
+                haveI = true;
+                string tmp = string.Empty;
+
+                if (pos == 0)
+                {
+                    tmp = string.Empty;
+                }
+                else
+                {        
+                    tmp = tmpSource.Substring(0, pos);
+                }
+
+                result.Add(tmp);
+
+                // 算出要延後幾位
+                int diff = pos + splitStrLen;
+
+                // 切割 (讓剩下的繼續跑)
+                tmpSource = tmpSource.Substring(diff);
+
+                // 重算位置
+                pos = tmpSource.IndexOf(splitStr);
+
+                // 如果 最後一次砍完剩下 空字串 => 要 push 進去
+                if (string.IsNullOrEmpty(tmpSource))
+                {
+                    result.Add(string.Empty);
+                }
+            }
+
+            // 如果一開始就查不到 => 直接回傳 自己
+            if (haveI == false)
+            {
+                result.Add(source);
+            }
+
+            return result;
+        }
+
+                /// <summary>
+        /// Trim
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string Trim2(this string source)
+        {
+            string result = string.Empty;
+
+            if (!string.IsNullOrEmpty(source))
+            {
+                try
+                {
+                    result = source.Trim();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
+                    return string.Empty;
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// TrimStart
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string TrimStart2(this string source)
+        {
+            string result = string.Empty;
+
+            if (!string.IsNullOrEmpty(source))
+            {
+                try
+                {
+                    result = source.TrimStart();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
+                    return string.Empty;
+                }
+            }
+
+            return result;
         }
 
         #endregion
