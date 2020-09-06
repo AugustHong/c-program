@@ -656,3 +656,61 @@ HttpCookie myHttpOnlyCookie = new HttpCookie("LastVisit", DateTime.Now.ToString(
 myHttpOnlyCookie.HttpOnly = true;  // 重點是這個
 myHttpOnlyCookie.Name = "MyHttpOnlyCookie";
 Response.AppendCookie(myHttpOnlyCookie);
+
+------------------------------------------------------------------------------------------------
+二十八、API常用的非同步寫法：
+
+public async Task<xxx> GetRequest(xxxx request)
+{
+            return await Task.Run(() => this.Main(request));
+}
+
+public xxx Main(xxxx request)
+{
+	return new xxx();
+}
+
+---------------------------------------------------------------------------------------------------
+二十九、 List 是傳址：
+
+(1) 因為 List 是傳址，所以：
+
+	public void aaa(){
+		List<int> a = new List<int>();
+		bbb(a);  // 因為是傳址的，所以到bbb函式所 Add 的在這邊都會有 
+		foreach (var item in a){   // 因為在 bbb 有 加入 1 和 3 => 所以會執行2次
+			....
+		}
+
+	}
+
+	public void bbb(List<int> source){
+		bbb.Add(1);
+		bbb.Add(3);
+	}
+
+(2) 
+	List<int> aaa = new List<int>{ 1, 3, 5};
+	var bbb = aaa;
+	bbb.Add(7);     // 當你這樣做時， aaa 裡面也會 Add 7 (因為 aaa 和 bbb 現在共用同一個位址)
+
+(3)     
+       public class A {
+		public string a {get;set;}
+		public string b {get;set;}
+	}
+
+	List<A> aaa = new List<A>();
+	A item = new A();
+	item.a = "1";
+	item.b = "2";
+	aaa.Add(item);
+
+	item.a = "3";
+	item.b = "4";
+	aaa.Add(item);
+
+	// 執行完後， aaa 裡面會是 2個 但都是 a = "3", b = "4" 的 (因為傳)
+
+	=> 故如果要修改，就要在 item.a = "3" 之前 用 item = new A(); 重清位址才行。
+
