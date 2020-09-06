@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Hong.StringHelper
 {
@@ -791,6 +792,32 @@ namespace Hong.StringHelper
         }
 
 
+
+        #endregion
+    
+        #region JSON 處理
+
+        /// <summary>
+        ///  轉成 JSON 字串
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static string ToJSON(object obj)
+        {
+            string error = string.Empty;
+
+            // 這邊可以寫成一個 Helper
+            try
+            {
+                error = JsonConvert.SerializeObject(obj);
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+            }
+
+            return error;
+        }
 
         #endregion
     }
