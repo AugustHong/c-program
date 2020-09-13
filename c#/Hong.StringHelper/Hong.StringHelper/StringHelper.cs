@@ -247,10 +247,17 @@ namespace Hong.StringHelper
                 // 重算位置
                 pos = tmpSource.IndexOf(splitStr);
 
-                // 如果 最後一次砍完剩下 空字串 => 要 push 進去
+                 // 如果 最後一次砍完剩下 空字串 => 要 push 進去
                 if (string.IsNullOrEmpty(tmpSource))
                 {
                     result.Add(string.Empty);
+                }
+                else
+                {
+                    if (pos < 0)
+                    {
+                        result.Add(tmpSource);
+                    }
                 }
             }
 
