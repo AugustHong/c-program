@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\bin\Debug\word取代文字.exe.config
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\bin\Debug\word取代文字.exe
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\bin\Debug\word取代文字.pdb
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\obj\Debug\word取代文字.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\obj\Debug\word取代文字.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\obj\Debug\word取代文字.exe
+C:\摳叮幫幫忙\研究\word取代文字\word取代文字\obj\Debug\word取代文字.pdb
