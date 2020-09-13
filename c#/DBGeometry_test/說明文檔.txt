@@ -336,3 +336,8 @@ https://www.infragistics.com/community/blogs/b/mihail_mateev/posts/using-spatial
             string lonlat = lon + "," + lat;
             return lonlat;
       }
+
+--------------------------------------------------------------------------------------------------------------------------------------
+三、KML文件進階：
+
+參考網圵： https://developers.google.com/kml/documentation/kml_21tutorial?hl=zh-cn
