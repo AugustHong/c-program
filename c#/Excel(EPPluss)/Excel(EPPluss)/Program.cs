@@ -52,10 +52,23 @@ namespace Excel_EPPluss_
             // 開啟出來的 都是用 "另存新檔" 來存喔！ 所以不用擔心會直接改到原本的
             using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
+                // 看是要哪種認證，基本上 NonCommercial 就行了
+                // If you are a commercial business and have
+                // purchased commercial licenses use the static property
+                // LicenseContext of the ExcelPackage class:
+                ExcelPackage.LicenseContext = LicenseContext.Commercial;
+
+                // If you use EPPlus in a noncommercial context
+                // according to the Polyform Noncommercial license:
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
                 // 固定寫法 (讀取頁面)
                 using (ExcelPackage excel = new ExcelPackage(fs))
                 {
-                    ExcelWorksheet sheet = excel.Workbook.Worksheets[1]; // 取得Sheet1 (都是從1開始，不是0喔)
+                    // 取得Sheet1 (都是從1開始，不是0喔)
+                    // 第2次自己做實測 卻又從 0 開始 
+                    // 下次自己先測一下，會是從哪開始 
+                    ExcelWorksheet sheet = excel.Workbook.Worksheets[1]; 
 
                     // 也可再改變 sheet 的名稱
                     sheet.Name = "第一張表";
@@ -108,10 +121,24 @@ namespace Excel_EPPluss_
 
             try
             {
+
+                // 看是要哪種認證，基本上 NonCommercial 就行了
+                // If you are a commercial business and have
+                // purchased commercial licenses use the static property
+                // LicenseContext of the ExcelPackage class:
+                ExcelPackage.LicenseContext = LicenseContext.Commercial;
+
+                // If you use EPPlus in a noncommercial context
+                // according to the Polyform Noncommercial license:
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
                 // 讀檔並組出 資料
                 using (ExcelPackage excel = new ExcelPackage(file.InputStream))
                 {
-                    ExcelWorksheet sheet = excel.Workbook.Worksheets[1]; // 取得Sheet1
+                    // 取得Sheet1 (都是從1開始，不是0喔)
+                    // 第2次自己做實測 卻又從 0 開始 
+                    // 下次自己先測一下，會是從哪開始
+                    ExcelWorksheet sheet = excel.Workbook.Worksheets[1];
 
                     // 開始讀檔
                     int startRowIndex = sheet.Dimension.Start.Row; // 起始列(從1開始 => 如果有標題列，那會是標題列那)
