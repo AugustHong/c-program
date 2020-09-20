@@ -384,6 +384,15 @@ namespace WriteWord_Microsoft.Office.Interop.Word_
         }
 
         /// <summary>
+        /// 關閉Word程序
+        /// </summary>
+        public void KillWinword()
+        {
+            var p = Process.GetProcessesByName("WINWORD");
+            if (p.Any()) p[0].Kill();
+        }
+
+        /// <summary>
         ///  編輯 頁首 頁尾
         /// </summary>
         /// <param name="headerText">頁首文字</param>
@@ -571,6 +580,37 @@ namespace WriteWord_Microsoft.Office.Interop.Word_
         {
             // 用這個的會自動斷行
             this.WriteText(Text: "\n");
+
+            // 或者用下面的寫法：
+            // WordApp.Selection.TypeParagraph();
+        }
+
+        /// <summary>
+        ///  加入新的一頁(換頁)
+        /// </summary>
+        public void NewPage(){
+            WordApp.Selection.InsertNewPage();
+        }
+  
+        /// <summary>
+        ///  複製至剪貼簿
+        /// </summary>
+        public void Copy(int timespan = 1000){
+            // 複製
+            WordApp.ActiveDocument.Select();
+            WordApp.Selection.Copy();
+
+            // 要等幾秒，不然很容易 後面的 複製時，沒複製到
+            System.Threading.Thread.Sleep(timespan);
+        }
+
+        /// <summary>
+        ///  貼上至文件
+        /// </summary>
+        public void Paste(){
+            // 先移至最後面
+            MoveToCurrentSelect();
+            WordApp.Selection.Paste();
         }
 
         /// <summary>
@@ -912,6 +952,80 @@ namespace WriteWord_Microsoft.Office.Interop.Word_
                 Console.WriteLine(e.StackTrace);
                 return false;
             }
+        }
+
+        /// <summary>
+        /// 替換word中的文字
+        /// </summary>
+        /// <param name=”strOld”>查詢的文字</param>
+        /// <param name=”strNew”>替換的文字</param>
+        public void Replace(string strOld, string strNew)
+        {
+            //替換全域性Document
+            WordApp.Selection.Find.ClearFormatting();
+            WordApp.Selection.Find.Replacement.ClearFormatting();
+            WordApp.Selection.Find.Text = strOld;
+            WordApp.Selection.Find.Replacement.Text = strNew;
+
+            object objReplace = Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll;
+            WordApp.Selection.Find.Execute(ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref objReplace, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing);
+            //替換頁尾的字
+            foreach (Microsoft.Office.Interop.Word.Section wordSection in _word.Sections)
+            {
+                Microsoft.Office.Interop.Word.Range footerRange = wordSection.Footers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                footerRange.Find.ClearFormatting();
+                footerRange.Find.Replacement.ClearFormatting();
+                footerRange.Find.Text = strOld;
+                footerRange.Find.Replacement.Text = strNew;
+                footerRange.Find.Execute(ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref objReplace, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing);
+            }
+
+            //替換頁首的字
+            foreach (Microsoft.Office.Interop.Word.Section section in _word.Sections)
+            {
+                Microsoft.Office.Interop.Word.Range headerRange = section.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                headerRange.Find.ClearFormatting();
+                headerRange.Find.Replacement.ClearFormatting();
+                headerRange.Find.Text = strOld;
+                headerRange.Find.Replacement.Text = strNew;
+                headerRange.Find.Execute(ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing,
+                                       ref oMissing, ref objReplace, ref oMissing,
+                                       ref oMissing, ref oMissing, ref oMissing);
+            }
+
+            //文字框
+            Microsoft.Office.Interop.Word.StoryRanges storyRanges = _word.StoryRanges;
+            foreach (Microsoft.Office.Interop.Word.Range range in storyRanges)
+            {
+                Microsoft.Office.Interop.Word.Range rangeFlag = range;
+                if (Microsoft.Office.Interop.Word.WdStoryType.wdTextFrameStory == rangeFlag.StoryType)
+                {
+                    while (rangeFlag != null)
+                    {
+                        rangeFlag.Find.ClearFormatting();
+                        rangeFlag.Find.Replacement.ClearFormatting();
+                        rangeFlag.Find.Text = strOld;
+                        rangeFlag.Find.Replacement.Text = strNew;
+                        rangeFlag.Find.Execute(ref oMissing, ref oMissing, ref oMissing,
+                                               ref oMissing, ref oMissing, ref oMissing,
+                                               ref oMissing, ref oMissing, ref oMissing,
+                                               ref oMissing, ref objReplace, ref oMissing,
+                                               ref oMissing, ref oMissing, ref oMissing);
+                        rangeFlag = range.NextStoryRange;
+                    }
+                }
+            }
+
         }
     }
 }
