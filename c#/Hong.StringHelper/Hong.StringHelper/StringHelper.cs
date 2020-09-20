@@ -827,5 +827,50 @@ namespace Hong.StringHelper
         }
 
         #endregion
+    
+        #region 得到字串長度
+
+        /// <summary>
+        /// 算出 字串去掉 特定 char 後 的長度
+        /// (預設是 空白 => 即預設是去掉 空白後的長度)
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static int RemoveSpecificCharLength(string source, char filter = ' ')
+        {
+            int result = 0;
+            if (!string.IsNullOrEmpty(source))
+            {
+                for (var i = 0; i < source.Length; i++)
+                {
+                    char c = source[i];
+                    if (c != filter)
+                    {
+                        result++;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 算出 字串去掉 特定 string 後 的長度
+        /// (預設是 空白 => 即預設是去掉 空白後的長度)
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static int RemoveSpecificCharLength(string source, string filter = " ")
+        {
+            int result = 0;
+            if (!string.IsNullOrEmpty(source))
+            {
+                return source.Replace(filter, string.Empty).Length;
+            }
+
+            return result;
+        }
+
+        #endregion
     }
 }
