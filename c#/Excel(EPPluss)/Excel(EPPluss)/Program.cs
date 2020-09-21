@@ -22,6 +22,10 @@ using System.Web;
      (c) Spire.Xls (轉 ODS用的 => 但要認證，否則會多一頁訊息頁 => 看你要不要用)
 */
 
+/*
+    註： 好像不能讀 .xls 的 => 我試著讀，但讀到的 sheet 數 為 0
+*/
+
 namespace Excel_EPPluss_
 {
     class Program
