@@ -872,5 +872,7 @@ namespace Hong.StringHelper
         }
 
         #endregion
+   
+   
     }
 }
