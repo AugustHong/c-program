@@ -1,0 +1,9 @@
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\bin\Debug\Hong.StringHelper.dll
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\bin\Debug\Hong.StringHelper.pdb
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\obj\Debug\Hong.StringHelper.csprojAssemblyReference.cache
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\obj\Debug\Hong.StringHelper.csproj.CoreCompileInputs.cache
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\obj\Debug\Hong.StringHelper.csproj.CopyComplete
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\obj\Debug\Hong.StringHelper.dll
+D:\Documents\Github\c-program\c#\Hong.StringHelper\Hong.StringHelper\obj\Debug\Hong.StringHelper.pdb
