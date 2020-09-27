@@ -1,0 +1,15 @@
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\XLS和XLSX互轉.exe.config
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\XLS和XLSX互轉.exe
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\XLS和XLSX互轉.pdb
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.License.dll
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.Pdf.dll
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.XLS.dll
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Microsoft.mshtml.dll
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.License.xml
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.Pdf.xml
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\bin\Debug\Spire.XLS.xml
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\obj\Debug\XLS和XLSX互轉.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\obj\Debug\XLS和XLSX互轉.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\obj\Debug\XLS和XLSX互轉.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\obj\Debug\XLS和XLSX互轉.exe
+C:\摳叮幫幫忙\研究\XLS和XLSX互轉\XLS和XLSX互轉\obj\Debug\XLS和XLSX互轉.pdb
