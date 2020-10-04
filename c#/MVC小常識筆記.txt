@@ -714,3 +714,40 @@ public xxx Main(xxxx request)
 
 	=> 故如果要修改，就要在 item.a = "3" 之前 用 item = new A(); 重清位址才行。
 
+---------------------------------------------------------------------------------------------------------------------------
+三十、 繼承時取到自己的名稱：
+
+        /// <summary>
+        ///  得到當前的 Class 名稱
+        /// </summary>
+        /// <returns></returns>
+        public string GetCurrentClassName()
+        {
+            string name = this.ToString();
+            return name.Split('.').Last();
+        }
+
+--------------------------------------------------------------------------------------------------------------------------
+三十一、 SQL CURSOR 寫法 (在用 dapper 時，不知為何沒成功執行，要再確認)
+
+DECLARE MyCursor Cursor FOR
+SELECT TOP (2) [id] FROM [Test].[dbo].[Test]
+Open MyCursor 
+
+declare @id numeric(18, 0);
+
+--開始迴圈跑Cursor Start
+Fetch NEXT FROM MyCursor INTO @id
+While (@@FETCH_STATUS <> -1)
+BEGIN
+
+--此區塊就可以處理商業邏輯，譬如利用tableA的ID將資料塞入tableB
+delete Test6 where id = @id;
+
+Fetch NEXT FROM MyCursor INTO @id
+END
+
+--關閉&釋放cursor
+CLOSE MyCursor
+DEALLOCATE MyCursor
+
