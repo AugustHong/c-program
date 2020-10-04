@@ -107,7 +107,7 @@ namespace Hong.StringHelper
 		/// <returns></returns>
 		public static string GetFixedLength(this string source, int stringLen, bool isRightAddSpace = true)
 		{
-			// 長度
+			// 長度 
 			stringLen = stringLen <= 0 ? 0 : stringLen;
 
 			// String.Format("{0, -3}", ) => 不足3，向右補空白
