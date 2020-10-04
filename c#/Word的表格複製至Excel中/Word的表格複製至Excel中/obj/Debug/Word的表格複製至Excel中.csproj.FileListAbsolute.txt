@@ -5,3 +5,10 @@ C:\摳叮幫幫忙\研究\Word的表格複製至Excel中\Word的表格複製至E
 C:\摳叮幫幫忙\研究\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.csproj.CoreCompileInputs.cache
 C:\摳叮幫幫忙\研究\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.exe
 C:\摳叮幫幫忙\研究\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.pdb
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\bin\Debug\Word的表格複製至Excel中.exe.config
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\bin\Debug\Word的表格複製至Excel中.exe
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\bin\Debug\Word的表格複製至Excel中.pdb
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.csprojAssemblyReference.cache
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.csproj.CoreCompileInputs.cache
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.exe
+D:\Documents\Github\c-program\c#\Word的表格複製至Excel中\Word的表格複製至Excel中\obj\Debug\Word的表格複製至Excel中.pdb
