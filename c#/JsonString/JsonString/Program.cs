@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;   //方法1（先去NuGet裝上Newtonsoft.Json）
 
 using System.Web.Script.Serialization;  //方法2（參考/右鍵/加入參考 => System.Web.Extensions）
+using System.IO;
 
 /*
 	本次講述如何轉成JSON字串，和把JSON字串轉成Class
@@ -116,6 +117,36 @@ namespace JsonString
 		public static T AsObject<T>(string t)
 		{
 			return new JavaScriptSerializer().Deserialize<T>(t);
+		}
+
+		/// <summary>
+		///  JSON 格式化
+		/// </summary>
+		/// <param name="str"></param>
+		/// <returns></returns>
+		static string FormatJson(string str)
+		{
+			//格式化json字串
+			JsonSerializer serializer = new JsonSerializer();
+			TextReader tr = new StringReader(str);
+			JsonTextReader jtr = new JsonTextReader(tr);
+			object obj = serializer.Deserialize(jtr);
+			if (obj != null)
+			{
+				StringWriter textWriter = new StringWriter();
+				JsonTextWriter jsonWriter = new JsonTextWriter(textWriter)
+				{
+					Formatting = Formatting.Indented,
+					Indentation = 4,
+					IndentChar = ' '
+				};
+				serializer.Serialize(jsonWriter, obj);
+				return textWriter.ToString();
+			}
+			else
+			{
+				return str;
+			}
 		}
 	}
 }

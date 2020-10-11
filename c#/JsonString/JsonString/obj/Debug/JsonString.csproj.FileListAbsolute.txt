@@ -7,3 +7,14 @@ C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\bin\Debug\Newto
 C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.csprojResolveAssemblyReference.cache
 C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.exe
 C:\Users\偉德\Documents\c製作全集\c#\JsonString\JsonString\obj\Debug\JsonString.pdb
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\JsonString.exe.config
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\JsonString.exe
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\JsonString.pdb
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.pdb
+D:\Documents\Github\c-program\c#\JsonString\JsonString\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Github\c-program\c#\JsonString\JsonString\obj\Debug\JsonString.csprojAssemblyReference.cache
+D:\Documents\Github\c-program\c#\JsonString\JsonString\obj\Debug\JsonString.csproj.CoreCompileInputs.cache
+D:\Documents\Github\c-program\c#\JsonString\JsonString\obj\Debug\JsonString.csproj.CopyComplete
+D:\Documents\Github\c-program\c#\JsonString\JsonString\obj\Debug\JsonString.exe
+D:\Documents\Github\c-program\c#\JsonString\JsonString\obj\Debug\JsonString.pdb
