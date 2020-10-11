@@ -113,7 +113,8 @@ namespace struct_and_file
 				string text = File.ReadAllText(file_name);  // 讀取檔案內所有文字
 				Console.WriteLine(text);
 			}
-			else {
+			else
+			{
 				FileStream output = File.Create(file_name);             // 建立檔案（output是要開檔來寫用的）
 
 				StreamWriter sc = new StreamWriter(output);            //同樣寫檔，不過要用output才不會爆錯
@@ -138,6 +139,7 @@ namespace struct_and_file
 
 			//File.Delete(路徑);   是刪除檔案
 			//File.Move(原路徑, 新路徑)  是移動檔案
+			//File.Copy(原路徑, 新路徑, 是否強制覆蓋)  是 複製檔案 (如是要複製資料夾--> 請看我下方的擴充)
 
 
 			//取到當前的資料夾位置
@@ -149,13 +151,15 @@ namespace struct_and_file
 			// 得到 資料夾內的資料夾列表：
 			string RootPath = "C:\\Users\\green\\Desktop\\指定目錢";
 
-            DirectoryInfo rootDir = new DirectoryInfo(RootPath);
+			DirectoryInfo rootDir = new DirectoryInfo(RootPath);
 			// 得到所有資料夾
-            List<DirectoryInfo> DirList = rootDir.EnumerateDirectories().ToList();
+			List<DirectoryInfo> DirList = rootDir.EnumerateDirectories().ToList();
+			List<string> allDirs = rootDir.GetDirectories().ToList().Select(x => x.Name).ToList();
 
 			//得到 資料夾內的 檔案(不包含資料夾)：
-			DirectoryInfo rootDir = new DirectoryInfo(RootPath);
-			List<FileInfo> fileList = rootDir .EnumerateFiles().ToList();
+			rootDir = new DirectoryInfo(RootPath);
+			List<FileInfo> fileList = rootDir.EnumerateFiles().ToList();
+			List<string> allFiles = rootDir.GetFiles().Select(x => x.Name).ToList();
 
 			//-----------------------------------------------------------------------------------------------------------------------------------------------------
 			//------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -267,6 +271,65 @@ namespace struct_and_file
 			}
 
 			Console.Read();
+		}
+	}
+
+	/// <summary>
+	/// 擴充 (對 資料夾的複製 )
+	/// </summary>
+	public static class DirExpansion
+	{
+		/// <summary>
+		/// 自己擴充 
+		/// </summary>
+		/// <param name="dir">自已本身</param>
+		/// <param name="goalDirPath">目標路徑(最後面不用加 \\)</param>
+		/// <param name="cover">是否強蓋過去(會先刪掉再建一個，如果是 false 的話，原先有的話就不做事)</param>
+		public static void Copy(this DirectoryInfo dir, string goalDirPath, bool cover = true)
+		{
+			try
+			{
+				if (Directory.Exists(goalDirPath))
+				{
+					if (cover)
+					{
+						Directory.Delete(goalDirPath, true);
+						Directory.CreateDirectory(goalDirPath);
+					}
+					else
+					{
+						// 不做事
+						return;
+					}
+				}
+				else
+				{
+					Directory.CreateDirectory(goalDirPath);
+				}
+
+				// 先把所有檔案搬過去
+				List<string> allFiles = dir.GetFiles().ToList().Select(x => x.Name).ToList();
+				foreach (var item in allFiles)
+				{
+					string sourceFilePath = dir.FullName + "\\" + item;
+					string goalFilePath = goalDirPath + "\\" + item;
+					File.Copy(sourceFilePath, goalFilePath, true);
+				}
+
+				// 再把所有的資料夾搬過去
+				List<string> allDirs = dir.GetDirectories().ToList().Select(x => x.Name).ToList();
+				foreach (var item in allDirs)
+				{
+					string sourceDirPath = dir.FullName + "\\" + item;
+					string goalDirPath2 = goalDirPath + "\\" + item;
+					DirectoryInfo newDir = new DirectoryInfo(sourceDirPath);
+					newDir.Copy(goalDirPath2, true);
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
 		}
 	}
 }
