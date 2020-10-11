@@ -4,3 +4,10 @@ C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Micros
 C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).csprojAssemblyReference.cache
 C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).exe
 C:\Users\green\Desktop\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).pdb
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).exe.config
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).exe
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\bin\Debug\WriteWord(Microsoft.Office.Interop.Word).pdb
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).csprojAssemblyReference.cache
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).csproj.CoreCompileInputs.cache
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).exe
+D:\Documents\Github\c-program\c#\WriteWord(Microsoft.Office.Interop.Word)\WriteWord(Microsoft.Office.Interop.Word)\obj\Debug\WriteWord(Microsoft.Office.Interop.Word).pdb
