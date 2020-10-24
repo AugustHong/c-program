@@ -1,0 +1,15 @@
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\PDF合併與分割(使用Spire.PDF).exe.config
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\PDF合併與分割(使用Spire.PDF).exe
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\PDF合併與分割(使用Spire.PDF).pdb
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\Spire.License.dll
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\Spire.Pdf.dll
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\Microsoft.mshtml.dll
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\Spire.License.xml
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\Spire.Pdf.xml
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\obj\Debug\PDF合併與分割(使用Spire.PDF).csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\obj\Debug\PDF合併與分割(使用Spire.PDF).csproj.CopyComplete
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\obj\Debug\PDF合併與分割(使用Spire.PDF).exe
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\obj\Debug\PDF合併與分割(使用Spire.PDF).pdb
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\BouncyCastle.Crypto.dll
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\itextsharp.dll
+C:\摳叮幫幫忙\研究\PDF合併與分割(使用Spire.PDF)\PDF合併與分割(使用Spire.PDF)\bin\Debug\itextsharp.xml
