@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\bin\Debug\Doc和Docx互轉+轉成PDF.exe.config
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\bin\Debug\Doc和Docx互轉+轉成PDF.exe
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\bin\Debug\Doc和Docx互轉+轉成PDF.pdb
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\obj\Debug\Doc和Docx互轉+轉成PDF.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\obj\Debug\Doc和Docx互轉+轉成PDF.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\obj\Debug\Doc和Docx互轉+轉成PDF.exe
+C:\摳叮幫幫忙\研究\Doc和Docx互轉+轉成PDF\Doc和Docx互轉+轉成PDF\obj\Debug\Doc和Docx互轉+轉成PDF.pdb
