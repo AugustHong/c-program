@@ -331,5 +331,56 @@ namespace struct_and_file
 				Console.WriteLine(ex.Message);
 			}
 		}
+
+		/// <summary>
+        /// 得到 資料夾內的所有 資料夾 + 檔案 (用 遞迴查)
+        /// </summary>
+        /// <param name="rootPath"></param>
+        /// <param name="result"></param>
+        /// <param name="otherPath"></param>
+        static void GetAllDirAndFile(string rootPath, List<string> result, string otherPath = "")
+        {
+            string path = rootPath + "\\" + otherPath;
+            if (Directory.Exists(path))
+            {
+                DirectoryInfo info = new DirectoryInfo(path);
+
+                // 得到所有的檔案
+                List<string> allFiles = info.GetFiles().ToList().Select(x => x.Name).ToList();
+                foreach (var file in allFiles)
+                {
+                    // 要把 前面的路徑附上去 (但 rootPath 不用)
+                    if (string.IsNullOrEmpty(otherPath))
+                    {
+                        result.Add($"{otherPath}\\{file}");
+                    }
+                    else
+                    {
+                        result.Add($"\\{otherPath}\\{file}");
+                    }
+                }
+
+                // 再跑遞迴 去把 所有的 目錄 跑下去
+                List<string> allDirs = info.GetDirectories().ToList().Select(x => x.Name).ToList();
+                foreach (var dir in allDirs)
+                {
+                    // 下一個要跑的路徑
+                    string nextOtherPath = string.IsNullOrEmpty(otherPath) ? dir : $"{otherPath}\\{dir}";
+
+                    // 先把 目錄本身加上去
+                    if (string.IsNullOrEmpty(otherPath))
+                    {
+                        result.Add($"{otherPath}\\{dir}");
+                    }
+                    else
+                    {
+                        result.Add($"\\{otherPath}\\{dir}");
+                    }
+
+                    // 遞回繼續跑
+                    GetAllDirAndFile(rootPath, result, nextOtherPath);
+                }
+            }
+        }
 	}
 }
