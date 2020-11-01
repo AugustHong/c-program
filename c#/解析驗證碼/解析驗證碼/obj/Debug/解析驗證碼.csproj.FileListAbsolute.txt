@@ -1,0 +1,9 @@
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\bin\Debug\解析驗證碼.exe.config
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\bin\Debug\解析驗證碼.exe
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\bin\Debug\解析驗證碼.pdb
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\bin\Debug\tessnet2_32.dll
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\obj\Debug\解析驗證碼.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\obj\Debug\解析驗證碼.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\obj\Debug\解析驗證碼.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\obj\Debug\解析驗證碼.exe
+C:\摳叮幫幫忙\研究\解析驗證碼\解析驗證碼\obj\Debug\解析驗證碼.pdb
