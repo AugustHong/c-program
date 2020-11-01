@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\bin\Debug\切分圖片.exe.config
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\bin\Debug\切分圖片.exe
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\bin\Debug\切分圖片.pdb
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\obj\Debug\切分圖片.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\obj\Debug\切分圖片.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\obj\Debug\切分圖片.exe
+C:\摳叮幫幫忙\研究\切分圖片\切分圖片\obj\Debug\切分圖片.pdb
