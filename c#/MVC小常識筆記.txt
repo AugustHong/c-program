@@ -751,3 +751,17 @@ END
 CLOSE MyCursor
 DEALLOCATE MyCursor
 
+-----------------------------------------------------------------------------------------------------------------------------
+三十二、 c# 開啟 網頁 寫法
+
+System.Diagnostics.Process.Start("explorer.exe", "http://blog.csdn.net/testcs_dn");
+System.Diagnostics.Process.Start("explorer.exe", "file://C:/index.html");   // 本機 html 也行
+
+-----------------------------------------------------------------------------------------------------------------------------
+三十三、 string.IsNullOrWhiteSpace 比 string.IsNullOrEmpty
+
+string.IsNullOrWhiteSpace： null 、  空字串 、 純空白字串
+string.IsNullOrEmpty     ： null 、  空字串 
+
+=> 總結： string.IsNullOrWhiteSpace 可以包含 IsNullOrEmpty (在需要判斷 純空白也是要濾掉時，直接用 IsNullOrWhiteSpace)
+
