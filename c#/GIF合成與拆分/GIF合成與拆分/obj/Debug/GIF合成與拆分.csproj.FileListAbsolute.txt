@@ -1,0 +1,8 @@
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\bin\Debug\GIF合成與拆分.exe.config
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\bin\Debug\GIF合成與拆分.exe
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\bin\Debug\GIF合成與拆分.pdb
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\bin\Debug\Gif.Components.dll
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\obj\Debug\GIF合成與拆分.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\obj\Debug\GIF合成與拆分.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\obj\Debug\GIF合成與拆分.exe
+C:\摳叮幫幫忙\研究\GIF合成與拆分\GIF合成與拆分\obj\Debug\GIF合成與拆分.pdb
