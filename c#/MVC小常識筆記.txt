@@ -7,7 +7,7 @@ User u = new User{
 }
 
 db.User.Add(u);
-db.User.savechanges();
+db.User.savechanges(); 
 
 int id = u.id;
 
