@@ -1,0 +1,9 @@
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\bin\Debug\DB同步工具(簡易版).exe.config
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\bin\Debug\DB同步工具(簡易版).exe
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\bin\Debug\DB同步工具(簡易版).pdb
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\bin\Debug\Dapper.dll
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\bin\Debug\Dapper.xml
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\obj\Debug\DB同步工具(簡易版).csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\obj\Debug\DB同步工具(簡易版).csproj.CopyComplete
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\obj\Debug\DB同步工具(簡易版).exe
+C:\摳叮幫幫忙\研究\DB同步工具(簡易版)\DB同步工具(簡易版)\obj\Debug\DB同步工具(簡易版).pdb
