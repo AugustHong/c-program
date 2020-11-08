@@ -1,0 +1,11 @@
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\PDF轉文字檔.exe.config
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\PDF轉文字檔.exe
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\PDF轉文字檔.pdb
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\BouncyCastle.Crypto.dll
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\itextsharp.dll
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\bin\Debug\itextsharp.xml
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\obj\Debug\PDF轉文字檔.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\obj\Debug\PDF轉文字檔.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\obj\Debug\PDF轉文字檔.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\obj\Debug\PDF轉文字檔.exe
+C:\摳叮幫幫忙\研究\PDF轉文字檔\PDF轉文字檔\obj\Debug\PDF轉文字檔.pdb
