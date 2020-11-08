@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\bin\Debug\Base64加解密.dll
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\bin\Debug\Base64加解密.pdb
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\obj\Debug\Base64加解密.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\obj\Debug\Base64加解密.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\obj\Debug\Base64加解密.dll
+C:\摳叮幫幫忙\研究\Base64加解密\Base64加解密\obj\Debug\Base64加解密.pdb
