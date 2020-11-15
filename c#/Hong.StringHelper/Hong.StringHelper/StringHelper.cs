@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Configuration;
 
 // 轉全形用的
 using Microsoft.VisualBasic;
@@ -971,6 +972,54 @@ namespace Hong.StringHelper
 
 			return result;
 		}
+
+		#endregion
+	
+		#region 得到 config 的資料
+
+		/// <summary>
+        ///  取到 AppSetting
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static string GetAppSetting(string key)
+        {
+            string result = string.Empty;
+
+            try
+            {
+                var o = ConfigurationManager.AppSettings[key];
+                result = o == null ? string.Empty : o.ToString();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        ///  取到 ConnectionStrings
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static string GetConnectionStrings(string key)
+        {
+            string result = string.Empty;
+
+            try
+            {
+                var o = ConfigurationManager.ConnectionStrings[key];
+                result = o == null ? string.Empty : o.ToString();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return string.Empty;
+            }
+        }
 
 		#endregion
 	}
