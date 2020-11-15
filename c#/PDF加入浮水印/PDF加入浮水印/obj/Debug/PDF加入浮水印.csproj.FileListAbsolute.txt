@@ -1,0 +1,11 @@
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\PDF加入浮水印.exe.config
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\PDF加入浮水印.exe
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\PDF加入浮水印.pdb
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\BouncyCastle.Crypto.dll
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\itextsharp.dll
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\bin\Debug\itextsharp.xml
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\obj\Debug\PDF加入浮水印.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\obj\Debug\PDF加入浮水印.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\obj\Debug\PDF加入浮水印.exe
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\obj\Debug\PDF加入浮水印.pdb
+C:\摳叮幫幫忙\研究\PDF加入浮水印\PDF加入浮水印\obj\Debug\PDF加入浮水印.csprojAssemblyReference.cache
