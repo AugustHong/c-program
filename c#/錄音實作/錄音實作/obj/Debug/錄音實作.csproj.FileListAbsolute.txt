@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\bin\Debug\錄音實作.exe.config
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\bin\Debug\錄音實作.exe
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\bin\Debug\錄音實作.pdb
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\obj\Debug\錄音實作.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\obj\Debug\錄音實作.exe
+C:\摳叮幫幫忙\研究\錄音實作\錄音實作\obj\Debug\錄音實作.pdb
