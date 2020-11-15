@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\bin\Debug\Word轉Html.exe.config
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\bin\Debug\Word轉Html.exe
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\bin\Debug\Word轉Html.pdb
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\obj\Debug\Word轉Html.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\obj\Debug\Word轉Html.exe
+C:\摳叮幫幫忙\研究\Word轉Html\Word轉Html\obj\Debug\Word轉Html.pdb
