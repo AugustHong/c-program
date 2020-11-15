@@ -1,0 +1,9 @@
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\bin\Debug\影片檔轉GIF檔.exe.config
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\bin\Debug\影片檔轉GIF檔.exe
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\bin\Debug\影片檔轉GIF檔.pdb
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\bin\Debug\NReco.VideoConverter.dll
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\bin\Debug\NReco.VideoConverter.xml
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\obj\Debug\影片檔轉GIF檔.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\obj\Debug\影片檔轉GIF檔.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\obj\Debug\影片檔轉GIF檔.exe
+C:\摳叮幫幫忙\研究\影片檔轉GIF檔\影片檔轉GIF檔\obj\Debug\影片檔轉GIF檔.pdb
