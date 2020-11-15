@@ -1,0 +1,10 @@
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\bin\Debug\多個圖片檔組成影片檔.exe.config
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\bin\Debug\多個圖片檔組成影片檔.exe
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\bin\Debug\多個圖片檔組成影片檔.pdb
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\bin\Debug\DirectShowLib-2005.dll
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\bin\Debug\Splicer.dll
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\obj\Debug\多個圖片檔組成影片檔.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\obj\Debug\多個圖片檔組成影片檔.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\obj\Debug\多個圖片檔組成影片檔.exe
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\obj\Debug\多個圖片檔組成影片檔.pdb
+C:\摳叮幫幫忙\研究\多個圖片檔組成影片檔\多個圖片檔組成影片檔\obj\Debug\多個圖片檔組成影片檔.csprojAssemblyReference.cache
