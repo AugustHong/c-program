@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\bin\Debug\Word轉圖檔.exe.config
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\bin\Debug\Word轉圖檔.exe
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\bin\Debug\Word轉圖檔.pdb
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\obj\Debug\Word轉圖檔.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\obj\Debug\Word轉圖檔.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\obj\Debug\Word轉圖檔.exe
+C:\摳叮幫幫忙\研究\Word轉圖檔\Word轉圖檔\obj\Debug\Word轉圖檔.pdb
