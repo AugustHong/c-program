@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\bin\Debug\給Privor把List排好.exe.config
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\bin\Debug\給Privor把List排好.exe
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\bin\Debug\給Privor把List排好.pdb
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\obj\Debug\給Privor把List排好.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\obj\Debug\給Privor把List排好.exe
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\obj\Debug\給Privor把List排好.pdb
+C:\摳叮幫幫忙\研究\解題目\給Privor把List排好\給Privor把List排好\obj\Debug\給Privor把List排好.csprojAssemblyReference.cache

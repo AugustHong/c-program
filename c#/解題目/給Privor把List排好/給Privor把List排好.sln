@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "給Privor把List排好", "給Privor把List排好\給Privor把List排好.csproj", "{CF34F06B-6A14-4135-B17D-2AE925DD72CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF34F06B-6A14-4135-B17D-2AE925DD72CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF34F06B-6A14-4135-B17D-2AE925DD72CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF34F06B-6A14-4135-B17D-2AE925DD72CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF34F06B-6A14-4135-B17D-2AE925DD72CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC859871-7462-409C-8C8E-0C7D632EA828}
+	EndGlobalSection
+EndGlobal
