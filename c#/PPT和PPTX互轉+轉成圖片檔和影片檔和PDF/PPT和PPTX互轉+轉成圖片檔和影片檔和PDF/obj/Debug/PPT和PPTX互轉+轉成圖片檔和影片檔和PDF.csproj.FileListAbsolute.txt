@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\bin\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.exe.config
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\bin\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.exe
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\bin\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.pdb
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\obj\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\obj\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\obj\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.exe
+C:\摳叮幫幫忙\研究\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF\obj\Debug\PPT和PPTX互轉+轉成圖片檔和影片檔和PDF.pdb
