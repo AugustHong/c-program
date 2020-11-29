@@ -1,0 +1,17 @@
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\讀取Gmail的郵件.exe.config
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\讀取Gmail的郵件.exe
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\讀取Gmail的郵件.pdb
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Common.dll
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Dns.dll
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Common.pdb
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Common.xml
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Imap4.pdb
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Imap4.xml
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Dns.pdb
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\ActiveUp.Net.Dns.xml
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\obj\Debug\讀取Gmail的郵件.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\obj\Debug\讀取Gmail的郵件.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\obj\Debug\讀取Gmail的郵件.exe
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\obj\Debug\讀取Gmail的郵件.pdb
+C:\摳叮幫幫忙\研究\讀取Gmail的郵件\讀取Gmail的郵件\bin\Debug\LumiSoft.Net.dll
