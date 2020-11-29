@@ -5,6 +5,10 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 
+/*
+    要去 Nuget 裝上 Microsoft.AspNet.WebApi.Client (才能用 call api 的函式喔)
+*/
+
 namespace MVC_test.Controllers
 {
     public class CallAPIController : Controller
@@ -80,6 +84,7 @@ namespace MVC_test.Controllers
             {
                 client.BaseAddress = new Uri(strConcatUrl);
                 //HTTP GET
+                // 後面的 "hello" 其實傳的是 object 喔
                 var responseTask = client.PostAsJsonAsync(strConcatUrl, "hello");
                 responseTask.Wait();
 
@@ -98,6 +103,67 @@ namespace MVC_test.Controllers
             }
 
                 return rtnResult;
+        }
+
+        /// <summary>
+        /// Post給API並取值 (傳入物件)
+        /// </summary>
+        /// <returns></returns>
+        public string CallPostAPI(object obj){
+            string strConcatUrl = "http://localhost:57410/";  
+
+            string rtnResult = string.Empty;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(strConcatUrl);
+
+                try
+                {
+                    var responseTask = client.PostAsJsonAsync(strConcatUrl, obj);
+                    responseTask.Wait();
+
+                    /*
+                        如果想直接 傳入 json 字串的話 (把上面 2行 換成下面的即可)：
+                        var content = new StringContent("你的 json 字串", Encoding.UTF8, "application/json");
+                        var responseTask = client.PostAsync(url, content);
+                        responseTask.Wait();
+                    */
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        try
+                        {
+                            // 轉成固定的 Model
+                            var readTask = result.Content.ReadAsAsync<API>();
+                            readTask.Wait();
+
+                            rtnResult = readTask.Result;
+                            Console.WriteLine(rtnResult);
+
+                            /*
+                                如果不想要多建 Model 可以不轉 Model ，使用方法如下：
+                                var readTask = result.Content.ReadAsAsync<JObject>();
+                                readTask.Wait();
+                                var arest = readTask.Result;
+                                Console.WriteLine(arest["Header"].ToString());  // 可以直接用 key 取出來使用
+                            */
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine($"Error = {e.Message}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
         }
     }
 }
