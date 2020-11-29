@@ -27,6 +27,18 @@ namespace 動態物件
     {
         static void Main(string[] args)
         {
+            // 比較快的方法是這樣，但缺點是 不能像 dynamic .出屬性 
+
+            var rr = new
+            {
+                abc = 22,
+                ccc = "sss"
+            };
+
+            // 但不能用 rr.abc 叫出來 (因為視同 Object 物件， 但 Object 物件 沒有 abc 這欄位)
+
+            // -----------------------------------------------------------
+
             //將boo建立成ExpandoObject
             dynamic boo = new ExpandoObject();
 
