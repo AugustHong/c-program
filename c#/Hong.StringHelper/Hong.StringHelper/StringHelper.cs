@@ -72,7 +72,7 @@ namespace Hong.StringHelper
 
 		#endregion
 
-		#region  重複字串 
+		#region  重複字串
 
 		//回傳重複的 "字元" 所組成的字串
 		public static string Repeat(this char source, int repeatNum = 2)
