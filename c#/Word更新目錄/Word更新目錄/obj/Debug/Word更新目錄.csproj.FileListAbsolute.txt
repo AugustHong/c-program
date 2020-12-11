@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\bin\Debug\Word更新目錄.exe.config
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\bin\Debug\Word更新目錄.exe
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\bin\Debug\Word更新目錄.pdb
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\obj\Debug\Word更新目錄.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\obj\Debug\Word更新目錄.exe
+C:\摳叮幫幫忙\研究\Word更新目錄\Word更新目錄\obj\Debug\Word更新目錄.pdb
