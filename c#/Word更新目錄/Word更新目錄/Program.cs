@@ -32,7 +32,10 @@ namespace Word更新目錄
             int count = doc.TablesOfContents.Count;
             for (int i = 0; i < count; i++)
             {
+                // 更新全部
                 doc.TablesOfContents[i + 1].Update();
+                // 更新頁數
+                //doc.TablesOfContents[i + 1].UpdatePageNumbers();
             }
             doc.SaveAs2(goalPath, WdSaveFormat.wdFormatDocumentDefault);
 
