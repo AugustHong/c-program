@@ -1,0 +1,9 @@
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\bin\Debug\Hong.AutoMapperHelper.dll
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\bin\Debug\Hong.AutoMapperHelper.pdb
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\bin\Debug\AutoMapper.dll
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\bin\Debug\AutoMapper.xml
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\obj\Debug\Hong.AutoMapperHelper.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\obj\Debug\Hong.AutoMapperHelper.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\obj\Debug\Hong.AutoMapperHelper.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\obj\Debug\Hong.AutoMapperHelper.dll
+C:\摳叮幫幫忙\研究\Hong.AutoMapperHelper\Hong.AutoMapperHelper\obj\Debug\Hong.AutoMapperHelper.pdb
