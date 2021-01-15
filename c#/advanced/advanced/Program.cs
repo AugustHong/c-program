@@ -336,6 +336,16 @@ namespace advanced
                 Console.WriteLine(i);
             }
 
+            // group 用法
+            var group = arr3_1.GroupBy(x => x.name).ToList();
+            foreach (var ttg in group)
+            {
+                if (ttg != null)
+                {
+                    List<Member> tmp = ttg.ToList();
+                }
+            }
+
             Console.WriteLine("-------------------------------------------------------------------");
 
             //另種排序在第195行
