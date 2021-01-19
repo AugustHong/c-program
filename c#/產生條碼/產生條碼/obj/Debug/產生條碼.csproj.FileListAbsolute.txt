@@ -1,0 +1,10 @@
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\產生條碼.exe.config
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\產生條碼.exe
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\產生條碼.pdb
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\BarcodeStandard.dll
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\QRCoder.dll
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\bin\Debug\System.Drawing.Common.dll
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\obj\Debug\產生條碼.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\obj\Debug\產生條碼.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\obj\Debug\產生條碼.exe
+C:\摳叮幫幫忙\研究\產生條碼\產生條碼\obj\Debug\產生條碼.pdb
