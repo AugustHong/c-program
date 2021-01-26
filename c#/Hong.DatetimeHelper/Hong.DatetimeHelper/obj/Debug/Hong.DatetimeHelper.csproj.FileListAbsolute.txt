@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\bin\Debug\Hong.DatetimeHelper.dll
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\bin\Debug\Hong.DatetimeHelper.pdb
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\obj\Debug\Hong.DatetimeHelper.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\obj\Debug\Hong.DatetimeHelper.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\obj\Debug\Hong.DatetimeHelper.dll
+C:\摳叮幫幫忙\研究\Hong.DatetimeHelper\Hong.DatetimeHelper\obj\Debug\Hong.DatetimeHelper.pdb
