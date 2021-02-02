@@ -1,0 +1,10 @@
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\bin\Debug\Hong.ZipHelper.dll
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\bin\Debug\Hong.ZipHelper.pdb
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\bin\Debug\DotNetZip.dll
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\bin\Debug\DotNetZip.pdb
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\bin\Debug\DotNetZip.xml
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\obj\Debug\Hong.ZipHelper.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\obj\Debug\Hong.ZipHelper.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\obj\Debug\Hong.ZipHelper.csproj.CopyComplete
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\obj\Debug\Hong.ZipHelper.dll
+C:\摳叮幫幫忙\研究\Hong.ZipHelper\Hong.ZipHelper\obj\Debug\Hong.ZipHelper.pdb
