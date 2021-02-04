@@ -274,6 +274,32 @@ namespace Excel_EPPluss_
              }
         */
 
+        /// 如果不想要 多建一個 Excel 的範本的話
+        public byte[] NoTemplateMakeExcel(List<List<string>> source){
+            MemoryStream memory = new MemoryStream();
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            // 因為沒有建立 所以 ExcelPackage() 裡面不用放東西
+            using (var excel = new ExcelPackage())
+            {
+                // 因為沒有範本 => 所以要多新加一個 sheet ，不然會連一個表都沒有
+                excel.Workbook.Worksheets.Add("sheet1");
+                ExcelWorksheet sheet = excel.Workbook.Worksheets[0];
+
+                for (var i = 0; i < source.Count; i++)
+                {
+                    for (var j = 0; j < source[i].Count; j++)
+                    {
+                        sheet.Cells[(i + 1), (j + 1)].Value = source[i][j];
+                    }
+                }
+
+                excel.SaveAs(memory);
+            }
+
+            return memory.ToArray();
+        }
+
 
         /// <summary>
         /// 設定標題列的style (做儲存格合併 + 設定儲存格格式)
