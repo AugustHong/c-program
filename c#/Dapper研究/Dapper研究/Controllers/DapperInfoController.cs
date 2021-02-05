@@ -572,6 +572,135 @@ namespace Dapper研究.Controllers
 		}
 	}
 
+	/*
+		實現前端 呼叫執行 Select 語法 (且裡面可以動態的)
+
+		1. Dao 的部份
+
+		result.Success = false;
+		using (SqlConnection conn = new SqlConnection(connectString))
+        {
+            try
+            {
+				// 可以直接用 select * (前台一樣可以取到)
+                result.Result = conn.Query<dynamic>("select * from Test").ToList();
+                result.Success = true;
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.Message;
+            }
+        }
+
+		2. Model 的部份 
+
+		public class RunSqlResult
+    	{
+    	    public RunSqlResult()
+    	    {
+    	        this.Success = false;
+    	        this.Message = string.Empty;
+    	        this.ExcuteType = string.Empty;
+    	        this.Result = new List<dynamic>();
+    	        this.EffortRows = 0;
+    	    }
+
+    	    /// <summary>
+    	    ///  是否執行成功
+    	    /// </summary>
+    	    public bool Success { get; set; }
+
+    	    /// <summary>
+    	    ///  訊息
+    	    /// </summary>
+    	    public string Message { get; set; }
+
+    	    /// <summary>
+    	    /// 執行類型
+    	    /// </summary>
+    	    public string ExcuteType { get; set; }
+
+    	    /// <summary>
+    	    /// 輸出結果
+    	    /// </summary>
+    	    public List<dynamic> Result { get; set; }
+
+    	    /// <summary>
+    	    /// 影響 Rows 數
+    	    /// </summary>
+    	    public int EffortRows { get; set; }
+    	}
+
+		3. Controller 的部份
+
+		public ActionResult CallSql(string connectString, string sql){
+
+			RunSqlResult result = 上面的Dao 產出來的
+
+			// 用 JsonResult 回傳回去
+			return new JsonResult
+            {
+                Data = result
+            };
+		}
+
+		4. 前端的部份
+
+		// 前面略過 if response.Success = true
+		if (response.Result.length > 0) {
+            var header = '<h2>總共有 ' + response.Result.length.toString() + ' 筆資料</h2><table id="ResultTable"<thead><tr><th></th>';
+
+			// 得出來的 Result 長這樣 [[{"id":1}, {"text" : "xxx"}, {"value":123}], [{"id":2}, {"text" : "ggg"}, {"value":1233}]]
+			// 是個 List<List<object>> 且 Object 裡 都是 key-value 的型別 (key 就是 欄位名稱，value 是值)
+
+            // 加上 標題(因為都是 key-value ， 所以拿第一筆的 查出所有的 key 即是所有的欄位)
+            var first = response.Result[0];
+            var titles = [];
+            for (var i = 0, l = first.length; i < l; i++) {
+                var title = first[i].Key; 
+                titles.push(title);
+                header += "<th>" + title + "</th>";
+			}
+            
+            header += '</tr></thead><tbody>'
+
+            // 順便組出 基本 Sql 語法
+            var sqlResult = "";
+            var insertSql = "INSERT INTO {TableName} (" + titles.join(", ") + ") VALUES (";
+
+            // 順便組出 Export Excel 要用的 (怕會加上 , 所以用特殊符號區隔)
+            var splitStr = "**^*^^**^";
+            var exportExcel = titles.join(splitStr) + "\n";
+
+            // 開始加上 值
+            for (var j = 0, jl = response.Result.length; j < jl; j++){
+                var tmpColnums = [];
+                var tmpColnums2 = [];
+                header += "<tr><td>" + (j + 1).toString() + "</td>";
+
+                for (var i = 0, l = response.Result[j].length; i < l; i++) {
+                    var v = response.Result[j][i].Value;
+                    tmpColnums.push("'" + v + "'");
+                    tmpColnums2.push(v);
+                    header += "<td>" + v + "</td>";
+                }
+
+                header += "</tr>";
+                sqlResult += insertSql + tmpColnums.join(", ") + "); \n";
+                exportExcel += tmpColnums2.join(splitStr) + "\n";
+			}
+            
+            // 收尾
+            header += '</tbody></table>';
+			
+            // 給值
+            output.innerHTML = header;
+            document.getElementById("insertSqlResult").value = sqlResult;
+            document.getElementById("exportExcelSource").innerHTML = exportEx
+        }
+
+	*/
+
 	public static class DapperDebugHelper
 	{
 		/// <summary>
