@@ -1,0 +1,7 @@
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\bin\Debug\快速排序法(QuickSort).exe.config
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\bin\Debug\快速排序法(QuickSort).exe
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\bin\Debug\快速排序法(QuickSort).pdb
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\obj\Debug\快速排序法(QuickSort).csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\obj\Debug\快速排序法(QuickSort).csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\obj\Debug\快速排序法(QuickSort).exe
+C:\摳叮幫幫忙\研究\快速排序法(QuickSort)\快速排序法(QuickSort)\obj\Debug\快速排序法(QuickSort).pdb

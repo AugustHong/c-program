@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "快速排序法(QuickSort)", "快速排序法(QuickSort)\快速排序法(QuickSort).csproj", "{6348E7D9-AB92-4F26-B47C-F06651A89259}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6348E7D9-AB92-4F26-B47C-F06651A89259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6348E7D9-AB92-4F26-B47C-F06651A89259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6348E7D9-AB92-4F26-B47C-F06651A89259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6348E7D9-AB92-4F26-B47C-F06651A89259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECE05320-5390-4B88-B6B7-C7CCB3E5F660}
+	EndGlobalSection
+EndGlobal
