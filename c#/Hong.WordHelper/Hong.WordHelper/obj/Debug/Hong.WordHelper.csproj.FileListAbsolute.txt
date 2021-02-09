@@ -1,0 +1,6 @@
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\bin\Debug\Hong.WordHelper.dll
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\bin\Debug\Hong.WordHelper.pdb
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\obj\Debug\Hong.WordHelper.csprojAssemblyReference.cache
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\obj\Debug\Hong.WordHelper.csproj.CoreCompileInputs.cache
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\obj\Debug\Hong.WordHelper.dll
+C:\摳叮幫幫忙\研究\Hong.WordHelper\Hong.WordHelper\obj\Debug\Hong.WordHelper.pdb
