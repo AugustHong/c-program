@@ -765,3 +765,28 @@ string.IsNullOrEmpty     ： null 、  空字串
 
 => 總結： string.IsNullOrWhiteSpace 可以包含 IsNullOrEmpty (在需要判斷 純空白也是要濾掉時，直接用 IsNullOrWhiteSpace)
 
+------------------------------------------------------------------------------------------------------------------------------
+三十四、 Razor 中 @裡 寫 js
+
+語法： <text>裡面放文字(可用js)</text>
+
+<script>
+	function AddRow(q, a, p, f, m){
+		console.log(q, a, p, f, m);
+	}
+
+        @foreach (var item in Model.Content)
+        {
+            string q = item.QuestionOrDescription;
+            string a = string.IsNullOrWhiteSpace(item.Answer) ? string.Empty : item.Answer;
+            string p = string.IsNullOrWhiteSpace(item.Principal) ? string.Empty : item.Principal;
+            string f = item.ExpectedFinishDate == null ? string.Empty : ((DateTime)item.ExpectedFinishDate).ToString("yyyy-MM-dd");
+            string m = string.IsNullOrWhiteSpace(item.Memo) ? string.Empty : item.Memo;
+
+            <text>
+		// 因為是在 script 裡，所以放 js (其實他裡面是 文字)
+                AddRow('@q', '@a', '@p', '@f', '@m');
+            </text>
+        }
+    </script>
+
