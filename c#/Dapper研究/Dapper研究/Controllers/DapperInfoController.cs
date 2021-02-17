@@ -529,6 +529,44 @@ namespace Dapper研究.Controllers
 		}
 
 		/// <summary>
+        /// Insert 資料， 並取得 其 自動增加的 key
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="parm"></param>
+        /// <param name="errorMessage"></param>
+        /// <returns></returns>
+        public int Create(string sql, object parm, out string errorMessage)
+        {
+            int result = -1;
+            errorMessage = "傳入 SQL 指定是空的";
+
+            if (!string.IsNullOrWhiteSpace(sql))
+            {
+                // 要加上 取 id 的 sql 語法
+                sql = " declare @id int; " + sql;
+                sql += "; select @id = @@IDENTITY; select @id; ";
+
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    try
+                    {
+						// 直接用 Query (但 輸入的 Insert 語法還是會執行)
+                        result = conn.Query<int>(sql, parm).FirstOrDefault();
+                        errorMessage = string.Empty;
+                        return result;
+                    }
+                    catch (Exception ex)
+                    {
+                        errorMessage = ex.Message;
+                        return -1;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+		/// <summary>
 		/// 執行 Cursor (和 執行完 Cursor 再執行其他)
 		/// </summary>
 		private void RunCursor()
