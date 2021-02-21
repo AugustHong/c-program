@@ -153,11 +153,12 @@ namespace Hong.WordHelper
             try
             {
                 //儲存
-                this._word.Save();
-                this._word.Close(ref oMissing, ref oMissing, ref oMissing);
-                this.WordApp.Quit(ref oMissing, ref oMissing, ref oMissing);
+                bool saveSuccess = Save();
+                if (saveSuccess == false) { throw new Exception(); }
 
-                return true;
+                // 關閉
+                bool closeSuccess = Close();
+                return closeSuccess;
             }
             catch (Exception e)
             {
