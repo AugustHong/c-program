@@ -1,0 +1,10 @@
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\bin\Debug\開啟藍芽傳檔.exe.config
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\bin\Debug\開啟藍芽傳檔.exe
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\bin\Debug\開啟藍芽傳檔.pdb
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\bin\Debug\InTheHand.Net.Personal.dll
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\bin\Debug\InTheHand.Net.Personal.xml
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\obj\Debug\開啟藍芽傳檔.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\obj\Debug\開啟藍芽傳檔.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\obj\Debug\開啟藍芽傳檔.csproj.CopyComplete
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\obj\Debug\開啟藍芽傳檔.exe
+D:\Document\Github\c-program\c#\開啟藍芽傳檔\開啟藍芽傳檔\obj\Debug\開啟藍芽傳檔.pdb
