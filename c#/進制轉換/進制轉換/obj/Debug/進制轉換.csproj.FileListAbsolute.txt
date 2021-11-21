@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\bin\Debug\進制轉換.exe.config
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\bin\Debug\進制轉換.exe
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\bin\Debug\進制轉換.pdb
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\obj\Debug\進制轉換.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\obj\Debug\進制轉換.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\obj\Debug\進制轉換.exe
+D:\Document\Github\c-program\c#\進制轉換\進制轉換\obj\Debug\進制轉換.pdb
