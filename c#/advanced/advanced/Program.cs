@@ -110,6 +110,10 @@ namespace advanced
 
             Console.WriteLine("\n");
 
+            // 字串用 換行分開
+            string v = "abc\r\nbbbc\r\n";
+            List<string> kkk = v.Split(new string[] { "\r\n" }, StringSplitOptions.None).ToList();
+
             /* 日期 */
             DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
             DateTime dateOnly = date1.Date; //只有日期沒有時間
