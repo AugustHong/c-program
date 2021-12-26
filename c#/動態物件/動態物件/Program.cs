@@ -21,6 +21,14 @@ namespace 動態物件
         public Action<string> Show { get; set; }
 
         public Action<string, int> Show2 { get; set; }
+
+        /*
+            還有一種是 Function (前面是參數，最後面一個類型是 回傳)
+            public Function<string, bool> func1 {get;set;}
+            用法可以像這樣 (IsNum 是自己寫的額外函式， 功能就是 傳入 string 回傳 bool)
+            func1 = (s) => IsNum(s)
+        */
+        public Function<string, bool> Func1 {get;set;}
     }
 
     class Program
@@ -61,6 +69,10 @@ namespace 動態物件
             boo.Show2 = (Action<string, int>)((k, v) => { Console.WriteLine($"key = {k}, value = {v}"); });
             boo.Show2("id", 335);
 
+            boo.Func1 = (s) => Test(s);
+            bool t = boo.Func1("TRUE");
+            Console.WriteLine((t).ToString());
+
             // 如果要轉型的話 => 就用 AutoMapper 吧
             Console.WriteLine("---------------------------------------------------------------------------");
             A a = new A();
@@ -70,6 +82,8 @@ namespace 動態物件
                 Console.WriteLine(a.Name);
                 a.Show("This is A");
                 a.Show2("A", 65);
+                var b = a.Func1("FALSE");
+                Console.WriteLine((b).ToString());
             }
 
             Console.Read();
@@ -102,6 +116,11 @@ namespace 動態物件
                     }
                 }
             }
+        }
+
+        // 測試功能
+        public static bool Test(string s){
+            return s == "TRUE";
         }
     }
 }
