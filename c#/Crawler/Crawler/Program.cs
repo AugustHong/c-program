@@ -79,6 +79,26 @@ namespace Crawler
 
 			//後面那邊有點像正規表達式的寫法(但仍看網圵2寫的) => 找到所有的ul
 			var ulElement = document.DocumentNode.SelectNodes("//ul");
+
+			/*
+			 HtmlNodeCollection nameNodes = doc.DocumentNode.SelectNodes(@"//div[@class='ROOT']/p/a[2]");
+			 
+			 //name
+表示我要選擇「所有」是name的節點 －＞所以//div表示我要選擇所有帶有div的節點
+
+ 
+name[@key='value']
+指定name中帶有key = value的節點－＞//div[@class='ROOT'] 表示說我要找出div中，屬性帶有class='ROOT'的節點
+
+ 
+name1/name2
+代表name2是name1中的子節點，所以 －＞ //div[@class='ROOT']/p/a 表示我要找出所有div中屬性帶有class='ROOT'且存在子節點有p，p的子節點有a的位置
+
+ 
+name[number]
+number代表同階層中的第幾個name節點，如上面的例子，p/a[2] 表示我要尋找p的子節點中的第2個a的節點，我想要拿到第2個a節點的資料，此時我便可以打上a[2]來鎖定到位置(number是從1開始,不要想成陣列index從0開始唷!~)
+			 */
+
 			foreach (var item in ulElement)
 			{
 				//抓出 li 的部份
