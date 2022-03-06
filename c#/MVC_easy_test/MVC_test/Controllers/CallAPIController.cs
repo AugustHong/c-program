@@ -9,6 +9,13 @@ using System.Web.Mvc;
     要去 Nuget 裝上 Microsoft.AspNet.WebApi.Client (才能用 call api 的函式喔)
 */
 
+/*
+    演進史：
+    (1) WebRequest
+    (2) HttpClient (本次介紹)
+    (3) RestSharp (最新，有空可以去了解)
+*/
+
 namespace MVC_test.Controllers
 {
     public class CallAPIController : Controller
