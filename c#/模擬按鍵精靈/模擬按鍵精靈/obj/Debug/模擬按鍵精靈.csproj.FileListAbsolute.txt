@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\bin\Debug\模擬按鍵精靈.exe.config
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\bin\Debug\模擬按鍵精靈.exe
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\bin\Debug\模擬按鍵精靈.pdb
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\obj\Debug\模擬按鍵精靈.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\obj\Debug\模擬按鍵精靈.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\obj\Debug\模擬按鍵精靈.exe
+D:\Document\Github\c-program\c#\模擬按鍵精靈\模擬按鍵精靈\obj\Debug\模擬按鍵精靈.pdb

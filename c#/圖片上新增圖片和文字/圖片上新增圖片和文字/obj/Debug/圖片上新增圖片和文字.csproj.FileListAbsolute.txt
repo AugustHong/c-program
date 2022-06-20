@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\bin\Debug\圖片上新增圖片和文字.exe.config
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\bin\Debug\圖片上新增圖片和文字.exe
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\bin\Debug\圖片上新增圖片和文字.pdb
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\obj\Debug\圖片上新增圖片和文字.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\obj\Debug\圖片上新增圖片和文字.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\obj\Debug\圖片上新增圖片和文字.exe
+D:\Document\Github\c-program\c#\圖片上新增圖片和文字\圖片上新增圖片和文字\obj\Debug\圖片上新增圖片和文字.pdb
