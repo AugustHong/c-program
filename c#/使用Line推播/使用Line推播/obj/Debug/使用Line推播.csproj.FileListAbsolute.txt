@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\bin\Debug\使用Line推播.exe.config
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\bin\Debug\使用Line推播.exe
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\bin\Debug\使用Line推播.pdb
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\obj\Debug\使用Line推播.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\obj\Debug\使用Line推播.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\obj\Debug\使用Line推播.exe
+D:\Document\Github\c-program\c#\使用Line推播\使用Line推播\obj\Debug\使用Line推播.pdb
