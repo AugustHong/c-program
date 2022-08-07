@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\bin\Debug\螢幕截圖.exe.config
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\bin\Debug\螢幕截圖.exe
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\bin\Debug\螢幕截圖.pdb
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\obj\Debug\螢幕截圖.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\obj\Debug\螢幕截圖.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\obj\Debug\螢幕截圖.exe
+D:\Document\Github\c-program\c#\螢幕截圖\螢幕截圖\obj\Debug\螢幕截圖.pdb
