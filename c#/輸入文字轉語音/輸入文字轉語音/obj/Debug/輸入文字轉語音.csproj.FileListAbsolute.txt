@@ -1,0 +1,7 @@
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\bin\Debug\輸入文字轉語音.exe.config
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\bin\Debug\輸入文字轉語音.exe
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\bin\Debug\輸入文字轉語音.pdb
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\obj\Debug\輸入文字轉語音.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\obj\Debug\輸入文字轉語音.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\obj\Debug\輸入文字轉語音.exe
+D:\Document\Github\c-program\c#\輸入文字轉語音\輸入文字轉語音\obj\Debug\輸入文字轉語音.pdb
