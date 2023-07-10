@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\bin\Debug\圖片背景白色變透明(類去背).exe.config
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\bin\Debug\圖片背景白色變透明(類去背).exe
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\bin\Debug\圖片背景白色變透明(類去背).pdb
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\obj\Debug\圖片背景白色變透明(類去背).csprojAssemblyReference.cache
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\obj\Debug\圖片背景白色變透明(類去背).csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\obj\Debug\圖片背景白色變透明(類去背).exe
+C:\Users\user\Desktop\圖片背景白色變透明(類去背)\圖片背景白色變透明(類去背)\obj\Debug\圖片背景白色變透明(類去背).pdb
