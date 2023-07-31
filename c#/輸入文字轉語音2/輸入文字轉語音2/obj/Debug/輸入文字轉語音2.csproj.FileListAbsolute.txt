@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\bin\Debug\輸入文字轉語音2.exe.config
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\bin\Debug\輸入文字轉語音2.exe
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\bin\Debug\輸入文字轉語音2.pdb
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\bin\Debug\Interop.SpeechLib.dll
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\輸入文字轉語音2.csprojAssemblyReference.cache
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\Interop.SpeechLib.dll
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\輸入文字轉語音2.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\輸入文字轉語音2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\輸入文字轉語音2.exe
+C:\Users\user\Desktop\輸入文字轉語音2\輸入文字轉語音2\obj\Debug\輸入文字轉語音2.pdb
