@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\bin\Debug\資料夾加解密工具.exe.config
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\bin\Debug\資料夾加解密工具.exe
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\bin\Debug\資料夾加解密工具.pdb
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\obj\Debug\資料夾加解密工具.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\obj\Debug\資料夾加解密工具.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\obj\Debug\資料夾加解密工具.exe
+C:\Users\user\Desktop\資料夾加解密工具\資料夾加解密工具\obj\Debug\資料夾加解密工具.pdb
