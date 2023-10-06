@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\bin\Debug\查看VSDX檔案2(轉成PDF).exe.config
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\bin\Debug\查看VSDX檔案2(轉成PDF).exe
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\bin\Debug\查看VSDX檔案2(轉成PDF).pdb
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\bin\Debug\Aspose.Diagram.dll
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\bin\Debug\Aspose.Diagram.xml
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\obj\Debug\查看VSDX檔案2(轉成PDF).csproj.AssemblyReference.cache
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\obj\Debug\查看VSDX檔案2(轉成PDF).csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\obj\Debug\查看VSDX檔案2(轉成PDF).csproj.CopyComplete
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\obj\Debug\查看VSDX檔案2(轉成PDF).exe
+C:\Users\user\Desktop\查看VSDX檔案2(轉成PDF)\查看VSDX檔案2(轉成PDF)\obj\Debug\查看VSDX檔案2(轉成PDF).pdb
