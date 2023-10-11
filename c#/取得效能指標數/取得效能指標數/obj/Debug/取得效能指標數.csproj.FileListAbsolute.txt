@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\bin\Debug\取得效能指標數.exe.config
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\bin\Debug\取得效能指標數.exe
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\bin\Debug\取得效能指標數.pdb
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\obj\Debug\取得效能指標數.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\obj\Debug\取得效能指標數.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\obj\Debug\取得效能指標數.exe
+C:\Users\user\Desktop\取得效能指標數\取得效能指標數\obj\Debug\取得效能指標數.pdb
