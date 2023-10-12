@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.exe.config
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.exe
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.pdb
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.exe
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.pdb
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.exe.config
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.exe
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\bin\Debug\讀取讀卡機健保卡資訊.pdb
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.csprojAssemblyReference.cache
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.exe
+C:\Users\user\Desktop\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\讀取讀卡機健保卡資訊\obj\Debug\讀取讀卡機健保卡資訊.pdb
