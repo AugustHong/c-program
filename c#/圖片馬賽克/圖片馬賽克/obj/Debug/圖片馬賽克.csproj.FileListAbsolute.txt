@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\bin\Debug\圖片馬賽克.exe.config
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\bin\Debug\圖片馬賽克.exe
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\bin\Debug\圖片馬賽克.pdb
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\obj\Debug\圖片馬賽克.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\obj\Debug\圖片馬賽克.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\obj\Debug\圖片馬賽克.exe
+C:\Users\user\Desktop\圖片馬賽克\圖片馬賽克\obj\Debug\圖片馬賽克.pdb
