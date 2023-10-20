@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\bin\Debug\對RegEdit增刪修讀.exe.config
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\bin\Debug\對RegEdit增刪修讀.exe
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\bin\Debug\對RegEdit增刪修讀.pdb
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\obj\Debug\對RegEdit增刪修讀.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\obj\Debug\對RegEdit增刪修讀.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\obj\Debug\對RegEdit增刪修讀.exe
+C:\Users\user\Desktop\對RegEdit增刪修讀\對RegEdit增刪修讀\obj\Debug\對RegEdit增刪修讀.pdb
