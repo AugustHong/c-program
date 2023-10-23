@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\bin\Debug\取得電池、CPU溫度和型號.exe.config
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\bin\Debug\取得電池、CPU溫度和型號.exe
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\bin\Debug\取得電池、CPU溫度和型號.pdb
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\obj\Debug\取得電池、CPU溫度和型號.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\obj\Debug\取得電池、CPU溫度和型號.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\obj\Debug\取得電池、CPU溫度和型號.exe
+C:\Users\user\Desktop\取得電池、CPU溫度和型號\取得電池、CPU溫度和型號\obj\Debug\取得電池、CPU溫度和型號.pdb
