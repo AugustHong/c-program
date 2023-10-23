@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\bin\Debug\對工作管理器CRUD.exe.config
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\bin\Debug\對工作管理器CRUD.exe
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\bin\Debug\對工作管理器CRUD.pdb
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\bin\Debug\Interop.TaskScheduler.dll
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\對工作管理器CRUD.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\Interop.TaskScheduler.dll
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\對工作管理器CRUD.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\對工作管理器CRUD.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\對工作管理器CRUD.exe
+C:\Users\user\Desktop\對工作管理器CRUD\對工作管理器CRUD\obj\Debug\對工作管理器CRUD.pdb
