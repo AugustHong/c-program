@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\bin\Debug\查詢事件檢視器.exe.config
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\bin\Debug\查詢事件檢視器.exe
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\bin\Debug\查詢事件檢視器.pdb
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\obj\Debug\查詢事件檢視器.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\obj\Debug\查詢事件檢視器.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\obj\Debug\查詢事件檢視器.exe
+C:\Users\user\Desktop\查詢事件檢視器\查詢事件檢視器\obj\Debug\查詢事件檢視器.pdb
