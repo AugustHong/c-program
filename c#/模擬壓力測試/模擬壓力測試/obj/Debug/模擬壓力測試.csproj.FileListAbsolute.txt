@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\bin\Debug\模擬壓力測試.exe.config
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\bin\Debug\模擬壓力測試.exe
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\bin\Debug\模擬壓力測試.pdb
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\obj\Debug\模擬壓力測試.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\obj\Debug\模擬壓力測試.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\obj\Debug\模擬壓力測試.exe
+C:\Users\user\Desktop\模擬壓力測試\模擬壓力測試\obj\Debug\模擬壓力測試.pdb
