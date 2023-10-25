@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\播放音檔\播放音檔\bin\Debug\播放音檔.exe.config
+C:\Users\user\Desktop\播放音檔\播放音檔\bin\Debug\播放音檔.exe
+C:\Users\user\Desktop\播放音檔\播放音檔\bin\Debug\播放音檔.pdb
+C:\Users\user\Desktop\播放音檔\播放音檔\obj\Debug\播放音檔.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\播放音檔\播放音檔\obj\Debug\播放音檔.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\播放音檔\播放音檔\obj\Debug\播放音檔.exe
+C:\Users\user\Desktop\播放音檔\播放音檔\obj\Debug\播放音檔.pdb
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\bin\Debug\播放音檔.exe.config
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\bin\Debug\播放音檔.exe
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\bin\Debug\播放音檔.pdb
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\obj\Debug\播放音檔.csprojAssemblyReference.cache
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\obj\Debug\播放音檔.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\obj\Debug\播放音檔.exe
+C:\Users\user\Desktop\播放音檔\播放音檔\播放音檔\obj\Debug\播放音檔.pdb
