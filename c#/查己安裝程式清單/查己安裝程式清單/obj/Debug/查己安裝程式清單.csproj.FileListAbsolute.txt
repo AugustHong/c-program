@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\bin\Debug\查己安裝程式清單.exe.config
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\bin\Debug\查己安裝程式清單.exe
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\bin\Debug\查己安裝程式清單.pdb
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\obj\Debug\查己安裝程式清單.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\obj\Debug\查己安裝程式清單.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\obj\Debug\查己安裝程式清單.exe
+C:\Users\user\Desktop\查己安裝程式清單\查己安裝程式清單\obj\Debug\查己安裝程式清單.pdb
