@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\bin\Debug\繁簡轉換.exe.config
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\bin\Debug\繁簡轉換.exe
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\bin\Debug\繁簡轉換.pdb
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\bin\Debug\ChineseConverter.dll
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\bin\Debug\ChineseConverter.xml
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\obj\Debug\繁簡轉換.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\obj\Debug\繁簡轉換.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\obj\Debug\繁簡轉換.csproj.CopyComplete
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\obj\Debug\繁簡轉換.exe
+C:\Users\user\Desktop\繁簡轉換\繁簡轉換\obj\Debug\繁簡轉換.pdb
