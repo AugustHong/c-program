@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\bin\Debug\取得所有網路與資訊.exe.config
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\bin\Debug\取得所有網路與資訊.exe
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\bin\Debug\取得所有網路與資訊.pdb
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\bin\Debug\ManagedWifi.dll
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\obj\Debug\取得所有網路與資訊.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\obj\Debug\取得所有網路與資訊.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\obj\Debug\取得所有網路與資訊.csproj.CopyComplete
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\obj\Debug\取得所有網路與資訊.exe
+C:\Users\user\Desktop\取得所有網路與資訊\取得所有網路與資訊\obj\Debug\取得所有網路與資訊.pdb
