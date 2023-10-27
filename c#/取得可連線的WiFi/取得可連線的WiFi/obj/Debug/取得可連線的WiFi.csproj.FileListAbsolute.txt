@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\取得可連線的WiFi.exe.config
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\取得可連線的WiFi.exe
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\取得可連線的WiFi.pdb
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\ManagedWifi.dll
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\obj\Debug\取得可連線的WiFi.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\obj\Debug\取得可連線的WiFi.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\obj\Debug\取得可連線的WiFi.csproj.CopyComplete
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\obj\Debug\取得可連線的WiFi.exe
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\obj\Debug\取得可連線的WiFi.pdb
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\SimpleWifi.dll
+C:\Users\user\Desktop\取得可連線的WiFi\取得可連線的WiFi\bin\Debug\SimpleWifi.xml
