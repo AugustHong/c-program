@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\bin\Debug\掃描二維條碼.exe.config
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\bin\Debug\掃描二維條碼.exe
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\bin\Debug\掃描二維條碼.pdb
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\bin\Debug\GroupDocs.Parser.dll
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\bin\Debug\GroupDocs.Parser.xml
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\obj\Debug\掃描二維條碼.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\obj\Debug\掃描二維條碼.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\obj\Debug\掃描二維條碼.csproj.CopyComplete
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\obj\Debug\掃描二維條碼.exe
+C:\Users\user\Desktop\掃描二維條碼\掃描二維條碼\obj\Debug\掃描二維條碼.pdb
