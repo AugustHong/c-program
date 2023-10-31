@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\bin\Debug\呼叫Google翻譯.exe.config
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\bin\Debug\呼叫Google翻譯.exe
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\bin\Debug\呼叫Google翻譯.pdb
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\obj\Debug\呼叫Google翻譯.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\obj\Debug\呼叫Google翻譯.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\obj\Debug\呼叫Google翻譯.exe
+C:\Users\user\Desktop\呼叫Google翻譯\呼叫Google翻譯\obj\Debug\呼叫Google翻譯.pdb

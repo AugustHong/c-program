@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "呼叫Google翻譯", "呼叫Google翻譯\呼叫Google翻譯.csproj", "{C0694B01-A7C9-4F22-BB8F-39D28FA945F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0694B01-A7C9-4F22-BB8F-39D28FA945F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0694B01-A7C9-4F22-BB8F-39D28FA945F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0694B01-A7C9-4F22-BB8F-39D28FA945F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0694B01-A7C9-4F22-BB8F-39D28FA945F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDFFE33A-53B3-499A-8C57-571BEB411644}
+	EndGlobalSection
+EndGlobal
