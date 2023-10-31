@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\取得所有服務\取得所有服務\bin\Debug\取得所有服務.exe.config
+C:\Users\user\Desktop\取得所有服務\取得所有服務\bin\Debug\取得所有服務.exe
+C:\Users\user\Desktop\取得所有服務\取得所有服務\bin\Debug\取得所有服務.pdb
+C:\Users\user\Desktop\取得所有服務\取得所有服務\obj\Debug\取得所有服務.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\取得所有服務\取得所有服務\obj\Debug\取得所有服務.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\取得所有服務\取得所有服務\obj\Debug\取得所有服務.exe
+C:\Users\user\Desktop\取得所有服務\取得所有服務\obj\Debug\取得所有服務.pdb
