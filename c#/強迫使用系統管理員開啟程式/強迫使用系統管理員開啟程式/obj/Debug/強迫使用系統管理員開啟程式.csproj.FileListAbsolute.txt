@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\bin\Debug\強迫使用系統管理員開啟程式.exe.config
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\bin\Debug\強迫使用系統管理員開啟程式.exe
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\bin\Debug\強迫使用系統管理員開啟程式.pdb
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\obj\Debug\強迫使用系統管理員開啟程式.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\obj\Debug\強迫使用系統管理員開啟程式.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\obj\Debug\強迫使用系統管理員開啟程式.exe
+C:\Users\user\Desktop\強迫使用系統管理員開啟程式\強迫使用系統管理員開啟程式\obj\Debug\強迫使用系統管理員開啟程式.pdb
