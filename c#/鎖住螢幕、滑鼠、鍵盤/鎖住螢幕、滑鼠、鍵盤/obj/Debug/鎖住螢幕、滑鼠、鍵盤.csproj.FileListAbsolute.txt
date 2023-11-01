@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\bin\Debug\鎖住螢幕、滑鼠、鍵盤.exe.config
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\bin\Debug\鎖住螢幕、滑鼠、鍵盤.exe
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\bin\Debug\鎖住螢幕、滑鼠、鍵盤.pdb
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\obj\Debug\鎖住螢幕、滑鼠、鍵盤.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\obj\Debug\鎖住螢幕、滑鼠、鍵盤.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\obj\Debug\鎖住螢幕、滑鼠、鍵盤.exe
+C:\Users\user\Desktop\鎖住螢幕、滑鼠、鍵盤\鎖住螢幕、滑鼠、鍵盤\obj\Debug\鎖住螢幕、滑鼠、鍵盤.pdb
