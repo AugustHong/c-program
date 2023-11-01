@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\bin\Debug\設定桌布圖片.exe.config
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\bin\Debug\設定桌布圖片.exe
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\bin\Debug\設定桌布圖片.pdb
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\obj\Debug\設定桌布圖片.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\obj\Debug\設定桌布圖片.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\obj\Debug\設定桌布圖片.exe
+C:\Users\user\Desktop\設定桌布圖片\設定桌布圖片\obj\Debug\設定桌布圖片.pdb
