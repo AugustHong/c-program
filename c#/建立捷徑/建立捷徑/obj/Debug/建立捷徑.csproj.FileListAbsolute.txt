@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\建立捷徑\建立捷徑\bin\Debug\建立捷徑.exe.config
+C:\Users\user\Desktop\建立捷徑\建立捷徑\bin\Debug\建立捷徑.exe
+C:\Users\user\Desktop\建立捷徑\建立捷徑\bin\Debug\建立捷徑.pdb
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\建立捷徑.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\建立捷徑.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\建立捷徑.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\建立捷徑.exe
+C:\Users\user\Desktop\建立捷徑\建立捷徑\obj\Debug\建立捷徑.pdb
