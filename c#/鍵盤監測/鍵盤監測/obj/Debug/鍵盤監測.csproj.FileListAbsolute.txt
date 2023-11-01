@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\bin\Debug\鍵盤監測.exe.config
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\bin\Debug\鍵盤監測.exe
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\bin\Debug\鍵盤監測.pdb
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\obj\Debug\鍵盤監測.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\obj\Debug\鍵盤監測.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\obj\Debug\鍵盤監測.exe
+C:\Users\user\Desktop\鍵盤監測\鍵盤監測\obj\Debug\鍵盤監測.pdb
