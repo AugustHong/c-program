@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\bin\Debug\呼叫Goole圖片並下載.exe.config
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\bin\Debug\呼叫Goole圖片並下載.exe
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\bin\Debug\呼叫Goole圖片並下載.pdb
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\obj\Debug\呼叫Goole圖片並下載.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\obj\Debug\呼叫Goole圖片並下載.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\obj\Debug\呼叫Goole圖片並下載.exe
+C:\Users\user\Desktop\呼叫Goole圖片並下載\呼叫Goole圖片並下載\obj\Debug\呼叫Goole圖片並下載.pdb
