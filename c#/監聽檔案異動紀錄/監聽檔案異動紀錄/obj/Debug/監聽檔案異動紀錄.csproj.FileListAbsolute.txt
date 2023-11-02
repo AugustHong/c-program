@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\bin\Debug\監聽檔案異動紀錄.exe.config
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\bin\Debug\監聽檔案異動紀錄.exe
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\bin\Debug\監聽檔案異動紀錄.pdb
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\obj\Debug\監聽檔案異動紀錄.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\obj\Debug\監聽檔案異動紀錄.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\obj\Debug\監聽檔案異動紀錄.exe
+C:\Users\user\Desktop\監聽檔案異動紀錄\監聽檔案異動紀錄\obj\Debug\監聽檔案異動紀錄.pdb
