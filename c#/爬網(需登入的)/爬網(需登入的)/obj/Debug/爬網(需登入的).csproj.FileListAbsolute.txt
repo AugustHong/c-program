@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).exe.config
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).exe
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).pdb
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).csproj.AssemblyReference.cache
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).exe
+C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).pdb
