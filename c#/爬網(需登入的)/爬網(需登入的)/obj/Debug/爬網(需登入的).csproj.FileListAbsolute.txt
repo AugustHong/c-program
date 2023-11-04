@@ -5,3 +5,10 @@ C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網
 C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).exe
 C:\Users\user\Desktop\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).pdb
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).exe.config
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).exe
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\bin\Debug\爬網(需登入的).pdb
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).exe
+D:\Document\Github\c-program\c#\爬網(需登入的)\爬網(需登入的)\obj\Debug\爬網(需登入的).pdb
