@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\找出圖片在另1張圖片的位置.exe.config
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\找出圖片在另1張圖片的位置.exe
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\找出圖片在另1張圖片的位置.pdb
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.dll
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.Imaging.dll
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.Math.dll
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.xml
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.Imaging.xml
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\bin\Debug\AForge.Math.xml
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\obj\Debug\找出圖片在另1張圖片的位置.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\obj\Debug\找出圖片在另1張圖片的位置.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\obj\Debug\找出圖片在另1張圖片的位置.csproj.CopyComplete
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\obj\Debug\找出圖片在另1張圖片的位置.exe
+C:\Users\user\Desktop\找出圖片在另1張圖片的位置\找出圖片在另1張圖片的位置\obj\Debug\找出圖片在另1張圖片的位置.pdb
