@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WInForm無邊框釘在桌面上/1.0.0": {
+        "runtime": {
+          "WInForm無邊框釘在桌面上.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WInForm無邊框釘在桌面上/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\bin\Debug\net6.0-windows\WInForm無邊框釘在桌面上.exe
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\bin\Debug\net6.0-windows\WInForm無邊框釘在桌面上.deps.json
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\bin\Debug\net6.0-windows\WInForm無邊框釘在桌面上.runtimeconfig.json
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\bin\Debug\net6.0-windows\WInForm無邊框釘在桌面上.dll
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\bin\Debug\net6.0-windows\WInForm無邊框釘在桌面上.pdb
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.Todo.resources
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.csproj.GenerateResource.cache
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.AssemblyInfo.cs
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.dll
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\refint\WInForm無邊框釘在桌面上.dll
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.pdb
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\WInForm無邊框釘在桌面上.genruntimeconfig.cache
+C:\Users\user\Desktop\WInForm無邊框釘在桌面上\WInForm無邊框釘在桌面上\obj\Debug\net6.0-windows\ref\WInForm無邊框釘在桌面上.dll
