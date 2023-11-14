@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\bin\Debug\圖像比對差異.exe.config
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\bin\Debug\圖像比對差異.exe
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\bin\Debug\圖像比對差異.pdb
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\obj\Debug\圖像比對差異.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\obj\Debug\圖像比對差異.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\obj\Debug\圖像比對差異.exe
+C:\Users\user\Desktop\圖像比對差異\圖像比對差異\obj\Debug\圖像比對差異.pdb
