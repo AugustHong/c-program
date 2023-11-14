@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\電腦定位\電腦定位\bin\Debug\電腦定位.exe.config
+C:\Users\user\Desktop\電腦定位\電腦定位\bin\Debug\電腦定位.exe
+C:\Users\user\Desktop\電腦定位\電腦定位\bin\Debug\電腦定位.pdb
+C:\Users\user\Desktop\電腦定位\電腦定位\obj\Debug\電腦定位.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\電腦定位\電腦定位\obj\Debug\電腦定位.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\電腦定位\電腦定位\obj\Debug\電腦定位.exe
+C:\Users\user\Desktop\電腦定位\電腦定位\obj\Debug\電腦定位.pdb
