@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\bin\Debug\呼叫SOAP.exe.config
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\bin\Debug\呼叫SOAP.exe
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\bin\Debug\呼叫SOAP.pdb
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\obj\Debug\呼叫SOAP.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\obj\Debug\呼叫SOAP.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\obj\Debug\呼叫SOAP.exe
+C:\Users\user\Desktop\呼叫SOAP\呼叫SOAP\obj\Debug\呼叫SOAP.pdb
