@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\bin\Debug\建立可以using的類別.exe.config
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\bin\Debug\建立可以using的類別.exe
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\bin\Debug\建立可以using的類別.pdb
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\obj\Debug\建立可以using的類別.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\obj\Debug\建立可以using的類別.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\obj\Debug\建立可以using的類別.exe
+C:\Users\user\Desktop\建立可以using的類別\建立可以using的類別\obj\Debug\建立可以using的類別.pdb
