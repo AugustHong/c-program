@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.exe.config
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.exe
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.pdb
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.exe
+C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.pdb
