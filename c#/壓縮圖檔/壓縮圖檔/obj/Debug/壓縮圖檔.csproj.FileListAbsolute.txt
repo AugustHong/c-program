@@ -5,3 +5,9 @@ C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.As
 C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.exe
 C:\Users\user\Desktop\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.pdb
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.exe.config
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.exe
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔.pdb
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.exe
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.pdb
