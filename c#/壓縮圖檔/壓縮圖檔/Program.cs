@@ -58,6 +58,8 @@ namespace 壓縮圖檔
             /// <param name="range">壓縮百分比</param>
             static void CompressionImage(string inputFileName, string outputFileName, double range = 100)
             {
+                  MemoryStream oMS = new MemoryStream();
+
                   // 百分比換算
                   double persent = (range / 100);
 
@@ -83,18 +85,16 @@ namespace 壓縮圖檔
                               // 所以不能用下面這一行
                               // outputImage.Save(outputFileName, ImageFormat.Jpeg);
                               // 要改用下面這段
-                              using (MemoryStream oMS = new MemoryStream())
-                              {
-                                    //將outputImage儲存（指定）到記憶體串流中
-                                    outputImage.Save(oMS, ImageFormat.Jpeg);
-
-                                    //將串流整個讀到陣列中，寫入某個路徑中的某個檔案裡
-                                    using (FileStream oFS = File.Open(outputFileName, FileMode.OpenOrCreate))
-                                    {
-                                          oFS.Write(oMS.ToArray(), 0, oMS.ToArray().Length);
-                                    }
-                              }
+                              //將outputImage儲存（指定）到記憶體串流中
+                              outputImage.Save(oMS, ImageFormat.Jpeg);
                         }
+                  }
+
+                  //將串流整個讀到陣列中，寫入某個路徑中的某個檔案裡
+                  using (FileStream oFS = File.Open(outputFileName, FileMode.OpenOrCreate))
+                  {
+                        oFS.SetLength(0);  //清空
+                        oFS.Write(oMS.ToArray(), 0, oMS.ToArray().Length);
                   }
             }
       }

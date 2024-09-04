@@ -11,3 +11,4 @@ D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\bin\Debug\壓縮圖檔
 D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csproj.CoreCompileInputs.cache
 D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.exe
 D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.pdb
+D:\Document\Github\c-program\c#\壓縮圖檔\壓縮圖檔\obj\Debug\壓縮圖檔.csprojAssemblyReference.cache
