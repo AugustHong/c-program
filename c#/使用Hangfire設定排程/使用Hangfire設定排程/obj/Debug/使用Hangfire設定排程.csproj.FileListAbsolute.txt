@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\使用Hangfire設定排程.exe.config
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\使用Hangfire設定排程.exe
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\使用Hangfire設定排程.pdb
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Hangfire.Core.dll
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Hangfire.SqlServer.dll
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Owin.dll
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Hangfire.Core.xml
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Hangfire.SqlServer.xml
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\obj\Debug\使用Hangfire設定排程.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\obj\Debug\使用Hangfire設定排程.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\obj\Debug\使用Hangfi.FFFEECC3.Up2Date
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\obj\Debug\使用Hangfire設定排程.exe
+C:\Users\user\Desktop\使用Hangfire設定排程\使用Hangfire設定排程\obj\Debug\使用Hangfire設定排程.pdb
