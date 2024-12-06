@@ -1,0 +1,7 @@
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\bin\Debug\指定檔名資料搬移.exe.config
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\bin\Debug\指定檔名資料搬移.exe
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\bin\Debug\指定檔名資料搬移.pdb
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\obj\Debug\指定檔名資料搬移.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\obj\Debug\指定檔名資料搬移.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\obj\Debug\指定檔名資料搬移.exe
+C:\Users\hf\Desktop\指定檔名資料搬移\指定檔名資料搬移\obj\Debug\指定檔名資料搬移.pdb

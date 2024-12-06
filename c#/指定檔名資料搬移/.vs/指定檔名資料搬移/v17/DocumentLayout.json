@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hf\\Desktop\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99CFF273-76A1-4CC7-BE2E-E1D50653E791}|\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB.csproj|c:\\users\\hf\\desktop\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99CFF273-76A1-4CC7-BE2E-E1D50653E791}|\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB.csproj|solutionrelative:\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hf\\Desktop\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\Program.cs",
+              "RelativeDocumentMoniker": "\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\Program.cs",
+              "ToolTip": "C:\\Users\\hf\\Desktop\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\Program.cs",
+              "RelativeToolTip": "\u6307\u5B9A\u6A94\u540D\u8CC7\u6599\u642C\u79FB\\Program.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHkAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:09:08.007Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
