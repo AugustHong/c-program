@@ -98,7 +98,10 @@ namespace 指定檔名資料搬移
 
                         // 符合這個資料夾下的 指定資料
                         List<string> procStrList = lines.Where(x => x.dir == dir).Select(x => x.filterStr).ToList();
-                        List<FileInfo> procFileList = pdir.GetFiles().Where(x => procStrList.Count(p => x.Name.Contains(p)) > 0).ToList();
+                        // GetFiles() 的速度小於 EnumerateFiles() 很多，所以改成用 EnumerateFiles()
+                        // 參考網址： https://www.cnblogs.com/liweis/p/17946887
+                        //List<FileInfo> procFileList = pdir.GetFiles().Where(x => procTicketNoList.Count(p => x.Name.Contains(p)) > 0).ToList();
+                        List<FileInfo> procFileList = pdir.EnumerateFiles().AsParallel().Where(x => procTicketNoList.Count(p => x.Name.Contains(p)) > 0).ToList();
                         Console.WriteLine($"符合的檔案數： {procFileList.Count()}");
                         foreach (FileInfo f in procFileList)
                         {
