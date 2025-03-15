@@ -1,0 +1,10 @@
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\bin\Debug\模擬大量打API.exe.config
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\bin\Debug\模擬大量打API.exe
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\bin\Debug\模擬大量打API.pdb
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\obj\Debug\模擬大量打API.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\obj\Debug\模擬大量打API.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\obj\Debug\模擬大量打API.csproj.Up2Date
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\obj\Debug\模擬大量打API.exe
+C:\Users\hf\Desktop\模擬大量打API\模擬大量打API\obj\Debug\模擬大量打API.pdb
