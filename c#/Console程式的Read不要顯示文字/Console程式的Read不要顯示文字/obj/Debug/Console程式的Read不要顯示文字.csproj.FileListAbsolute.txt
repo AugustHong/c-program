@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\bin\Debug\Console程式的Read不要顯示文字.exe.config
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\bin\Debug\Console程式的Read不要顯示文字.exe
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\bin\Debug\Console程式的Read不要顯示文字.pdb
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\obj\Debug\Console程式的Read不要顯示文字.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\obj\Debug\Console程式的Read不要顯示文字.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\obj\Debug\Console程式的Read不要顯示文字.exe
+C:\Users\user\Desktop\Console程式的Read不要顯示文字\Console程式的Read不要顯示文字\obj\Debug\Console程式的Read不要顯示文字.pdb
