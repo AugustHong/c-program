@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\bin\Debug\將MP4檔案和Base64字串互轉.exe.config
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\bin\Debug\將MP4檔案和Base64字串互轉.exe
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\bin\Debug\將MP4檔案和Base64字串互轉.pdb
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\obj\Debug\將MP4檔案和Base64字串互轉.csprojAssemblyReference.cache
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\obj\Debug\將MP4檔案和Base64字串互轉.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\obj\Debug\將MP4檔案和Base64字串互轉.exe
+C:\Users\user\Desktop\將MP4檔案和Base64字串互轉\將MP4檔案和Base64字串互轉\obj\Debug\將MP4檔案和Base64字串互轉.pdb
