@@ -1,0 +1,56 @@
+--方案一： 加入Cookies讓前端定期檢核
+--備註1： 要確保 若開啟2個分頁且2個都在轉圈時，第1個成功後設定Cookies，第2頁會不會也消失轉圈。(感覺就是會受影響)
+--備註2： 若上面的會受影響，以後就在 Cookies前綴要加上各自的名稱 (有點像 Redis這樣)
+/*
+已確定 備註1 會產生，有想到1個解法：
+(1) 在前端呼叫時，先去撈 目前 Cookies中 (LoadModal_0 ~ LoadModal_9) 有誰是空的取最小的那筆
+(2) 然後前端設定 Cookies， 設 LoadModal_X 的值 = 系統時間取 YYYYMMDDHHMISS
+(3) 然後 要跑循環時帶入上面的 X 參數，只抓這個 DownloadComplete_X 的 Cookies完成時，才關閉轉圈
+(4) 後端一進入時 去抓 Cookies中 (LoadModal_0 ~ LoadModal_9) 的值 最大的那筆  (理論上快的話不會出錯。但仍可能有機會出錯：
+	前端按1下 -> 跑很慢所以前端按到第2下 -> 這時才進後端，所以就抓到第2下的非第1下)
+(5) 後端回傳前 若是 回傳 File 的話，要將 DownloadComplete_X 設為 True；反之 要將 LoadModal_X 清空(不然會出錯)
+	(備註：因為 非File 和 Json 的話會重刷頁面，這時候循環也會被清掉，轉圈也會消失所以沒事。故只要清 Cookies即可)
+*/
+
+==================================後端=======================================================
+
+--(1) 先加入1個Function (我是放在 BaseController，所以才用 protected，實際請自行修正)
+/// <summary>
+/// 設定 下載檔案完成後的Cookies(要讓前端轉圈消失用)
+/// </summary>
+protected void SetDownloadCompleteCookies()
+{
+	if (Request.Cookies["DownloadComplete"] != null)
+	{
+    		Response.Cookies["DownloadComplete"].Value = "true";
+    		Response.Cookies["DownloadComplete"].Expires = DateTime.Now.AddSeconds(20);
+	}
+	else
+	{
+    		var cookie = new HttpCookie("DownloadComplete", "true");
+    		cookie.Expires = DateTime.Now.AddSeconds(20);
+    		Response.Cookies.Add(cookie);
+	}
+} 
+
+-- (2) MVC的Controller 回傳時前面先執行
+this.SetDownloadCompleteCookies();
+return File(workBook.ToByteArray(), System.Net.Mime.MediaTypeNames.Application.Octet, dowloadFileName);
+
+==================================前端================================================================
+
+-- (1) 宣告共用變數
+let checkInterval;
+
+-- (2) 在呼叫MVC的頁面前，設定循環去監聽
+// 設定循環跑看是否檔案已跑完
+checkInterval = setInterval(checkDownloadComplete, 500);
+
+-- (3) 設定監聽函式，裡面的 轉圈圈Modal名稱請自已修改成自已的
+function checkDownloadComplete() {
+    if (document.cookie.indexOf("DownloadComplete=true") >= 0) {
+        $('#myLoadingModal').modal('hide'); // 讓轉圈圈消失
+        clearInterval(checkInterval);  // 清除循環
+        document.cookie = "DownloadComplete=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"; //清除Cookies
+    }
+}
