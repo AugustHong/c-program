@@ -1,0 +1,14 @@
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.exe.config
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.exe
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.pdb
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.exe
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.pdb
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.exe.config
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.exe
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\bin\Debug\自定Cron轉中文描述.pdb
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.exe
+C:\Users\hf\Desktop\自定Cron轉中文描述\自定Cron轉中文描述\自定Cron轉中文描述\obj\Debug\自定Cron轉中文描述.pdb
