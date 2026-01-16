@@ -1,0 +1,7 @@
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\bin\Debug\檢查憑證資訊.exe.config
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\bin\Debug\檢查憑證資訊.exe
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\bin\Debug\檢查憑證資訊.pdb
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\obj\Debug\檢查憑證資訊.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\obj\Debug\檢查憑證資訊.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\obj\Debug\檢查憑證資訊.exe
+C:\Users\hf\Desktop\檢查憑證資訊\檢查憑證資訊\obj\Debug\檢查憑證資訊.pdb
