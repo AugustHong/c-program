@@ -137,74 +137,105 @@ namespace 每日定時鬧鐘
             System.Diagnostics.Debug.WriteLine("背景程式執行完成");
         }
 
-        // 背景程式 執行 主程式
-        private void BW_Main(BackgroundWorker b, int sleepPeriod)
-        {
-            int currentIndex = 0;
-            this.toDoList = this.toDoList.OrderBy(todo => todo.hour).ThenBy(todo => todo.minute).ToList();  // 排序
-
-            // 開始跑迴圈
-            while (!b.CancellationPending)
+            // 背景程式 執行 主程式
+            private void BW_Main(BackgroundWorker b, int sleepPeriod)
             {
-                Item currentItem = this.toDoList[currentIndex];
-                DateTime nowTime = DateTime.Now;
+                  int currentIndex = 0;
+                  this.toDoList = this.toDoList.OrderBy(todo => todo.hour).ThenBy(todo => todo.minute).ToList();  // 排序
 
-                // 如果時間相同的話 => 跳出桌面提示
-                if (nowTime.Hour == currentItem.hour && nowTime.Minute == currentItem.minute)
-                {
-                    this.n.ShowBalloonTip(currentItem.timeout, currentItem.title, currentItem.content, ToolTipIcon.Info);
-                    currentIndex++;
-                }
+                  int firstDiffSecond = 0;
 
-                // 如果超過上限 => 今天結束 => 關掉 Form
-                if (currentIndex > (this.toDoList.Count() - 1))
-                {
-                    // 要先讓最後一個的 桌面提示跑完
-                    Item lastItem = this.toDoList[this.toDoList.Count() - 1];
-                    System.Threading.Thread.Sleep(lastItem.timeout);
+                  // 首次進入
+                  this.n.ShowBalloonTip(2000, "請打卡", "如果是剛到公司請記得打卡喔", ToolTipIcon.Info);
+                  // 找下1個時間是誰
+                  for (var i = 0; i < this.toDoList.Count(); i++)
+                  {
+                        DateTime nowTime = DateTime.Now;
+                        Item nextItem = this.toDoList[i];
 
-                    // 取消背景程式
-                    this.bw.CancelAsync();
-                    // 關閉 Form
-                    this.Close();
-                }
-                else
-                {
-                    // 有 ++ 過 => 所以 next 會是最新的
-                    Item nextItem = this.toDoList[currentIndex];
+                        TimeSpan t1 = new TimeSpan(nowTime.Hour, nowTime.Minute, 0);
+                        TimeSpan t2 = new TimeSpan(nextItem.hour, nextItem.minute, nowTime.Second);
 
-                    // 計算 差幾秒 (不要讓迴圈一直跑，所以直接等待到下一個到)
-                    nowTime = DateTime.Now;
-                    TimeSpan t1 = new TimeSpan(nowTime.Hour, nowTime.Minute, 0);
-                    TimeSpan t2 = new TimeSpan(nextItem.hour, nextItem.minute, nowTime.Second);
+                        // 差幾秒
+                        firstDiffSecond = (int)((t2 - t1).TotalSeconds);
 
-                    // 差幾秒
-                    int dSecond = (int)((t2 - t1).TotalSeconds);
-
-                    if (dSecond < 0)
-                    {
-                        for (var i = 0; i < this.toDoList.Count(); i++)
+                        // 找比自己大的
+                        if (firstDiffSecond >= 0)
                         {
-                            Item item = this.toDoList[i];
-
-                            if ((nowTime.Hour < item.hour) || ((nowTime.Hour == item.hour) && (nowTime.Minute < item.minute)))
-                            {
-                                currentIndex = i;
-                                break;
-                            }
+                              currentIndex = i;
+                              break;
                         }
-                    }
-                    else
-                    {
-                        // 讓它停在這，等到下一個出來
-                        System.Threading.Thread.Sleep(dSecond);
-                    }
-                }
-            }
-        }
+                        else
+                        {
+                              firstDiffSecond = 0;
+                        }
+                  }
 
-        // ---------Event--------------------
-        private void N_DoubleClick(object sender, EventArgs e)
+                  // 讓它停在這，等到下一個出來
+                  System.Threading.Thread.Sleep(firstDiffSecond);
+
+                  // 開始跑迴圈
+                  while (!b.CancellationPending)
+                  {
+                        Item currentItem = this.toDoList[currentIndex];
+                        DateTime nowTime = DateTime.Now;
+
+                        // 如果時間相同的話 => 跳出桌面提示
+                        if (nowTime.Hour == currentItem.hour && nowTime.Minute == currentItem.minute)
+                        {
+                              this.n.ShowBalloonTip(currentItem.timeout, currentItem.title, currentItem.content, ToolTipIcon.Info);
+                              currentIndex++;
+                        }
+
+                        // 如果超過上限 => 今天結束 => 關掉 Form
+                        if (currentIndex > (this.toDoList.Count() - 1))
+                        {
+                              // 要先讓最後一個的 桌面提示跑完
+                              Item lastItem = this.toDoList[this.toDoList.Count() - 1];
+                              System.Threading.Thread.Sleep(lastItem.timeout);
+
+                              // 取消背景程式
+                              this.bw.CancelAsync();
+                              // 關閉 Form
+                              this.Close();
+                        }
+                        else
+                        {
+                              // 有 ++ 過 => 所以 next 會是最新的
+                              Item nextItem = this.toDoList[currentIndex];
+
+                              // 計算 差幾秒 (不要讓迴圈一直跑，所以直接等待到下一個到)
+                              nowTime = DateTime.Now;
+                              TimeSpan t1 = new TimeSpan(nowTime.Hour, nowTime.Minute, 0);
+                              TimeSpan t2 = new TimeSpan(nextItem.hour, nextItem.minute, nowTime.Second);
+
+                              // 差幾秒
+                              int dSecond = (int)((t2 - t1).TotalSeconds);
+
+                              if (dSecond < 0)
+                              {
+                                    for (var i = 0; i < this.toDoList.Count(); i++)
+                                    {
+                                          Item item = this.toDoList[i];
+
+                                          if ((nowTime.Hour < item.hour) || ((nowTime.Hour == item.hour) && (nowTime.Minute < item.minute)))
+                                          {
+                                                currentIndex = i;
+                                                break;
+                                          }
+                                    }
+                              }
+                              else
+                              {
+                                    // 讓它停在這，等到下一個出來
+                                    System.Threading.Thread.Sleep(dSecond);
+                              }
+                        }
+                  }
+            }
+
+            // ---------Event--------------------
+            private void N_DoubleClick(object sender, EventArgs e)
         {
             // 取消背景程式
             this.bw.CancelAsync();

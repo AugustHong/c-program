@@ -4,3 +4,10 @@ C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日
 C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.csprojAssemblyReference.cache
 C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.exe
 C:\摳叮幫幫忙\研究\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.pdb
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.exe.config
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.exe
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\bin\Debug\每日定時鬧鐘.pdb
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.csprojAssemblyReference.cache
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.csproj.CoreCompileInputs.cache
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.exe
+D:\Document\Github\c-program\c#\每日定時鬧鐘\每日定時鬧鐘\obj\Debug\每日定時鬧鐘.pdb
