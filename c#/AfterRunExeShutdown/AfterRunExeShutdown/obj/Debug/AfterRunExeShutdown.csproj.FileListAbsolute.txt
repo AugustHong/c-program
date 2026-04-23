@@ -1,0 +1,7 @@
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\bin\Debug\AfterRunExeShutdown.exe.config
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\bin\Debug\AfterRunExeShutdown.exe
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\bin\Debug\AfterRunExeShutdown.pdb
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\obj\Debug\AfterRunExeShutdown.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\obj\Debug\AfterRunExeShutdown.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\obj\Debug\AfterRunExeShutdown.exe
+C:\Users\hf\Desktop\AfterRunExeShutdown\AfterRunExeShutdown\obj\Debug\AfterRunExeShutdown.pdb
