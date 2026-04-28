@@ -1,0 +1,7 @@
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\bin\Debug\產生ICON圖檔.exe.config
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\bin\Debug\產生ICON圖檔.exe
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\bin\Debug\產生ICON圖檔.pdb
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\obj\Debug\產生ICON圖檔.csproj.AssemblyReference.cache
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\obj\Debug\產生ICON圖檔.csproj.CoreCompileInputs.cache
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\obj\Debug\產生ICON圖檔.exe
+C:\Users\hf\Desktop\產生ICON圖檔\產生ICON圖檔\obj\Debug\產生ICON圖檔.pdb
